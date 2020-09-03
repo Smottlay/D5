@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PathFinding : MonoBehaviour
 {
-    public float speed;
+    public int speed;
 
     private Transform target;
     private int waypointIndex = 0;
@@ -34,7 +34,7 @@ public class PathFinding : MonoBehaviour
     {
         if(waypointIndex >= Waypoints.points.Length - 1)
         {
-            Destroy(this.gameObject);
+            this.gameObject.GetComponent<Enemy>().TargetReached();
             return;
         }
 
