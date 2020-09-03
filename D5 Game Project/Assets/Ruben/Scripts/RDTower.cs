@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RDTower : MonoBehaviour
+public class RDTower : BaseTower
 {
+
     // Start is called before the first frame update
     void Start()
     {
