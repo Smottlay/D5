@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         health = 50;
         endPanel.SetActive(false);
     }
@@ -26,22 +28,17 @@ public class PlayerHealth : MonoBehaviour
         if(health <= 0)
         {
             endPanel.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 
-    void Restart(bool button)
+    public void Restart()
     {
-        if (button)
-        {
-          
-        }
+        SceneManager.LoadScene(1);
     }
 
-    void MainMenu(bool button)
+    public void MainMenu()
     {
-        if (button)
-        {
-            //code to go back to main menu
-        }
+
     }
 }
