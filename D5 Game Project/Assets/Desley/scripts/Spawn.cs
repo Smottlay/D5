@@ -34,6 +34,7 @@ public class Spawn : MonoBehaviour
     {
         if(waveCountdown <= 0)
         {
+            GameObject.FindGameObjectWithTag("timer").GetComponent<WaveDisplay>().newRound = true;
             canSpawn = true;
             waveCountdown = 100;
         }

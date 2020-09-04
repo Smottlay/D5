@@ -121,5 +121,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 25
-  finishDamage: 0
+  finishDamage: 5
   coinReward: 0

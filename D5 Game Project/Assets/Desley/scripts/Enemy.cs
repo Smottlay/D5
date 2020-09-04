@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour
 
     public void TargetReached()
     {
-        //code to do dmg to player
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PlayerHealth>().health -= finishDamage;
         GameObject.FindGameObjectWithTag("spawner").GetComponent<Spawn>().destroyedCounter++;
         Destroy(this.gameObject);
     }
