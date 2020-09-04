@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - soldier
+  - enemy
+  - spawner
   layers:
   - Default
   - TransparentFX

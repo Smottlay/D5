@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3362707669796378591}
   m_Layer: 0
   m_Name: Speed
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,11 +121,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 25
-  attackDamage: 25
-  attackRate: 0
   finishDamage: 0
   coinReward: 0
-  canAttack: 0
-  searching: 0
-  normalSpeed: 0
-  soldier: {fileID: 0}
