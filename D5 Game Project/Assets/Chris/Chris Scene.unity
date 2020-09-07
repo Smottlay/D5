@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 717befa3721f309428af4c82f3552445,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -329,3 +329,141 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1001 &1668322900
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 917535400561637121, guid: 3fccc2d2876e1dc49841d2b1f181811b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 917535400561637121, guid: 3fccc2d2876e1dc49841d2b1f181811b,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 917535400561637121, guid: 3fccc2d2876e1dc49841d2b1f181811b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 917535400561637121, guid: 3fccc2d2876e1dc49841d2b1f181811b,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 917535400561637121, guid: 3fccc2d2876e1dc49841d2b1f181811b,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 917535400561637121, guid: 3fccc2d2876e1dc49841d2b1f181811b,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 917535400561637121, guid: 3fccc2d2876e1dc49841d2b1f181811b,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 917535400561637121, guid: 3fccc2d2876e1dc49841d2b1f181811b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 917535400561637121, guid: 3fccc2d2876e1dc49841d2b1f181811b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 917535400561637121, guid: 3fccc2d2876e1dc49841d2b1f181811b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 917535400561637121, guid: 3fccc2d2876e1dc49841d2b1f181811b,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7561096330845814486, guid: 3fccc2d2876e1dc49841d2b1f181811b,
+        type: 3}
+      propertyPath: m_Name
+      value: Raw Damager Tower
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3fccc2d2876e1dc49841d2b1f181811b, type: 3}
+--- !u!1001 &4082709161817108543
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1875924477210871143, guid: 379ad7d997cf9e74497fa062700d0aaa,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875924477210871143, guid: 379ad7d997cf9e74497fa062700d0aaa,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875924477210871143, guid: 379ad7d997cf9e74497fa062700d0aaa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875924477210871143, guid: 379ad7d997cf9e74497fa062700d0aaa,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875924477210871143, guid: 379ad7d997cf9e74497fa062700d0aaa,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875924477210871143, guid: 379ad7d997cf9e74497fa062700d0aaa,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875924477210871143, guid: 379ad7d997cf9e74497fa062700d0aaa,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875924477210871143, guid: 379ad7d997cf9e74497fa062700d0aaa,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875924477210871143, guid: 379ad7d997cf9e74497fa062700d0aaa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875924477210871143, guid: 379ad7d997cf9e74497fa062700d0aaa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1875924477210871143, guid: 379ad7d997cf9e74497fa062700d0aaa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4403478154926755091, guid: 379ad7d997cf9e74497fa062700d0aaa,
+        type: 3}
+      propertyPath: m_Name
+      value: MiningDrill
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 379ad7d997cf9e74497fa062700d0aaa, type: 3}
