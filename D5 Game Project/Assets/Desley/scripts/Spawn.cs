@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Spawn : MonoBehaviour
 {
-    public int[] maxInstantiate;
+    public List<int> maxInstantiate;
     public int instantiated;
     public int destroyedCounter;
 
     public int waveCounter;
     public float waveCountdown;
+    public int regulationRounds;
 
     public float spawnCountdown;
     public float spawnRate;
@@ -21,18 +22,39 @@ public class Spawn : MonoBehaviour
     public GameObject speed;
     public GameObject tank;
 
+    public bool newEndlessWave;
+    public bool endlessMode;
+    public int extraSpawns;
+    public GameObject continuePanel;
+
     // Start is called before the first frame update
     void Start()
     {
         spawnRate = 1.5f;
         waveCountdown = 10;
         waveCounter = 1;
+        continuePanel.SetActive(false);
+        endlessMode = false;
+        newEndlessWave = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(waveCountdown <= 0)
+        if (waveCounter > regulationRounds && !endlessMode)
+        {
+            Time.timeScale = 0;
+            continuePanel.SetActive(true);
+            return;
+        }
+
+        if (endlessMode && newEndlessWave)
+        {
+            maxInstantiate.Add(maxInstantiate.Count * 2 + extraSpawns);
+            newEndlessWave = false;
+        }
+
+        if (waveCountdown <= 0)
         {
             GameObject.FindGameObjectWithTag("timer").GetComponent<WaveDisplay>().newRound = true;
             canSpawn = true;
@@ -58,6 +80,7 @@ public class Spawn : MonoBehaviour
     void WaveCountdown()
     {
         waveCountdown = 10;
+        newEndlessWave = true;
     }
 
     void SpawnCountdown()

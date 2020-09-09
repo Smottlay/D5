@@ -26,7 +26,7 @@ public class WaveDisplay : MonoBehaviour
         if(roundTimeDisplay <= 10)
         {
             timerText.SetActive(true);
-            timeText.text = ("Preperation ") + roundTimeDisplay.ToString("0.00");
+            timeText.text = ("Preperation ") + roundTimeDisplay.ToString("0.0");
         }
         if(roundTimeDisplay <= .1)
         {
@@ -34,7 +34,7 @@ public class WaveDisplay : MonoBehaviour
         }
         if (newRound)
         {
-            roundText.text = ("Round ") + roundDisplay;
+            roundText.text = ("Wave ") + roundDisplay;
             newRound = false;
         }
     }

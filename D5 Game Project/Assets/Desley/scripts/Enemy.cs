@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        transform.position = GameObject.FindGameObjectWithTag("spawner").transform.position;
     }
 
     // Update is called once per frame
