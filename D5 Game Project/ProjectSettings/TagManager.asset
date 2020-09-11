@@ -8,6 +8,10 @@ TagManager:
   - enemy
   - spawner
   - timer
+  - warningpanel
+  - warningtext
+  - canvas
+  - barrack
   layers:
   - Default
   - TransparentFX

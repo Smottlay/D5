@@ -121,6 +121,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1071c74fc83c7484a839658567718025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 40
+  health: 60
   finishDamage: 10
   coinReward: 0
