@@ -5,26 +5,29 @@ using UnityEngine.EventSystems;
 
 public class Resource : MonoBehaviour
 {
-    public GameObject drill;
-    public Vector3 posOffSet;
-
-    BuildManager buildmanager;
-    private Renderer rend;
+    private GameObject drill;
 
     public Color hoverColor;
     private Color startColor;
+    public Vector3 posOffSet;
 
-    private void Start()
+    private Renderer rend;
+
+    BuildManager buildmanager;
+
+    void Start()
     {
         buildmanager = BuildManager.instance;
         rend = GetComponent<Renderer>();
+        startColor = rend.material.color;
     }
-    private void OnMouseDown()
+    void OnMouseDown()
     {
         if (EventSystem.current.IsPointerOverGameObject())
             return;
         if (buildmanager.GetTurretToBuild() == null)
             return;
+
         if (drill != null)
         {
             Debug.Log("cant build");
@@ -32,16 +35,14 @@ public class Resource : MonoBehaviour
         GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
         drill = (GameObject)Instantiate(turretToBuild, transform.position + posOffSet, transform.rotation);
         Destroy(gameObject);
-
-        Instantiate(drill, transform.position + posOffSet, transform.rotation);
-        Destroy(gameObject);
     }
-    private void OnMouseEnter()
+    void OnMouseEnter()
     {
         if (EventSystem.current.IsPointerOverGameObject())
             return;
         if (buildmanager.GetTurretToBuild() == null)
             return;
+        rend.material.color = hoverColor;
     }
     void OnMouseExit()
     {
