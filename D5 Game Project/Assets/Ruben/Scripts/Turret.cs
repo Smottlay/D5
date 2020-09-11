@@ -6,8 +6,11 @@ public class Turret : MonoBehaviour
 {
     public GameObject bulletSpawner;
     public GameObject bullet;
+    public GameObject turretRing;
 
     public Transform enemy;
+    public float viewRange;
+    private string enemyTag = "enemy";
 
     public float bulletSpeed;
     private float bulletReload = 0f;
@@ -15,24 +18,69 @@ public class Turret : MonoBehaviour
 
     void Start()
     {
-        enemy = gameObject.GetComponent<TurretRing>().enemyTarget;
+        InvokeRepeating("targetToShoot", 0f, 0.5f);
+    }
+
+    public void targetToShoot()
+    {
+        if (enemy != null && Vector3.Distance(transform.position, enemy.position) <= viewRange)
+        {
+            return;
+        }
+
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
+        float shortestDistance = Mathf.Infinity;
+        GameObject nearestEnemy = null;
+
+        foreach (GameObject enemy in enemies)
+        {
+            float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
+            if (distanceToEnemy < shortestDistance)
+            {
+                shortestDistance = distanceToEnemy;
+                nearestEnemy = enemy;
+            }
+        }
+        if (nearestEnemy != null && shortestDistance <= viewRange)
+        {
+            enemy = nearestEnemy.transform;
+        }
+        else
+        {
+            enemy = null;
+        }
     }
 
     void Update()
     {
-        bulletReload -= Time.deltaTime;
-        transform.LookAt(new Vector3(transform.position.x, enemy.position.y, transform.position.z));
+        float distance = Vector3.Distance(enemy.position, transform.position);
+        if (distance <= viewRange)
+        {
+            Vector3 dir = enemy.position - transform.position;
+            transform.LookAt(new Vector3(enemy.position.x, enemy.position.y, enemy.position.z));
+
+        }
+
+        if (enemy == null)
+            return;
     }
 
-    public void reload()
+    public void LookAt()
+    {
+        
+    }
+
+    public void Reload()
     {
         if (bulletReload <= 0f)
         {
-            shoot();
+            Shoot();
             bulletReload = 1f / bulletrate;
         }
+        bulletReload -= Time.deltaTime;
     }
-    public void shoot()
+
+    public void Shoot()
     {
         GameObject tempBullet;
         tempBullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation) as GameObject;
@@ -46,5 +94,4 @@ public class Turret : MonoBehaviour
 
         Destroy(tempBullet, 3f);
     }
-
 }
