@@ -12,6 +12,7 @@ TagManager:
   - warningtext
   - canvas
   - barrack
+  - shop
   layers:
   - Default
   - TransparentFX

@@ -34,7 +34,6 @@ public class Resource : MonoBehaviour
         }
         GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
         drill = (GameObject)Instantiate(turretToBuild, transform.position + posOffSet, transform.rotation);
-        Destroy(gameObject);
     }
     void OnMouseEnter()
     {

@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
+    public float gold;
+    public float addToGold;
+
+
     BuildManager buildManager;
 
     private void Start()
@@ -30,5 +34,10 @@ public class Shop : MonoBehaviour
     public void PurchaseMiningTower()
     {
         buildManager.SetTurret(buildManager.miningTower);
+    }
+
+    public void addGold()
+    {
+        gold += addToGold;
     }
 }
