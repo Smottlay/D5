@@ -12,36 +12,31 @@ public class soldier : MonoBehaviour
     public float range;
     public float rotationSpeed = 10f;
 
+    public bool searching;
+
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("UpdateTarget", 0f, .5f);
+        InvokeRepeating("UpdateTarget", 0, .1f);
+        searching = true; 
     }
 
     void UpdateTarget()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
-        float shortestDistance = Mathf.Infinity;
-        GameObject nearestEnemy = null;
+        GameObject attackableEnemy = null;
 
         foreach (GameObject enemy in enemies)
         {
             float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
-            if (distanceToEnemy < shortestDistance)
+            if (distanceToEnemy <= range && searching && enemy.GetComponent<Enemy>().attackable==true)
             {
-                shortestDistance = distanceToEnemy;
-                nearestEnemy = enemy;
+                enemy.GetComponent<Enemy>().attackable = false;
+                enemy.GetComponent<Enemy>().attacker = gameObject;
+                attackableEnemy = enemy;
+                target = attackableEnemy.transform;
+                searching = false;
             }
-        }
-
-        if (nearestEnemy != null && shortestDistance <= range)
-        {
-            target = nearestEnemy.transform;
-        }
-
-        if(shortestDistance >= range)
-        {
-            target = null;
         }
     }
    
@@ -56,6 +51,9 @@ public class soldier : MonoBehaviour
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         Vector3 rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * rotationSpeed).eulerAngles;
         transform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+
+        target.GetComponent<PathFinding>().speed = 0;
+        //make code to stop the animation
 
         if(attackCountdown <= 0f)
         {

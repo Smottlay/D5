@@ -4,20 +4,33 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public GameObject attacker;
+    
     public int health;
     public int finishDamage;
     public int coinReward;
+
+    public bool attackable;
 
     // Start is called before the first frame update
     void Start()
     {
         transform.position = GameObject.FindGameObjectWithTag("spawner").transform.position;
+        attackable = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(health <= 0)
+        if(health <= 0 && attacker != null)
+        {
+            //code to give player currency
+            GameObject.FindGameObjectWithTag("spawner").GetComponent<Spawn>().destroyedCounter++;
+            attacker.gameObject.GetComponent<soldier>().searching = true;
+            attacker.gameObject.GetComponent<soldier>().target = null;
+            Destroy(this.gameObject);
+        }
+        else if(health <= 0 && attacker == null)
         {
             //code to give player currency
             GameObject.FindGameObjectWithTag("spawner").GetComponent<Spawn>().destroyedCounter++;

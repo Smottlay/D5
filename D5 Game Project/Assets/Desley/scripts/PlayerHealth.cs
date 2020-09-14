@@ -27,6 +27,7 @@ public class PlayerHealth : MonoBehaviour
 
         if(health <= 0)
         {
+            health = 0;
             endPanel.SetActive(true);
             Time.timeScale = 0;
         }

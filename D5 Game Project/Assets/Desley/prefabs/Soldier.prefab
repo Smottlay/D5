@@ -107,8 +107,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  attackDamage: 5
+  attackDamage: 3
   attackRate: 2
   attackCountdown: 0
   range: 0.75
   rotationSpeed: 10
+  searching: 0
