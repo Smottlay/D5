@@ -58,16 +58,10 @@ public class Turret : MonoBehaviour
         {
             Vector3 dir = enemy.position - transform.position;
             transform.LookAt(new Vector3(enemy.position.x, enemy.position.y, enemy.position.z));
-
         }
 
         if (enemy == null)
             return;
-    }
-
-    public void LookAt()
-    {
-        
     }
 
     public void Reload()

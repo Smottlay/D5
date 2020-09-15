@@ -6,6 +6,8 @@ using UnityEngine.EventSystems;
 public class Foundation : MonoBehaviour
 {
     private GameObject turret;
+    private GameObject shop;
+    public GameObject refund;
 
     public Color hoverColor;
     private Color startColor;
@@ -20,6 +22,11 @@ public class Foundation : MonoBehaviour
         buildmanager = BuildManager.instance;
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
+        shop = GameObject.FindGameObjectWithTag("shop");
+    }
+    private void Update()
+    {
+        refund = GameObject.FindGameObjectWithTag("refund");
     }
     void OnMouseDown()
     {
@@ -34,6 +41,10 @@ public class Foundation : MonoBehaviour
         }
         GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
         turret = (GameObject)Instantiate(turretToBuild, transform.position + posOffSet, transform.rotation);
+        buildmanager.NoTurretToBuild();
+
+        shop.SetActive(true);
+        refund.SetActive(false);
         Destroy(gameObject);
     }
     void OnMouseEnter()

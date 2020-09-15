@@ -53,17 +53,11 @@ public class TurretRing : MonoBehaviour
             Vector3 dir = enemyTarget.position - transform.position;
             transform.LookAt(new Vector3(enemyTarget.position.x, transform.position.y, enemyTarget.position.z));
 
-            TurretLook();
             ShootTarget();
         }
 
         if (enemyTarget == null)
             return;
-    }
-
-    public void TurretLook()
-    {
-        turret.GetComponent<Turret>().LookAt();
     }
     public void ShootTarget()
     {

@@ -20,6 +20,10 @@ public class BuildManager : MonoBehaviour
     {
         return turretBuild;
     }
+    public void NoTurretToBuild()
+    {
+        turretBuild = null;
+    }
     private void Awake()
     {
         instance = this;

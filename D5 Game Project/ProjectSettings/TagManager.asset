@@ -13,6 +13,9 @@ TagManager:
   - canvas
   - barrack
   - shop
+  - road
+  - refund
+  - UI
   layers:
   - Default
   - TransparentFX

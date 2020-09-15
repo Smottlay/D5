@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BulletSplash : MonoBehaviour
 {
-    public int damageAmount;
-    public int splashRadius;
+    //public int damageAmount;
+    public float splashRadius;
 
     private void OnCollisionEnter(Collision collision)
     {
