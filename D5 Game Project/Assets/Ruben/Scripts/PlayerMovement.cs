@@ -7,6 +7,11 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     public float mouseDetection;
 
+    public Vector2 horLimit;
+
+    public float minY;
+    public float maxY;
+
     void Update()
     {
         Vector3 moveDir = transform.position;
@@ -27,6 +32,15 @@ public class PlayerMovement : MonoBehaviour
         {
             moveDir.x -= speed * Time.deltaTime;
         }
+
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
+        moveDir.y -= scroll * speed * 50f * Time.deltaTime;
+
+        moveDir.x = Mathf.Clamp(moveDir.x, - horLimit.x, horLimit.x);
+        moveDir.z = Mathf.Clamp(moveDir.z, - horLimit.y, horLimit.y);
+
+        moveDir.y = Mathf.Clamp(moveDir.y, minY, maxY);
+
         transform.position = moveDir;
     }
 }

@@ -14,11 +14,13 @@ public class Foundation : MonoBehaviour
     public Vector3 posOffSet;
 
     private Renderer rend;
+    public AudioSource thunk;
 
     BuildManager buildmanager;
 
     void Start()
     {
+        thunk = GetComponent<AudioSource>();
         buildmanager = BuildManager.instance;
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
@@ -41,8 +43,8 @@ public class Foundation : MonoBehaviour
         }
         GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
         turret = (GameObject)Instantiate(turretToBuild, transform.position + posOffSet, transform.rotation);
-        buildmanager.NoTurretToBuild();
 
+        buildmanager.NoTurretToBuild();
         shop.SetActive(true);
         refund.SetActive(false);
         Destroy(gameObject);

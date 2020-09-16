@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: e2dfcbb60b684ef4cbfc23bfedc196f8
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Mechanical
+  fontNames:
+  - Mechanical
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 95fb55eebbfec684c8ce7c4ca1605880, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
