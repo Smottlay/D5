@@ -759,6 +759,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 413157277573529988, guid: 3a033440593d8c04abd78e745971122a,
+        type: 3}
+      propertyPath: spawnPoints.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 413157277573529989, guid: 3a033440593d8c04abd78e745971122a,
         type: 3}
       propertyPath: m_Name
@@ -5949,6 +5954,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barracks (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 413157277573529989, guid: 3a033440593d8c04abd78e745971122a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 413157277573529992, guid: 3a033440593d8c04abd78e745971122a,
         type: 3}
       propertyPath: m_RootOrder
@@ -9447,6 +9457,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barracks (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 413157277573529989, guid: 3a033440593d8c04abd78e745971122a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 413157277573529992, guid: 3a033440593d8c04abd78e745971122a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11786,6 +11801,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barracks (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 413157277573529989, guid: 3a033440593d8c04abd78e745971122a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 413157277573529992, guid: 3a033440593d8c04abd78e745971122a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13688,6 +13708,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Barracks (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 413157277573529989, guid: 3a033440593d8c04abd78e745971122a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 413157277573529992, guid: 3a033440593d8c04abd78e745971122a,
         type: 3}
@@ -20612,13 +20637,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793925537}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9653a0d128fe840498b2e5c818a07c8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
   mouseDetection: 0
+  horLimit: {x: 0, y: 0}
+  minY: 0
+  maxY: 0
 --- !u!1001 &1794275981
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20939,6 +20967,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Barracks (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 413157277573529989, guid: 3a033440593d8c04abd78e745971122a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 413157277573529992, guid: 3a033440593d8c04abd78e745971122a,
         type: 3}

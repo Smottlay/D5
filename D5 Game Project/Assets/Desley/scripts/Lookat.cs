@@ -21,6 +21,7 @@ public class Lookat : MonoBehaviour
             {
                 shortestDistance = distanceToRoad;
                 nearestRoad = road;
+                gameObject.GetComponent<Barracks>().nearestRoad = nearestRoad;
                 roadPos = road.transform.position;
             }
         }

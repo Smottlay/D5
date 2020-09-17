@@ -20,8 +20,14 @@ public class Barracks : MonoBehaviour
     public bool upgrade;
     public bool click;
 
+    public GameObject nearestRoad;
+    public Transform[] spawnPoints;
+    public bool firstSpawn;
+
     void Start()
     {
+        nearestRoad = null;
+        firstSpawn = false;
         click = true;
         upgrade = false;
         maxSoldiers = 3;
@@ -35,6 +41,14 @@ public class Barracks : MonoBehaviour
 
     void Update()
     {
+        if(nearestRoad != null && !firstSpawn)
+        {
+            spawnPoints = nearestRoad.GetComponentsInChildren<Transform>();
+            Instantiate(soldier, spawnPoints[soldierCount].transform);
+            soldierCount++;
+            firstSpawn = true;
+        }
+
         if(countdown <= 0f)
         {
             countdown = 2f;
@@ -56,9 +70,9 @@ public class Barracks : MonoBehaviour
 
     public void Spawn()
     {
-        if (soldierCount < maxSoldiers)
+        if (soldierCount < maxSoldiers +1)
         {
-            Instantiate(soldier);
+            Instantiate(soldier, spawnPoints[soldierCount].transform);
             soldierCount++;
             upgradeButton.SetActive(false);
         }
