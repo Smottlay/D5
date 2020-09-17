@@ -47,6 +47,9 @@ public class TurretRing : MonoBehaviour
 
     void Update()
     {
+        if (enemyTarget == null)
+            return;
+
         float distance = Vector3.Distance(enemyTarget.position, transform.position);
         if (distance <= viewRange)
         {
@@ -55,9 +58,6 @@ public class TurretRing : MonoBehaviour
 
             ShootTarget();
         }
-
-        if (enemyTarget == null)
-            return;
     }
     public void ShootTarget()
     {

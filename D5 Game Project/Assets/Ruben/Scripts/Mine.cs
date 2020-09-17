@@ -32,13 +32,13 @@ public class Mine : MonoBehaviour
 
         foreach (GameObject road in roads)
         {
-            float distanceToEnemy = Vector3.Distance(transform.position, road.transform.position);
-            if (distanceToEnemy < shortestDistance)
+            float distanceToRoad = Vector3.Distance(transform.position, road.transform.position);
+            if (distanceToRoad < shortestDistance)
             {
-                shortestDistance = distanceToEnemy;
+                shortestDistance = distanceToRoad;
                 nearestRoad = road;
+
                 targetPos = road.transform.position;
-                //targetPos = new Vector3(Random.Range(road.transform.position.z - 2, road.transform.position.z + 2), 0);
             }
         }
         if (nearestRoad != null && shortestDistance <= roadRadius)

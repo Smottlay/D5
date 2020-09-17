@@ -53,15 +53,15 @@ public class Turret : MonoBehaviour
 
     void Update()
     {
+        if (enemy == null)
+            return;
+
         float distance = Vector3.Distance(enemy.position, transform.position);
         if (distance <= viewRange)
         {
             Vector3 dir = enemy.position - transform.position;
             transform.LookAt(new Vector3(enemy.position.x, enemy.position.y, enemy.position.z));
         }
-
-        if (enemy == null)
-            return;
     }
 
     public void Reload()

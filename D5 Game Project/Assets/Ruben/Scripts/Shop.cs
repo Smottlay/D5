@@ -48,6 +48,12 @@ public class Shop : MonoBehaviour
         refund.SetActive(true);
         gameObject.SetActive(false);
         rawDamageTower = true;
+
+        GameObject[] minerals = GameObject.FindGameObjectsWithTag("minerals");
+        foreach (GameObject mineral in minerals)
+        {
+            mineral.GetComponent<Resource>().DisableMineral();
+        }
     }
     public void PurchaseSplashTower()
     {
@@ -61,6 +67,12 @@ public class Shop : MonoBehaviour
         refund.SetActive(true);
         gameObject.SetActive(false);
         splashTower = true;
+
+        GameObject[] minerals = GameObject.FindGameObjectsWithTag("minerals");
+        foreach (GameObject mineral in minerals)
+        {
+            mineral.GetComponent<Resource>().DisableMineral();
+        }
     }
     public void PurchaseSlowTower()
     {
@@ -74,6 +86,12 @@ public class Shop : MonoBehaviour
         refund.SetActive(true);
         gameObject.SetActive(false);
         mineLayer = true;
+
+        GameObject[] minerals = GameObject.FindGameObjectsWithTag("minerals");
+        foreach (GameObject mineral in minerals)
+        {
+            mineral.GetComponent<Resource>().DisableMineral();
+        }
     }
     public void PurchaseBunker()
     {
@@ -87,6 +105,12 @@ public class Shop : MonoBehaviour
         refund.SetActive(true);
         gameObject.SetActive(false);
         barracks = true;
+
+        GameObject[] minerals = GameObject.FindGameObjectsWithTag("minerals");
+        foreach (GameObject mineral in minerals)
+        {
+            mineral.GetComponent<Resource>().DisableMineral();
+        }
     }
     public void PurchaseMiningTower()
     {
@@ -100,6 +124,12 @@ public class Shop : MonoBehaviour
         refund.SetActive(true);
         gameObject.SetActive(false);
         drill = true;
+
+        GameObject[] foundations = GameObject.FindGameObjectsWithTag("foundation");
+        foreach (GameObject foundation in foundations)
+        {
+            foundation.GetComponent<Foundation>().DisableFoundation();
+        }
     }
 
     public void addGold()
@@ -134,8 +164,21 @@ public class Shop : MonoBehaviour
             gold += drillCost;
             drill = false;
         }
+
         refund.SetActive(false);
         gameObject.SetActive(true);
         buildManager.NoTurretToBuild();
+
+        GameObject[] minerals = GameObject.FindGameObjectsWithTag("minerals");
+        foreach (GameObject mineral in minerals)
+        {
+            mineral.GetComponent<Resource>().EnableMineral();
+        }
+
+        GameObject[] foundations = GameObject.FindGameObjectsWithTag("foundation");
+        foreach (GameObject foundation in foundations)
+        {
+            foundation.GetComponent<Foundation>().EnableFoundation();
+        }
     }
 }

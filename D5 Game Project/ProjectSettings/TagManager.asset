@@ -16,6 +16,8 @@ TagManager:
   - road
   - refund
   - UI
+  - foundation
+  - minerals
   layers:
   - Default
   - TransparentFX

@@ -19,7 +19,7 @@ public class Drill : MonoBehaviour
         goldCountdown -= Time.deltaTime;
         if(goldCountdown <= 0)
         {
-            shop.gameObject.GetComponent<Shop>().addGold();
+            shop.GetComponent<Shop>().addGold();
             goldCountdown = goldTimer;
         }
     }
