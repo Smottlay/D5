@@ -121,7 +121,7 @@ MonoBehaviour:
   countdown: 0
   upgrade: 1
   click: 0
-  nearestRoad: {fileID: 0}
+  road: {fileID: 0}
   spawnPoints:
   - {fileID: 0}
   - {fileID: 0}
