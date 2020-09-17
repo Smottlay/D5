@@ -20,13 +20,13 @@ public class Barracks : MonoBehaviour
     public bool upgrade;
     public bool click;
 
-    public GameObject nearestRoad;
+    public GameObject road;
     public Transform[] spawnPoints;
     public bool firstSpawn;
 
     void Start()
     {
-        nearestRoad = null;
+        road = null;
         firstSpawn = false;
         click = true;
         upgrade = false;
@@ -41,9 +41,14 @@ public class Barracks : MonoBehaviour
 
     void Update()
     {
-        if(nearestRoad != null && !firstSpawn)
+        if(gameObject.GetComponent<Lookat>().nearestRoad != null && !firstSpawn)
         {
-            spawnPoints = nearestRoad.GetComponentsInChildren<Transform>();
+            road = gameObject.GetComponent<Lookat>().nearestRoad;
+        }
+
+        if(road != null && !firstSpawn)
+        {
+            spawnPoints = road.GetComponentsInChildren<Transform>();
             Instantiate(soldier, spawnPoints[soldierCount].transform);
             soldierCount++;
             firstSpawn = true;

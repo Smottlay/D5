@@ -8,7 +8,7 @@ public class Lookat : MonoBehaviour
     public Transform road;
     public GameObject nearestRoad;
 
-    private void Start()
+    void Start()
     {
         GameObject[] roads = GameObject.FindGameObjectsWithTag("road");
         float shortestDistance = Mathf.Infinity;
@@ -21,7 +21,6 @@ public class Lookat : MonoBehaviour
             {
                 shortestDistance = distanceToRoad;
                 nearestRoad = road;
-                gameObject.GetComponent<Barracks>().nearestRoad = nearestRoad;
                 roadPos = road.transform.position;
             }
         }
