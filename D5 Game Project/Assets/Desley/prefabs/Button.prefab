@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonPressed: 0
+  range: 100
 --- !u!1 &3659198007799066931
 GameObject:
   m_ObjectHideFlags: 0

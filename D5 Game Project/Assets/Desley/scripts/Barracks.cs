@@ -9,9 +9,6 @@ public class Barracks : MonoBehaviour
     public int maxSoldiers;
     public int soldierCount;
 
-    public Transform[] spawnPoints;
-    public int nextSpawnPoint;
-
     public GameObject canvas;
     public GameObject upgradeButtonPrefab;
     public GameObject upgradeButton;
@@ -27,10 +24,8 @@ public class Barracks : MonoBehaviour
     {
         click = true;
         upgrade = false;
-        maxSoldiers = spawnPoints.Length;
-        Instantiate(soldier, spawnPoints[0]);
+        maxSoldiers = 3;
         soldierCount = 1;
-        nextSpawnPoint = 1;
         countdown = 2f;
         canvas = GameObject.FindGameObjectWithTag("canvas");
         upgradeButton = Instantiate(upgradeButtonPrefab);
@@ -63,9 +58,8 @@ public class Barracks : MonoBehaviour
     {
         if (soldierCount < maxSoldiers)
         {
-            Instantiate(soldier, spawnPoints[nextSpawnPoint]);
+            Instantiate(soldier);
             soldierCount++;
-            nextSpawnPoint++;
             upgradeButton.SetActive(false);
         }
         else if (click)

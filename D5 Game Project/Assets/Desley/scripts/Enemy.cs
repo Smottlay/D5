@@ -26,8 +26,8 @@ public class Enemy : MonoBehaviour
         {
             //code to give player currency
             GameObject.FindGameObjectWithTag("spawner").GetComponent<Spawn>().destroyedCounter++;
-            attacker.gameObject.GetComponent<soldier>().searching = true;
-            attacker.gameObject.GetComponent<soldier>().target = null;
+            attacker.gameObject.GetComponent<Soldier>().searching = true;
+            attacker.gameObject.GetComponent<Soldier>().target = null;
             Destroy(this.gameObject);
         }
         else if(health <= 0 && attacker == null)

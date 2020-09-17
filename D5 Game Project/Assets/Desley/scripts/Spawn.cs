@@ -58,7 +58,7 @@ public class Spawn : MonoBehaviour
         {
             GameObject.FindGameObjectWithTag("timer").GetComponent<WaveDisplay>().newRound = true;
             canSpawn = true;
-            waveCountdown = 100;
+            waveCountdown = 300;
         }
 
         if (canSpawn && spawnCountdown <= 0 && instantiated <= maxInstantiate[waveCounter -1])
