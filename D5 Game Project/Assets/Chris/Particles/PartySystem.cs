@@ -17,7 +17,7 @@ public class PartySystem : MonoBehaviour
         void ActivateAllParticles()
         {
             particleSystemies[0].Play();
-            particleSystemies[1].Play();
+            
         }
     }
 }
