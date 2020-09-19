@@ -26,6 +26,8 @@ public class Healthbar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        health = gameObject.GetComponentInParent<Enemy>().health;
+
         if(currentHealth > health)
         {
             slider.value = health;

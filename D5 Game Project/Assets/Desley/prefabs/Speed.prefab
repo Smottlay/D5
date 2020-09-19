@@ -109,6 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  rotationSpeed: 5
 --- !u!114 &3362707669796378591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,10 +123,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attacker: {fileID: 0}
-  health: 25
+  healthBar: {fileID: 3151834316555562380}
+  maxHealth: 25
+  health: 0
   finishDamage: 5
   coinReward: 0
   attackable: 0
+  healthBarVisible: 0
 --- !u!1 &3151834316555562380
 GameObject:
   m_ObjectHideFlags: 0

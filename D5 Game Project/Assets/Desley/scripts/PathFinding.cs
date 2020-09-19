@@ -5,6 +5,7 @@ using UnityEngine;
 public class PathFinding : MonoBehaviour
 {
     public int speed;
+    public float rotationSpeed;
 
     private Transform target;
     private int waypointIndex = 0;
@@ -27,7 +28,9 @@ public class PathFinding : MonoBehaviour
         }
 
         Vector3 lookDir = target.position - transform.position;
-        transform.rotation = Quaternion.LookRotation(lookDir);
+        Quaternion lookRotation = Quaternion.LookRotation(lookDir);
+        Vector3 rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * rotationSpeed).eulerAngles;
+        transform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
     }
 
     void GetNextWaypoint()

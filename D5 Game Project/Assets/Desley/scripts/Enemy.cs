@@ -5,16 +5,23 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public GameObject attacker;
-    
+
+    public GameObject healthBar;
+
+    public int maxHealth;
     public int health;
     public int finishDamage;
     public int coinReward;
 
     public bool attackable;
+    public bool healthBarVisible;
 
     // Start is called before the first frame update
     void Start()
     {
+        healthBar.SetActive(false);
+        healthBarVisible = false;
+        health = maxHealth;
         transform.position = GameObject.FindGameObjectWithTag("spawner").transform.position;
         attackable = true;
     }
@@ -35,6 +42,12 @@ public class Enemy : MonoBehaviour
             //code to give player currency
             GameObject.FindGameObjectWithTag("spawner").GetComponent<Spawn>().destroyedCounter++;
             Destroy(this.gameObject);
+        }
+
+        if(health < maxHealth && !healthBarVisible)
+        {
+            healthBar.SetActive(true);
+            healthBarVisible = true;
         }
     }
 

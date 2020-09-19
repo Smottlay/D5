@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int health;
-
     public GameObject endPanel;
-    public Text healthCounter;
+    public ParticleSystem[] particleSystemies;
+
+    public int health;
 
     // Start is called before the first frame update
     void Start()
@@ -22,18 +22,21 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthCounter.color = Color.red;
-        healthCounter.text = ("Health: ") + health;
-
         if(health <= 0)
         {
-            health = 0;
             endPanel.SetActive(true);
             Time.timeScale = 0;
+            ActivateAllParticles();
         }
     }
 
-    public void Restart()
+void ActivateAllParticles()
+{
+    particleSystemies[0].Play();
+    particleSystemies[1].Play();
+}
+
+public void Restart()
     {
         SceneManager.LoadScene(1);
     }

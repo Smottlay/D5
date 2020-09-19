@@ -67,12 +67,11 @@ public class Soldier : MonoBehaviour
     void Attack()
     {
         target.GetComponent<Enemy>().health -= attackDamage;
-        target.GetComponentInChildren<Healthbar>().health -= attackDamage;
     }
 
         private void OnDrawGizmosSelected()
-    {
+        {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
-    }
+         }
 }
