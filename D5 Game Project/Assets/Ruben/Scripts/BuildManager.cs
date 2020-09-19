@@ -12,6 +12,8 @@ public class BuildManager : MonoBehaviour
     public GameObject bunker;
     public GameObject miningTower;
 
+    public GameObject shop;
+
     public void SetTurret(GameObject turret)
     {
         turretBuild = turret;

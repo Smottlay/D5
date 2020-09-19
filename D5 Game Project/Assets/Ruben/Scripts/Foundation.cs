@@ -48,6 +48,7 @@ public class Foundation : MonoBehaviour
 
         GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
         turret = (GameObject)Instantiate(turretToBuild, transform.position + posOffSet, transform.rotation);
+
         gameObject.SetActive(false);
         buildmanager.NoTurretToBuild();
         shop.SetActive(true);

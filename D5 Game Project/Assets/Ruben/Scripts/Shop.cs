@@ -19,11 +19,13 @@ public class Shop : MonoBehaviour
     public float mineLayerCost;
     public float drillCost;
 
-    private bool rawDamageTower;
-    private bool splashTower;
-    private bool barracks;
-    private bool mineLayer;
-    private bool drill;
+    public bool rawDamageTower;
+    public bool splashTower;
+    public bool barracks;
+    public bool mineLayer;
+    public bool drill;
+
+    public bool resetTowers;
 
     BuildManager buildManager;
 
@@ -34,6 +36,15 @@ public class Shop : MonoBehaviour
     public void Update()
     {
         mineralsDisplay.text = gold.ToString();
+
+        if (resetTowers == true)
+        {
+            rawDamageTower = false;
+            splashTower = false;
+            mineLayer = false;
+            barracks = false;
+            drill = false;
+        }
     }
 
     public void PurchaserRawDamageTower()
@@ -42,6 +53,8 @@ public class Shop : MonoBehaviour
             return;
         if (gold >= rawDamageTowerCost)
         {
+            resetTowers = true;
+            Enable();
             gold -= rawDamageTowerCost;
             buildManager.SetTurret(buildManager.rawDamageTower);
         }
@@ -61,6 +74,8 @@ public class Shop : MonoBehaviour
             return;
         if (gold >= splashTowerCost)
         {
+            resetTowers = true;
+            Enable();
             gold -= splashTowerCost;
             buildManager.SetTurret(buildManager.splashTower);
         }
@@ -80,6 +95,8 @@ public class Shop : MonoBehaviour
             return;
         if (gold >= mineLayerCost)
         {
+            resetTowers = true;
+            Enable();
             gold -= mineLayerCost;
             buildManager.SetTurret(buildManager.slowTower);
         }
@@ -99,11 +116,14 @@ public class Shop : MonoBehaviour
             return;
         if (gold >= barracksCost)
         {
+            resetTowers = true;
+            Enable();
             gold -= barracksCost;
             buildManager.SetTurret(buildManager.bunker);
         }
         refund.SetActive(true);
         gameObject.SetActive(false);
+
         barracks = true;
 
         GameObject[] minerals = GameObject.FindGameObjectsWithTag("minerals");
@@ -118,6 +138,8 @@ public class Shop : MonoBehaviour
             return;
         if (gold >= drillCost)
         {
+            resetTowers = true;
+            Enable();
             gold -= drillCost;
             buildManager.SetTurret(buildManager.miningTower);
         }
@@ -162,13 +184,26 @@ public class Shop : MonoBehaviour
         if (drill == true)
         {
             gold += drillCost;
-            drill = false;
         }
 
         refund.SetActive(false);
         gameObject.SetActive(true);
         buildManager.NoTurretToBuild();
 
+        GameObject[] minerals = GameObject.FindGameObjectsWithTag("minerals");
+        foreach (GameObject mineral in minerals)
+        {
+            mineral.GetComponent<Resource>().EnableMineral();
+        }
+
+        GameObject[] foundations = GameObject.FindGameObjectsWithTag("foundation");
+        foreach (GameObject foundation in foundations)
+        {
+            foundation.GetComponent<Foundation>().EnableFoundation();
+        }
+    }
+    private void Enable()
+    {
         GameObject[] minerals = GameObject.FindGameObjectsWithTag("minerals");
         foreach (GameObject mineral in minerals)
         {

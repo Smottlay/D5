@@ -13,7 +13,11 @@ public class MineLayer : MonoBehaviour
     public float mines;
     public float maxMines;
 
-    //public Transform[] mineSpots;
+    public bool firstSpawn;
+    public Vector3 targetPos;
+    public float mineAmount;
+
+    public Transform[] mineSpawnPoints;
     public Transform roadTransform;
     public GameObject road;
     public GameObject mine;
@@ -24,9 +28,27 @@ public class MineLayer : MonoBehaviour
         roadTransform = road.GetComponent<Transform>();
     }
 
-
     void Update()
     {
+        if (gameObject.GetComponent<Lookat>().nearestRoad != null && !firstSpawn)
+        {
+            road = gameObject.GetComponent<Lookat>().nearestRoad;
+        }
+
+        if (road != null && !firstSpawn)
+        {
+            mineSpawnPoints = road.GetComponentsInChildren<Transform>();
+            firstSpawn = true;
+            foreach (Transform mineSpawnPoint in mineSpawnPoints)
+            {
+                if (mineSpawnPoint.tag == "mineSpawnPoint")
+                {
+                    targetPos = mineSpawnPoint.transform.position;
+                    mineAmount += 1;
+                }
+            }
+        }
+
         if (mines < maxMines)
         {
             if (cooldownTimer < 0)

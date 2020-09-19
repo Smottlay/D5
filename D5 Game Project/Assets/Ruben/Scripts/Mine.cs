@@ -7,15 +7,17 @@ public class Mine : MonoBehaviour
     public float splashRadius;
 
     public Vector3 targetPos;
-    public Vector3 startPos;
-    public Vector3 nextPos;
+    private Vector3 startPos;
+    private Vector3 nextPos;
     public GameObject mineLayer;
 
     public float speed;
 
-    public Transform road;
+    public GameObject road;
+
     public float roadRadius;
     public string roadTag = "road";
+    public string mineSpawnPointTag = "mineSpawnPoint";
 
     public Rigidbody rb;
 
@@ -24,42 +26,10 @@ public class Mine : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody>();
     }
 
+
     private void Update()
     {
-        GameObject[] roads = GameObject.FindGameObjectsWithTag(roadTag);
-        float shortestDistance = Mathf.Infinity;
-        GameObject nearestRoad = null;
-
-        foreach (GameObject road in roads)
-        {
-            float distanceToRoad = Vector3.Distance(transform.position, road.transform.position);
-            if (distanceToRoad < shortestDistance)
-            {
-                shortestDistance = distanceToRoad;
-                nearestRoad = road;
-
-                targetPos = road.transform.position;
-            }
-        }
-        if (nearestRoad != null && shortestDistance <= roadRadius)
-        {
-            road = nearestRoad.transform;
-        }
-        else
-        {
-            road = null;
-        }
-
-        float distance = Vector3.Distance(road.position, transform.position);
-        if (distance <= roadRadius)
-        {
-            Vector3 nextPos = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
-
-            transform.LookAt(nextPos - transform.position);
-            transform.position = nextPos;
-        }
-        if (road == null)
-            return;
+        Vector3 nextPos = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
     }
 
     private void OnCollisionEnter(Collision collision)
