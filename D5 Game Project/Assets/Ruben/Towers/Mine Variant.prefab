@@ -126,14 +126,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   splashRadius: 0
+  kinematicCountdown: 0
+  spawnPointID: 0
   targetPos: {x: 0, y: 0, z: 0}
   mineLayer: {fileID: 0}
-  speed: 5
-  road: {fileID: 0}
-  mineSpawnPoints: []
-  firstSpawn: 0
-  roadRadius: 100
+  speed: 7.5
   roadTag: road
+  mineSpawnPointTag: mineSpawnPoint
   rb: {fileID: 0}
 --- !u!114 &3952511769512767768
 MonoBehaviour:

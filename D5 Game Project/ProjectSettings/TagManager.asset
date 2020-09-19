@@ -19,6 +19,8 @@ TagManager:
   - foundation
   - minerals
   - mineSpawnPoint
+  - slowTower
+  - DoorExplosion
   layers:
   - Default
   - TransparentFX

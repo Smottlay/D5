@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1168301353668936874}
   - component: {fileID: 1168301353668936873}
   - component: {fileID: 3362707669796378591}
+  - component: {fileID: 4390050503585497019}
   m_Layer: 0
   m_Name: Speed
   m_TagString: enemy
@@ -29,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1168301353668936872}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 46.102, y: 0.587, z: 26.024}
+  m_LocalPosition: {x: 46.102, y: 0.565, z: 26.024}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 8032438962768586313}
@@ -130,6 +131,20 @@ MonoBehaviour:
   coinReward: 0
   attackable: 0
   healthBarVisible: 0
+--- !u!64 &4390050503585497019
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168301353668936872}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &3151834316555562380
 GameObject:
   m_ObjectHideFlags: 0

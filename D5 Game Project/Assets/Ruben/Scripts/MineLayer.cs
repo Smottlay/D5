@@ -18,6 +18,7 @@ public class MineLayer : MonoBehaviour
     public float mineAmount;
 
     public Transform[] mineSpawnPoints;
+    public bool[] activeSpawnPoints;
     public Transform roadTransform;
     public GameObject road;
     public GameObject mine;
@@ -51,26 +52,76 @@ public class MineLayer : MonoBehaviour
 
         if (mines < maxMines)
         {
-            if (cooldownTimer < 0)
+            if (cooldownTimer < 0 && activeSpawnPoints[0])
             {
                 cooldownTimer = cooldown;
                 mines++;
-                Mine();
+                Mine0();
+                activeSpawnPoints[0] = false;
+            }
+            else if (cooldownTimer < 0 && activeSpawnPoints[1])
+            {
+                cooldownTimer = cooldown;
+                mines++;
+                Mine1();
+                activeSpawnPoints[1] = false;
+            }
+            else if (cooldownTimer < 0 && activeSpawnPoints[2])
+            {
+                cooldownTimer = cooldown;
+                mines++;
+                Mine2();
+                activeSpawnPoints[2] = false;
             }
         }
         cooldownTimer -= Time.deltaTime;
     }
 
-    public void Mine()
+    public void Mine0()
     {
         GameObject tempMine;
         tempMine = Instantiate(mine, mineSpawner.transform.position, mineSpawner.transform.rotation) as GameObject;
+        targetPos = mineSpawnPoints[4].transform.position;
+        tempMine.GetComponent<Mine>().targetPos = targetPos;
+        tempMine.GetComponent<Mine>().mineLayer = gameObject;
+        tempMine.GetComponent<Mine>().spawnPointID = 0;
 
         Rigidbody tempRid;
         tempRid = tempMine.GetComponent<Rigidbody>();
 
         tempRid.AddForce(transform.up * mineForce);
     }
+
+    public void Mine1()
+    {
+        GameObject tempMine;
+        tempMine = Instantiate(mine, mineSpawner.transform.position, mineSpawner.transform.rotation) as GameObject;
+        targetPos = mineSpawnPoints[5].transform.position;
+        tempMine.GetComponent<Mine>().targetPos = targetPos;
+        tempMine.GetComponent<Mine>().mineLayer = gameObject;
+        tempMine.GetComponent<Mine>().spawnPointID = 1;
+
+        Rigidbody tempRid;
+        tempRid = tempMine.GetComponent<Rigidbody>();
+
+        tempRid.AddForce(transform.up * mineForce);
+    }
+
+    public void Mine2()
+    {
+        GameObject tempMine;
+        tempMine = Instantiate(mine, mineSpawner.transform.position, mineSpawner.transform.rotation) as GameObject;
+        targetPos = mineSpawnPoints[6].transform.position;
+        tempMine.GetComponent<Mine>().targetPos = targetPos;
+        tempMine.GetComponent<Mine>().mineLayer = gameObject;
+        tempMine.GetComponent<Mine>().spawnPointID = 2;
+
+        Rigidbody tempRid;
+        tempRid = tempMine.GetComponent<Rigidbody>();
+
+        tempRid.AddForce(transform.up * mineForce);
+    }
+
     public void extractMine()
     {
         mines -= 1f;

@@ -120,9 +120,10 @@ GameObject:
   m_Component:
   - component: {fileID: 455054008700568946}
   - component: {fileID: 455054008700568947}
+  - component: {fileID: 1906420184}
   m_Layer: 0
   m_Name: Slow Tower Variant
-  m_TagString: Untagged
+  m_TagString: slowTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -160,9 +161,32 @@ MonoBehaviour:
   mineSpawner: {fileID: 455054008338992838}
   mines: 0
   maxMines: 12
+  firstSpawn: 0
+  targetPos: {x: 0, y: 0, z: 0}
+  mineAmount: 0
+  mineSpawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  activeSpawnPoints: 010101
   roadTransform: {fileID: 0}
   road: {fileID: 0}
   mine: {fileID: 5371528665430058128, guid: 9807ad5354f8b6345bbd25eb5aba1ca1, type: 3}
+--- !u!114 &1906420184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455054008700568944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b64b6161e40434dacad190b6da3689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roadPos: {x: 0, y: 0, z: 0}
+  road: {fileID: 0}
+  nearestRoad: {fileID: 0}
 --- !u!1 &455054008976828700
 GameObject:
   m_ObjectHideFlags: 0

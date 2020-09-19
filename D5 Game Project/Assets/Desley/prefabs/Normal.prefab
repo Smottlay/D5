@@ -187,6 +187,7 @@ GameObject:
   - component: {fileID: 3854355152644408955}
   - component: {fileID: 3854355152644408954}
   - component: {fileID: 7613592212322456733}
+  - component: {fileID: 6096841791999701106}
   m_Layer: 0
   m_Name: Normal
   m_TagString: enemy
@@ -202,7 +203,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3854355152644409221}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 46.098, y: 0.817, z: 26.019}
+  m_LocalPosition: {x: 46.098, y: 0.791, z: 26.019}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 7562510328419308564}
@@ -304,6 +305,20 @@ MonoBehaviour:
   coinReward: 0
   attackable: 0
   healthBarVisible: 0
+--- !u!64 &6096841791999701106
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3854355152644409221}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &5652023876255256262
 GameObject:
   m_ObjectHideFlags: 0

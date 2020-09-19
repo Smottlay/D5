@@ -6,6 +6,11 @@ public class Mine : MonoBehaviour
 {
     public float splashRadius;
 
+    public float kinematicCountdown;
+    public float kinematicOffCountdown;
+
+    public int spawnPointID;
+
     public Vector3 targetPos;
     private Vector3 startPos;
     private Vector3 nextPos;
@@ -13,9 +18,6 @@ public class Mine : MonoBehaviour
 
     public float speed;
 
-    public GameObject road;
-
-    public float roadRadius;
     public string roadTag = "road";
     public string mineSpawnPointTag = "mineSpawnPoint";
 
@@ -23,24 +25,30 @@ public class Mine : MonoBehaviour
 
     public void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody>();
+        kinematicCountdown = 1.5f;
+        kinematicOffCountdown = 1f;
     }
 
 
-    private void Update()
+    public void Update()
     {
-        Vector3 nextPos = Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.tag == "road")
+       gameObject.transform.position =  Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+        kinematicCountdown -= Time.deltaTime;
+        if(kinematicCountdown<= 0)
         {
-            print("arrived");
-            speed = 0f;
+            gameObject.GetComponent<Rigidbody>().isKinematic = true;
+            kinematicCountdown = 0;
+            kinematicOffCountdown -= Time.deltaTime;
         }
+        if(kinematicOffCountdown <= 0)
+        {
+            gameObject.GetComponent<Rigidbody>().isKinematic = false;
+            kinematicOffCountdown = 0;
+        }
+    }
 
-
+    public void OnCollisionEnter(Collision collision)
+    {
         if(collision.gameObject.tag == "enemy")
         {
             Collider[] colliders = Physics.OverlapSphere(transform.position, splashRadius);
@@ -51,6 +59,7 @@ public class Mine : MonoBehaviour
                 //criple;
             }
 
+            mineLayer.GetComponent<MineLayer>().activeSpawnPoints[spawnPointID] = true;
             Destroy(gameObject);
         }
     }

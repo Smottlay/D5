@@ -118,21 +118,21 @@ public class Spawn : MonoBehaviour
     {
         if(spawnRandomizer == 1 && canSpawn)
         {
-            Instantiate(normal);
+            Instantiate(normal, gameObject.transform);
             instantiated++;
             canSpawn = false;
             SpawnCountdown();
         }
         else if (spawnRandomizer == 2 && canSpawn)
         {
-            Instantiate(speed);
+            Instantiate(speed, gameObject.transform);
             instantiated++;
             canSpawn = false;
             SpawnCountdown();
         }
         else if (spawnRandomizer == 3 && canSpawn)
         {
-            Instantiate(tank);
+            Instantiate(tank, gameObject.transform);
             instantiated++;
             canSpawn = false;
             SpawnCountdown();
