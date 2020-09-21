@@ -15,10 +15,17 @@ public class Enemy : MonoBehaviour
 
     public bool attackable;
     public bool healthBarVisible;
+    public bool mineExplosion;
+    public bool mineDetecion;
+
+    public float cripleTimer;
+    public float cripleCountdown;
+    public int cripleSpeed;
 
     // Start is called before the first frame update
     void Start()
     {
+        mineDetecion = true;
         healthBar.SetActive(false);
         healthBarVisible = false;
         health = maxHealth;
@@ -49,6 +56,24 @@ public class Enemy : MonoBehaviour
             healthBar.SetActive(true);
             healthBarVisible = true;
         }
+
+        if(mineExplosion == true)
+        {
+            cripleCountdown -= Time.deltaTime;
+            if (cripleCountdown > 0)
+            {
+                gameObject.GetComponent<PathFinding>().speed = cripleSpeed;
+                mineDetecion = false;
+            }
+            
+            if (cripleCountdown <= 0)
+            {
+                gameObject.GetComponent<PathFinding>().NormalSpeed();
+                cripleCountdown = cripleTimer;
+                mineExplosion = false;
+                mineDetecion = true;
+            }
+        }
     }
 
     public void TargetReached()
@@ -56,5 +81,21 @@ public class Enemy : MonoBehaviour
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PlayerHealth>().health -= finishDamage;
         GameObject.FindGameObjectWithTag("spawner").GetComponent<Spawn>().destroyedCounter++;
         Destroy(this.gameObject);
+    }
+
+    public void RawDamage(int damageAmount)
+    {
+        health -= damageAmount;
+    }
+
+    public void SplashDamage(int damageAmount)
+    {
+        health -= damageAmount;
+    }
+
+    public void MineDamage(int damageAmount)
+    {
+        health -= damageAmount;
+        mineExplosion = true;
     }
 }

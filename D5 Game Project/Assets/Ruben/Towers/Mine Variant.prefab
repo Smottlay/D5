@@ -125,9 +125,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9b3d7a8415de7e4585a2477843b72d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  splashRadius: 0
+  splashRadius: 10
+  damageAmount: 2
   kinematicCountdown: 0
+  kinematicOffCountdown: 0
   spawnPointID: 0
+  mineDetection: 0
   targetPos: {x: 0, y: 0, z: 0}
   mineLayer: {fileID: 0}
   speed: 7.5

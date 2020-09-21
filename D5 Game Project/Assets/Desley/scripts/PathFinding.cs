@@ -5,6 +5,7 @@ using UnityEngine;
 public class PathFinding : MonoBehaviour
 {
     public int speed;
+    public int normalSpeed;
     public float rotationSpeed;
 
     private Transform target;
@@ -44,5 +45,10 @@ public class PathFinding : MonoBehaviour
         waypointIndex++;
 
         target = Waypoints.points[waypointIndex];
+    }
+
+    public void NormalSpeed()
+    {
+        speed = normalSpeed;
     }
 }

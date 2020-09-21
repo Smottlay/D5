@@ -124,5 +124,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22c844efc43255145b75d32ce07efa9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 0
-  splashRadius: 0
+  splashRadius: 5
+  damageAmount: 10

@@ -10,8 +10,7 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.tag == "enemy")
         {
-            //collision.gameObject.GetComponent<Enemy>().health(damageAmount);
-            print("hit");
+            collision.gameObject.GetComponent<Enemy>().RawDamage(damageAmount);
             Destroy(gameObject);
         }
     }

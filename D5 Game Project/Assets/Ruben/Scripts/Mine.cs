@@ -5,6 +5,7 @@ using UnityEngine;
 public class Mine : MonoBehaviour
 {
     public float splashRadius;
+    public int damageAmount;
 
     public float kinematicCountdown;
     public float kinematicOffCountdown;
@@ -49,18 +50,28 @@ public class Mine : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "enemy")
+        if (collision.gameObject.tag == "enemy")
         {
-            Collider[] colliders = Physics.OverlapSphere(transform.position, splashRadius);
+            Explode();
+        }
+    }
 
-            foreach (Collider nearbyEnemy in colliders)
+    public void Explode()
+    {
+        Collider[] colliders = Physics.OverlapSphere(transform.position, splashRadius);
+
+        foreach (Collider nearbyEnemy in colliders)
+        {
+            if (nearbyEnemy.gameObject.tag == "enemy")
             {
-                mineLayer.GetComponent<MineLayer>().extractMine();
-                //criple;
-            }
+                if (nearbyEnemy.GetComponent<Enemy>().mineDetecion == true)
+                {
 
+                    nearbyEnemy.GetComponent<Enemy>().MineDamage(damageAmount);
+                    Destroy(gameObject);
+                }
+            }
             mineLayer.GetComponent<MineLayer>().activeSpawnPoints[spawnPointID] = true;
-            Destroy(gameObject);
         }
     }
 }

@@ -30,22 +30,6 @@ Transform:
   m_Father: {fileID: 6284514936950315611}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1184805892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6664418862922680922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c7dc9c286909304abc62095b9413932, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyTarget: {fileID: 0}
-  viewRange: 10
-  enemyTag: enemy
-  turret: {fileID: 6664418862273855713}
 --- !u!114 &499134756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,7 +48,23 @@ MonoBehaviour:
   enemy: {fileID: 0}
   viewRange: 10
   bulletSpeed: 2000
-  bulletrate: 2
+  bulletrate: 0.05
+--- !u!114 &1184805892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6664418862922680922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7dc9c286909304abc62095b9413932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyTarget: {fileID: 0}
+  viewRange: 10
+  enemyTag: enemy
+  turret: {fileID: 6664418862273855713}
 --- !u!1001 &5262179754212314249
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -75,17 +75,17 @@ PrefabInstance:
     - target: {fileID: 2097725674534778250, guid: 6cce86074b8612d4fb0bd4c75facadbf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.697507
+      value: 62.947147
       objectReference: {fileID: 0}
     - target: {fileID: 2097725674534778250, guid: 6cce86074b8612d4fb0bd4c75facadbf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.6858356e-16
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2097725674534778250, guid: 6cce86074b8612d4fb0bd4c75facadbf,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.095928
+      value: 21.409573
       objectReference: {fileID: 0}
     - target: {fileID: 2097725674534778250, guid: 6cce86074b8612d4fb0bd4c75facadbf,
         type: 3}
@@ -130,7 +130,7 @@ PrefabInstance:
     - target: {fileID: 7544545172021625613, guid: 6cce86074b8612d4fb0bd4c75facadbf,
         type: 3}
       propertyPath: m_Name
-      value: Splash Tower
+      value: Splash Tower Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cce86074b8612d4fb0bd4c75facadbf, type: 3}

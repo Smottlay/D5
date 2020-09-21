@@ -47,6 +47,11 @@ public class Shop : MonoBehaviour
         }
     }
 
+    public void SettingsScreen()
+    {
+        //settings.setActive(true);
+    }
+
     public void PurchaserRawDamageTower()
     {
         if (gold < rawDamageTowerCost)

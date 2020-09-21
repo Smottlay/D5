@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e443715193775d848816687502f2684d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 4
+  cooldown: 10
   mineForce: 600
   mineSpawner: {fileID: 455054008338992838}
   mines: 0

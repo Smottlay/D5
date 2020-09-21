@@ -6,6 +6,7 @@ public class BulletSplash : MonoBehaviour
 {
     //public int damageAmount;
     public float splashRadius;
+    public int damageAmount;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -19,9 +20,12 @@ public class BulletSplash : MonoBehaviour
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position, splashRadius);
 
-        foreach(Collider nearbyEnemy in colliders)
+        foreach (Collider nearbyEnemy in colliders)
         {
-            print("sploosh");
+            if (nearbyEnemy.gameObject.tag == "enemy")
+            {
+                nearbyEnemy.GetComponent<Enemy>().RawDamage(damageAmount);
+            }
         }
 
         Destroy(gameObject);

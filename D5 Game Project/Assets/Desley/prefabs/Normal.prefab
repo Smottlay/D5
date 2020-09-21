@@ -284,6 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  normalSpeed: 2
   rotationSpeed: 5
 --- !u!114 &7613592212322456733
 MonoBehaviour:
@@ -305,6 +306,11 @@ MonoBehaviour:
   coinReward: 0
   attackable: 0
   healthBarVisible: 0
+  mineExplosion: 0
+  mineDetecion: 0
+  cripleTimer: 10
+  cripleCountdown: 10
+  cripleSpeed: 1
 --- !u!64 &6096841791999701106
 MeshCollider:
   m_ObjectHideFlags: 0
