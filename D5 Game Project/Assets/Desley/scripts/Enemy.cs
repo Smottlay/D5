@@ -97,5 +97,6 @@ public class Enemy : MonoBehaviour
     {
         health -= damageAmount;
         mineExplosion = true;
+        mineDetecion = false;
     }
 }

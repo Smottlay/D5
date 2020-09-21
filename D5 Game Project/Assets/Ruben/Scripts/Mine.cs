@@ -64,14 +64,15 @@ public class Mine : MonoBehaviour
         {
             if (nearbyEnemy.gameObject.tag == "enemy")
             {
+
                 if (nearbyEnemy.GetComponent<Enemy>().mineDetecion == true)
                 {
-
+                    mineLayer.GetComponent<MineLayer>().activeSpawnPoints[spawnPointID] = true;
                     nearbyEnemy.GetComponent<Enemy>().MineDamage(damageAmount);
                     Destroy(gameObject);
+
                 }
             }
-            mineLayer.GetComponent<MineLayer>().activeSpawnPoints[spawnPointID] = true;
         }
     }
 }

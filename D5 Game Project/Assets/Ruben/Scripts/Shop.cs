@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Shop : MonoBehaviour
 {
-    public Text mineralsDisplay;
+    //public TextMeshPro mineralsDisplay;
+    public TMP_Text mineralsDisplay;
     //public GameObject mineralsCounter;
 
     public GameObject refund;
@@ -19,19 +21,26 @@ public class Shop : MonoBehaviour
     public float mineLayerCost;
     public float drillCost;
 
-    public bool rawDamageTower;
-    public bool splashTower;
-    public bool barracks;
-    public bool mineLayer;
-    public bool drill;
+    private bool rawDamageTower;
+    private bool splashTower;
+    private bool barracks;
+    private bool mineLayer;
+    private bool drill;
 
     public bool resetTowers;
+
+    public GameObject rawDamageInfo;
+    public GameObject splashTowerInfo;
+    public GameObject slowTowerInfo;
+    public GameObject barracksInfo;
+    public GameObject drillInfo;
 
     BuildManager buildManager;
 
     private void Start()
     {
         buildManager = BuildManager.instance;
+        gameObject.GetComponent<TextMeshPro>();
     }
     public void Update()
     {
@@ -220,5 +229,35 @@ public class Shop : MonoBehaviour
         {
             foundation.GetComponent<Foundation>().EnableFoundation();
         }
+    }
+
+    public void RawDamageInfo()
+    {
+        rawDamageInfo.SetActive(true);
+    }
+    public void SplashTowerInfo()
+    {
+        splashTowerInfo.SetActive(true);
+    }
+    public void SlowTowerInfo()
+    {
+        slowTowerInfo.SetActive(true);
+    }
+    public void BarracksInfo()
+    {
+        barracksInfo.SetActive(true);
+    }
+    public void DrillInfo()
+    {
+        drillInfo.SetActive(true);
+    }
+
+    public void InfoDisable()
+    {
+        rawDamageInfo.SetActive(false);
+        splashTowerInfo.SetActive(false);
+        slowTowerInfo.SetActive(false);
+        barracksInfo.SetActive(false);
+        drillInfo.SetActive(false);
     }
 }
