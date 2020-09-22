@@ -45,6 +45,7 @@ public class Spawn : MonoBehaviour
         {
             Time.timeScale = 0;
             continuePanel.SetActive(true);
+            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PlayerHealth>().continuePanelActive = true;
             return;
         }
 

@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
 
     public GameObject healthBar;
 
-    public Collider colider;
+    Collider colider;
 
     public int maxHealth;
     public int health;

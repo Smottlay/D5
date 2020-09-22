@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Healthbar : MonoBehaviour
 {
-    public Transform cam;
+    Transform cam;
 
     public Canvas canvas;
     public Slider slider;

@@ -7,10 +7,11 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     public GameObject endPanel;
-    public GameObject particleObject;
+    GameObject particleObject;
     public GameObject wholeGate;
     public GameObject brokenGate;
 
+    public bool continuePanelActive;
     public int health;
     public bool alive;
 
@@ -24,6 +25,8 @@ public class PlayerHealth : MonoBehaviour
         alive = true;
         health = 50;
         endPanel.SetActive(false);
+        GameObject.FindGameObjectWithTag("canvas").GetComponent<GraphicRaycaster>().enabled = false;
+        continuePanelActive = false;
     }
 
     // Update is called once per frame
@@ -31,12 +34,22 @@ public class PlayerHealth : MonoBehaviour
     {
         if(health <= 0 && alive)
         {
+            GameObject.FindGameObjectWithTag("canvas").GetComponent<GraphicRaycaster>().enabled = true;
             particleObject.GetComponent<ParticlePlayer>().ParticleStart();
             wholeGate.SetActive(false);
             brokenGate.SetActive(true);
             endPanel.SetActive(true);
             alive = false;
             Time.timeScale = 0.25f;
+        }
+
+        if (continuePanelActive)
+        {
+            GameObject.FindGameObjectWithTag("canvas").GetComponent<GraphicRaycaster>().enabled = true;
+        }
+        else
+        {
+            GameObject.FindGameObjectWithTag("canvas").GetComponent<GraphicRaycaster>().enabled = false;
         }
     }
 

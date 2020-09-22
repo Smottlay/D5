@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class EnemyHealthbar : MonoBehaviour
 {
-    public GameObject cam;
+    GameObject cam;
 
     public Canvas canvas;
     public Slider slider;

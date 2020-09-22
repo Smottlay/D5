@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MouseRaycast : MonoBehaviour
 {
-    public GameObject barrack;
+    GameObject barrack;
     public float range;
 
     // Start is called before the first frame update
