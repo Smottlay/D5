@@ -70,7 +70,6 @@ public class Mine : MonoBehaviour
                     mineLayer.GetComponent<MineLayer>().activeSpawnPoints[spawnPointID] = true;
                     nearbyEnemy.GetComponent<Enemy>().MineDamage(damageAmount);
                     Destroy(gameObject);
-
                 }
             }
         }

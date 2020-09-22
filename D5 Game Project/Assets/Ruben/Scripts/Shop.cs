@@ -72,6 +72,7 @@ public class Shop : MonoBehaviour
             gold -= rawDamageTowerCost;
             buildManager.SetTurret(buildManager.rawDamageTower);
         }
+        InfoDisable();
         refund.SetActive(true);
         gameObject.SetActive(false);
         rawDamageTower = true;
@@ -93,6 +94,7 @@ public class Shop : MonoBehaviour
             gold -= splashTowerCost;
             buildManager.SetTurret(buildManager.splashTower);
         }
+        InfoDisable();
         refund.SetActive(true);
         gameObject.SetActive(false);
         splashTower = true;
@@ -114,6 +116,7 @@ public class Shop : MonoBehaviour
             gold -= mineLayerCost;
             buildManager.SetTurret(buildManager.slowTower);
         }
+        InfoDisable();
         refund.SetActive(true);
         gameObject.SetActive(false);
         mineLayer = true;
@@ -135,6 +138,7 @@ public class Shop : MonoBehaviour
             gold -= barracksCost;
             buildManager.SetTurret(buildManager.bunker);
         }
+        InfoDisable();
         refund.SetActive(true);
         gameObject.SetActive(false);
 
@@ -157,6 +161,7 @@ public class Shop : MonoBehaviour
             gold -= drillCost;
             buildManager.SetTurret(buildManager.miningTower);
         }
+        InfoDisable();
         refund.SetActive(true);
         gameObject.SetActive(false);
         drill = true;
