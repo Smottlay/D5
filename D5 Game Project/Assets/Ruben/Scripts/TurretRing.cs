@@ -61,6 +61,6 @@ public class TurretRing : MonoBehaviour
     }
     public void ShootTarget()
     {
-        turret.GetComponent<Turret>().Reload();
+        //turret.GetComponent<Turret>().Reload();
     }
 }

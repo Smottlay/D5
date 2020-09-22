@@ -16744,7 +16744,7 @@ GameObject:
   - component: {fileID: 1261348913}
   m_Layer: 5
   m_Name: Shop
-  m_TagString: Untagged
+  m_TagString: shop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16764,12 +16764,12 @@ MonoBehaviour:
   mineralsDisplay: {fileID: 1170812774}
   refund: {fileID: 589369929}
   gold: 100
-  addToGold: 0
-  rawDamageTowerCost: 0
-  splashTowerCost: 0
-  barracksCost: 0
-  mineLayerCost: 0
-  drillCost: 0
+  addToGold: 5
+  rawDamageTowerCost: 20
+  splashTowerCost: 60
+  barracksCost: 40
+  mineLayerCost: 30
+  drillCost: 50
   resetTowers: 0
   rawDamageInfo: {fileID: 1483887884}
   splashTowerInfo: {fileID: 158706340}
