@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GateHealth : MonoBehaviour
+public class EnemyHealthbar : MonoBehaviour
 {
     public GameObject cam;
 
@@ -17,16 +17,17 @@ public class GateHealth : MonoBehaviour
     void Start()
     {
         cam = GameObject.FindGameObjectWithTag("MainCamera");
-        health = cam.GetComponent<PlayerHealth>().health;
-        slider.maxValue = 50;
+        health = gameObject.GetComponentInParent<Enemy>().maxHealth;
+        slider.maxValue = health;
         slider.value = slider.maxValue;
-        currentHealth = 50;
+        currentHealth = health;
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        health = cam.GetComponent<PlayerHealth>().health;
+        health = gameObject.GetComponentInParent<Enemy>().health;
 
         if (currentHealth > health)
         {

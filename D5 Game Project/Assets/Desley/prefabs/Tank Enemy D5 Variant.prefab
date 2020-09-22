@@ -14,6 +14,58 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!65 &1287840923
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4089212742721074479}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &-3990475814639962047
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4089212742721074479}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!114 &-3118229493734784823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28,12 +80,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attacker: {fileID: 0}
   healthBar: {fileID: 6705672277240475412}
+  colider: {fileID: 0}
   maxHealth: 100
   health: 0
   finishDamage: 20
   coinReward: 0
   attackable: 0
   healthBarVisible: 0
+  mineExplosion: 0
+  mineDetecion: 0
+  cripleTimer: 0
+  cripleCountdown: 0
+  cripleSpeed: 0
 --- !u!114 &4477790528913436186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47,6 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  normalSpeed: 1
   rotationSpeed: 5
 --- !u!1 &5118831757844479315
 GameObject:
@@ -231,7 +290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7655901451939553780}
   - component: {fileID: 7584775638125521330}
-  - component: {fileID: 6404268502729444396}
+  - component: {fileID: 1716952381787709044}
   m_Layer: 0
   m_Name: healthbar
   m_TagString: Untagged
@@ -311,7 +370,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &6404268502729444396
+--- !u!114 &1716952381787709044
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -320,7 +379,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6705672277240475412}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63aafd51f47e6e1429b3b1ff2b0f5a21, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ffdf58c99a73564b94aae07f5520e1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
@@ -496,7 +555,7 @@ PrefabInstance:
     - target: {fileID: 5459596254665540524, guid: f2d81f697f4aa344cb224a6612bb0343,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 45.78
+      value: 49.96
       objectReference: {fileID: 0}
     - target: {fileID: 5459596254665540524, guid: f2d81f697f4aa344cb224a6612bb0343,
         type: 3}

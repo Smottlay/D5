@@ -13,19 +13,27 @@ public class Healthbar : MonoBehaviour
     public float health;
     public float currentHealth;
 
+    public bool updated;
+
     // Start is called before the first frame update
     void Start()
     {
         cam = Camera.main.transform;
         health = gameObject.GetComponentInParent<Enemy>().health;
-        slider.maxValue = health;
-        slider.value = slider.maxValue;
-        currentHealth = health;
+        updated = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!updated)
+        {
+            slider.maxValue = health;
+            slider.value = slider.maxValue;
+            currentHealth = health;
+            updated = true;
+        }
+
         health = gameObject.GetComponentInParent<Enemy>().health;
 
         if(currentHealth > health)

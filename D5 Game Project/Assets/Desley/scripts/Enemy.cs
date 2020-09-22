@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
 
     public GameObject healthBar;
 
+    public Collider colider;
+
     public int maxHealth;
     public int health;
     public int finishDamage;
@@ -25,12 +27,12 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mineDetecion = true;
-        healthBar.SetActive(false);
-        healthBarVisible = false;
         health = maxHealth;
+        mineDetecion = true;
+        healthBarVisible = false;
         transform.position = GameObject.FindGameObjectWithTag("spawner").transform.position;
         attackable = true;
+        colider = gameObject.GetComponent<BoxCollider>();
     }
 
     // Update is called once per frame
@@ -72,6 +74,7 @@ public class Enemy : MonoBehaviour
                 cripleCountdown = cripleTimer;
                 mineExplosion = false;
                 mineDetecion = true;
+                colider.enabled = true;
             }
         }
     }
@@ -96,6 +99,7 @@ public class Enemy : MonoBehaviour
     public void MineDamage(int damageAmount)
     {
         health -= damageAmount;
+        colider.enabled = false;
         mineExplosion = true;
         mineDetecion = false;
     }
