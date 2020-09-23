@@ -31,7 +31,7 @@ public class Spawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spawnRate = 1.5f;
+        spawnRate = 1f;
         waveCountdown = 10;
         waveCounter = 1;
         continuePanel.SetActive(false);
