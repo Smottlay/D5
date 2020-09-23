@@ -48,9 +48,9 @@ public class Mine : MonoBehaviour
         }
     }
 
-    public void OnCollisionEnter(Collision collision)
+    public void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "enemy")
+        if(other.gameObject.tag == "enemy")
         {
             Explode();
         }

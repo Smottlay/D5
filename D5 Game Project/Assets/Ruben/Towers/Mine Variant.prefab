@@ -107,7 +107,7 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5371528665430058128}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 4
   m_Convex: 1
@@ -130,7 +130,6 @@ MonoBehaviour:
   kinematicCountdown: 0
   kinematicOffCountdown: 0
   spawnPointID: 0
-  mineDetection: 0
   targetPos: {x: 0, y: 0, z: 0}
   mineLayer: {fileID: 0}
   speed: 7.5

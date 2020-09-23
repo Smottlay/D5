@@ -311,7 +311,7 @@ MonoBehaviour:
   enemy: {fileID: 0}
   viewRange: 11
   bulletSpeed: 4000
-  bulletrate: 10
+  bulletrate: 4
 --- !u!82 &7950908164514647263
 AudioSource:
   m_ObjectHideFlags: 0

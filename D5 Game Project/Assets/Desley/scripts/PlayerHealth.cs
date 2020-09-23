@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public GameObject shopPanel;
     public GameObject canvas;
     public GameObject endPanel;
     GameObject particleObject;
@@ -40,6 +41,7 @@ public class PlayerHealth : MonoBehaviour
         {
             endPanelActive = true;
             particleObject.GetComponent<ParticlePlayer>().ParticleStart();
+            shopPanel.SetActive(false);
             wholeGate.SetActive(false);
             brokenGate.SetActive(true);
             endPanel.SetActive(true);
