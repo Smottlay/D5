@@ -21,6 +21,8 @@ TagManager:
   - mineSpawnPoint
   - slowTower
   - DoorExplosion
+  - ShowOnPaused
+  - ShowOnSettings
   layers:
   - Default
   - TransparentFX
