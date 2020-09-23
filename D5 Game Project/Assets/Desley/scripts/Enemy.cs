@@ -64,6 +64,7 @@ public class Enemy : MonoBehaviour
             cripleCountdown -= Time.deltaTime;
             if (cripleCountdown > 0)
             {
+                colider.enabled = false;
                 gameObject.GetComponent<PathFinding>().speed = cripleSpeed;
                 mineDetecion = false;
             }
@@ -99,7 +100,6 @@ public class Enemy : MonoBehaviour
     public void MineDamage(int damageAmount)
     {
         health -= damageAmount;
-        colider.enabled = false;
         mineExplosion = true;
         mineDetecion = false;
     }

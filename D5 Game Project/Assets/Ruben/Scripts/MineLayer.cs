@@ -25,12 +25,29 @@ public class MineLayer : MonoBehaviour
     
     void Start()
     {
-        road = GameObject.FindGameObjectWithTag("road");
-        roadTransform = road.GetComponent<Transform>();
+
+        //roadTransform = road.GetComponent<Transform>();
+
     }
 
     void Update()
     {
+        GameObject[] roads = GameObject.FindGameObjectsWithTag("road");
+        float shortestDistance = Mathf.Infinity;
+        GameObject nearestRoad = null;
+
+        foreach (GameObject road in roads)
+        {
+            float distanceToRoad = Vector3.Distance(transform.position, road.transform.position);
+            if (distanceToRoad < shortestDistance)
+            {
+                shortestDistance = distanceToRoad;
+                nearestRoad = road;
+
+
+            }
+        }
+
         if (gameObject.GetComponent<Lookat>().nearestRoad != null && !firstSpawn)
         {
             road = gameObject.GetComponent<Lookat>().nearestRoad;
@@ -38,14 +55,16 @@ public class MineLayer : MonoBehaviour
 
         if (road != null && !firstSpawn)
         {
-            mineSpawnPoints = road.GetComponentsInChildren<Transform>();
+            mineSpawnPoints = nearestRoad.GetComponentsInChildren<Transform>();
             firstSpawn = true;
             foreach (Transform mineSpawnPoint in mineSpawnPoints)
             {
+
                 if (mineSpawnPoint.tag == "mineSpawnPoint")
                 {
                     targetPos = mineSpawnPoint.transform.position;
                     mineAmount += 1;
+                    print("this road");
                 }
             }
         }
