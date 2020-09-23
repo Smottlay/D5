@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Main Scene/Main Scene Dawg.unity
     guid: 94a921a32698b2f449fe39f20e757b9f
-  - enabled: 1
+  - enabled: 0
     path: Assets/URP Example Assets/Scenes/SampleScene.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
-  - enabled: 1
+  - enabled: 0
     path: Assets/Desley/Desley.unity
     guid: 61bcf9e83d354e14bb482b8f1edbe7fa
   m_configObjects: {}

@@ -12,12 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e78be2e29b47e5d45b960b94864a9254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shopPanel: {fileID: 0}
+  canvas: {fileID: 0}
   endPanel: {fileID: 0}
-  particleObject: {fileID: 0}
   wholeGate: {fileID: 0}
   brokenGate: {fileID: 0}
+  continuePanelActive: 0
+  endPanelActive: 0
   health: 0
   alive: 0
+  upgrading: 0
+--- !u!114 &1407801912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6277268301323266345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3eee9e0649c10ff4480875bb45169ba5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barrack: {fileID: 0}
+  range: 0
 --- !u!1001 &7174519670577978497
 PrefabInstance:
   m_ObjectHideFlags: 0
