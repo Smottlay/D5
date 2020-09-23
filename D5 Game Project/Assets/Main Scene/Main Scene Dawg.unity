@@ -21679,7 +21679,7 @@ MonoBehaviour:
     type: 3}
   slowTower: {fileID: 455054008700568944, guid: f52ed55f61be8e842828072a67f8c7d7,
     type: 3}
-  bunker: {fileID: 8620255328183359325, guid: 033a69c1b41e34a4bac569dd504b4771, type: 3}
+  bunker: {fileID: 2224047353701688502, guid: a63c88c572af278478f47e08eb551050, type: 3}
   miningTower: {fileID: 6935833132031034867, guid: 9ee76afa601da4741bd8fd32051037e5,
     type: 3}
   shop: {fileID: 1261348912}

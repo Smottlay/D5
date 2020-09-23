@@ -33,6 +33,6 @@ public class MouseRaycast : MonoBehaviour
 
     public void Upgrade()
     {
-        barrack.GetComponent<Barracks>().upgradeButton.SetActive(true);
+        //barrack.GetComponent<Barracks>().upgradeButton.SetActive(true);
     }
 }

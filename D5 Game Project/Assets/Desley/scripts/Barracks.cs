@@ -19,14 +19,14 @@ public class Barracks : MonoBehaviour
     public Transform[] spawnPoints;
     public bool firstSpawn;
 
-    public GameObject canvas;
-    public GameObject upgradeButton;
-    public Text upgradeText;
+    //public GameObject canvas;
+    //public GameObject upgradeButton;
+    //public Text upgradeText;
 
     void Start()
     {
         cam = GameObject.FindGameObjectWithTag("MainCamera");
-        upgradeButton.SetActive(false);
+        //upgradeButton.SetActive(false);
         road = null;
         firstSpawn = false;
         click = true;
@@ -72,9 +72,9 @@ public class Barracks : MonoBehaviour
         else if (click)
         {
             click = false;
-            upgradeButton.SetActive(true);
-            upgradeText.text = ("Max Reached");
-            upgradeText.color = Color.red;
+            //upgradeButton.SetActive(true);
+            //upgradeText.text = ("Max Reached");
+            //upgradeText.color = Color.red;
             countdown = 1.5f;
 
         }
