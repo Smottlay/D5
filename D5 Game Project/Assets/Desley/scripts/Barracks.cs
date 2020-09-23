@@ -5,15 +5,10 @@ using UnityEngine.UI;
 
 public class Barracks : MonoBehaviour
 {
+    public GameObject cam;
     public GameObject soldier;
     public int maxSoldiers;
     public int soldierCount;
-
-    public GameObject canvas;
-    public GameObject upgradeButtonPrefab;
-    public GameObject upgradeButton;
-    public Text warningPrefab;
-    public Text warningText;
 
     public float countdown;
 
@@ -24,8 +19,14 @@ public class Barracks : MonoBehaviour
     public Transform[] spawnPoints;
     public bool firstSpawn;
 
+    public GameObject canvas;
+    public GameObject upgradeButton;
+    public Text upgradeText;
+
     void Start()
     {
+        cam = GameObject.FindGameObjectWithTag("MainCamera");
+        upgradeButton.SetActive(false);
         road = null;
         firstSpawn = false;
         click = true;
@@ -33,10 +34,6 @@ public class Barracks : MonoBehaviour
         maxSoldiers = 3;
         soldierCount = 1;
         countdown = 2f;
-        canvas = GameObject.FindGameObjectWithTag("canvas");
-        upgradeButton = Instantiate(upgradeButtonPrefab);
-        upgradeButton.transform.SetParent(canvas.transform, false);
-        upgradeButton.SetActive(false);
     }
 
     void Update()
@@ -57,19 +54,11 @@ public class Barracks : MonoBehaviour
         if(countdown <= 0f)
         {
             countdown = 2f;
-            Destroy(warningText);
-            warningText = warningPrefab;
             click = true;
         }
         if(countdown <= 1.5f)
         {
             countdown -= Time.deltaTime;
-        }
-
-        if (upgradeButton.GetComponent<UpgradeManager>().buttonPressed == true)
-        {
-            Spawn();
-            upgradeButton.GetComponent<UpgradeManager>().buttonPressed = false;
         }
     }
 
@@ -79,17 +68,15 @@ public class Barracks : MonoBehaviour
         {
             Instantiate(soldier, spawnPoints[soldierCount].transform);
             soldierCount++;
-            upgradeButton.SetActive(false);
         }
         else if (click)
         {
             click = false;
-            warningText = Instantiate(warningText);
-            warningText.transform.SetParent(canvas.transform, false);
-            warningText.text = ("Max Reached!");
-            warningText.color = Color.red;
+            upgradeButton.SetActive(true);
+            upgradeText.text = ("Max Reached");
+            upgradeText.color = Color.red;
             countdown = 1.5f;
-            upgradeButton.SetActive(false);
+
         }
     }
 }

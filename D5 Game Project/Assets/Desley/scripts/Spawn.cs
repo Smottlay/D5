@@ -25,6 +25,7 @@ public class Spawn : MonoBehaviour
     public bool newEndlessWave;
     public bool endlessMode;
     public int extraSpawns;
+    public GameObject cam;
     public GameObject continuePanel;
 
     // Start is called before the first frame update
@@ -43,9 +44,9 @@ public class Spawn : MonoBehaviour
     {
         if (waveCounter > regulationRounds && !endlessMode)
         {
-            Time.timeScale = 0;
+            cam.GetComponent<PlayerHealth>().continuePanelActive = true;
             continuePanel.SetActive(true);
-            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PlayerHealth>().continuePanelActive = true;
+            Time.timeScale = 0;
             return;
         }
 

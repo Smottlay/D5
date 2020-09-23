@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MouseRaycast : MonoBehaviour
 {
-    GameObject barrack;
+    public GameObject barrack;
     public float range;
 
     // Start is called before the first frame update
@@ -17,7 +17,7 @@ public class MouseRaycast : MonoBehaviour
     void Update()
     {
         if (Input.GetButtonDown("Fire1"))
-        {
+        { 
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if(Physics.Raycast(ray, out hit, range))

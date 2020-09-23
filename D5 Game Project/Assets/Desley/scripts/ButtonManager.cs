@@ -7,13 +7,11 @@ public class ButtonManager : MonoBehaviour
     public void RestartButton(bool button)
     {
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PlayerHealth>().Restart();
-        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PlayerHealth>().continuePanelActive = false;
     }
 
     public void MenuButton(bool button)
     {
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PlayerHealth>().MainMenu();
-        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PlayerHealth>().continuePanelActive = false;
     }
 
     public void EndlessButton(bool button)
@@ -27,6 +25,6 @@ public class ButtonManager : MonoBehaviour
 
     public void NextLevelButton(bool button)
     {
-        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PlayerHealth>().continuePanelActive = false;
+
     }
 }

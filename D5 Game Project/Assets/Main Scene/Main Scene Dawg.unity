@@ -6453,6 +6453,7 @@ MonoBehaviour:
   newEndlessWave: 0
   endlessMode: 0
   extraSpawns: 2
+  cam: {fileID: 1407801905}
   continuePanel: {fileID: 456034996}
 --- !u!1001 &549931725
 PrefabInstance:
@@ -18790,6 +18791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eee9e0649c10ff4480875bb45169ba5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  barrack: {fileID: 0}
   range: 0
 --- !u!1 &1408064903
 GameObject:
@@ -28995,6 +28997,10 @@ PrefabInstance:
       propertyPath: brokenGate
       value: 
       objectReference: {fileID: 1258747179}
+    - target: {fileID: 1430783980, guid: d0b5581f3160db04391f845dcea53af9, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 645556402}
     - target: {fileID: 6277268301323266345, guid: d0b5581f3160db04391f845dcea53af9,
         type: 3}
       propertyPath: m_Name

@@ -6,27 +6,31 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
+    public GameObject canvas;
     public GameObject endPanel;
     GameObject particleObject;
     public GameObject wholeGate;
     public GameObject brokenGate;
 
     public bool continuePanelActive;
+    public bool endPanelActive;
     public int health;
     public bool alive;
+    public bool upgrading;
 
     // Start is called before the first frame update
     void Start()
     {
         Time.timeScale = 1;
+        canvas.GetComponent<GraphicRaycaster>().enabled = false;
         particleObject = GameObject.FindGameObjectWithTag("DoorExplosion");
         wholeGate.SetActive(true);
         brokenGate.SetActive(false);
         alive = true;
         health = 50;
         endPanel.SetActive(false);
-        GameObject.FindGameObjectWithTag("canvas").GetComponent<GraphicRaycaster>().enabled = false;
         continuePanelActive = false;
+        endPanelActive = false;
     }
 
     // Update is called once per frame
@@ -34,22 +38,27 @@ public class PlayerHealth : MonoBehaviour
     {
         if(health <= 0 && alive)
         {
-            GameObject.FindGameObjectWithTag("canvas").GetComponent<GraphicRaycaster>().enabled = true;
+            endPanelActive = true;
             particleObject.GetComponent<ParticlePlayer>().ParticleStart();
             wholeGate.SetActive(false);
             brokenGate.SetActive(true);
             endPanel.SetActive(true);
             alive = false;
             Time.timeScale = 0.25f;
+            return;
         }
 
-        if (continuePanelActive)
+        if (continuePanelActive && !endPanelActive)
         {
-            GameObject.FindGameObjectWithTag("canvas").GetComponent<GraphicRaycaster>().enabled = true;
+            canvas.GetComponent<GraphicRaycaster>().enabled = true;
         }
-        else
+        else if (!continuePanelActive && endPanelActive)
         {
-            GameObject.FindGameObjectWithTag("canvas").GetComponent<GraphicRaycaster>().enabled = false;
+            canvas.GetComponent<GraphicRaycaster>().enabled = true;
+        }
+        else if (!continuePanelActive)
+        {
+            canvas.GetComponent<GraphicRaycaster>().enabled = false;
         }
     }
 
