@@ -39,7 +39,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6776580744776322699}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b61abf3d1995f141adef010ef0f46e4, type: 3}
   m_Name: 
@@ -5464,7 +5464,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: -2
+      scalar: -1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -5604,7 +5604,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 4
+      value: 5.58
       mode: 0
       spread: 0
       speed:
@@ -10278,7 +10278,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: -5
+      scalar: -3
       minScalar: 0
       maxCurve:
         serializedVersion: 2
