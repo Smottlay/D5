@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 7495274751704439068}
   - component: {fileID: 6893686365142324921}
   - component: {fileID: 8669354998566740595}
-  - component: {fileID: 9028959279332525604}
   m_Layer: 0
-  m_Name: gun soldier
+  m_Name: Gun Soldier With Muzzle Flash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,20 +80,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &9028959279332525604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7156008703135335334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b61abf3d1995f141adef010ef0f46e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particleSystemies:
-  - {fileID: 9028959281241744900}
 --- !u!1 &9028959279262632120
 GameObject:
   m_ObjectHideFlags: 0
