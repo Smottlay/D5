@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 455054008700568946}
   - component: {fileID: 455054008700568947}
   - component: {fileID: 1906420184}
+  - component: {fileID: 386024925760629496}
   m_Layer: 0
   m_Name: Slow Tower Variant
   m_TagString: slowTower
@@ -187,6 +188,102 @@ MonoBehaviour:
   roadPos: {x: 0, y: 0, z: 0}
   road: {fileID: 0}
   nearestRoad: {fileID: 0}
+--- !u!82 &386024925760629496
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455054008700568944}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: dc3f786257ca2c94eabb1d4c4fae7ccb, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &455054008976828700
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,6 +295,7 @@ GameObject:
   - component: {fileID: 455054008976828703}
   - component: {fileID: 455054008976828697}
   - component: {fileID: 455054008976828702}
+  - component: {fileID: 1254981629}
   m_Layer: 0
   m_Name: TowerBase
   m_TagString: Untagged
@@ -215,7 +313,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 3969390003941330878}
   m_Father: {fileID: 455054008700568946}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -266,6 +365,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1254981629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455054008976828700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c9e5b0bd25f6514481857f85aa9d66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placingEffect: {fileID: 1189674319151496105}
 --- !u!1 &455054009101499034
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,3 +473,84 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roadPos: {x: 0, y: 0, z: 0}
   road: {fileID: 0}
+--- !u!1001 &1582244539
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 455054008976828703}
+    m_Modifications:
+    - target: {fileID: 2174419860006742577, guid: 2570bc8370ec2454592bbb8707fb8be6,
+        type: 3}
+      propertyPath: m_Name
+      value: Tower Land Gray Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3969390005312810245, guid: 2570bc8370ec2454592bbb8707fb8be6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 3969390005312810245, guid: 2570bc8370ec2454592bbb8707fb8be6,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 3969390005312810245, guid: 2570bc8370ec2454592bbb8707fb8be6,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.241
+      objectReference: {fileID: 0}
+    - target: {fileID: 3969390005312810245, guid: 2570bc8370ec2454592bbb8707fb8be6,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3969390005312810245, guid: 2570bc8370ec2454592bbb8707fb8be6,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3969390005312810245, guid: 2570bc8370ec2454592bbb8707fb8be6,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3969390005312810245, guid: 2570bc8370ec2454592bbb8707fb8be6,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3969390005312810245, guid: 2570bc8370ec2454592bbb8707fb8be6,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3969390005312810245, guid: 2570bc8370ec2454592bbb8707fb8be6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3969390005312810245, guid: 2570bc8370ec2454592bbb8707fb8be6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3969390005312810245, guid: 2570bc8370ec2454592bbb8707fb8be6,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2570bc8370ec2454592bbb8707fb8be6, type: 3}
+--- !u!4 &3969390003941330878 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3969390005312810245, guid: 2570bc8370ec2454592bbb8707fb8be6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1582244539}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1189674319151496105 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1189674317837949202, guid: 2570bc8370ec2454592bbb8707fb8be6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1582244539}
+  m_PrefabAsset: {fileID: 0}

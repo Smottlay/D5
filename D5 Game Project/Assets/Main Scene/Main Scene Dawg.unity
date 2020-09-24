@@ -3568,7 +3568,7 @@ PrefabInstance:
     - target: {fileID: 4009703535639001779, guid: ee59db76a0cc6cc4ca309dcfba7a273f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4009703535639001779, guid: ee59db76a0cc6cc4ca309dcfba7a273f,
         type: 3}
@@ -8959,7 +8959,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 66.01, y: 83.64001, z: 195.247}
 --- !u!1001 &707368893
 PrefabInstance:
@@ -21659,14 +21659,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30e8460f491930446beb4b350dbd1048, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rawDamageTower: {fileID: 537855898215397825, guid: 8cc456ab7151e72499304a96d8753b1f,
+  rawDamageTower: {fileID: 2968795203144560846, guid: 2789afc5e6227eb4fbf88e258c9e86cf,
     type: 3}
   splashTower: {fileID: 1474309455099426496, guid: d140e56df865ab04b90d53619942bd81,
     type: 3}
   slowTower: {fileID: 455054008700568944, guid: f52ed55f61be8e842828072a67f8c7d7,
     type: 3}
   bunker: {fileID: 2224047353701688502, guid: a63c88c572af278478f47e08eb551050, type: 3}
-  miningTower: {fileID: 6935833132031034867, guid: 9ee76afa601da4741bd8fd32051037e5,
+  miningTower: {fileID: 3356374379207804587, guid: ecee90a325a47db41bc0066ba6fffedf,
     type: 3}
   shop: {fileID: 1261348912}
 --- !u!1 &1595175553

@@ -9,6 +9,7 @@ public class Drill : MonoBehaviour
     public float goldAmount;
 
     public GameObject shop;
+    public ParticleSystem drill;
     public void Start()
     {
         shop = GameObject.FindGameObjectWithTag("shop");
@@ -19,6 +20,8 @@ public class Drill : MonoBehaviour
         goldCountdown -= Time.deltaTime;
         if(goldCountdown <= 0)
         {
+            drill.Play();
+
             shop.GetComponent<Shop>().addGold();
             goldCountdown = goldTimer;
         }

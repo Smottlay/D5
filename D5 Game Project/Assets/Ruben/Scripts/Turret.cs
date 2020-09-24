@@ -8,6 +8,8 @@ public class Turret : MonoBehaviour
     public GameObject bullet;
     public GameObject turretRing;
 
+    public ParticleSystem muzzleFlash;
+
     public Transform enemy;
     public float viewRange;
     private string enemyTag = "enemy";
@@ -77,6 +79,8 @@ public class Turret : MonoBehaviour
 
     public void Shoot()
     {
+        muzzleFlash.Play();
+
         GameObject tempBullet;
         tempBullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation) as GameObject;
 
