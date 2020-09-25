@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public CanvasGroup settings;
-    public GameObject settingsRim;
+    //public CanvasGroup settings;
+    //public GameObject settingsRim;
+
+    public GameObject settings;
 
     public void StartGame()
     {
@@ -15,9 +17,12 @@ public class MainMenu : MonoBehaviour
 
     public void Settings()
     {
-        settings.alpha = 1f;
-        settings.blocksRaycasts = true;
-        settingsRim.SetActive(true);
+        settings.SetActive(true);
+    }
+
+    public void BackToMainMenu()
+    {
+        settings.SetActive(false);
     }
 
     public void DevMode()
