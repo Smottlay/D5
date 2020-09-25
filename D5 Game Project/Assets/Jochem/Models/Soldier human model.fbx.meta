@@ -1,8 +1,17 @@
 fileFormatVersion: 2
-guid: 448170a24a8b0954992895f0413c472a
+guid: 84993daf64f3b0a49a97fc0504ef2a1e
 ModelImporter:
   serializedVersion: 19301
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -2970487174741199048
+    second: basic humanoid rig.001|Action
+  - first:
+      74: 6728136625468125211
+    second: basic humanoid rig.001|attack
+  - first:
+      74: 7694646781726551508
+    second: basic humanoid rig.001|idle
   externalObjects: {}
   materials:
     materialImportMode: 1
