@@ -38,7 +38,7 @@ public class PathFinding : MonoBehaviour
     {
         if(waypointIndex >= Waypoints.points.Length - 1)
         {
-            gameObject.GetComponent<Enemy>().TargetReached();
+            gameObject.GetComponent<Enemy>().AttackGate();
             return;
         }
 

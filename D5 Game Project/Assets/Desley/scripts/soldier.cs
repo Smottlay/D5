@@ -66,6 +66,7 @@ public class Soldier : MonoBehaviour
 
     void Attack()
     {
+        target.GetComponent<Animator>().SetBool("gettingAttacked", true);
         target.GetComponent<Enemy>().health -= attackDamage;
     }
 

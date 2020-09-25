@@ -17,7 +17,6 @@ public class PlayerHealth : MonoBehaviour
     public bool endPanelActive;
     public int health;
     public bool alive;
-    public bool upgrading;
 
     // Start is called before the first frame update
     void Start()

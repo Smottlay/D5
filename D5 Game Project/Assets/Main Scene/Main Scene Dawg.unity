@@ -6411,7 +6411,7 @@ MonoBehaviour:
   canSpawn: 0
   spawnRandomizer: 0
   normal: {fileID: 1779808116918377571, guid: c7205a85b213e5a42aa973b03dec9c9d, type: 3}
-  speed: {fileID: 6591741999402220071, guid: ab155397225b0c84485470bb49e26e39, type: 3}
+  speed: {fileID: 324807994392892879, guid: 17ee12ea53f824f4291fab0f5b750953, type: 3}
   tank: {fileID: 4207473739688313522, guid: d19ce2c177b983747a0c22efd216f888, type: 3}
   newEndlessWave: 0
   endlessMode: 0
@@ -19089,7 +19089,7 @@ PrefabInstance:
     - target: {fileID: 9036975020126762838, guid: ca316d3ea282f4f41824fc13559cc4b4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 78.88
+      value: 78.59
       objectReference: {fileID: 0}
     - target: {fileID: 9036975020126762838, guid: ca316d3ea282f4f41824fc13559cc4b4,
         type: 3}
@@ -30030,5 +30030,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1407801912, guid: d0b5581f3160db04391f845dcea53af9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d0b5581f3160db04391f845dcea53af9, type: 3}
