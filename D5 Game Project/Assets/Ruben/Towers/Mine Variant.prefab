@@ -125,8 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9b3d7a8415de7e4585a2477843b72d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  splashRadius: 10
-  damageAmount: 2
+  splashRadius: 5
+  damageAmount: 10
   kinematicCountdown: 0
   kinematicOffCountdown: 0
   spawnPointID: 0

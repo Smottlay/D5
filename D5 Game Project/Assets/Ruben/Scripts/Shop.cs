@@ -13,6 +13,9 @@ public class Shop : MonoBehaviour
     public GameObject refund;
 
     public float gold;
+    public float tankGold;
+    public float normalGold;
+    public float speedGold;
     public float addToGold;
 
     public float rawDamageTowerCost;
@@ -36,6 +39,8 @@ public class Shop : MonoBehaviour
     public GameObject drillInfo;
 
     BuildManager buildManager;
+
+    public GameObject deadEnemy;
 
     private void Start()
     {
@@ -175,7 +180,18 @@ public class Shop : MonoBehaviour
 
     public void addGold()
     {
-        gold += addToGold;
+        if(deadEnemy.GetComponent<Enemy>().finishDamage == 5)
+        {
+            gold += tankGold;
+        }
+        if (deadEnemy.GetComponent<Enemy>().finishDamage == 3)
+        {
+            gold += normalGold;
+        }
+        if (deadEnemy.GetComponent<Enemy>().finishDamage == 2)
+        {
+            gold += speedGold;
+        }
     }
 
     public void refundTower()
