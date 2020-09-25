@@ -24,6 +24,8 @@ public class Enemy : MonoBehaviour
     public float cripleCountdown;
     public int cripleSpeed;
 
+    public float damageCountdown;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,7 @@ public class Enemy : MonoBehaviour
         transform.position = GameObject.FindGameObjectWithTag("spawner").transform.position;
         attackable = true;
         colider = gameObject.GetComponent<BoxCollider>();
+        damageCountdown = 1.25f;
     }
 
     // Update is called once per frame
@@ -76,13 +79,19 @@ public class Enemy : MonoBehaviour
                 mineDetecion = true;
             }
         }
+
+        else if (damageCountdown <= 0f)
+        {
+            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PlayerHealth>().health -= finishDamage;
+            damageCountdown = 1.25f;
+        }
     }
 
-    public void TargetReached()
+    public void AttackGate()
     {
-        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PlayerHealth>().health -= finishDamage;
-        GameObject.FindGameObjectWithTag("spawner").GetComponent<Spawn>().destroyedCounter++;
-        Destroy(this.gameObject);
+        gameObject.GetComponent<PathFinding>().speed = 0;
+        gameObject.GetComponent<Animator>().SetBool("Attack", true);
+        damageCountdown -= Time.deltaTime;
     }
 
     public void RawDamage(int damageAmount)

@@ -357,9 +357,10 @@ MonoBehaviour:
   healthBarVisible: 0
   mineExplosion: 0
   mineDetecion: 0
-  cripleTimer: 0
-  cripleCountdown: 0
-  cripleSpeed: 0
+  cripleTimer: 10
+  cripleCountdown: 10
+  cripleSpeed: 1
+  damageCountdown: 0
 --- !u!1 &5777192183444969164
 GameObject:
   m_ObjectHideFlags: 0

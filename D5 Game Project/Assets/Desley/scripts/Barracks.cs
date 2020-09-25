@@ -19,14 +19,9 @@ public class Barracks : MonoBehaviour
     public Transform[] spawnPoints;
     public bool firstSpawn;
 
-    //public GameObject canvas;
-    //public GameObject upgradeButton;
-    //public Text upgradeText;
-
     void Start()
     {
         cam = GameObject.FindGameObjectWithTag("MainCamera");
-        //upgradeButton.SetActive(false);
         road = null;
         firstSpawn = false;
         click = true;
@@ -50,16 +45,6 @@ public class Barracks : MonoBehaviour
             soldierCount++;
             firstSpawn = true;
         }
-
-        if(countdown <= 0f)
-        {
-            countdown = 2f;
-            click = true;
-        }
-        if(countdown <= 1.5f)
-        {
-            countdown -= Time.deltaTime;
-        }
     }
 
     public void Spawn()
@@ -68,15 +53,6 @@ public class Barracks : MonoBehaviour
         {
             Instantiate(soldier, spawnPoints[soldierCount].transform);
             soldierCount++;
-        }
-        else if (click)
-        {
-            click = false;
-            //upgradeButton.SetActive(true);
-            //upgradeText.text = ("Max Reached");
-            //upgradeText.color = Color.red;
-            countdown = 1.5f;
-
         }
     }
 }
