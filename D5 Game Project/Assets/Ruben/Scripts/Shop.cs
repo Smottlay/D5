@@ -38,6 +38,12 @@ public class Shop : MonoBehaviour
     public GameObject barracksInfo;
     public GameObject drillInfo;
 
+    public TMP_Text damageGold;
+    public TMP_Text splashGold;
+    public TMP_Text slowGold;
+    public TMP_Text barracksGold;
+    public TMP_Text drillGold;
+
     BuildManager buildManager;
 
     public GameObject deadEnemy;
@@ -50,6 +56,11 @@ public class Shop : MonoBehaviour
     public void Update()
     {
         mineralsDisplay.text = gold.ToString();
+        damageGold.text = rawDamageTowerCost.ToString();
+        splashGold.text = splashTowerCost.ToString();
+        slowGold.text = mineLayerCost.ToString();
+        barracksGold.text = barracksCost.ToString();
+        drillGold.text = drillCost.ToString();
 
         if (resetTowers == true)
         {

@@ -21,6 +21,8 @@ TagManager:
   - DoorExplosion
   - ShowOnPaused
   - ShowOnSettings
+  - towercosts
+  - towerCosts
   layers:
   - Default
   - TransparentFX
