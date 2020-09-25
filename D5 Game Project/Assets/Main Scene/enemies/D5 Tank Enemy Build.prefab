@@ -349,9 +349,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attacker: {fileID: 0}
   healthBar: {fileID: 2653635171777767250}
-  maxHealth: 100
+  maxHealth: 400
   health: 0
-  finishDamage: 20
+  finishDamage: 5
   coinReward: 0
   attackable: 0
   healthBarVisible: 0

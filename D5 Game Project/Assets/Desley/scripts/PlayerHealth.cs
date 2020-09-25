@@ -12,7 +12,6 @@ public class PlayerHealth : MonoBehaviour
     GameObject particleObject;
     public GameObject wholeGate;
     public GameObject brokenGate;
-
     public bool continuePanelActive;
     public bool endPanelActive;
     public int health;
@@ -70,6 +69,6 @@ public void Restart()
 
     public void MainMenu()
     {
-
+        SceneManager.LoadScene(0);
     }
 }

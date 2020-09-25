@@ -27,7 +27,7 @@ public class MineLayer : MonoBehaviour
     {
 
         //roadTransform = road.GetComponent<Transform>();
-
+        maxMines = Mathf.Infinity;
     }
 
     void Update()
@@ -64,7 +64,6 @@ public class MineLayer : MonoBehaviour
                 {
                     targetPos = mineSpawnPoint.transform.position;
                     mineAmount += 1;
-                    print("this road");
                 }
             }
         }

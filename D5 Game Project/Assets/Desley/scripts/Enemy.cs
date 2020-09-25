@@ -43,6 +43,7 @@ public class Enemy : MonoBehaviour
     {
         if(health <= 0 && attacker != null)
         {
+            GameObject.FindGameObjectWithTag("shop").GetComponent<Shop>().deadEnemy = gameObject;
             GameObject.FindGameObjectWithTag("shop").GetComponent<Shop>().addGold();
             GameObject.FindGameObjectWithTag("spawner").GetComponent<Spawn>().destroyedCounter++;
             attacker.gameObject.GetComponent<Soldier>().searching = true;
@@ -51,6 +52,7 @@ public class Enemy : MonoBehaviour
         }
         else if(health <= 0 && attacker == null)
         {
+            GameObject.FindGameObjectWithTag("shop").GetComponent<Shop>().deadEnemy = gameObject;
             GameObject.FindGameObjectWithTag("shop").GetComponent<Shop>().addGold();
             GameObject.FindGameObjectWithTag("spawner").GetComponent<Spawn>().destroyedCounter++;
             Destroy(this.gameObject);

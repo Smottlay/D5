@@ -7,10 +7,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 400166188914554313, guid: 7de3f0077235a65439fdfe3e96e67f36,
+        type: 3}
+      propertyPath: attackDamage
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8143678773172594307, guid: 7de3f0077235a65439fdfe3e96e67f36,
         type: 3}
       propertyPath: m_Name
-      value: Soldier
+      value: Soldier Build
       objectReference: {fileID: 0}
     - target: {fileID: 8143678773172594319, guid: 7de3f0077235a65439fdfe3e96e67f36,
         type: 3}

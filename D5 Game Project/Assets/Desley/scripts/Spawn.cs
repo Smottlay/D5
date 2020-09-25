@@ -9,6 +9,8 @@ public class Spawn : MonoBehaviour
     public int destroyedCounter;
 
     public int waveCounter;
+    public int extraHealth;
+    public bool giveExtraHealth;
     public float waveCountdown;
     public int regulationRounds;
 
@@ -37,6 +39,7 @@ public class Spawn : MonoBehaviour
         continuePanel.SetActive(false);
         endlessMode = false;
         newEndlessWave = false;
+        giveExtraHealth = true;
     }
 
     // Update is called once per frame
@@ -77,6 +80,39 @@ public class Spawn : MonoBehaviour
             waveCounter++;
             WaveCountdown();
         }
+
+        if(waveCounter == 1)
+        {
+            tank.GetComponent<Enemy>().maxHealth = 400;
+            normal.GetComponent<Enemy>().maxHealth = 200;
+            speed.GetComponent<Enemy>().maxHealth = 100;
+        }
+
+        if(!giveExtraHealth)
+        {
+            giveExtraHealth = true;
+            if (waveCounter < 4)
+            {
+                normal.GetComponent<Enemy>().maxHealth += extraHealth;
+            }
+            else if (waveCounter < 7)
+            {
+                normal.GetComponent<Enemy>().maxHealth += extraHealth;
+                speed.GetComponent<Enemy>().maxHealth += extraHealth;
+            }
+            else if (waveCounter < 10)
+            {
+                normal.GetComponent<Enemy>().maxHealth += extraHealth;
+                speed.GetComponent<Enemy>().maxHealth += extraHealth;
+                tank.GetComponent<Enemy>().maxHealth += extraHealth;
+            }
+            else if(waveCounter >= 10)
+            {
+                normal.GetComponent<Enemy>().maxHealth += extraHealth;
+                speed.GetComponent<Enemy>().maxHealth += extraHealth;
+                tank.GetComponent<Enemy>().maxHealth += extraHealth;
+            }
+        }
     }
 
     void WaveCountdown()
@@ -95,6 +131,7 @@ public class Spawn : MonoBehaviour
         else if (instantiated == maxInstantiate[waveCounter - 1])
         {
             instantiated = 0;
+            giveExtraHealth = false;
         }
     }
     void StartRandomizing()
