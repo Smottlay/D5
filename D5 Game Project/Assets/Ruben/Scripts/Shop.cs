@@ -191,17 +191,24 @@ public class Shop : MonoBehaviour
 
     public void addGold()
     {
-        if(deadEnemy.GetComponent<Enemy>().finishDamage == 5)
+        if(deadEnemy == null)
+        {
+            return;
+        }
+        else if(deadEnemy.GetComponent<Enemy>().finishDamage == 5)
         {
             gold += tankGold;
+            deadEnemy = null;
         }
-        if (deadEnemy.GetComponent<Enemy>().finishDamage == 3)
+        else if (deadEnemy.GetComponent<Enemy>().finishDamage == 3)
         {
             gold += normalGold;
+            deadEnemy = null;
         }
-        if (deadEnemy.GetComponent<Enemy>().finishDamage == 2)
+        else if (deadEnemy.GetComponent<Enemy>().finishDamage == 2)
         {
             gold += speedGold;
+            deadEnemy = null;
         }
     }
 

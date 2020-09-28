@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PathFinding : MonoBehaviour
 {
-    public int speed;
-    public int normalSpeed;
+    public float speed;
+    public float normalSpeed;
     public float rotationSpeed;
 
     private Transform target;

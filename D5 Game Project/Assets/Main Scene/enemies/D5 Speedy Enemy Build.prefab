@@ -105,7 +105,7 @@ MonoBehaviour:
   mineDetecion: 0
   cripleTimer: 10
   cripleCountdown: 10
-  cripleSpeed: 2
+  cripleSpeed: 1.5
   damageCountdown: 0
 --- !u!1 &777417996779796548
 GameObject:

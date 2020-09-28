@@ -1389,6 +1389,9 @@ MonoBehaviour:
   mineralsDisplay: {fileID: 20564846}
   refund: {fileID: 880620180}
   gold: 100
+  tankGold: 0
+  normalGold: 0
+  speedGold: 0
   addToGold: 2
   rawDamageTowerCost: 10
   splashTowerCost: 20
@@ -1401,6 +1404,12 @@ MonoBehaviour:
   slowTowerInfo: {fileID: 1466242118}
   barracksInfo: {fileID: 543927120}
   drillInfo: {fileID: 115873751}
+  damageGold: {fileID: 0}
+  splashGold: {fileID: 0}
+  slowGold: {fileID: 0}
+  barracksGold: {fileID: 0}
+  drillGold: {fileID: 0}
+  deadEnemy: {fileID: 0}
 --- !u!1001 &199556770
 PrefabInstance:
   m_ObjectHideFlags: 0

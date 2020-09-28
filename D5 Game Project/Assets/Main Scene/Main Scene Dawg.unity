@@ -6453,11 +6453,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b30a0e5a6108f18488c270d68f5b23f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxInstantiate: 0300000004000000050000000300000004000000050000000300000004000000050000000a0000000d000000100000001300000016000000190000001c0000001f000000220000002500000028000000
+  maxInstantiate: 0300000004000000050000000500000006000000070000000700000008000000090000000a0000000d000000100000001300000016000000190000001c0000001f000000220000002500000028000000
   instantiated: 0
   destroyedCounter: 0
   waveCounter: 0
-  extraHealth: 10
+  extraHealth: 5
   giveExtraHealth: 0
   waveCountdown: 0
   regulationRounds: 20
@@ -17159,9 +17159,9 @@ MonoBehaviour:
   mineralsDisplay: {fileID: 1170812774}
   refund: {fileID: 589369929}
   gold: 50
-  tankGold: 5
-  normalGold: 3
-  speedGold: 2
+  tankGold: 3
+  normalGold: 2
+  speedGold: 1
   addToGold: 5
   rawDamageTowerCost: 25
   splashTowerCost: 60
@@ -25382,7 +25382,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Refund
+  m_text: Cancel
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9a1df615c4de3754bbfc7a5d7688418a, type: 2}
   m_sharedMaterial: {fileID: -5325009618895169745, guid: 9a1df615c4de3754bbfc7a5d7688418a,
@@ -30087,7 +30087,7 @@ PrefabInstance:
     - target: {fileID: 6277268301323266349, guid: d0b5581f3160db04391f845dcea53af9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.59
+      value: 6.1
       objectReference: {fileID: 0}
     - target: {fileID: 6277268301323266349, guid: d0b5581f3160db04391f845dcea53af9,
         type: 3}

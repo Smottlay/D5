@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
 
     public float cripleTimer;
     public float cripleCountdown;
-    public int cripleSpeed;
+    public float cripleSpeed;
 
     public float damageCountdown;
 
