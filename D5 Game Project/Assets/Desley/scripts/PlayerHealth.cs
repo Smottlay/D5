@@ -71,4 +71,9 @@ public void Restart()
     {
         SceneManager.LoadScene(0);
     }
+
+    public void unlimitedHealth()
+    {
+        health = int.MaxValue;
+    }
 }

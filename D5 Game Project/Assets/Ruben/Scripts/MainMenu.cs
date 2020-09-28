@@ -9,6 +9,8 @@ public class MainMenu : MonoBehaviour
     //public GameObject settingsRim;
 
     public GameObject settings;
+    public GameObject devMenu;
+    static bool devModeOn;
 
     public void StartGame()
     {
@@ -27,11 +29,29 @@ public class MainMenu : MonoBehaviour
 
     public void DevMode()
     {
-        //SceneManager.LoadScene("SceneName");
+        devModeOn = true;
+        SceneManager.LoadScene("Main Scene/Main Scene Dawg");
     }
 
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void Update()
+    {
+        if (devModeOn == true)
+        {
+            devMenu.SetActive(true);
+        }
+        if (devModeOn == false)
+        {
+            devMenu.SetActive(false);
+        }
+    }
+
+    public void disableDevMode()
+    {
+        devModeOn = false;
     }
 }

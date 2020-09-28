@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ButtonManager : MonoBehaviour
 {
+    public GameObject gameMaster;
+
     public void RestartButton(bool button)
     {
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PlayerHealth>().Restart();
@@ -11,6 +13,7 @@ public class ButtonManager : MonoBehaviour
 
     public void MenuButton(bool button)
     {
+        gameMaster.GetComponent<MainMenu>().disableDevMode();
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PlayerHealth>().MainMenu();
     }
 
