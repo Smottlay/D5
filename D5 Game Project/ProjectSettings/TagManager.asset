@@ -23,6 +23,9 @@ TagManager:
   - ShowOnSettings
   - towercosts
   - towerCosts
+  - daytime
+  - nighttime
+  - deathsound
   layers:
   - Default
   - TransparentFX

@@ -145,7 +145,7 @@ MonoBehaviour:
   muzzleFlash: {fileID: 2957647324181584212}
   gunFire: {fileID: 1518616334}
   enemy: {fileID: 0}
-  viewRange: 10
+  viewRange: 11
   bulletSpeed: 4000
   bulletrate: 3
 --- !u!82 &583465605

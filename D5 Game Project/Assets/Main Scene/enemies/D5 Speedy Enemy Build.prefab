@@ -11,8 +11,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.42867383, y: 0.6840911, z: 1.7186502}
-  m_Center: {x: 0.002765417, y: 0.3159597, z: -0.09271145}
+  m_Size: {x: 0.9610683, y: 1.2534132, z: 1.9822423}
+  m_Center: {x: 0.0062104464, y: 0.4398737, z: -0.06803417}
 --- !u!64 &-1141088717242681217
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -78,8 +78,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a709708493c7c4545aac6680d0e5d697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  normalSpeed: 3
+  speed: 4
+  normalSpeed: 4
   rotationSpeed: 5
 --- !u!114 &-1388414003782925878
 MonoBehaviour:
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attacker: {fileID: 0}
   healthBar: {fileID: 777417996779796548}
-  maxHealth: 100
+  maxHealth: 105
   health: 0
   finishDamage: 2
   coinReward: 0
@@ -554,17 +554,17 @@ PrefabInstance:
     - target: {fileID: 5254590501538560747, guid: f50c581768a061843b2e1c3f2dfd2d25,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -73.66
+      value: -5.44
       objectReference: {fileID: 0}
     - target: {fileID: 5254590501538560747, guid: f50c581768a061843b2e1c3f2dfd2d25,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5
+      value: 0.27
       objectReference: {fileID: 0}
     - target: {fileID: 5254590501538560747, guid: f50c581768a061843b2e1c3f2dfd2d25,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -30.62
+      value: 3.6336765
       objectReference: {fileID: 0}
     - target: {fileID: 5254590501538560747, guid: f50c581768a061843b2e1c3f2dfd2d25,
         type: 3}
