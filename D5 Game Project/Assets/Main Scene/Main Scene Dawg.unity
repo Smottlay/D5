@@ -16323,7 +16323,7 @@ PrefabInstance:
     - target: {fileID: 4466669644631684818, guid: daf35082394f0b94c9ed70e09af6eea9,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Restart
+      value: Resume
       objectReference: {fileID: 0}
     - target: {fileID: 4466669645267464118, guid: daf35082394f0b94c9ed70e09af6eea9,
         type: 3}
