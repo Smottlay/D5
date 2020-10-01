@@ -12,6 +12,11 @@ public class PlayerMovement : MonoBehaviour
     public float minY;
     public float maxY;
 
+    private void Start()
+    {
+        speed = 10;
+    }
+
     void Update()
     {
         Vector3 moveDir = transform.position;
