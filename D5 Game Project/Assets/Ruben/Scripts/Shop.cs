@@ -17,6 +17,7 @@ public class Shop : MonoBehaviour
     public float normalGold;
     public float speedGold;
     public float addToGold;
+    public float addToGoldDrill;
 
     public float rawDamageTowerCost;
     public float splashTowerCost;
@@ -210,6 +211,10 @@ public class Shop : MonoBehaviour
             gold += speedGold;
             deadEnemy = null;
         }
+    }
+    public void addGoldDrill()
+    {
+        gold += addToGoldDrill;
     }
 
     public void refundTower()

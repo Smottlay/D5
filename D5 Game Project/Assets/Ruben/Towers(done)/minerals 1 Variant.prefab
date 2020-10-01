@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!64 &8216288259015323728
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4096710748846933859}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2534964839176971238, guid: 0bf4700d0ba88b146a298f7bd18b5fb9, type: 3}
+--- !u!114 &1713570322093712432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4096710748846933859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 481fa975bc33df242999bc7b3af0985b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refund: {fileID: 0}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
+  posOffSet: {x: 2, y: 0, z: -3}
+--- !u!1001 &1539841281759411944
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2796521414264087345, guid: a91aabfdc71ac2e419060ff0140fcd4e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.0127873
+      objectReference: {fileID: 0}
+    - target: {fileID: 2796521414264087345, guid: a91aabfdc71ac2e419060ff0140fcd4e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.4882665
+      objectReference: {fileID: 0}
+    - target: {fileID: 2796521414264087345, guid: a91aabfdc71ac2e419060ff0140fcd4e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.854488
+      objectReference: {fileID: 0}
+    - target: {fileID: 2796521414264087345, guid: a91aabfdc71ac2e419060ff0140fcd4e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2796521414264087345, guid: a91aabfdc71ac2e419060ff0140fcd4e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2796521414264087345, guid: a91aabfdc71ac2e419060ff0140fcd4e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2796521414264087345, guid: a91aabfdc71ac2e419060ff0140fcd4e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2796521414264087345, guid: a91aabfdc71ac2e419060ff0140fcd4e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2796521414264087345, guid: a91aabfdc71ac2e419060ff0140fcd4e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2796521414264087345, guid: a91aabfdc71ac2e419060ff0140fcd4e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2796521414264087345, guid: a91aabfdc71ac2e419060ff0140fcd4e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280007855864527243, guid: a91aabfdc71ac2e419060ff0140fcd4e,
+        type: 3}
+      propertyPath: m_Name
+      value: minerals 1 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3280007855864527243, guid: a91aabfdc71ac2e419060ff0140fcd4e,
+        type: 3}
+      propertyPath: m_TagString
+      value: minerals
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a91aabfdc71ac2e419060ff0140fcd4e, type: 3}
+--- !u!1 &4096710748846933859 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3280007855864527243, guid: a91aabfdc71ac2e419060ff0140fcd4e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1539841281759411944}
+  m_PrefabAsset: {fileID: 0}

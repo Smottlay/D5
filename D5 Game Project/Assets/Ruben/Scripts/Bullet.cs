@@ -13,5 +13,15 @@ public class Bullet : MonoBehaviour
             collision.gameObject.GetComponent<Enemy>().RawDamage(damageAmount);
             Destroy(gameObject);
         }
+
+        if(collision.gameObject.tag == "road")
+        {
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag == "terrain")
+        {
+            Destroy(gameObject);
+        }
     }
 }

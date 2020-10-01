@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed;
+    public static float speed;
     public float mouseDetection;
 
     public Vector2 horLimit;
 
     public float minY;
     public float maxY;
+
+    private void Start()
+    {
+        speed = 10;
+    }
 
     void Update()
     {
@@ -42,5 +47,10 @@ public class PlayerMovement : MonoBehaviour
         moveDir.y = Mathf.Clamp(moveDir.y, minY, maxY);
 
         transform.position = moveDir;
+    }
+
+    public void setSensitivity(float newSpeed)
+    {
+        PlayerMovement.speed = newSpeed;
     }
 }

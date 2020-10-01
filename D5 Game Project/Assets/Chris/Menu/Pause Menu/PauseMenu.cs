@@ -39,25 +39,25 @@ public class PauseMenu : MonoBehaviour
     {
         pause.alpha = 0f;
         pause.blocksRaycasts = false;
-        pauseRim.SetActive(false);
+        //pauseRim.SetActive(false);
     }
     public void showPaused()
     {
         pause.alpha = 1f;
         pause.blocksRaycasts = true;
-        pauseRim.SetActive(true);
+        //pauseRim.SetActive(true);
     }
     public void hideSettings()
     {
         settings.alpha = 0f;
         settings.blocksRaycasts = false;
-        settingsRim.SetActive(false);
+        //settingsRim.SetActive(false);
     }
     public void showSettings()
     {
         settings.alpha = 1f;
         settings.blocksRaycasts = true;
-        settingsRim.SetActive(true);
+        //settingsRim.SetActive(true);
     }
    
     public void Quit()
@@ -72,7 +72,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("Main Scene/Main Scene Dawg");
     }
     public void Resume()
     {
