@@ -22,7 +22,7 @@ public class Drill : MonoBehaviour
         {
             drill.Play();
 
-            shop.GetComponent<Shop>().addGold();
+            shop.GetComponent<Shop>().addGoldDrill();
             goldCountdown = goldTimer;
         }
     }

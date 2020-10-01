@@ -14,6 +14,16 @@ public class BulletSplash : MonoBehaviour
         {
             splash();
         }
+
+        if(collision.gameObject.tag == "road")
+        {
+            splash();
+        }
+
+        if(collision.gameObject.tag == "terrain")
+        {
+            splash();
+        }
     }
 
     void splash()

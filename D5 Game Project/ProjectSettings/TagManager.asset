@@ -23,6 +23,7 @@ TagManager:
   - ShowOnSettings
   - towercosts
   - towerCosts
+  - terrain
   layers:
   - Default
   - TransparentFX
