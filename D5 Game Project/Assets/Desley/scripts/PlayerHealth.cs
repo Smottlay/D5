@@ -9,9 +9,10 @@ public class PlayerHealth : MonoBehaviour
     public GameObject shopPanel;
     public GameObject canvas;
     public GameObject endPanel;
-    GameObject particleObject;
+    public GameObject particleObject;
     public GameObject wholeGate;
     public GameObject brokenGate;
+
     public bool continuePanelActive;
     public bool endPanelActive;
     public int health;
@@ -44,6 +45,8 @@ public class PlayerHealth : MonoBehaviour
             brokenGate.SetActive(true);
             endPanel.SetActive(true);
             alive = false;
+            gameObject.GetComponent<MusicPlayer>().music[0].Stop();
+            gameObject.GetComponent<MusicPlayer>().music[1].Stop();
             Time.timeScale = 0.25f;
             return;
         }

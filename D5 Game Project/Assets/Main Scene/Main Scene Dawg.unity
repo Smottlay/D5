@@ -33051,10 +33051,6 @@ PrefabInstance:
       propertyPath: brokenGate
       value: 
       objectReference: {fileID: 1258747179}
-    - target: {fileID: 1430783980, guid: d0b5581f3160db04391f845dcea53af9, type: 3}
-      propertyPath: health
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6277268301323266345, guid: d0b5581f3160db04391f845dcea53af9,
         type: 3}
       propertyPath: m_Name
@@ -33115,11 +33111,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6277268301323266350, guid: d0b5581f3160db04391f845dcea53af9,
-        type: 3}
-      propertyPath: speed
-      value: 18
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1407801912, guid: d0b5581f3160db04391f845dcea53af9, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0b5581f3160db04391f845dcea53af9, type: 3}
