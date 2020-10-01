@@ -7197,11 +7197,11 @@ RectTransform:
   m_Father: {fileID: 645556403}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &508536337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21729,7 +21729,7 @@ PrefabInstance:
     - target: {fileID: 3715927175824383449, guid: 7842341e5a2a05448a96dd3ef29c0046,
         type: 3}
       propertyPath: m_RootOrder
-      value: 46
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 3715927175824383449, guid: 7842341e5a2a05448a96dd3ef29c0046,
         type: 3}
@@ -22281,8 +22281,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 21}
-  m_SizeDelta: {x: 619.03796, y: 116.06961}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 619.03796, y: 59.999985}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1447514616
 MonoBehaviour:
@@ -22305,7 +22305,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 85ae89d5c7d91d34aab1378ff665706e, type: 3}
-    m_FontSize: 50
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -23626,8 +23626,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -42}
-  m_SizeDelta: {x: 513.692, y: 96.31723}
+  m_AnchoredPosition: {x: 0, y: -32}
+  m_SizeDelta: {x: 513.692, y: 69.93436}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1547581924
 MonoBehaviour:
@@ -23650,7 +23650,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 85ae89d5c7d91d34aab1378ff665706e, type: 3}
-    m_FontSize: 45
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -30289,7 +30289,7 @@ PrefabInstance:
     - target: {fileID: 3715927175824383449, guid: 7842341e5a2a05448a96dd3ef29c0046,
         type: 3}
       propertyPath: m_RootOrder
-      value: 45
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 3715927175824383449, guid: 7842341e5a2a05448a96dd3ef29c0046,
         type: 3}
@@ -32710,7 +32710,7 @@ PrefabInstance:
     - target: {fileID: 3715927175824383449, guid: 7842341e5a2a05448a96dd3ef29c0046,
         type: 3}
       propertyPath: m_RootOrder
-      value: 47
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 3715927175824383449, guid: 7842341e5a2a05448a96dd3ef29c0046,
         type: 3}

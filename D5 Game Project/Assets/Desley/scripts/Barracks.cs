@@ -27,7 +27,6 @@ public class Barracks : MonoBehaviour
         click = true;
         upgrade = false;
         maxSoldiers = 3;
-        soldierCount = 1;
         countdown = 2f;
     }
 

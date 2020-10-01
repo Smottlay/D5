@@ -45,8 +45,7 @@ public class PlayerHealth : MonoBehaviour
             brokenGate.SetActive(true);
             endPanel.SetActive(true);
             alive = false;
-            gameObject.GetComponent<MusicPlayer>().music[0].Stop();
-            gameObject.GetComponent<MusicPlayer>().music[1].Stop();
+            gameObject.GetComponent<MusicPlayer>().OnDeath();
             Time.timeScale = 0.25f;
             return;
         }

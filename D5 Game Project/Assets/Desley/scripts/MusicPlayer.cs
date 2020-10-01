@@ -21,4 +21,11 @@ public class MusicPlayer : MonoBehaviour
             music[1].Play();
         }
     }
+
+    public void OnDeath()
+    {
+        music[0].Stop();
+        music[1].Stop();
+        music[2].Play();
+    }
 }

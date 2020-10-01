@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  soldier: {fileID: 2285371412216912651, guid: 9f23dee6a0db1544e81b96bd6f30ab9a, type: 3}
+  soldier: {fileID: 1574657593899381097, guid: 4cd4092298f41e443b2cee757da7a8dc, type: 3}
   maxSoldiers: 0
   soldierCount: 0
   countdown: 0
