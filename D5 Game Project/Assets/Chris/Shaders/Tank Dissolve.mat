@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Test Dissolve Material
+  m_Name: Tank Dissolve
   m_Shader: {fileID: -6465566751694194690, guid: 2d3be4426b0631c40a13cc1e7635d249,
     type: 3}
   m_ShaderKeywords: 
@@ -54,7 +54,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_E8AA5266:
-        m_Texture: {fileID: 2800000, guid: 92ee3aee60a56834784c16ab0b09939d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8d9e04e9abb5ab1478a987b325d0f565, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_FCB9A62:
@@ -81,6 +81,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _NormalFromTexture_C0ED21D7_Texture_0:
+        m_Texture: {fileID: 2800000, guid: 92ee3aee60a56834784c16ab0b09939d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _NormalFromTexture_D639AAD2_Texture_0:
         m_Texture: {fileID: 2800000, guid: 92ee3aee60a56834784c16ab0b09939d, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -97,9 +101,33 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_6914A790_Out_0:
+        m_Texture: {fileID: 2800000, guid: 8d9e04e9abb5ab1478a987b325d0f565, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_6D9A18A2_Out_0:
+        m_Texture: {fileID: 2800000, guid: 6bfbd2a0beef3764486af46cfee892ca, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_809ED3B4_Out_0:
+        m_Texture: {fileID: 2800000, guid: 721878ca776fa954ab210042d7616839, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_C7A5E9D2_Out_0:
+        m_Texture: {fileID: 2800000, guid: 1bdbc597af8d4e846ae3792a9c61b7f6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_E02D7CFE_Out_0:
+        m_Texture: {fileID: 2800000, guid: 39d56f22d43afb34bbb37475891d9ae1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_E5E6CE68_Out_0:
+        m_Texture: {fileID: 2800000, guid: 5f957996389d8114c92861ad1d436512, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_17138370: 30
-    - Vector1_A520C114: 0.01
+    - Vector1_17138370: 400
+    - Vector1_A520C114: 0.02
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -124,7 +152,7 @@ Material:
     m_Colors:
     - Color_260A7354: {r: 1, g: 1, b: 1, a: 0}
     - Color_AC305F4A: {r: 0.023153365, g: 0.025186857, b: 0.06662595, a: 0}
-    - Color_BE0521D4: {r: 0, g: 0.7490196, b: 0.7490196, a: 1}
+    - Color_BE0521D4: {r: 0, g: 1, b: 0.9093275, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

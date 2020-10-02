@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    
     public CanvasGroup pause;
     public CanvasGroup settings;
     public GameObject pauseRim;
