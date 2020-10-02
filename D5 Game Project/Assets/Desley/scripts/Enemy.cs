@@ -43,11 +43,11 @@ public class Enemy : MonoBehaviour
     {
         if(health <= 0 && attacker != null)
         {
+            attacker.gameObject.GetComponent<Soldier>().target = null;
+            attacker.gameObject.GetComponent<Soldier>().searching = true;
             GameObject.FindGameObjectWithTag("shop").GetComponent<Shop>().deadEnemy = gameObject;
             GameObject.FindGameObjectWithTag("shop").GetComponent<Shop>().addGold();
             GameObject.FindGameObjectWithTag("spawner").GetComponent<Spawn>().destroyedCounter++;
-            attacker.gameObject.GetComponent<Soldier>().searching = true;
-            attacker.gameObject.GetComponent<Soldier>().target = null;
             Destroy(this.gameObject);
         }
         else if(health <= 0 && attacker == null)

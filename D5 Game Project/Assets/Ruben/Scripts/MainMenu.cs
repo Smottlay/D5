@@ -15,8 +15,6 @@ public class MainMenu : MonoBehaviour
 
     public void Start()
     {
-        print(devModeOn);
-
         //devModeOn = false;
         //DisableDevMode();
         spawner = null;

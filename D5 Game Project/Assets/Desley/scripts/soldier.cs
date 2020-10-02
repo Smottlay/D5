@@ -44,7 +44,8 @@ public class Soldier : MonoBehaviour
     {
        if (target == null)
        {
-           return;
+            gameObject.GetComponent<Animator>().SetBool("Attack", false);
+            return;
        }
 
         Vector3 dir = target.position - transform.position;
@@ -53,7 +54,6 @@ public class Soldier : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
 
         target.GetComponent<PathFinding>().speed = 0;
-        //make code to stop the animation
 
         if(attackCountdown <= 0f)
         {
@@ -66,13 +66,14 @@ public class Soldier : MonoBehaviour
 
     void Attack()
     {
+        gameObject.GetComponent<Animator>().SetBool("Attack", true);
         target.GetComponent<Animator>().SetBool("gettingAttacked", true);
         target.GetComponent<Enemy>().health -= attackDamage;
     }
 
-        private void OnDrawGizmosSelected()
-        {
+   private void OnDrawGizmosSelected()
+   { 
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
-         }
+   }
 }
