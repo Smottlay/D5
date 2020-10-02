@@ -17,6 +17,8 @@ public class Mine : MonoBehaviour
     private Vector3 nextPos;
     public GameObject mineLayer;
 
+    public ParticleSystem explosion;
+
     public float speed;
 
     public string roadTag = "road";
@@ -58,6 +60,7 @@ public class Mine : MonoBehaviour
 
     public void Explode()
     {
+
         Collider[] colliders = Physics.OverlapSphere(transform.position, splashRadius);
 
         foreach (Collider nearbyEnemy in colliders)
@@ -67,6 +70,7 @@ public class Mine : MonoBehaviour
 
                 if (nearbyEnemy.GetComponent<Enemy>().mineDetecion == true)
                 {
+                    explosion.Play();
                     mineLayer.GetComponent<MineLayer>().activeSpawnPoints[spawnPointID] = true;
                     nearbyEnemy.GetComponent<Enemy>().MineDamage(damageAmount);
                     Destroy(gameObject);

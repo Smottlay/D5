@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Turret : MonoBehaviour
+public class Turret : TowerUpgrade
 {
     public GameObject bulletSpawner;
     public GameObject bullet;
@@ -13,15 +13,15 @@ public class Turret : MonoBehaviour
 
     public Transform enemy;
     public float viewRange;
+    public float viewRangeUpdate;
     private string enemyTag = "enemy";
 
     public float bulletSpeed;
-    private float bulletReload = 0f;
+    private float bulletReload;
     public float bulletrate;
-
-
-    void Start()
+    public void Start()
     {
+        bulletReload = bulletrate;
         InvokeRepeating("targetToShoot", 0f, 0.5f);
     }
 
@@ -94,5 +94,14 @@ public class Turret : MonoBehaviour
         tempRid.AddForce(transform.forward * bulletSpeed);
 
         Destroy(tempBullet, 3f);
+    }
+
+    public void upgradeRange()
+    {
+        viewRange += viewRangeUpdate;
+    }
+    public void UpgradeDamage()
+    {
+        
     }
 }

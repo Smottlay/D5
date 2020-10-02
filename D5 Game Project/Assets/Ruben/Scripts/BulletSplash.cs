@@ -8,20 +8,25 @@ public class BulletSplash : MonoBehaviour
     public float splashRadius;
     public int damageAmount;
 
+    public ParticleSystem sploosh;
+
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "enemy")
         {
+            sploosh.Play();
             splash();
         }
 
         if(collision.gameObject.tag == "road")
         {
+            sploosh.Play();
             splash();
         }
 
         if(collision.gameObject.tag == "terrain")
         {
+            sploosh.Play();
             splash();
         }
     }

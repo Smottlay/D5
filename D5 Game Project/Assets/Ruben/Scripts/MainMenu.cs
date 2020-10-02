@@ -8,13 +8,25 @@ public class MainMenu : MonoBehaviour
     //public CanvasGroup settings;
     //public GameObject settingsRim;
 
+    public GameObject spawner;
     public GameObject settings;
     public GameObject devMenu;
-    static bool devModeOn;
+    public static bool devModeOn;
+
+    public void Start()
+    {
+        print(devModeOn);
+
+        //devModeOn = false;
+        //DisableDevMode();
+        spawner = null;
+        devMenu.SetActive(false);
+    }
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Main Scene/Main Scene Dawg");
+        devModeOn = false;
+        SceneManager.LoadScene(1);
     }
 
     public void Settings()
@@ -29,8 +41,11 @@ public class MainMenu : MonoBehaviour
 
     public void DevMode()
     {
+
         devModeOn = true;
-        SceneManager.LoadScene("Main Scene/Main Scene Dawg");
+        devMenu.GetComponent<DevMode>().DevModeOn();
+        SceneManager.LoadScene(1);
+
     }
 
     public void QuitGame()
@@ -50,7 +65,12 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-    public void disableDevMode()
+    public void CheckUpdate()
+    {
+
+    }
+
+    public void DisableDevMode()
     {
         devModeOn = false;
     }

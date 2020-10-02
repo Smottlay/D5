@@ -26,6 +26,9 @@ TagManager:
   - daytime
   - nighttime
   - deathsound
+  - terrain
+  - upgradeMenu
+  - devMode
   layers:
   - Default
   - TransparentFX

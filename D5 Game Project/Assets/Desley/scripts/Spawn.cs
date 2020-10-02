@@ -17,6 +17,7 @@ public class Spawn : MonoBehaviour
     public float spawnCountdown;
     public float spawnRate;
     public bool canSpawn;
+    public bool devMode;
 
     public int spawnRandomizer;
 
@@ -33,6 +34,7 @@ public class Spawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        devMode = false;
         spawnRate = 1f;
         waveCountdown = 10;
         waveCounter = 1;
@@ -45,7 +47,7 @@ public class Spawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (waveCounter > regulationRounds && !endlessMode)
+        if (waveCounter > regulationRounds && !endlessMode && !devMode)
         {
             cam.GetComponent<PlayerHealth>().continuePanelActive = true;
             continuePanel.SetActive(true);
@@ -53,20 +55,20 @@ public class Spawn : MonoBehaviour
             return;
         }
 
-        if (endlessMode && newEndlessWave)
+        if (endlessMode && newEndlessWave && !devMode)
         {
             maxInstantiate.Add(maxInstantiate.Count * 2 + extraSpawns);
             newEndlessWave = false;
         }
 
-        if (waveCountdown <= 0)
+        if (waveCountdown <= 0 && !devMode)
         {
             GameObject.FindGameObjectWithTag("timer").GetComponent<WaveDisplay>().newRound = true;
             canSpawn = true;
             waveCountdown = 300;
         }
 
-        if (canSpawn && spawnCountdown <= 0 && instantiated <= maxInstantiate[waveCounter -1])
+        if (canSpawn && spawnCountdown <= 0 && instantiated <= maxInstantiate[waveCounter -1] && !devMode)
         {
             StartRandomizing();
         }
@@ -74,7 +76,7 @@ public class Spawn : MonoBehaviour
         waveCountdown -= Time.deltaTime;
         spawnCountdown -= Time.deltaTime; 
 
-        if(destroyedCounter == maxInstantiate[waveCounter - 1])
+        if(destroyedCounter == maxInstantiate[waveCounter - 1] && !devMode)
         {
             destroyedCounter = 0;
             waveCounter++;
@@ -139,42 +141,40 @@ public class Spawn : MonoBehaviour
         if (waveCounter <= 3 && instantiated < maxInstantiate[waveCounter -1])
         {
             spawnRandomizer = Random.Range(1, 2);
-            StartInstantiating();
+            SpawnNormal();
         }
         else if (waveCounter <= 6 && instantiated < maxInstantiate[waveCounter -1])
         {
             spawnRandomizer = Random.Range(1, 3);
-            StartInstantiating();
+            SpawnSpeed();
         }
         else if (waveCounter > 6 && instantiated < maxInstantiate[waveCounter -1]) 
         {
             spawnRandomizer = Random.Range(1, 4);
-            StartInstantiating();
+            SpawnTank();
         }
     }
 
-    void StartInstantiating()
+
+    public void SpawnSpeed()
     {
-        if(spawnRandomizer == 1 && canSpawn)
-        {
-            Instantiate(normal, gameObject.transform);
-            instantiated++;
-            canSpawn = false;
-            SpawnCountdown();
-        }
-        else if (spawnRandomizer == 2 && canSpawn)
-        {
-            Instantiate(speed, gameObject.transform);
-            instantiated++;
-            canSpawn = false;
-            SpawnCountdown();
-        }
-        else if (spawnRandomizer == 3 && canSpawn)
-        {
-            Instantiate(tank, gameObject.transform);
-            instantiated++;
-            canSpawn = false;
-            SpawnCountdown();
-        }
+        Instantiate(speed, gameObject.transform);
+        instantiated++;
+        canSpawn = false;
+        SpawnCountdown();
+    }
+    public void SpawnNormal()
+    {
+        Instantiate(normal, gameObject.transform);
+        instantiated++;
+        canSpawn = false;
+        SpawnCountdown();
+    }
+    public void SpawnTank()
+    {
+        Instantiate(tank, gameObject.transform);
+        instantiated++;
+        canSpawn = false;
+        SpawnCountdown();
     }
 }

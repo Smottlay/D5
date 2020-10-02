@@ -5,9 +5,17 @@ using UnityEngine.EventSystems;
 
 public class TowerUpgrade : MonoBehaviour
 {
-    private Renderer rend;
+    public Renderer rend;
     public Color hoverColor;
-    public Color startColor;
+    private Color startColor;
+
+    public bool isTurretUpgrade;
+
+    public void Start()
+    {
+        rend = GetComponent<Renderer>();
+        startColor = rend.material.color;
+    }
 
     private void OnMouseEnter()
     {
@@ -16,11 +24,5 @@ public class TowerUpgrade : MonoBehaviour
     private void OnMouseExit()
     {
         rend.material.color = startColor;
-    }
-
-    private void OnMouseDown()
-    {
-        if (EventSystem.current.IsPointerOverGameObject())
-            return;
     }
 }

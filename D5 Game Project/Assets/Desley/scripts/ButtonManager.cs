@@ -13,7 +13,7 @@ public class ButtonManager : MonoBehaviour
 
     public void MenuButton(bool button)
     {
-        gameMaster.GetComponent<MainMenu>().disableDevMode();
+        gameMaster.GetComponent<MainMenu>().DisableDevMode();
         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PlayerHealth>().MainMenu();
     }
 
