@@ -19,27 +19,27 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e2112f1f140d3f24c8f3dc36e93ad083, type: 2}
     - target: {fileID: 700168007, guid: 78767f6e957baeb4f9452a2d9febd9d6, type: 3}
       propertyPath: m_Size.y
-      value: 1.7774646
+      value: 1.291065
       objectReference: {fileID: 0}
     - target: {fileID: 700168007, guid: 78767f6e957baeb4f9452a2d9febd9d6, type: 3}
       propertyPath: m_Size.z
-      value: 2.3234093
+      value: 1.2023655
       objectReference: {fileID: 0}
     - target: {fileID: 700168007, guid: 78767f6e957baeb4f9452a2d9febd9d6, type: 3}
       propertyPath: m_Center.x
-      value: -0.030923486
+      value: 0.004680991
       objectReference: {fileID: 0}
     - target: {fileID: 700168007, guid: 78767f6e957baeb4f9452a2d9febd9d6, type: 3}
       propertyPath: m_Center.y
-      value: 0.7080895
+      value: 0.46488965
       objectReference: {fileID: 0}
     - target: {fileID: 700168007, guid: 78767f6e957baeb4f9452a2d9febd9d6, type: 3}
       propertyPath: m_Center.z
-      value: -0.08248365
+      value: -0.16585545
       objectReference: {fileID: 0}
     - target: {fileID: 700168007, guid: 78767f6e957baeb4f9452a2d9febd9d6, type: 3}
       propertyPath: m_Size.x
-      value: 2.0101683
+      value: 1.3977808
       objectReference: {fileID: 0}
     - target: {fileID: 1728935755045736998, guid: 78767f6e957baeb4f9452a2d9febd9d6,
         type: 3}
@@ -89,7 +89,7 @@ PrefabInstance:
     - target: {fileID: 3821674741956243908, guid: 78767f6e957baeb4f9452a2d9febd9d6,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3821674741956243908, guid: 78767f6e957baeb4f9452a2d9febd9d6,
         type: 3}
@@ -99,7 +99,7 @@ PrefabInstance:
     - target: {fileID: 3821674741956243908, guid: 78767f6e957baeb4f9452a2d9febd9d6,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3821674741956243908, guid: 78767f6e957baeb4f9452a2d9febd9d6,
         type: 3}
@@ -114,7 +114,7 @@ PrefabInstance:
     - target: {fileID: 3821674741956243908, guid: 78767f6e957baeb4f9452a2d9febd9d6,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 3821674741956243908, guid: 78767f6e957baeb4f9452a2d9febd9d6,
         type: 3}
