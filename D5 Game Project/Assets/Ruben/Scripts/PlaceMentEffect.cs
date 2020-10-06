@@ -10,12 +10,4 @@ public class PlaceMentEffect : MonoBehaviour
     {
         placingEffect.Play();
     }
-
-    private void Update()
-    {
-        if (Input.GetButtonDown("Jump"))
-        {
-            placingEffect.Play();
-        }
-    }
 }
