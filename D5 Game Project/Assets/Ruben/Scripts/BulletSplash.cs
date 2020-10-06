@@ -9,11 +9,20 @@ public class BulletSplash : MonoBehaviour
     public int damageAmount;
 
     public ParticleSystem sploosh;
+    public GameObject particle;
+    public GameObject enemy;
+    public GameObject turret;
+
+    public void Start()
+    {
+        enemy = turret.gameObject.GetComponent<Turret>().enemy.gameObject;
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "enemy")
         {
+            Instantiate(particle, enemy.transform.position, enemy.transform.rotation);
             sploosh.Play();
             splash();
         }

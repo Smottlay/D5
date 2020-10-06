@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &7854566104509505686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568485570413346619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f43b3a2386d7f284d95659c1e520bc8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  splash: {fileID: 1568485568907394791}
 --- !u!1 &4777776079428978774
 GameObject:
   m_ObjectHideFlags: 0
@@ -16,7 +29,7 @@ GameObject:
   - component: {fileID: 4777776079428978775}
   m_Layer: 0
   m_Name: Rocket
-  m_TagString: Untagged
+  m_TagString: rocket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,6 +141,10 @@ MonoBehaviour:
   splashRadius: 3
   damageAmount: 80
   sploosh: {fileID: 1568485568907394791}
+  particle: {fileID: 5717865491792577716, guid: e3aa7ab14f46bd14087f51d376b7f948,
+    type: 3}
+  enemy: {fileID: 0}
+  turret: {fileID: 0}
 --- !u!1001 &4777776079313643019
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -143,17 +160,17 @@ PrefabInstance:
     - target: {fileID: 6307981046323943729, guid: 36efad71018c7334787279fb3bcd6177,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.625401
+      value: 0.13
       objectReference: {fileID: 0}
     - target: {fileID: 6307981046323943729, guid: 36efad71018c7334787279fb3bcd6177,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.1780796
+      value: 0.92
       objectReference: {fileID: 0}
     - target: {fileID: 6307981046323943729, guid: 36efad71018c7334787279fb3bcd6177,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.0661855
+      value: -0.03
       objectReference: {fileID: 0}
     - target: {fileID: 6307981046323943729, guid: 36efad71018c7334787279fb3bcd6177,
         type: 3}
@@ -197,6 +214,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36efad71018c7334787279fb3bcd6177, type: 3}
+--- !u!1 &1568485570413346619 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6307981046323943728, guid: 36efad71018c7334787279fb3bcd6177,
+    type: 3}
+  m_PrefabInstance: {fileID: 4777776079313643019}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1568485570413346618 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6307981046323943729, guid: 36efad71018c7334787279fb3bcd6177,

@@ -9,58 +9,36 @@ public class TurretRing : MonoBehaviour
     public string enemyTag = "enemy";
 
     public GameObject turret;
+    public GameObject enemy;
 
     void Start()
     {
-        InvokeRepeating("targetToShoot", 0f, 0.5f);
-    }
-
-    public void targetToShoot()
-    {
-        if (enemyTarget != null && Vector3.Distance(transform.position, enemyTarget.position) <= viewRange)
-        {
-            return;
-        }
-
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
-        float shortestDistance = Mathf.Infinity;
-        GameObject nearestEnemy = null;
-
-        foreach (GameObject enemy in enemies)
-        {
-            float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
-            if (distanceToEnemy < shortestDistance)
-            {
-                shortestDistance = distanceToEnemy;
-                nearestEnemy = enemy;
-            }
-        }
-        if (nearestEnemy != null && shortestDistance <= viewRange)
-        {
-            enemyTarget = nearestEnemy.transform;
-        }
-        else
-        {
-            enemyTarget = null;
-        }
+        enemy = null;
+        viewRange = turret.GetComponent<Turret>().viewRange;
     }
 
     void Update()
     {
-        if (enemyTarget == null)
-            return;
-
-        float distance = Vector3.Distance(enemyTarget.position, transform.position);
-        if (distance <= viewRange)
+        if (turret.GetComponent<Turret>().enemy != null)
         {
-            Vector3 dir = enemyTarget.position - transform.position;
-            transform.LookAt(new Vector3(enemyTarget.position.x, transform.position.y, enemyTarget.position.z));
-
-            ShootTarget();
+            enemy = gameObject.GetComponentInChildren<Turret>().enemy.gameObject;
         }
-    }
-    public void ShootTarget()
-    {
-        turret.GetComponent<Turret>().Reload();
+        else if (turret.GetComponent<Turret>().enemy == null)
+        {
+            enemy = null;
+        }
+
+        if (enemy != null)
+        {
+            if(viewRange > Vector3.Distance(transform.position, enemy.transform.position))
+            {
+                transform.LookAt(new Vector3(enemy.transform.position.x, transform.position.y, enemy.transform.position.z));
+            }
+            else
+            {
+                enemy = gameObject.GetComponentInChildren<Turret>().enemy.gameObject;
+            }
+
+        }
     }
 }

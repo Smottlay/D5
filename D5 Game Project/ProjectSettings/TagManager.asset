@@ -29,6 +29,8 @@ TagManager:
   - terrain
   - upgradeMenu
   - devMode
+  - rocket
+  - bullet
   layers:
   - Default
   - TransparentFX

@@ -16,6 +16,7 @@ public class Turret : TowerUpgrade
     public float viewRangeUpdate;
     private string enemyTag = "enemy";
 
+
     public float bulletSpeed;
     private float bulletReload;
     public float bulletrate;
@@ -57,6 +58,8 @@ public class Turret : TowerUpgrade
 
     void Update()
     {
+        bulletReload -= Time.deltaTime;
+
         if (enemy == null)
             return;
 
@@ -72,6 +75,8 @@ public class Turret : TowerUpgrade
         {
             Vector3 dir = enemy.position - transform.position;
             transform.LookAt(new Vector3(enemy.position.x, enemy.position.y, enemy.position.z));
+
+            Reload();
         }
     }
 
@@ -83,19 +88,30 @@ public class Turret : TowerUpgrade
         }
         else if (bulletReload <= 0f && enemy.GetComponent<Enemy>().dissolving == false)
         {
-            bulletReload = 1f / bulletrate;
             Shoot();
+            bulletReload = 1f / bulletrate;
         }
-        bulletReload -= Time.deltaTime;
     }
 
     public void Shoot()
     {
-        muzzleFlash.Play();
         gunFire.Play();
+        muzzleFlash.Play();
+        
 
         GameObject tempBullet;
         tempBullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation) as GameObject;
+
+        if(tempBullet.tag == "rocket")
+        {
+            tempBullet.GetComponent<BulletSplash>().turret = gameObject;
+        }
+        else if(tempBullet.tag == "bullet")
+        {
+            tempBullet.GetComponent<Bullet>().turret = gameObject;
+        }
+
+
 
         tempBullet.transform.Rotate(Vector3.right * -90);
 
