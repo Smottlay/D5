@@ -184,11 +184,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1652347746291859608, guid: c7205a85b213e5a42aa973b03dec9c9d,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e2112f1f140d3f24c8f3dc36e93ad083, type: 2}
     - target: {fileID: 1779808116918377571, guid: c7205a85b213e5a42aa973b03dec9c9d,
         type: 3}
       propertyPath: m_Name
@@ -219,11 +214,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8407498381532366420, guid: c7205a85b213e5a42aa973b03dec9c9d,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e2112f1f140d3f24c8f3dc36e93ad083, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c7205a85b213e5a42aa973b03dec9c9d, type: 3}
 --- !u!1 &419286269
@@ -5106,11 +5096,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: D5 Tank Enemy Build
       objectReference: {fileID: 0}
-    - target: {fileID: 4788139270186023549, guid: d19ce2c177b983747a0c22efd216f888,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 07bf27e4a45f02a4c94754d618f1d6fb, type: 2}
     - target: {fileID: 5890969262595783172, guid: d19ce2c177b983747a0c22efd216f888,
         type: 3}
       propertyPath: m_AnchorMin.x
@@ -5125,11 +5110,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6979310815074218014, guid: d19ce2c177b983747a0c22efd216f888,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7079146128233523670, guid: d19ce2c177b983747a0c22efd216f888,
         type: 3}
@@ -10047,11 +10027,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8975924165049576704, guid: 17ee12ea53f824f4291fab0f5b750953,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: edb57261be4d77440ad271c6fe7e293b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17ee12ea53f824f4291fab0f5b750953, type: 3}
 --- !u!1 &887122507
@@ -10131,13 +10106,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887122507}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.008, y: 1.235, z: 29.7}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 23.79, y: 20.69, z: -18.15}
   m_LocalScale: {x: 7.5268893, y: 7.5268893, z: 7.5268893}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &887122511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10278,7 +10253,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &1251849159
 Light:
   m_ObjectHideFlags: 0
@@ -11239,61 +11214,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fireflies
-      objectReference: {fileID: 0}
-    - target: {fileID: 8722863675103387370, guid: 583555f04dc6ee54a88fe48f4f7f57a3,
-        type: 3}
-      propertyPath: NoiseModule.strength.scalar
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8722863675103387370, guid: 583555f04dc6ee54a88fe48f4f7f57a3,
-        type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8722863675103387370, guid: 583555f04dc6ee54a88fe48f4f7f57a3,
-        type: 3}
-      propertyPath: ShapeModule.radius.value
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8722863675103387370, guid: 583555f04dc6ee54a88fe48f4f7f57a3,
-        type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key0.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8722863675103387370, guid: 583555f04dc6ee54a88fe48f4f7f57a3,
-        type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.atime1
-      value: 19853
-      objectReference: {fileID: 0}
-    - target: {fileID: 8722863675103387370, guid: 583555f04dc6ee54a88fe48f4f7f57a3,
-        type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.atime2
-      value: 42598
-      objectReference: {fileID: 0}
-    - target: {fileID: 8722863675103387370, guid: 583555f04dc6ee54a88fe48f4f7f57a3,
-        type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.m_NumAlphaKeys
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8722863675103387370, guid: 583555f04dc6ee54a88fe48f4f7f57a3,
-        type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key1.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8722863675103387370, guid: 583555f04dc6ee54a88fe48f4f7f57a3,
-        type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key2.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8722863675103387370, guid: 583555f04dc6ee54a88fe48f4f7f57a3,
-        type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.atime3
-      value: 65535
-      objectReference: {fileID: 0}
-    - target: {fileID: 8722863675103387370, guid: 583555f04dc6ee54a88fe48f4f7f57a3,
-        type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 583555f04dc6ee54a88fe48f4f7f57a3, type: 3}
