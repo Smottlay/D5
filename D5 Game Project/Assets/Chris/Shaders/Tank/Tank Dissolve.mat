@@ -148,6 +148,7 @@ Material:
     - _SrcBlend: 1
     - _Surface: 0
     - _TimeSlider: -1
+    - _TimeValue: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:

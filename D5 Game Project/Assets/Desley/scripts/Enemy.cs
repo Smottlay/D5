@@ -8,6 +8,10 @@ public class Enemy : MonoBehaviour
 
     public GameObject healthBar;
 
+    public SkinnedMeshRenderer sMeshRenderer;
+    public float dissolveTimer;
+    public float addOnDeath;
+    public bool dissolving;
     Collider colider;
 
     public int maxHealth;
@@ -36,26 +40,41 @@ public class Enemy : MonoBehaviour
         attackable = true;
         colider = gameObject.GetComponent<BoxCollider>();
         damageCountdown = 1.25f;
+        dissolving = false;
+        sMeshRenderer = gameObject.GetComponentInChildren<SkinnedMeshRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(health <= 0 && attacker != null)
+        sMeshRenderer.material.SetFloat("_TimeValue", dissolveTimer);
+        if (health <= 0 && attacker != null && !dissolving)
         {
             attacker.gameObject.GetComponent<Soldier>().target = null;
             attacker.gameObject.GetComponent<Soldier>().searching = true;
             GameObject.FindGameObjectWithTag("shop").GetComponent<Shop>().deadEnemy = gameObject;
             GameObject.FindGameObjectWithTag("shop").GetComponent<Shop>().addGold();
             GameObject.FindGameObjectWithTag("spawner").GetComponent<Spawn>().destroyedCounter++;
-            Destroy(this.gameObject);
+            gameObject.tag = "Untagged";
+            dissolving = true;
         }
-        else if(health <= 0 && attacker == null)
+        else if (health <= 0 && attacker == null && !dissolving)
         {
             GameObject.FindGameObjectWithTag("shop").GetComponent<Shop>().deadEnemy = gameObject;
             GameObject.FindGameObjectWithTag("shop").GetComponent<Shop>().addGold();
             GameObject.FindGameObjectWithTag("spawner").GetComponent<Spawn>().destroyedCounter++;
-            Destroy(this.gameObject);
+            gameObject.tag = "Untagged";
+            dissolving = true;
+        }
+        
+        if (dissolving)
+        {
+            dissolveTimer += addOnDeath * Time.deltaTime;
+            healthBar.SetActive(false);
+        }
+        if(dissolveTimer >= .7f)
+        {
+            Destroy(gameObject);
         }
 
         if(health < maxHealth && !healthBarVisible)

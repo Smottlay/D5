@@ -9,6 +9,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3288532126315810487, guid: 78767f6e957baeb4f9452a2d9febd9d6,
         type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3288532126315810487, guid: 78767f6e957baeb4f9452a2d9febd9d6,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e2112f1f140d3f24c8f3dc36e93ad083, type: 2}
@@ -50,6 +55,11 @@ PrefabInstance:
         type: 3}
       propertyPath: normalSpeed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3467762687833814917, guid: 78767f6e957baeb4f9452a2d9febd9d6,
+        type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3467762687833814917, guid: 78767f6e957baeb4f9452a2d9febd9d6,
         type: 3}
@@ -149,7 +159,17 @@ PrefabInstance:
     - target: {fileID: 8488314172147793731, guid: 78767f6e957baeb4f9452a2d9febd9d6,
         type: 3}
       propertyPath: maxHealth
-      value: 205
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 8488314172147793731, guid: 78767f6e957baeb4f9452a2d9febd9d6,
+        type: 3}
+      propertyPath: disolveTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8488314172147793731, guid: 78767f6e957baeb4f9452a2d9febd9d6,
+        type: 3}
+      propertyPath: addOnDeath
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78767f6e957baeb4f9452a2d9febd9d6, type: 3}

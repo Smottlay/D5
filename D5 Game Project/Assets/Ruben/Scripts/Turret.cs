@@ -60,6 +60,13 @@ public class Turret : TowerUpgrade
         if (enemy == null)
             return;
 
+        if(enemy.tag == "Untagged")
+        {
+            enemy = null;
+            targetToShoot();
+            return;
+        }
+
         float distance = Vector3.Distance(enemy.position, transform.position);
         if (distance <= viewRange)
         {
@@ -70,10 +77,14 @@ public class Turret : TowerUpgrade
 
     public void Reload()
     {
-        if (bulletReload <= 0f)
+        if(enemy == null)
         {
-            Shoot();
+            return;
+        }
+        else if (bulletReload <= 0f && enemy.GetComponent<Enemy>().dissolving == false)
+        {
             bulletReload = 1f / bulletrate;
+            Shoot();
         }
         bulletReload -= Time.deltaTime;
     }
