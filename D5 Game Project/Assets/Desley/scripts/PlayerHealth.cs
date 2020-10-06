@@ -15,7 +15,7 @@ public class PlayerHealth : MonoBehaviour
 
     public bool continuePanelActive;
     public bool endPanelActive;
-    public int health;
+    public float health;
     public bool alive;
 
     // Start is called before the first frame update
@@ -76,6 +76,6 @@ public void Restart()
 
     public void unlimitedHealth()
     {
-        health = int.MaxValue;
+        health = Mathf.Infinity;
     }
 }

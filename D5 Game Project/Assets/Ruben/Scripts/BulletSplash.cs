@@ -26,17 +26,9 @@ public class BulletSplash : MonoBehaviour
             sploosh.Play();
             splash();
         }
-
-        if(collision.gameObject.tag == "road")
+        else
         {
-            sploosh.Play();
-            splash();
-        }
-
-        if(collision.gameObject.tag == "terrain")
-        {
-            sploosh.Play();
-            splash();
+            Destroy(gameObject);
         }
     }
 
