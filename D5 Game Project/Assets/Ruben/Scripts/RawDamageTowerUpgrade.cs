@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class RawDamageTowerUpgrade : MonoBehaviour
 {
@@ -12,33 +13,43 @@ public class RawDamageTowerUpgrade : MonoBehaviour
 
     public GameObject upgradeMenu;
     public GameObject shop;
+
+    public float rangeCost;
     public void Start()
     {
         rawDamageUpgrade = false;
-
-        rend = GetComponent<Renderer>();
-        startColor = rend.material.color;
+        //rend = GetComponent<Renderer>();
+        //startColor = rend.material.color;
     }
 
     public void Update()
     {
-        upgradeMenu = GameObject.FindGameObjectWithTag("upgradeMenu");
         shop = GameObject.FindGameObjectWithTag("shop");
     }
 
 
     public void OnMouseDown()
     {
-        shop.SetActive(false);
-        upgradeMenu.GetComponent<UpgradeMenu>().upgradeRawDamage();
+        print("blyat");
+        upgradeMenu.SetActive(true);
+    }
+
+    public void UpgradeRange()
+    {
+        gameObject.GetComponent<Turret>().upgradeRange();
+        shop.GetComponent<Shop>().gold -= rangeCost;
+    }
+    public void UpgradeDamage()
+    {
+
     }
 
     public void OnMouseEnter()
     {
-        rend.material.color = hoverColor;
+
     }
     public void OnMouseExit()
     {
-        rend.material.color = startColor;
+
     }
 }

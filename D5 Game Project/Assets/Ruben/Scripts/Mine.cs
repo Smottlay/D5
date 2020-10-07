@@ -17,7 +17,7 @@ public class Mine : MonoBehaviour
     private Vector3 nextPos;
     public GameObject mineLayer;
 
-    public ParticleSystem explosion;
+    public GameObject particle;
 
     public float speed;
 
@@ -70,9 +70,9 @@ public class Mine : MonoBehaviour
 
                 if (nearbyEnemy.GetComponent<Enemy>().mineDetecion == true)
                 {
-                    explosion.Play();
                     mineLayer.GetComponent<MineLayer>().activeSpawnPoints[spawnPointID] = true;
                     nearbyEnemy.GetComponent<Enemy>().MineDamage(damageAmount);
+                    Instantiate(particle, gameObject.transform.position, gameObject.transform.rotation);
                     Destroy(gameObject);
                 }
             }

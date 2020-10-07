@@ -4,15 +4,42 @@ using UnityEngine;
 
 public class SplashTowerUpgrade : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Renderer rend;
+    public Color hoverColor;
+    private Color startColor;
+
+    public bool rawDamageUpgrade;
+
+    public GameObject upgradeMenu;
+    public GameObject shop;
+    public void Start()
     {
-        
+        rawDamageUpgrade = false;
+
+        rend = GetComponent<Renderer>();
+        startColor = rend.material.color;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        
+        upgradeMenu = GameObject.FindGameObjectWithTag("upgradeMenu");
+        shop = GameObject.FindGameObjectWithTag("shop");
+    }
+
+
+    public void OnMouseDown()
+    {
+        print("blyat");
+        shop.SetActive(false);
+        upgradeMenu.GetComponent<UpgradeMenu>().upgradeRawDamage();
+    }
+
+    public void OnMouseEnter()
+    {
+        rend.material.color = hoverColor;
+    }
+    public void OnMouseExit()
+    {
+        rend.material.color = startColor;
     }
 }

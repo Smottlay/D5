@@ -9759,7 +9759,8 @@ MonoBehaviour:
   spawnPointID: 0
   targetPos: {x: 0, y: 0, z: 0}
   mineLayer: {fileID: 0}
-  explosion: {fileID: 4082515458369431405}
+  particle: {fileID: 5820182146617978788, guid: 98da727aa25d4e543bf3524ad494cbbe,
+    type: 3}
   speed: 7.5
   roadTag: road
   mineSpawnPointTag: mineSpawnPoint

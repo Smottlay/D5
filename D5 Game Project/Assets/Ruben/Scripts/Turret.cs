@@ -12,9 +12,15 @@ public class Turret : TowerUpgrade
     public AudioSource gunFire;
 
     public Transform enemy;
+
     public float viewRange;
-    public float viewRangeUpdate;
+    public float viewRangeUpgrade;
+    public float maxUpgrade;
+    private bool viewRangeUpgradePossible;
+
     private string enemyTag = "enemy";
+
+    private bool flashed;
 
 
     public float bulletSpeed;
@@ -22,6 +28,7 @@ public class Turret : TowerUpgrade
     public float bulletrate;
     public void Start()
     {
+        viewRangeUpgradePossible = true;
         bulletReload = bulletrate;
         InvokeRepeating("targetToShoot", 0f, 0.5f);
     }
@@ -58,6 +65,12 @@ public class Turret : TowerUpgrade
 
     void Update()
     {
+        if(viewRange >= maxUpgrade)
+        {
+            viewRangeUpgradePossible = false;
+        }
+
+
         bulletReload -= Time.deltaTime;
 
         if (enemy == null)
@@ -82,22 +95,22 @@ public class Turret : TowerUpgrade
 
     public void Reload()
     {
-        if(enemy == null)
+        if (enemy == null)
         {
             return;
         }
         else if (bulletReload <= 0f && enemy.GetComponent<Enemy>().dissolving == false)
         {
-            Shoot();
             bulletReload = 1f / bulletrate;
+            Shoot();
         }
     }
 
+
     public void Shoot()
     {
-        gunFire.Play();
         muzzleFlash.Play();
-        
+        gunFire.Play();
 
         GameObject tempBullet;
         tempBullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation) as GameObject;
@@ -125,7 +138,10 @@ public class Turret : TowerUpgrade
 
     public void upgradeRange()
     {
-        viewRange += viewRangeUpdate;
+        if (viewRangeUpgradePossible == true)
+        {
+            viewRange += viewRangeUpgrade;
+        }
     }
     public void UpgradeDamage()
     {

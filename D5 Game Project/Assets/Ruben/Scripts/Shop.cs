@@ -25,13 +25,15 @@ public class Shop : MonoBehaviour
     public float mineLayerCost;
     public float drillCost;
 
-    private bool rawDamageTower;
+    public bool rawDamageTower;
     private bool splashTower;
     private bool barracks;
     private bool mineLayer;
     private bool drill;
 
     public bool resetTowers;
+
+    public GameObject shop;
 
     public GameObject rawDamageInfo;
     public GameObject splashTowerInfo;
@@ -51,6 +53,7 @@ public class Shop : MonoBehaviour
 
     private void Start()
     {
+        shop = GameObject.FindGameObjectWithTag("shop");
         buildManager = BuildManager.instance;
         gameObject.GetComponent<TextMeshPro>();
     }
@@ -84,15 +87,15 @@ public class Shop : MonoBehaviour
             return;
         if (gold >= rawDamageTowerCost)
         {
-            resetTowers = true;
+            rawDamageTower = true;
+            //resetTowers = true;
             Enable();
             gold -= rawDamageTowerCost;
             buildManager.SetTurret(buildManager.rawDamageTower);
         }
         InfoDisable();
         refund.SetActive(true);
-        gameObject.SetActive(false);
-        rawDamageTower = true;
+        shop.SetActive(false);
 
         GameObject[] minerals = GameObject.FindGameObjectsWithTag("minerals");
         foreach (GameObject mineral in minerals)
@@ -106,15 +109,15 @@ public class Shop : MonoBehaviour
             return;
         if (gold >= splashTowerCost)
         {
-            resetTowers = true;
+            splashTower = true;
+            //resetTowers = true;
             Enable();
             gold -= splashTowerCost;
             buildManager.SetTurret(buildManager.splashTower);
         }
         InfoDisable();
         refund.SetActive(true);
-        gameObject.SetActive(false);
-        splashTower = true;
+        shop.SetActive(false);
 
         GameObject[] minerals = GameObject.FindGameObjectsWithTag("minerals");
         foreach (GameObject mineral in minerals)
@@ -128,15 +131,15 @@ public class Shop : MonoBehaviour
             return;
         if (gold >= mineLayerCost)
         {
-            resetTowers = true;
+            mineLayer = true;
+            //resetTowers = true;
             Enable();
             gold -= mineLayerCost;
             buildManager.SetTurret(buildManager.slowTower);
         }
         InfoDisable();
         refund.SetActive(true);
-        gameObject.SetActive(false);
-        mineLayer = true;
+        shop.SetActive(false);
 
         GameObject[] minerals = GameObject.FindGameObjectsWithTag("minerals");
         foreach (GameObject mineral in minerals)
@@ -150,16 +153,15 @@ public class Shop : MonoBehaviour
             return;
         if (gold >= barracksCost)
         {
-            resetTowers = true;
+            barracks = true;
+            //resetTowers = true;
             Enable();
             gold -= barracksCost;
             buildManager.SetTurret(buildManager.bunker);
         }
         InfoDisable();
         refund.SetActive(true);
-        gameObject.SetActive(false);
-
-        barracks = true;
+        shop.SetActive(false);
 
         GameObject[] minerals = GameObject.FindGameObjectsWithTag("minerals");
         foreach (GameObject mineral in minerals)
@@ -173,15 +175,15 @@ public class Shop : MonoBehaviour
             return;
         if (gold >= drillCost)
         {
-            resetTowers = true;
+            drill = true;
+            //resetTowers = true;
             Enable();
             gold -= drillCost;
             buildManager.SetTurret(buildManager.miningTower);
         }
         InfoDisable();
         refund.SetActive(true);
-        gameObject.SetActive(false);
-        drill = true;
+        shop.SetActive(false);
 
         GameObject[] foundations = GameObject.FindGameObjectsWithTag("foundation");
         foreach (GameObject foundation in foundations)
@@ -245,7 +247,7 @@ public class Shop : MonoBehaviour
         }
 
         refund.SetActive(false);
-        gameObject.SetActive(true);
+        shop.SetActive(true);
         buildManager.NoTurretToBuild();
 
         GameObject[] minerals = GameObject.FindGameObjectsWithTag("minerals");

@@ -52,16 +52,16 @@ public class Enemy : MonoBehaviour
         {
             attacker.gameObject.GetComponent<Soldier>().target = null;
             attacker.gameObject.GetComponent<Soldier>().searching = true;
-            GameObject.FindGameObjectWithTag("shop").GetComponent<Shop>().deadEnemy = gameObject;
-            GameObject.FindGameObjectWithTag("shop").GetComponent<Shop>().addGold();
+            GameObject.FindGameObjectWithTag("gameMaster").GetComponent<Shop>().deadEnemy = gameObject;
+            GameObject.FindGameObjectWithTag("gameMaster").GetComponent<Shop>().addGold();
             GameObject.FindGameObjectWithTag("spawner").GetComponent<Spawn>().destroyedCounter++;
             gameObject.tag = "Untagged";
             dissolving = true;
         }
         else if (health <= 0 && attacker == null && !dissolving)
         {
-            GameObject.FindGameObjectWithTag("shop").GetComponent<Shop>().deadEnemy = gameObject;
-            GameObject.FindGameObjectWithTag("shop").GetComponent<Shop>().addGold();
+            GameObject.FindGameObjectWithTag("gameMaster").GetComponent<Shop>().deadEnemy = gameObject;
+            GameObject.FindGameObjectWithTag("gameMaster").GetComponent<Shop>().addGold();
             GameObject.FindGameObjectWithTag("spawner").GetComponent<Spawn>().destroyedCounter++;
             gameObject.tag = "Untagged";
             dissolving = true;

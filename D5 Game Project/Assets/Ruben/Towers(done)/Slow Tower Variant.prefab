@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 455054008700568947}
   - component: {fileID: 1906420184}
   - component: {fileID: 386024925760629496}
+  - component: {fileID: 3617148826634206723}
   m_Layer: 0
   m_Name: Slow Tower Variant
   m_TagString: slowTower
@@ -286,6 +287,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &3617148826634206723
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455054008700568944}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7296076, y: 6.3691654, z: 1.5300685}
+  m_Center: {x: 0.028061867, y: 3.5638533, z: 0.014135063}
 --- !u!1 &455054008976828700
 GameObject:
   m_ObjectHideFlags: 0

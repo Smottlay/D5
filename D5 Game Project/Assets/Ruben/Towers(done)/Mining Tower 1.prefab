@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3029625576646408518}
   - component: {fileID: 363820955306901807}
+  - component: {fileID: 4279793553594249755}
   m_Layer: 0
   m_Name: Mining Tower 1
   m_TagString: Untagged
@@ -51,6 +52,19 @@ MonoBehaviour:
   goldAmount: 5
   shop: {fileID: 0}
   drill: {fileID: 6017203611589842552}
+--- !u!65 &4279793553594249755
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3356374379207804587}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.694109, y: 6.0034103, z: 2.5741034}
+  m_Center: {x: -1.7931261, y: 2.964449, z: 1.7738156}
 --- !u!1 &4739619737238834501
 GameObject:
   m_ObjectHideFlags: 0

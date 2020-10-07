@@ -31,6 +31,7 @@ TagManager:
   - devMode
   - rocket
   - bullet
+  - gameMaster
   layers:
   - Default
   - TransparentFX
