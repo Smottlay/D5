@@ -9,10 +9,14 @@ public class PauseMenu : MonoBehaviour
     public CanvasGroup settings;
     public GameObject pauseRim;
     public GameObject settingsRim;
+    public float lastTimescale;
+
+    public bool pausedActive;
+    public bool settingsActive;
     private void Start()
     {
-        hideSettings();
-        hidePaused();
+        HideSettings();
+        HidePaused();
     }
     public void Update()
     {
@@ -22,40 +26,49 @@ public class PauseMenu : MonoBehaviour
     {
         if(Input.GetButtonDown("Cancel"))
         {
-           if(Time.timeScale == 1)
+            if(!pausedActive && !settingsActive)
             {
+                lastTimescale = Time.timeScale;
                 Time.timeScale = 0;
-                showPaused();
+                ShowPaused();
             }
-           else if (Time.timeScale == 0)
+            else if(pausedActive && !settingsActive)
             {
-                Time.timeScale = 1;
-                hidePaused();
+                Time.timeScale = lastTimescale;
+                HidePaused();
+            }
+            else if (settingsActive)
+            {
+                HideSettings();
             }
         }
     }
-    public void hidePaused()
+    public void HidePaused()
     {
         pause.alpha = 0f;
         pause.blocksRaycasts = false;
+        pausedActive = false;
         //pauseRim.SetActive(false);
     }
-    public void showPaused()
+    public void ShowPaused()
     {
         pause.alpha = 1f;
         pause.blocksRaycasts = true;
+        pausedActive = true;
         //pauseRim.SetActive(true);
     }
-    public void hideSettings()
+    public void HideSettings()
     {
         settings.alpha = 0f;
         settings.blocksRaycasts = false;
+        settingsActive = false;
         //settingsRim.SetActive(false);
     }
-    public void showSettings()
+    public void ShowSettings()
     {
         settings.alpha = 1f;
         settings.blocksRaycasts = true;
+        settingsActive = true;
         //settingsRim.SetActive(true);
     }
    
@@ -65,8 +78,8 @@ public class PauseMenu : MonoBehaviour
     }
     public void Setttings()
     {
-        hidePaused();
-        showSettings();
+       //HidePaused();
+        ShowSettings();
     }
 
     public void Restart()
@@ -76,13 +89,13 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         Time.timeScale = 1;
-        hidePaused();
-        hideSettings();
+        HidePaused();
+        HideSettings();
     }
     
     public void settingsBack()
     {
-        hideSettings();
-        showPaused();
+        HideSettings();
+        ShowPaused();
     }
 }

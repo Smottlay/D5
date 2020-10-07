@@ -21725,6 +21725,11 @@ PrefabInstance:
       propertyPath: m_UiScaleMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9212124093362451911, guid: daf35082394f0b94c9ed70e09af6eea9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9212124093376009771, guid: daf35082394f0b94c9ed70e09af6eea9,
         type: 3}
       propertyPath: m_AnchorMax.y
