@@ -65,7 +65,7 @@ public class Spawn : MonoBehaviour
         {
             GameObject.FindGameObjectWithTag("timer").GetComponent<WaveDisplay>().newRound = true;
             canSpawn = true;
-            waveCountdown = 300;
+            waveCountdown = Mathf.Infinity;
         }
 
         if (canSpawn && spawnCountdown <= 0 && instantiated <= maxInstantiate[waveCounter -1] && !devMode)
@@ -146,12 +146,30 @@ public class Spawn : MonoBehaviour
         else if (waveCounter <= 6 && instantiated < maxInstantiate[waveCounter -1])
         {
             spawnRandomizer = Random.Range(1, 3);
-            SpawnSpeed();
+            if(spawnRandomizer == 1)
+            {
+                SpawnNormal();
+            }
+            else if(spawnRandomizer == 2)
+            {
+                SpawnSpeed();
+            }
         }
         else if (waveCounter > 6 && instantiated < maxInstantiate[waveCounter -1]) 
         {
             spawnRandomizer = Random.Range(1, 4);
-            SpawnTank();
+            if (spawnRandomizer == 1)
+            {
+                SpawnNormal();
+            }
+            else if (spawnRandomizer == 2)
+            {
+                SpawnSpeed();
+            }
+            else if(spawnRandomizer == 3)
+            {
+                SpawnTank();
+            }
         }
     }
 
