@@ -5,6 +5,7 @@ using UnityEngine;
 public class Soldier : MonoBehaviour
 {
     public Transform target;
+    public ParticleSystem muzzleFlash;
 
     public int attackDamage;
     public float attackRate;
@@ -17,6 +18,7 @@ public class Soldier : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        muzzleFlash.Stop();
         InvokeRepeating("UpdateTarget", 0, .1f);
     }
 
@@ -44,6 +46,7 @@ public class Soldier : MonoBehaviour
        if (target == null)
        {
             gameObject.GetComponent<Animator>().SetBool("Attack", false);
+            muzzleFlash.Stop();
             return;
        }
 
@@ -66,6 +69,7 @@ public class Soldier : MonoBehaviour
     void Attack()
     {
         gameObject.GetComponent<Animator>().SetBool("Attack", true);
+        muzzleFlash.Play();
         target.GetComponent<Animator>().SetBool("gettingAttacked", true);
         target.GetComponent<Enemy>().health -= attackDamage;
     }
