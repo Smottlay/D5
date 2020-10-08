@@ -199,8 +199,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.121294, y: 6.2287784, z: 1.8577182}
-  m_Center: {x: -0.0059013367, y: 3.1219237, z: 0.026918054}
+  m_Size: {x: 2.121294, y: 4.3345904, z: 1.8577182}
+  m_Center: {x: -0.0059013367, y: 2.1748297, z: 0.026918054}
 --- !u!1 &8990969909169031188
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,7 +308,6 @@ MonoBehaviour:
   viewRangeUpgrade: 0
   maxUpgrade: 0
   splashTower: 0
-  splashReloadTime: 2
   bulletSpeed: 4000
   bulletrate: 0.5
 --- !u!82 &463118747

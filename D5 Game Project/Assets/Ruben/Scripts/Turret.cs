@@ -103,28 +103,13 @@ public class Turret : TowerUpgrade
         else if (bulletReload <= 0f && enemy.GetComponent<Enemy>().dissolving == false)
         {
             bulletReload = 1f / bulletrate;
-            PlayParticle();
-        }
-    }
-
-    public void PlayParticle()
-    {
-        muzzleFlash.Play();
-        if (muzzleFlash.IsAlive(true))
-        {
-            return;
-        }
-
-        if (muzzleFlash.IsAlive(false))
-        {
             Shoot();
         }
     }
 
     public void Shoot()
     {
-        print("work");
-
+        muzzleFlash.Play();
         gunFire.Play();
 
         GameObject tempBullet;
