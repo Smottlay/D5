@@ -307,7 +307,7 @@ public class Shop : MonoBehaviour
         drillInfo.SetActive(false);
     }
 
-    public void unlimitedResources()
+    public void UnlimitedResources()
     {
         gold = Mathf.Infinity;
     }

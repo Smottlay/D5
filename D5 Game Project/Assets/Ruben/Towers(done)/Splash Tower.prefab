@@ -305,7 +305,10 @@ MonoBehaviour:
   gunFire: {fileID: 463118747}
   enemy: {fileID: 0}
   viewRange: 11
-  viewRangeUpdate: 0
+  viewRangeUpgrade: 0
+  maxUpgrade: 0
+  splashTower: 0
+  splashReloadTime: 2
   bulletSpeed: 4000
   bulletrate: 0.5
 --- !u!82 &463118747

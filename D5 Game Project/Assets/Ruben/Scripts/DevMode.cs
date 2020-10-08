@@ -43,7 +43,7 @@ public class DevMode : MonoBehaviour
     }
     public void unlimitedResources()
     {
-        shop.GetComponent<Shop>().unlimitedResources();
+        shop.GetComponent<Shop>().UnlimitedResources();
     }
     public void unlimitedHealth()
     {
@@ -52,6 +52,5 @@ public class DevMode : MonoBehaviour
     public void DevModeOn()
     {
 
-        
     }
 }

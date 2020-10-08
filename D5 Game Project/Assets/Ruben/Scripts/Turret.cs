@@ -18,10 +18,11 @@ public class Turret : TowerUpgrade
     public float maxUpgrade;
     private bool viewRangeUpgradePossible;
 
+    public bool splashTower;
+
     private string enemyTag = "enemy";
 
     private bool flashed;
-
 
     public float bulletSpeed;
     private float bulletReload;
@@ -70,7 +71,7 @@ public class Turret : TowerUpgrade
             viewRangeUpgradePossible = false;
         }
 
-
+        muzzleFlash.IsAlive();
         bulletReload -= Time.deltaTime;
 
         if (enemy == null)
@@ -102,24 +103,38 @@ public class Turret : TowerUpgrade
         else if (bulletReload <= 0f && enemy.GetComponent<Enemy>().dissolving == false)
         {
             bulletReload = 1f / bulletrate;
+            PlayParticle();
+        }
+    }
+
+    public void PlayParticle()
+    {
+        muzzleFlash.Play();
+        if (muzzleFlash.IsAlive(true))
+        {
+            return;
+        }
+
+        if (muzzleFlash.IsAlive(false))
+        {
             Shoot();
         }
     }
 
-
     public void Shoot()
     {
-        muzzleFlash.Play();
+        print("work");
+
         gunFire.Play();
 
         GameObject tempBullet;
         tempBullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation) as GameObject;
 
-        if(tempBullet.tag == "rocket")
+        if (tempBullet.tag == "rocket")
         {
             tempBullet.GetComponent<BulletSplash>().turret = gameObject;
         }
-        else if(tempBullet.tag == "bullet")
+        else if (tempBullet.tag == "bullet")
         {
             tempBullet.GetComponent<Bullet>().turret = gameObject;
         }

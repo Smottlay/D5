@@ -19237,7 +19237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 544453386}
-  shop: {fileID: 1261348912}
+  shop: {fileID: 1575086473}
   health: {fileID: 1407801905}
   mainMenu: {fileID: 0}
   devmodeEnable: 0
