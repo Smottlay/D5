@@ -18,7 +18,6 @@ public class Soldier : MonoBehaviour
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0, .1f);
-        searching = true; 
     }
 
     void UpdateTarget()

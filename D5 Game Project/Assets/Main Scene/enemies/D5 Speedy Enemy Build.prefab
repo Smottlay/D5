@@ -102,14 +102,14 @@ MonoBehaviour:
   health: 0
   finishDamage: 2
   coinReward: 0
-  attackable: 0
+  attackable: 1
   healthBarVisible: 0
   mineExplosion: 0
-  mineDetecion: 0
+  mineDetecion: 1
   cripleTimer: 10
   cripleCountdown: 10
   cripleSpeed: 1.5
-  damageCountdown: 0
+  damageCountdown: 1.25
 --- !u!1 &777417996779796548
 GameObject:
   m_ObjectHideFlags: 0

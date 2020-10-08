@@ -20,7 +20,6 @@ public class Healthbar : MonoBehaviour
     {
         cam = Camera.main.transform;
         health = gameObject.GetComponentInParent<Enemy>().health;
-        updated = false;
     }
 
     // Update is called once per frame

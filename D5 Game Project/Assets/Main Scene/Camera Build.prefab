@@ -287,8 +287,8 @@ MonoBehaviour:
   brokenGate: {fileID: 0}
   continuePanelActive: 0
   endPanelActive: 0
-  health: 0
-  alive: 0
+  health: 50
+  alive: 1
 --- !u!114 &6551285033737628614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,6 +301,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce01a72f41c777b49aa40937baa403ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skipping: 0
+  skipSpeed: 2
+  normalSpeed: 1
 --- !u!1 &6538157931985628367
 GameObject:
   m_ObjectHideFlags: 0

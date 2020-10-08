@@ -11,11 +11,6 @@ public class Barracks : MonoBehaviour
     public int maxSoldiers;
     public int soldierCount;
 
-    public float countdown;
-
-    public bool upgrade;
-    public bool click;
-
     public GameObject road;
     public Transform[] spawnPoints;
     public bool firstSpawn;
@@ -25,12 +20,6 @@ public class Barracks : MonoBehaviour
         cam = GameObject.FindGameObjectWithTag("MainCamera");
         spawnPoints = null;
         road = null;
-        firstSpawn = false;
-        click = true;
-        upgrade = false;
-        soldierCount = 1;
-        maxSoldiers = 3;
-        countdown = 2f;
     }
 
     void Update()
@@ -48,16 +37,11 @@ public class Barracks : MonoBehaviour
             firstSpawn = true;
             soldierCount++;
         }
-
-        if (Input.GetKeyDown("e"))
-        {
-            Spawn();
-        }
     }
 
     public void Spawn()
     {
-        if (soldierCount < maxSoldiers +1)
+        if (soldierCount < maxSoldiers + 1)
         {
             newSoldier = Instantiate(soldier, spawnPoints[soldierCount].transform);
             newSoldier.transform.position = spawnPoints[soldierCount].transform.position;

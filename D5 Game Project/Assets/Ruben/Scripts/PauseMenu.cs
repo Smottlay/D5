@@ -26,7 +26,7 @@ public class PauseMenu : MonoBehaviour
     {
         if(Input.GetButtonDown("Cancel"))
         {
-            if(!pausedActive && !settingsActive)
+            if(!pausedActive && !settingsActive && Time.timeScale >= 1)
             {
                 lastTimescale = Time.timeScale;
                 Time.timeScale = 0;

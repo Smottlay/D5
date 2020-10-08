@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class Skip : MonoBehaviour
 {
-    public bool skipping = false;
+    public bool skipping;
+    public float skipSpeed;
+    public float normalSpeed;
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire2") && !skipping && Time.timeScale != 0)
-        {          
-            Time.timeScale = 2;
+        if (Input.GetButtonDown("Fire2") && !skipping && Time.timeScale >= 1)
+        {
+            Time.timeScale = skipSpeed;
             skipping = true;
         }
-        else if (Input.GetButtonDown("Fire2") && skipping && Time.timeScale != 0)
+        else if (Input.GetButtonDown("Fire2") && skipping && Time.timeScale >= 1)
         {
-            Time.timeScale = 1;
+            Time.timeScale = normalSpeed;
             skipping = false;
         }
     }

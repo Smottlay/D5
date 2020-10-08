@@ -18,9 +18,8 @@ public class GateHealth : MonoBehaviour
     {
         cam = GameObject.FindGameObjectWithTag("MainCamera");
         health = cam.GetComponent<PlayerHealth>().health;
-        slider.maxValue = 50;
         slider.value = slider.maxValue;
-        currentHealth = 50;
+        currentHealth = health;
     }
 
     // Update is called once per frame

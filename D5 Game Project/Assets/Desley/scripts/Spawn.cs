@@ -28,20 +28,14 @@ public class Spawn : MonoBehaviour
     public bool newEndlessWave;
     public bool endlessMode;
     public int extraSpawns;
+    public int multiplier;
     public GameObject cam;
     public GameObject continuePanel;
 
     // Start is called before the first frame update
     void Start()
     {
-        devMode = false;
-        spawnRate = 1f;
-        waveCountdown = 10;
-        waveCounter = 1;
         continuePanel.SetActive(false);
-        endlessMode = false;
-        newEndlessWave = false;
-        giveExtraHealth = true;
     }
 
     // Update is called once per frame
@@ -57,7 +51,7 @@ public class Spawn : MonoBehaviour
 
         if (endlessMode && newEndlessWave && !devMode)
         {
-            maxInstantiate.Add(maxInstantiate.Count * 2 + extraSpawns);
+            maxInstantiate.Add(maxInstantiate.Count * multiplier + extraSpawns);
             newEndlessWave = false;
         }
 

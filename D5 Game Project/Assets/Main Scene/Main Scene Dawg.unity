@@ -7112,13 +7112,13 @@ MonoBehaviour:
   maxInstantiate: 0300000004000000050000000500000006000000070000000700000008000000090000000a0000000d000000100000001300000016000000190000001c0000001f000000220000002500000028000000
   instantiated: 0
   destroyedCounter: 0
-  waveCounter: 0
+  waveCounter: 1
   extraHealth: 5
-  giveExtraHealth: 0
-  waveCountdown: 0
+  giveExtraHealth: 1
+  waveCountdown: 10
   regulationRounds: 20
   spawnCountdown: 0
-  spawnRate: 0
+  spawnRate: 1
   canSpawn: 0
   devMode: 0
   spawnRandomizer: 0
@@ -7128,6 +7128,7 @@ MonoBehaviour:
   newEndlessWave: 0
   endlessMode: 0
   extraSpawns: 2
+  multiplier: 2
   cam: {fileID: 1407801905}
   continuePanel: {fileID: 456034996}
 --- !u!1001 &549931725
@@ -20300,9 +20301,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1171205107}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 50
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 50
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -26727,7 +26728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 281b90dc25d71124ba0d997cef69a53f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newRound: 0
+  newRound: 1
   timerText: {fileID: 1547581922}
   roundText: {fileID: 1447514616}
   timeText: {fileID: 1547581924}

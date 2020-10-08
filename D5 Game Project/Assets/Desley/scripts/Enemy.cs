@@ -34,13 +34,8 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         health = maxHealth;
-        mineDetecion = true;
-        healthBarVisible = false;
         transform.position = GameObject.FindGameObjectWithTag("spawner").transform.position;
-        attackable = true;
         colider = gameObject.GetComponent<BoxCollider>();
-        damageCountdown = 1.25f;
-        dissolving = false;
         sMeshRenderer = gameObject.GetComponentInChildren<SkinnedMeshRenderer>();
     }
 

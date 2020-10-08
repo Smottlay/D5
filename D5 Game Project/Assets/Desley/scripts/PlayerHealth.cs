@@ -26,11 +26,7 @@ public class PlayerHealth : MonoBehaviour
         particleObject = GameObject.FindGameObjectWithTag("DoorExplosion");
         wholeGate.SetActive(true);
         brokenGate.SetActive(false);
-        alive = true;
-        health = 50;
         endPanel.SetActive(false);
-        continuePanelActive = false;
-        endPanelActive = false;
     }
 
     // Update is called once per frame

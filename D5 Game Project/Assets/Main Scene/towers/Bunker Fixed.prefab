@@ -110,11 +110,8 @@ MonoBehaviour:
   cam: {fileID: 0}
   soldier: {fileID: 1574657593899381097, guid: 4cd4092298f41e443b2cee757da7a8dc, type: 3}
   newSoldier: {fileID: 0}
-  maxSoldiers: 0
-  soldierCount: 0
-  countdown: 0
-  upgrade: 1
-  click: 0
+  maxSoldiers: 3
+  soldierCount: 1
   road: {fileID: 0}
   spawnPoints:
   - {fileID: 0}
