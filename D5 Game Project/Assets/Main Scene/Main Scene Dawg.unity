@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -15545,6 +15545,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1004805852567808487, guid: 612484c9e5944b143a255063844f13b5,
+        type: 3}
+      propertyPath: missionLore.Array.data[0]
+      value: "When we first fought the aliens 50 years ago, humanity as we knew it
+        was in ruins. Complete cities were destroyed, landscapes collapsed and nature
+        was completely absorbed. But one of humanities last strongholds survived,
+        we've fought them off once before, and the people here are ready to do it
+        again. while a cargo ship was doing a routine transport of eggs and alien
+        DNA samples one of the crew fell victim to the alien's grasp.  The eggs began
+        to hatch and the DNA was mutating. This alien activity overwhelmed the poor
+        souls and were overtaken and turned against us. As the aliens never learned
+        to fly the ship crashed near your stronghold, they are located at the first
+        wall which defends the main tunnel to the city. No defenses have been built
+        but that is where you come in commander, you shall be the defense that humanity
+        needs to survive. Build those defenses and get to work, we\u2019ll talk soon\u2026
+        I am sure of it\u2026\r\n\r\n- LT. Rainn\r"
+      objectReference: {fileID: 0}
     - target: {fileID: 7081021802554059297, guid: 612484c9e5944b143a255063844f13b5,
         type: 3}
       propertyPath: m_LocalPosition.z

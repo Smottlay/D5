@@ -640,6 +640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transition: {fileID: 7081021802554059300}
+  cam: {fileID: 0}
   spawner: {fileID: 0}
   timePanel: {fileID: 0}
   ui: {fileID: 0}
@@ -686,7 +687,7 @@ MonoBehaviour:
     absorbed. But one of humanities last strongholds survived, we've fought them
     off once before, and the people here are ready to do it again. while a cargo
     ship was doing a routine transport of eggs and alien DNA samples one of the crew
-    fell victim to the aliens grasp.  The eggs began to hatch and the DNA was mutating.
+    fell victim to the alien's grasp.  The eggs began to hatch and the DNA was mutating.
     This alien activity overwhelmed the poor souls and were overtaken and turned
     against us. As the aliens never learned to fly the ship crashed near your stronghold,
     they are located at the first wall which defends the main tunnel to the city.
