@@ -32,6 +32,8 @@ TagManager:
   - rocket
   - bullet
   - gameMaster
+  - levelloader
+  - timePanel
   layers:
   - Default
   - TransparentFX
