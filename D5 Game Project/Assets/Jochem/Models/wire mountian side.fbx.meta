@@ -1,38 +1,80 @@
 fileFormatVersion: 2
-guid: 0aeedcc0ce18ffe47a0f1accddae44f3
+guid: 9942163aa99099f4bb8157f1ca8321b5
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
-      74: -6501106192357277496
-    second: Cylinder.005|Circle.004Action
+      74: -248722074063367590
+    second: BezierCurve.001|BezierCurve.001Action
   - first:
-      74: 1264066527249871010
-    second: Cylinder.005|Cube.013Action
+      74: 5849909425463310815
+    second: BezierCurve.001|BezierCurveAction
   - first:
-      74: -7896957351967214917
-    second: Cylinder.005|Cube.013Action.001
+      74: 6024029801710729829
+    second: BezierCurve.001|BezierCurveAction.001
   - first:
-      74: -3933054080307157362
-    second: Cylinder.005|Cylinder.004Action
+      74: -1348604391878858152
+    second: BezierCurve.001|Circle.004Action
   - first:
-      74: -3471457578295120481
-    second: Cylinder.005|Cylinder.004Action.001
+      74: -3422610887345768598
+    second: BezierCurve.001|Circle.005Action
   - first:
-      74: 7185734586610020436
-    second: Cylinder.005|Cylinder.004Action.002
+      74: 9168199031298980544
+    second: BezierCurve.001|Circle.005Action.001
   - first:
-      74: 8263777003831402119
-    second: Cylinder.005|Cylinder.005Action
+      74: 7040865801422134800
+    second: BezierCurve.001|Circle.005Action.002
   - first:
-      74: 302854352485520516
-    second: Cylinder.005|Cylinder.005Action.001
+      74: -6209765610141157317
+    second: BezierCurve.001|Circle.005Action.003
   - first:
-      74: -3075798569098467577
-    second: Cylinder.005|Cylinder.007Action
+      74: -506985689409710882
+    second: BezierCurve.001|Circle.005Action.004
   - first:
-      74: 675809645806012455
-    second: Cylinder.005|EmptyAction
+      74: 327363345930139110
+    second: BezierCurve.001|Circle.010Action
+  - first:
+      74: -3655146308669522091
+    second: BezierCurve.001|Circle.010Action.001
+  - first:
+      74: 3676461387209662628
+    second: BezierCurve.001|Circle.010Action.002
+  - first:
+      74: -5021978063286818015
+    second: BezierCurve.001|Circle.010Action.003
+  - first:
+      74: 8688463260169925924
+    second: BezierCurve.001|Circle.010Action.004
+  - first:
+      74: 3181809190333892037
+    second: BezierCurve.001|Cube.013Action
+  - first:
+      74: 8286572559321053004
+    second: BezierCurve.001|Cube.013Action.001
+  - first:
+      74: -3706070275875590473
+    second: BezierCurve.001|Cube.013Action.002
+  - first:
+      74: -8351984029861883594
+    second: BezierCurve.001|Cylinder.004Action
+  - first:
+      74: -674928645513012210
+    second: BezierCurve.001|Cylinder.004Action.001
+  - first:
+      74: -7847177875328013662
+    second: BezierCurve.001|Cylinder.004Action.002
+  - first:
+      74: -4260777499592768682
+    second: BezierCurve.001|Cylinder.005Action
+  - first:
+      74: 2359286197124579019
+    second: BezierCurve.001|Cylinder.005Action.001
+  - first:
+      74: -7914908621616591565
+    second: BezierCurve.001|Cylinder.007Action
+  - first:
+      74: -745434360691295166
+    second: BezierCurve.001|EmptyAction
   externalObjects: {}
   materials:
     materialImportMode: 1

@@ -1,38 +1,32 @@
 fileFormatVersion: 2
-guid: 0aeedcc0ce18ffe47a0f1accddae44f3
+guid: 3e5aeccc94704b14fad19659893a72a4
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
-      74: -6501106192357277496
-    second: Cylinder.005|Circle.004Action
+      74: -4090819288717459287
+    second: Circle.004|Circle.004Action
   - first:
-      74: 1264066527249871010
-    second: Cylinder.005|Cube.013Action
+      74: -1300619951885296163
+    second: Circle.004|Cylinder.004Action
   - first:
-      74: -7896957351967214917
-    second: Cylinder.005|Cube.013Action.001
+      74: 4916629184478305497
+    second: Circle.004|Cylinder.004Action.001
   - first:
-      74: -3933054080307157362
-    second: Cylinder.005|Cylinder.004Action
+      74: -8044605137981095034
+    second: Circle.004|Cylinder.004Action.002
   - first:
-      74: -3471457578295120481
-    second: Cylinder.005|Cylinder.004Action.001
+      74: 3087231527838698974
+    second: Circle.004|Cylinder.005Action
   - first:
-      74: 7185734586610020436
-    second: Cylinder.005|Cylinder.004Action.002
+      74: 6239293598626938083
+    second: Circle.004|Cylinder.005Action.001
   - first:
-      74: 8263777003831402119
-    second: Cylinder.005|Cylinder.005Action
+      74: -5045354185121264977
+    second: Circle.004|Cylinder.007Action
   - first:
-      74: 302854352485520516
-    second: Cylinder.005|Cylinder.005Action.001
-  - first:
-      74: -3075798569098467577
-    second: Cylinder.005|Cylinder.007Action
-  - first:
-      74: 675809645806012455
-    second: Cylinder.005|EmptyAction
+      74: -2716793453065235670
+    second: Circle.004|EmptyAction
   externalObjects: {}
   materials:
     materialImportMode: 1
