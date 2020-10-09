@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class WaveDisplay : MonoBehaviour
 {
     public bool newRound;
 
     public GameObject timerText;
-    public Text roundText;
-    public Text timeText;
+    public TextMeshProUGUI roundText;
+    public TextMeshProUGUI timeText;
 
     // Start is called before the first frame update
     void Start()

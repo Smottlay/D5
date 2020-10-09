@@ -11,12 +11,12 @@ public class Skip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire2") && !skipping && Time.timeScale >= 1)
+        if (Input.GetButtonDown("Jump") && !skipping && Time.timeScale >= 1)
         {
             Time.timeScale = skipSpeed;
             skipping = true;
         }
-        else if (Input.GetButtonDown("Fire2") && skipping && Time.timeScale >= 1)
+        else if (Input.GetButtonDown("Jump") && skipping && Time.timeScale >= 1)
         {
             Time.timeScale = normalSpeed;
             skipping = false;
