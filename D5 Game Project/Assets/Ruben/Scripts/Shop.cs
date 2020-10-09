@@ -25,6 +25,8 @@ public class Shop : MonoBehaviour
     public float mineLayerCost;
     public float drillCost;
 
+    public float RangeCost;
+
     public bool rawDamageTower;
     private bool splashTower;
     private bool barracks;
@@ -310,5 +312,13 @@ public class Shop : MonoBehaviour
     public void UnlimitedResources()
     {
         gold = Mathf.Infinity;
+    }
+
+    public void RangeUpgrade()
+    {
+        if(gold >= RangeCost)
+        {
+            gold -= RangeCost;
+        }
     }
 }

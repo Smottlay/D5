@@ -24191,6 +24191,7 @@ MonoBehaviour:
   barracksCost: 40
   mineLayerCost: 30
   drillCost: 50
+  RangeCost: 10
   rawDamageTower: 0
   resetTowers: 0
   shop: {fileID: 0}

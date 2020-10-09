@@ -136,7 +136,7 @@ public class Turret : TowerUpgrade
         Destroy(tempBullet, 3f);
     }
 
-    public void upgradeRange()
+    public void UpgradeRange()
     {
         if (viewRangeUpgradePossible == true)
         {

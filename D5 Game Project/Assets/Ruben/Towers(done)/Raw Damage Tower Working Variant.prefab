@@ -665,6 +665,7 @@ MonoBehaviour:
   rend: {fileID: 0}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   rawDamageUpgrade: 0
+  turret: {fileID: 2336554440016781208}
   upgradeMenu: {fileID: 194765270713154557}
   shop: {fileID: 0}
   rangeCost: 10
@@ -1070,8 +1071,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 631121547}
-        m_MethodName: upgradeRange
+      - m_Target: {fileID: 8904202443599133620}
+        m_MethodName: UpgradeRange
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

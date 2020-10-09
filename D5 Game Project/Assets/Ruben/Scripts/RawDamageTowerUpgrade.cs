@@ -11,10 +11,10 @@ public class RawDamageTowerUpgrade : MonoBehaviour
 
     public bool rawDamageUpgrade;
 
+    public GameObject turret;
     public GameObject upgradeMenu;
     public GameObject shop;
 
-    public float rangeCost;
     public void Start()
     {
         rawDamageUpgrade = false;
@@ -24,20 +24,20 @@ public class RawDamageTowerUpgrade : MonoBehaviour
 
     public void Update()
     {
-        shop = GameObject.FindGameObjectWithTag("shop");
+        shop = GameObject.FindGameObjectWithTag("gameMaster");
     }
 
 
     public void OnMouseDown()
     {
-        print("blyat");
         upgradeMenu.SetActive(true);
     }
 
     public void UpgradeRange()
     {
-        gameObject.GetComponent<Turret>().upgradeRange();
-        shop.GetComponent<Shop>().gold -= rangeCost;
+        turret.GetComponent<Turret>().UpgradeRange();
+        shop.GetComponent<Shop>().RangeUpgrade();
+        upgradeMenu.SetActive(false);
     }
     public void UpgradeDamage()
     {
@@ -50,6 +50,6 @@ public class RawDamageTowerUpgrade : MonoBehaviour
     }
     public void OnMouseExit()
     {
-
+        
     }
 }
