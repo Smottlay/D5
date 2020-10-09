@@ -78,6 +78,84 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Mission Name
+--- !u!1 &1264251481
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1264251482}
+  - component: {fileID: 1264251484}
+  - component: {fileID: 1264251483}
+  m_Layer: 0
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1264251482
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264251481}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5088977133184041509}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 319.07996, y: -502.2199}
+  m_SizeDelta: {x: 402.98755, y: 75.56016}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1264251484
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264251481}
+  m_CullTransparentMesh: 0
+--- !u!114 &1264251483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264251481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 4
+    m_MaxSize: 54
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: '[Mouse1 to skip]'
 --- !u!1 &6275162297995025650
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,6 +187,7 @@ RectTransform:
   m_Children:
   - {fileID: 1113776181828650977}
   - {fileID: 496871707}
+  - {fileID: 1264251482}
   m_Father: {fileID: 7081021802554059297}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -189,7 +268,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 319.08, y: -168.63}
-  m_SizeDelta: {x: 837.65, y: 742.7562}
+  m_SizeDelta: {x: 837.65, y: 742.7611}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6232957692305562510
 CanvasRenderer:
@@ -220,9 +299,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9a1df615c4de3754bbfc7a5d7688418a, type: 2}
-  m_sharedMaterial: {fileID: -5325009618895169745, guid: 9a1df615c4de3754bbfc7a5d7688418a,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -246,8 +324,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -561,7 +639,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d61ee72db3d131428d5ba1445286060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transition: {fileID: 7490170551329069407}
+  transition: {fileID: 7081021802554059300}
+  spawner: {fileID: 0}
+  timePanel: {fileID: 0}
+  ui: {fileID: 0}
 --- !u!95 &7490170551329069407
 Animator:
   serializedVersion: 3
@@ -625,5 +706,4 @@ MonoBehaviour:
     the aliens grasp and cleanse this world from their footprint? That\u2019s what
     I thought, Good luck commander, we\u2019ll talk soon.\r\n\r\n-LT. Rainn\r"
   typingSpeed: 0.05
-  firstLevel: 0
-  secondLevel: 0
+  sceneName: 

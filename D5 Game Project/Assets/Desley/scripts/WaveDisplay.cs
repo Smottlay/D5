@@ -12,17 +12,29 @@ public class WaveDisplay : MonoBehaviour
     public TextMeshProUGUI roundText;
     public TextMeshProUGUI timeText;
 
+    public int roundDisplay;
+    public float roundTimeDisplay;
+    public bool transitionEnd;
+
     // Start is called before the first frame update
     void Start()
     {
-        timerText.SetActive(true);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        int roundDisplay = GameObject.FindGameObjectWithTag("spawner").GetComponent<Spawn>().waveCounter;
-        float roundTimeDisplay = GameObject.FindGameObjectWithTag("spawner").GetComponent<Spawn>().waveCountdown;
+        if (transitionEnd)
+        {
+            roundDisplay = GameObject.FindGameObjectWithTag("spawner").GetComponent<Spawn>().waveCounter;
+            roundTimeDisplay = GameObject.FindGameObjectWithTag("spawner").GetComponent<Spawn>().waveCountdown;
+        }
+        else
+        {
+            return;
+        }
+
         if(roundTimeDisplay <= 10)
         {
             timerText.SetActive(true);
