@@ -11,10 +11,14 @@ public class PauseMenu : MonoBehaviour
     public GameObject settingsRim;
     public float lastTimescale;
 
+    public GameObject shop;
+
     public bool pausedActive;
     public bool settingsActive;
     private void Start()
     {
+        shop = GameObject.FindGameObjectWithTag("shop");
+
         HideSettings();
         HidePaused();
     }
@@ -48,6 +52,7 @@ public class PauseMenu : MonoBehaviour
         pause.alpha = 0f;
         pause.blocksRaycasts = false;
         pausedActive = false;
+        shop.SetActive(true);
         //pauseRim.SetActive(false);
     }
     public void ShowPaused()
@@ -55,6 +60,7 @@ public class PauseMenu : MonoBehaviour
         pause.alpha = 1f;
         pause.blocksRaycasts = true;
         pausedActive = true;
+        shop.SetActive(false);
         //pauseRim.SetActive(true);
     }
     public void HideSettings()
@@ -62,6 +68,7 @@ public class PauseMenu : MonoBehaviour
         settings.alpha = 0f;
         settings.blocksRaycasts = false;
         settingsActive = false;
+        shop.SetActive(true);
         //settingsRim.SetActive(false);
     }
     public void ShowSettings()
@@ -69,6 +76,7 @@ public class PauseMenu : MonoBehaviour
         settings.alpha = 1f;
         settings.blocksRaycasts = true;
         settingsActive = true;
+        shop.SetActive(false);
         //settingsRim.SetActive(true);
     }
    
