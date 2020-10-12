@@ -108,7 +108,6 @@ public class Turret : TowerUpgrade
 
     public void Shoot()
     {
-        print("shooting");
         muzzleFlash.Play();
         gunFire.Play();
 

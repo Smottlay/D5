@@ -13,6 +13,9 @@ public class MainMenu : MonoBehaviour
     public GameObject devMenu;
     public static bool devModeOn;
 
+    public GameObject devModePanel;
+    public GameObject panel;
+
     public void Start()
     {
         //devModeOn = false;
@@ -39,11 +42,8 @@ public class MainMenu : MonoBehaviour
 
     public void DevMode()
     {
-
-        devModeOn = true;
-        devMenu.GetComponent<DevMode>().DevModeOn();
-        SceneManager.LoadScene(1);
-
+        panel.SetActive(false);
+        devModePanel.SetActive(true);
     }
 
     public void QuitGame()
@@ -71,5 +71,23 @@ public class MainMenu : MonoBehaviour
     public void DisableDevMode()
     {
         devModeOn = false;
+    }
+
+    public void Back()
+    {
+        devModePanel.SetActive(false);
+        panel.SetActive(true);
+    }
+    public void Level1()
+    {
+        devModeOn = true;
+        devMenu.GetComponent<DevMode>().DevModeOn();
+        SceneManager.LoadScene(1);
+    }
+    public void Level2()
+    {
+        devModeOn = true;
+        spawner.GetComponent<Spawn>().devMode = true;
+        SceneManager.LoadScene(2);
     }
 }
