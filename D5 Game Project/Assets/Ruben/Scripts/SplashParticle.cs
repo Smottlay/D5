@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class SplashParticle : MonoBehaviour
 {
+    public AudioSource impact;
     public ParticleSystem splash;
     private float timer = 3;
 
     void Start()
     {
         splash.Play();
+        impact.Play();
     }
 
     private void Update()
