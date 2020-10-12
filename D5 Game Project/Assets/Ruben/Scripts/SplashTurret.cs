@@ -13,6 +13,7 @@ public class SplashTurret : MonoBehaviour
     public AudioClip laserLoad;
     public AudioSource audioS;
 
+    public GameObject pulse;
     public Transform enemy;
 
     public float viewRange;
@@ -35,7 +36,6 @@ public class SplashTurret : MonoBehaviour
     public void Start()
     {
         audioS = gameObject.GetComponent<AudioSource>();
-
         particleReload = particleReloadTime;
         viewRangeUpgradePossible = true;
         bulletReload = bulletrate;
