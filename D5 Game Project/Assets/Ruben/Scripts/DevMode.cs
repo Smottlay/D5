@@ -14,11 +14,13 @@ public class DevMode : MonoBehaviour
     {
         devmodeEnable = true;
         //devmodeEnable = false;
-        spawner = GameObject.FindGameObjectWithTag("spawner");
-
     }
     public void Update()
     {
+        if(spawner == null)
+        {
+            spawner = GameObject.FindGameObjectWithTag("spawner");
+        }
         if (devmodeEnable == true&& spawner != null)
         {
             spawner.GetComponent<Spawn>().devMode = true;
@@ -31,15 +33,15 @@ public class DevMode : MonoBehaviour
 
     public void SpawnSpeed()
     {
-        spawner.GetComponent<Spawn>().SpawnSpeed();
+        spawner.GetComponent<Spawn>().DevModeSpeed();
     }
     public void SpawnNormal()
     {
-        spawner.GetComponent<Spawn>().SpawnNormal();
+        spawner.GetComponent<Spawn>().DevModeNormal();
     }
     public void SpawnTank()
     {
-        spawner.GetComponent<Spawn>().SpawnTank();
+        spawner.GetComponent<Spawn>().DevModeTank();
     }
     public void unlimitedResources()
     {

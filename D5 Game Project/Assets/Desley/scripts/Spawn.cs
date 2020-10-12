@@ -189,4 +189,17 @@ public class Spawn : MonoBehaviour
         canSpawn = false;
         SpawnCountdown();
     }
+
+    public void DevModeSpeed()
+    {
+        Instantiate(speed, gameObject.transform);
+    }
+    public void DevModeNormal()
+    {
+        Instantiate(normal, gameObject.transform);
+    }
+    public void DevModeTank()
+    {
+        Instantiate(tank, gameObject.transform);
+    }
 }

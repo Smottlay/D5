@@ -19,6 +19,9 @@ public class TransitionText : MonoBehaviour
     Scene currentScene;
     public string sceneName;
 
+    public float activeTimer;
+    public bool activeBool;
+
     void Start()
     {
         currentScene = SceneManager.GetActiveScene();
@@ -59,6 +62,16 @@ public class TransitionText : MonoBehaviour
         {
             StopAllCoroutines();
             gameObject.GetComponent<Transition>().EndTransition();
+            activeTimer = 1f;
+            activeBool = true;
+        }
+
+        activeTimer -= Time.deltaTime;
+
+        if(activeTimer <= 0 && activeBool)
+        {
+            gameObject.GetComponent<Transition>().ActivateUI();
+            gameObject.SetActive(false);
         }
     }
 }

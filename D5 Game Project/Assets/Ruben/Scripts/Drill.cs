@@ -12,7 +12,7 @@ public class Drill : MonoBehaviour
     public ParticleSystem drill;
     public void Start()
     {
-        shop = GameObject.FindGameObjectWithTag("shop");
+        shop = GameObject.FindGameObjectWithTag("gameMaster");
     }
 
     void Update()

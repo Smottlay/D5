@@ -25,6 +25,9 @@ public class Transition : MonoBehaviour
     public void EndTransition()
     {
         transition.SetBool("End", true);
+    }
+    public void ActivateUI()
+    {
         spawner.SetActive(true);
         timePanel.SetActive(true);
         ui.GetComponent<Canvas>().enabled = true;
