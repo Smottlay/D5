@@ -246,6 +246,7 @@ public class Shop : MonoBehaviour
         if (drill == true)
         {
             gold += drillCost;
+            drill = false;
         }
 
         refund.SetActive(false);

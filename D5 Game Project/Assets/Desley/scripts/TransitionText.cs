@@ -27,15 +27,19 @@ public class TransitionText : MonoBehaviour
         currentScene = SceneManager.GetActiveScene();
         sceneName = currentScene.name;
 
-        if (sceneName == ("Main Scene Dawg"))
+        if (sceneName == ("Level 1"))
         {
             MissionNameText.text = missionName[0];
             StartCoroutine(TypeFirstLore());
         }
-        else
+        else if(sceneName ==  ("Level 2"))
         {
             MissionNameText.text = missionName[1];
             StartCoroutine(TypeSecondLore());
+        }
+        else
+        {
+            return;
         }
     }
     

@@ -84,6 +84,15 @@ public class Spawn : MonoBehaviour
             speed.GetComponent<Enemy>().maxHealth = 100;
         }
 
+        if(waveCounter == 1 && waveCountdown <= 0)
+        {
+            GameObject[] buildSigns = GameObject.FindGameObjectsWithTag("BuildSign");
+            foreach(GameObject sign in buildSigns)
+            {
+                Destroy(sign);
+            }
+        }
+
         if(!giveExtraHealth)
         {
             giveExtraHealth = true;

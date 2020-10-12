@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
 
     public float minY;
     public float maxY;
+    public float minZ;
+    public float maxZ;
 
     public bool transitionEnd;
 
@@ -49,6 +51,8 @@ public class PlayerMovement : MonoBehaviour
             moveDir.z = Mathf.Clamp(moveDir.z, -horLimit.y, horLimit.y);
 
             moveDir.y = Mathf.Clamp(moveDir.y, minY, maxY);
+
+            moveDir.z = Mathf.Clamp(moveDir.z, minZ, maxZ);
 
             transform.position = moveDir;
         }

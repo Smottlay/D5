@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class ButtonManager : MonoBehaviour
 
     public void NextLevelButton(bool button)
     {
-
+        SceneManager.LoadScene("Level 2");
     }
 
     public void QuitButton()

@@ -92,7 +92,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene("Main Scene/Main Scene Dawg");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
     public void Resume()
     {

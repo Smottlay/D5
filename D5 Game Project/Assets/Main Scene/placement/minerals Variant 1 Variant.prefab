@@ -65,7 +65,12 @@ PrefabInstance:
     - target: {fileID: 317674388455511399, guid: 728e73d39de79014b804f7aad02d5d46,
         type: 3}
       propertyPath: m_Name
-      value: minerals Variant 1
+      value: minerals Variant 1 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6269743663340094458, guid: 728e73d39de79014b804f7aad02d5d46,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 728e73d39de79014b804f7aad02d5d46, type: 3}
