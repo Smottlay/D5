@@ -28,6 +28,7 @@ public class Resource : MonoBehaviour
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
         shop = GameObject.FindGameObjectWithTag("shop");
+        
     }
     private void Update()
     {
