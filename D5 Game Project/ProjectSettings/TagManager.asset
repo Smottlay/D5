@@ -35,6 +35,7 @@ TagManager:
   - levelloader
   - timePanel
   - BuildSign
+  - menu's
   layers:
   - Default
   - TransparentFX

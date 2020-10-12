@@ -8,18 +8,23 @@ public class Skip : MonoBehaviour
     public float skipSpeed;
     public float normalSpeed;
 
+    public bool gameStarted;
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Jump") && !skipping && Time.timeScale >= 1)
+        if (gameStarted)
         {
-            Time.timeScale = skipSpeed;
-            skipping = true;
-        }
-        else if (Input.GetButtonDown("Jump") && skipping && Time.timeScale >= 1)
-        {
-            Time.timeScale = normalSpeed;
-            skipping = false;
+            if (Input.GetButtonDown("Jump") && !skipping && Time.timeScale >= 1)
+            {
+                Time.timeScale = skipSpeed;
+                skipping = true;
+            }
+            else if (Input.GetButtonDown("Jump") && skipping && Time.timeScale >= 1)
+            {
+                Time.timeScale = normalSpeed;
+                skipping = false;
+            }
         }
     }
 }

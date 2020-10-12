@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
 
     public GameObject healthBar;
 
+    public AudioSource death;
+
     public SkinnedMeshRenderer sMeshRenderer;
     public float dissolveTimer;
     public float addOnDeath;
@@ -37,6 +39,7 @@ public class Enemy : MonoBehaviour
         transform.position = GameObject.FindGameObjectWithTag("spawner").transform.position;
         colider = gameObject.GetComponent<BoxCollider>();
         sMeshRenderer = gameObject.GetComponentInChildren<SkinnedMeshRenderer>();
+        death = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -52,6 +55,7 @@ public class Enemy : MonoBehaviour
             GameObject.FindGameObjectWithTag("spawner").GetComponent<Spawn>().destroyedCounter++;
             gameObject.tag = "Untagged";
             dissolving = true;
+            death.Play();
         }
         else if (health <= 0 && attacker == null && !dissolving)
         {
@@ -60,6 +64,7 @@ public class Enemy : MonoBehaviour
             GameObject.FindGameObjectWithTag("spawner").GetComponent<Spawn>().destroyedCounter++;
             gameObject.tag = "Untagged";
             dissolving = true;
+            death.Play();
         }
         
         if (dissolving)

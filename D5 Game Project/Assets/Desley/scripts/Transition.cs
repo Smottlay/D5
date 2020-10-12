@@ -33,5 +33,7 @@ public class Transition : MonoBehaviour
         ui.GetComponent<Canvas>().enabled = true;
         cam.GetComponent<PlayerMovement>().transitionEnd = true;
         GameObject.FindGameObjectWithTag("timer").GetComponent<WaveDisplay>().transitionEnd = true;
+        cam.GetComponent<Skip>().gameStarted = true;
+        GameObject.FindGameObjectWithTag("menu's").GetComponent<PauseMenu>().gameStarted = true;
     }
 }

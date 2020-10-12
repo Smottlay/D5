@@ -15,6 +15,8 @@ public class PauseMenu : MonoBehaviour
 
     public bool pausedActive;
     public bool settingsActive;
+
+    public bool gameStarted;
     private void Start()
     {
         shop = GameObject.FindGameObjectWithTag("shop");
@@ -28,7 +30,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void PauseThing()
     {
-        if(Input.GetButtonDown("Cancel"))
+        if(Input.GetButtonDown("Cancel") && gameStarted)
         {
             if(!pausedActive && !settingsActive && Time.timeScale >= 1)
             {

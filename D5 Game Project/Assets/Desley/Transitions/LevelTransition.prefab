@@ -505,7 +505,7 @@ Animator:
   m_GameObject: {fileID: 7081021802781924158}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6c1baf4cd69cc4240a299890769e0c35, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -629,3 +629,5 @@ MonoBehaviour:
     I thought, Good luck commander, we\u2019ll talk soon.\r\n\r\n-LT. Rainn\r"
   typingSpeed: 0.05
   sceneName: 
+  activeTimer: 0
+  activeBool: 0

@@ -176,6 +176,7 @@ MonoBehaviour:
   road: {fileID: 0}
   mine: {fileID: 6833606103196482294, guid: 4fddba2d2b5a70d4092aaaf5a04c72cc, type: 3}
   thunkDust: {fileID: 3374073209577184495}
+  mineThunk: {fileID: 386024925760629496}
 --- !u!114 &1906420184
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -24,10 +24,10 @@ public class MineLayer : MonoBehaviour
     public GameObject mine;
 
     public ParticleSystem thunkDust;
+    public AudioSource mineThunk;
     
     void Start()
     {
-
         //roadTransform = road.GetComponent<Transform>();
         maxMines = Mathf.Infinity;
     }
@@ -100,6 +100,7 @@ public class MineLayer : MonoBehaviour
     public void Mine0()
     {
         thunkDust.Play();
+        mineThunk.Play();
         GameObject tempMine;
         tempMine = Instantiate(mine, mineSpawner.transform.position, mineSpawner.transform.rotation) as GameObject;
         targetPos = mineSpawnPoints[4].transform.position;
@@ -116,6 +117,7 @@ public class MineLayer : MonoBehaviour
     public void Mine1()
     {
         thunkDust.Play();
+        mineThunk.Play();
         GameObject tempMine;
         tempMine = Instantiate(mine, mineSpawner.transform.position, mineSpawner.transform.rotation) as GameObject;
         targetPos = mineSpawnPoints[5].transform.position;
@@ -132,6 +134,7 @@ public class MineLayer : MonoBehaviour
     public void Mine2()
     {
         thunkDust.Play();
+        mineThunk.Play();
         GameObject tempMine;
         tempMine = Instantiate(mine, mineSpawner.transform.position, mineSpawner.transform.rotation) as GameObject;
         targetPos = mineSpawnPoints[6].transform.position;

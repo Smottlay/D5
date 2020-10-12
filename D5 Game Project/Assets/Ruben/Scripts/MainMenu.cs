@@ -87,7 +87,7 @@ public class MainMenu : MonoBehaviour
     public void Level2()
     {
         devModeOn = true;
-        spawner.GetComponent<Spawn>().devMode = true;
+        devMenu.GetComponent<DevMode>().DevModeOn();
         SceneManager.LoadScene(2);
     }
 }
