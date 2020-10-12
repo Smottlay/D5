@@ -305,6 +305,8 @@ MonoBehaviour:
   audioS: {fileID: 0}
   pulse: {fileID: 8990969909395090824}
   enemy: {fileID: 0}
+  towerBase: {fileID: 8990969909395090824}
+  emission: {fileID: 0}
   viewRange: 11
   viewRangeUpgrade: 0
   maxUpgrade: 0

@@ -16,6 +16,9 @@ public class SplashTurret : MonoBehaviour
     public GameObject pulse;
     public Transform enemy;
 
+    public GameObject towerBase;
+    public MeshRenderer emission;
+
     public float viewRange;
     public float viewRangeUpgrade;
     public float maxUpgrade;
@@ -30,11 +33,13 @@ public class SplashTurret : MonoBehaviour
     public float bulletSpeed;
     private float bulletReload;
     public float bulletrate;
+    public float addPulse;
 
     public float particleReload;
     public float particleReloadTime = 2f;
     public void Start()
     {
+        emission = towerBase.GetComponent<MeshRenderer>();
         audioS = gameObject.GetComponent<AudioSource>();
         particleReload = particleReloadTime;
         viewRangeUpgradePossible = true;
@@ -83,9 +88,15 @@ public class SplashTurret : MonoBehaviour
 
         muzzleFlash.IsAlive();
         bulletReload -= Time.deltaTime;
+        addPulse = 2 - bulletReload;
+        emission.material.SetFloat("_PulseTime", addPulse);
 
         if (enemy == null)
+        {
+            emission.material.SetFloat("_PulseTime", 0);
             return;
+        }
+           
 
         if (enemy.tag == "Untagged")
         {

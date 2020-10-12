@@ -10,12 +10,12 @@ PrefabInstance:
     - target: {fileID: 9044075122205936210, guid: a569b56992722a344823c308b6239ccc,
         type: 3}
       propertyPath: m_Name
-      value: SplashTowerGroundExplosion
+      value: SplashTowerGroundExplosion Variant
       objectReference: {fileID: 0}
     - target: {fileID: 9044075122205936211, guid: a569b56992722a344823c308b6239ccc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.625401
+      value: 12.847433
       objectReference: {fileID: 0}
     - target: {fileID: 9044075122205936211, guid: a569b56992722a344823c308b6239ccc,
         type: 3}
@@ -25,7 +25,7 @@ PrefabInstance:
     - target: {fileID: 9044075122205936211, guid: a569b56992722a344823c308b6239ccc,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.0661855
+      value: -12.94402
       objectReference: {fileID: 0}
     - target: {fileID: 9044075122205936211, guid: a569b56992722a344823c308b6239ccc,
         type: 3}

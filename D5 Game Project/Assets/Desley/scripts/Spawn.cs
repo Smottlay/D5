@@ -19,6 +19,8 @@ public class Spawn : MonoBehaviour
     public bool canSpawn;
     public bool devMode;
 
+    public GameObject timePanel;
+
     public int spawnRandomizer;
 
     public GameObject normal;
@@ -47,6 +49,11 @@ public class Spawn : MonoBehaviour
             continuePanel.SetActive(true);
             Time.timeScale = 0;
             return;
+        }
+
+        if (devMode)
+        {
+            timePanel.SetActive(false);
         }
 
         if (endlessMode && newEndlessWave && !devMode)

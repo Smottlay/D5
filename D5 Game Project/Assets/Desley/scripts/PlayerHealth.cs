@@ -67,7 +67,7 @@ public void Restart()
 
     public void MainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene(0);
     }
 
     public void unlimitedHealth()

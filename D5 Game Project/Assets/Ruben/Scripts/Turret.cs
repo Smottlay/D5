@@ -25,12 +25,11 @@ public class Turret : TowerUpgrade
     private bool flashed;
 
     public float bulletSpeed;
-    private float bulletReload;
+    public float bulletReload;
     public float bulletrate;
     public void Start()
     {
         viewRangeUpgradePossible = true;
-        bulletReload = bulletrate;
         InvokeRepeating("targetToShoot", 0f, 0.5f);
     }
 
@@ -109,6 +108,7 @@ public class Turret : TowerUpgrade
 
     public void Shoot()
     {
+        print("shooting");
         muzzleFlash.Play();
         gunFire.Play();
 

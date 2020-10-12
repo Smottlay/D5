@@ -10687,6 +10687,7 @@ MonoBehaviour:
   spawnRate: 1
   canSpawn: 0
   devMode: 0
+  timePanel: {fileID: 508536335}
   spawnRandomizer: 0
   normal: {fileID: 1779808116918377571, guid: c7205a85b213e5a42aa973b03dec9c9d, type: 3}
   speed: {fileID: 324807994392892879, guid: 17ee12ea53f824f4291fab0f5b750953, type: 3}
