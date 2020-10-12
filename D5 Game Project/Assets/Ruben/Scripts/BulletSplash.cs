@@ -13,9 +13,10 @@ public class BulletSplash : MonoBehaviour
     public GameObject enemy;
     public GameObject turret;
 
+
     public void Start()
     {
-        enemy = turret.gameObject.GetComponent<Turret>().enemy.gameObject;
+        enemy = turret.gameObject.GetComponent<SplashTurret>().enemy.gameObject;
     }
 
     private void OnCollisionEnter(Collision collision)
