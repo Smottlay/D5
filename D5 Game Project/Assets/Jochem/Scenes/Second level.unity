@@ -2225,7 +2225,7 @@ PrefabInstance:
     - target: {fileID: 199646407869239124, guid: 037283651a83570498bd8d47b7ef355a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -73.11
+      value: -73.41
       objectReference: {fileID: 0}
     - target: {fileID: 199646407869239124, guid: 037283651a83570498bd8d47b7ef355a,
         type: 3}
@@ -3195,7 +3195,7 @@ PrefabInstance:
     - target: {fileID: 199646407869239124, guid: 037283651a83570498bd8d47b7ef355a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -73.48
+      value: -73.78001
       objectReference: {fileID: 0}
     - target: {fileID: 199646407869239124, guid: 037283651a83570498bd8d47b7ef355a,
         type: 3}
@@ -3428,6 +3428,8 @@ MonoBehaviour:
   horLimit: {x: 70, y: 15}
   minY: 25
   maxY: 50
+  minZ: 0
+  maxZ: 0
   transitionEnd: 0
 --- !u!114 &1391265883
 MonoBehaviour:
@@ -4275,7 +4277,7 @@ PrefabInstance:
     - target: {fileID: 2877369994012525020, guid: ee59db76a0cc6cc4ca309dcfba7a273f,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4009703535639001779, guid: ee59db76a0cc6cc4ca309dcfba7a273f,
         type: 3}
@@ -5698,7 +5700,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4f210f8a8ceff644e91d33bc96e4af50, type: 2}
+      objectReference: {fileID: 2100000, guid: 512c855f07ac13d4c8a58133e26c7a78, type: 2}
     - target: {fileID: 919132149155446097, guid: 168855f1f32d8b54eac9cbc10fdcb5c7,
         type: 3}
       propertyPath: m_Name
