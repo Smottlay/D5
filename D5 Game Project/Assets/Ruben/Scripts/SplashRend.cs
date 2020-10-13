@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class SplashRend : MonoBehaviour
 {
+    /*
+     * bro why this thing empty huh, was looking for a referance error and I find this
+     * mmm bruh
+     */
     // Start is called before the first frame update
     void Start()
     {

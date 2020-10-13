@@ -16,6 +16,8 @@ public class MainMenu : MonoBehaviour
     public GameObject devModePanel;
     public GameObject panel;
 
+    public GameObject[] buttons;
+
     public void Start()
     {
         //devModeOn = false;
@@ -33,11 +35,19 @@ public class MainMenu : MonoBehaviour
     public void Settings()
     {
         settings.SetActive(true);
+        foreach(GameObject button in buttons)
+        {
+            button.SetActive(false);
+        }
     }
 
     public void BackToMainMenu()
     {
         settings.SetActive(false);
+        foreach (GameObject button in buttons)
+        {
+            button.SetActive(true);
+        }
     }
 
     public void DevMode()

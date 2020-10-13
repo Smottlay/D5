@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class SettingsMenu : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class SettingsMenu : MonoBehaviour
     public TMPro.TMP_Dropdown resolutionsDropdown;
     public Slider slider;
     public GameObject player;
+    public Text resText;
 
     public List<string> options = new List<string>();
     private void Start()
@@ -38,6 +40,14 @@ public class SettingsMenu : MonoBehaviour
         resolutionsDropdown.AddOptions(options);
         resolutionsDropdown.value = currentResolutionIndex;
         resolutionsDropdown.RefreshShownValue();
+        SetResolution(currentResolutionIndex);
+    }
+    public void Update()
+    {
+        if(SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            resText.text = Screen.currentResolution.ToString();
+        }
     }
 
     public void SetResolution(int resolutionIndex)
