@@ -13,6 +13,7 @@ public class SettingsMenu : MonoBehaviour
     public Slider slider;
     public GameObject player;
 
+    public List<string> options = new List<string>();
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("MainCamera");
@@ -20,8 +21,6 @@ public class SettingsMenu : MonoBehaviour
         resolutions = Screen.resolutions;
 
         resolutionsDropdown.ClearOptions();
-
-        List<string> options = new List<string>();
 
         int currentResolutionIndex = 0;
         for(int i = 0; i < resolutions.Length; i++)

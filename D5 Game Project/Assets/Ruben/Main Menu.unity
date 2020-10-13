@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -306,6 +306,7 @@ MonoBehaviour:
   resolutionsDropdown: {fileID: 1180802573}
   slider: {fileID: 0}
   player: {fileID: 0}
+  options: []
 --- !u!225 &55301259
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -4634,7 +4635,6 @@ GameObject:
   - component: {fileID: 1180802576}
   - component: {fileID: 1180802575}
   - component: {fileID: 1180802573}
-  - component: {fileID: 1180802577}
   m_Layer: 5
   m_Name: Resolution
   m_TagString: ShowOnSettings
@@ -4765,18 +4765,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180802572}
   m_CullTransparentMesh: 0
---- !u!114 &1180802577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1180802572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03bbfe5fd4fbdce4593d7ff4cd506196, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1377373739
 GameObject:
   m_ObjectHideFlags: 0
