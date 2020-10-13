@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class RawDamageTowerUpgrade : MonoBehaviour
 {
@@ -11,19 +12,30 @@ public class RawDamageTowerUpgrade : MonoBehaviour
 
     public bool rawDamageUpgrade;
 
+    public float rangeCost;
+    public float damageCost;
+
     public GameObject turret;
     public GameObject upgradeMenu;
     public GameObject shop;
+
+    public TMP_Text rangeGold;
+    public TMP_Text damageGold;
 
     public void Start()
     {
         rawDamageUpgrade = false;
         //rend = GetComponent<Renderer>();
         //startColor = rend.material.color;
+        rangeCost = shop.GetComponent<Shop>().rangeCost;
+        damageCost = shop.GetComponent<Shop>().damageCost;
     }
 
     public void Update()
     {
+        rangeGold.text = rangeCost.ToString();
+        damageGold.text = rangeCost.ToString();
+
         shop = GameObject.FindGameObjectWithTag("gameMaster");
     }
 

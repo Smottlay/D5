@@ -25,7 +25,8 @@ public class Shop : MonoBehaviour
     public float mineLayerCost;
     public float drillCost;
 
-    public float RangeCost;
+    public float rangeCost;
+    public float damageCost;
 
     public bool rawDamageTower;
     private bool splashTower;
@@ -317,9 +318,9 @@ public class Shop : MonoBehaviour
 
     public void RangeUpgrade()
     {
-        if(gold >= RangeCost)
+        if(gold >= rangeCost)
         {
-            gold -= RangeCost;
+            gold -= rangeCost;
         }
     }
 }
