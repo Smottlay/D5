@@ -10,7 +10,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: edc458e834a81a949a10ea87e10692a9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f6e38d49f1bf83c4bb43a81280496f9d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.03
   m_Pitch: 1
@@ -286,6 +286,21 @@ PrefabInstance:
         type: 3}
       propertyPath: damageCountdown
       value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8488314172147793731, guid: 78767f6e957baeb4f9452a2d9febd9d6,
+        type: 3}
+      propertyPath: cripleTimer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8488314172147793731, guid: 78767f6e957baeb4f9452a2d9febd9d6,
+        type: 3}
+      propertyPath: cripleCountdown
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8488314172147793731, guid: 78767f6e957baeb4f9452a2d9febd9d6,
+        type: 3}
+      propertyPath: dissolveTimer
+      value: 0.15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78767f6e957baeb4f9452a2d9febd9d6, type: 3}

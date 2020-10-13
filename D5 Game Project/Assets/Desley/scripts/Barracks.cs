@@ -8,12 +8,11 @@ public class Barracks : MonoBehaviour
     public GameObject cam;
     public GameObject soldier;
     public GameObject newSoldier;
-    public int maxSoldiers;
+
     public int soldierCount;
 
     public GameObject road;
     public Transform[] spawnPoints;
-    public bool firstSpawn;
 
     void Start()
     {
@@ -24,28 +23,22 @@ public class Barracks : MonoBehaviour
 
     void Update()
     {
-        if(gameObject.GetComponent<Lookat>().nearestRoad != null && !firstSpawn)
+        if(gameObject.GetComponent<Lookat>().nearestRoad != null)
         {
             road = gameObject.GetComponent<Lookat>().nearestRoad;
         }
 
-        if(road != null && !firstSpawn)
+        if(road != null)
         {
             spawnPoints = road.GetComponentsInChildren<Transform>();
             newSoldier = Instantiate(soldier, spawnPoints[soldierCount].transform);
             newSoldier.transform.position = spawnPoints[soldierCount].transform.position;
-            firstSpawn = true;
             soldierCount++;
         }
-    }
-
-    public void Spawn()
-    {
-        if (soldierCount < maxSoldiers + 1)
+        if(soldierCount == 3)
         {
-            newSoldier = Instantiate(soldier, spawnPoints[soldierCount].transform);
-            newSoldier.transform.position = spawnPoints[soldierCount].transform.position;
-            soldierCount++;
+            soldierCount = 0;
+            road = null;
         }
     }
 }

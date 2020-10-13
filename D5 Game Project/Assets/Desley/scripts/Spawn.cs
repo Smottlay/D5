@@ -34,6 +34,10 @@ public class Spawn : MonoBehaviour
     public GameObject cam;
     public GameObject continuePanel;
 
+    public int normalMaxHp;
+    public int speedMaxHp;
+    public int tankMaxHp;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -86,9 +90,9 @@ public class Spawn : MonoBehaviour
 
         if(waveCounter == 1)
         {
-            tank.GetComponent<Enemy>().maxHealth = 400;
-            normal.GetComponent<Enemy>().maxHealth = 200;
-            speed.GetComponent<Enemy>().maxHealth = 100;
+            tank.GetComponent<Enemy>().maxHealth = tankMaxHp;
+            normal.GetComponent<Enemy>().maxHealth = normalMaxHp;
+            speed.GetComponent<Enemy>().maxHealth = speedMaxHp;
         }
 
         if(waveCounter == 1 && waveCountdown <= 0)

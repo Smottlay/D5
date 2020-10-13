@@ -10,6 +10,8 @@ public class Enemy : MonoBehaviour
 
     public AudioSource death;
 
+    public GameObject gameMaster;
+
     public SkinnedMeshRenderer sMeshRenderer;
     public float dissolveTimer;
     public float addOnDeath;
@@ -40,6 +42,7 @@ public class Enemy : MonoBehaviour
         colider = gameObject.GetComponent<BoxCollider>();
         sMeshRenderer = gameObject.GetComponentInChildren<SkinnedMeshRenderer>();
         death = gameObject.GetComponent<AudioSource>();
+        gameMaster = GameObject.FindGameObjectWithTag("gameMaster");
     }
 
     // Update is called once per frame
@@ -48,19 +51,25 @@ public class Enemy : MonoBehaviour
         sMeshRenderer.material.SetFloat("_TimeValue", dissolveTimer);
         if (health <= 0 && attacker != null && !dissolving)
         {
+            cripleSpeed = 0;
+            gameObject.GetComponent<PathFinding>().normalSpeed = 0;
+            gameObject.GetComponent<PathFinding>().speed = 0;
+            gameObject.GetComponent<Animator>().SetBool("gettingAttacked", true);
             attacker.gameObject.GetComponent<Soldier>().target = null;
             attacker.gameObject.GetComponent<Soldier>().searching = true;
-            GameObject.FindGameObjectWithTag("gameMaster").GetComponent<Shop>().deadEnemy = gameObject;
-            GameObject.FindGameObjectWithTag("gameMaster").GetComponent<Shop>().addGold();
-            GameObject.FindGameObjectWithTag("spawner").GetComponent<Spawn>().destroyedCounter++;
+            gameMaster.GetComponent<Shop>().addGold();
+            gameMaster.GetComponent<Spawn>().destroyedCounter++;
             gameObject.tag = "Untagged";
             dissolving = true;
             death.Play();
         }
         else if (health <= 0 && attacker == null && !dissolving)
         {
-            GameObject.FindGameObjectWithTag("gameMaster").GetComponent<Shop>().deadEnemy = gameObject;
-            GameObject.FindGameObjectWithTag("gameMaster").GetComponent<Shop>().addGold();
+            cripleSpeed = 0;
+            gameObject.GetComponent<PathFinding>().normalSpeed = 0;
+            gameObject.GetComponent<PathFinding>().speed = 0;
+            gameObject.GetComponent<Animator>().SetBool("gettingAttacked", true);
+            gameMaster.GetComponent<Shop>().addGold();
             GameObject.FindGameObjectWithTag("spawner").GetComponent<Spawn>().destroyedCounter++;
             gameObject.tag = "Untagged";
             dissolving = true;

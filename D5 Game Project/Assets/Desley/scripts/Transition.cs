@@ -35,5 +35,6 @@ public class Transition : MonoBehaviour
         GameObject.FindGameObjectWithTag("timer").GetComponent<WaveDisplay>().transitionEnd = true;
         cam.GetComponent<Skip>().gameStarted = true;
         GameObject.FindGameObjectWithTag("menu's").GetComponent<PauseMenu>().gameStarted = true;
+        GameObject.FindGameObjectWithTag("gameMaster").GetComponent<Shop>().gameStarted = true;
     }
 }

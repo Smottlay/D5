@@ -30,7 +30,7 @@ public class SplashTowerUpgrade : MonoBehaviour
 
     public void OnMouseDown()
     {
-        upgradeMenu.SetActive(true);
+        //upgradeMenu.SetActive(true);
     }
 
     public void UpgradeRange()

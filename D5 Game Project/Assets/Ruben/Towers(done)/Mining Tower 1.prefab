@@ -49,8 +49,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31244fdda59a13346b33fb3886d47e99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goldTimer: 20
-  goldAmount: 5
+  goldTimer: 5
+  goldAmount: 1
   shop: {fileID: 0}
   drill: {fileID: 6017203611589842552}
 --- !u!65 &4279793553594249755

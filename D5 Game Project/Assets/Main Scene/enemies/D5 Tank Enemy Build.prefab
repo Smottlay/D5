@@ -444,8 +444,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attacker: {fileID: 0}
   healthBar: {fileID: 2653635171777767250}
+  death: {fileID: 0}
+  gameMaster: {fileID: 0}
   sMeshRenderer: {fileID: 0}
-  dissolveTimer: 0
+  dissolveTimer: 0.15
   addOnDeath: 0.3
   dissolving: 0
   maxHealth: 400

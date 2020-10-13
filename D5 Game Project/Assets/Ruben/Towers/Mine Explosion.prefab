@@ -9638,7 +9638,7 @@ GameObject:
   - component: {fileID: 9179220910267816732}
   m_Layer: 0
   m_Name: Mine Explosion
-  m_TagString: Untagged
+  m_TagString: mine
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14451,4 +14451,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f43b3a2386d7f284d95659c1e520bc8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  impact: {fileID: 0}
   splash: {fileID: 5889645593029864938}

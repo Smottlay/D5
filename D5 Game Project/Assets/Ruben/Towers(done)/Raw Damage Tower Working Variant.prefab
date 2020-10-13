@@ -318,7 +318,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2776346615574650931
 RectTransform:
   m_ObjectHideFlags: 0
@@ -513,131 +513,6 @@ MonoBehaviour:
   m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
---- !u!82 &1518616334
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2336554440016781208}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 017dd8014a074b24b9df8eac3da81b01, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 60
-  Pan2D: 0
-  rolloffMode: 1
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &631121547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2336554440016781208}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4627fcafadcee7c47a192d5a2c51e59b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rend: {fileID: 0}
-  hoverColor: {r: 0, g: 0, b: 0, a: 0}
-  isTurretUpgrade: 0
-  bulletSpawner: {fileID: 158781777}
-  bullet: {fileID: 2364677504307542409, guid: a9b4aca4f4d1557409f8907e25141f76, type: 3}
-  turretRing: {fileID: 7594354825327363599}
-  rangeCircle: {fileID: 2995509026820208263}
-  muzzleFlash: {fileID: 2957647324181584212}
-  gunFire: {fileID: 1518616334}
-  enemy: {fileID: 0}
-  viewRange: 11
-  viewRangeUpgrade: 4
-  maxUpgrade: 20
-  splashTower: 0
-  bulletSpeed: 4000
-  bulletReload: 0
-  bulletrate: 3
 --- !u!1 &2877426429452298929
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,7 +802,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2968795203144560846}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd190f403ca348a43b85f78651bae5cc, type: 3}
   m_Name: 
@@ -943,6 +818,161 @@ MonoBehaviour:
   rangeCircle: {fileID: 2995509026820208263}
   rangeGold: {fileID: 706509966}
   damageGold: {fileID: 0}
+--- !u!114 &26388467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6339908552400200380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c9e5b0bd25f6514481857f85aa9d66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placingEffect: {fileID: 2654831485141551423}
+--- !u!114 &1794800639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7594354825327363599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c7dc9c286909304abc62095b9413932, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyTarget: {fileID: 0}
+  viewRange: 10
+  enemyTag: enemy
+  turret: {fileID: 2336554440016781208}
+  enemy: {fileID: 0}
+--- !u!82 &1518616334
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2336554440016781208}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 017dd8014a074b24b9df8eac3da81b01, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 60
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &631121547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2336554440016781208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4627fcafadcee7c47a192d5a2c51e59b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rend: {fileID: 0}
+  hoverColor: {r: 0, g: 0, b: 0, a: 0}
+  isTurretUpgrade: 0
+  bulletSpawner: {fileID: 158781777}
+  bullet: {fileID: 2364677504307542409, guid: a9b4aca4f4d1557409f8907e25141f76, type: 3}
+  turretRing: {fileID: 7594354825327363599}
+  rangeCircle: {fileID: 2995509026820208263}
+  muzzleFlash: {fileID: 2957647324181584212}
+  gunFire: {fileID: 1518616334}
+  enemy: {fileID: 0}
+  viewRange: 12
+  viewRangeUpgrade: 4
+  maxUpgrade: 20
+  splashTower: 0
+  bulletSpeed: 4000
+  bulletReload: 0
+  bulletrate: 2
 --- !u!1 &5658038502451327369
 GameObject:
   m_ObjectHideFlags: 0
@@ -978,10 +1008,10 @@ RectTransform:
   m_Father: {fileID: 426100620283252126}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 75, y: -15}
+  m_SizeDelta: {x: 50, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8268980077997109817
 CanvasRenderer:
@@ -1197,36 +1227,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &26388467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6339908552400200380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c9e5b0bd25f6514481857f85aa9d66e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  placingEffect: {fileID: 2654831485141551423}
---- !u!114 &1794800639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7594354825327363599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c7dc9c286909304abc62095b9413932, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyTarget: {fileID: 0}
-  viewRange: 10
-  enemyTag: enemy
-  turret: {fileID: 2336554440016781208}
-  enemy: {fileID: 0}
 --- !u!1 &8304208826349682939
 GameObject:
   m_ObjectHideFlags: 0
@@ -1262,10 +1262,10 @@ RectTransform:
   m_Father: {fileID: 426100620283252126}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 25, y: -15}
+  m_SizeDelta: {x: 50, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4010186048103215009
 CanvasRenderer:
@@ -1509,7 +1509,7 @@ PrefabInstance:
     - target: {fileID: 2118396979442734491, guid: bfec9582d87e406449635ac4621d263b,
         type: 3}
       propertyPath: m_Name
-      value: Raw Damage Tower Working
+      value: Raw Damage Tower Working Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5727046189406523667, guid: bfec9582d87e406449635ac4621d263b,
         type: 3}
@@ -1553,15 +1553,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3771000897692329301}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &6678892743763572742 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7558580342858669395, guid: bfec9582d87e406449635ac4621d263b,
-    type: 3}
-  m_PrefabInstance: {fileID: 3771000897692329301}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2968795203144560846 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2118396979442734491, guid: bfec9582d87e406449635ac4621d263b,
+    type: 3}
+  m_PrefabInstance: {fileID: 3771000897692329301}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6678892743763572742 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7558580342858669395, guid: bfec9582d87e406449635ac4621d263b,
     type: 3}
   m_PrefabInstance: {fileID: 3771000897692329301}
   m_PrefabAsset: {fileID: 0}

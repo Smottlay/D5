@@ -9,7 +9,6 @@ public class Turret : TowerUpgrade
     public GameObject turretRing;
 
     public GameObject rangeCircle;
-    public float rangeCircleValue;
 
     public ParticleSystem muzzleFlash;
     public AudioSource gunFire;
@@ -34,7 +33,6 @@ public class Turret : TowerUpgrade
     {
         viewRangeUpgradePossible = true;
         InvokeRepeating("targetToShoot", 0f, 0.5f);
-        //rangeCircleValue = Vector3.one
     }
 
     public void targetToShoot()
@@ -144,7 +142,7 @@ public class Turret : TowerUpgrade
         if (viewRangeUpgradePossible == true)
         {
             viewRange += viewRangeUpgrade;
-            //rangeCircle.transform.localScale = Vector3.one += viewRangeUpgrade * 2;
+            rangeCircle.transform.localScale = new Vector3(viewRange, viewRange, viewRange) * 2;
         }
     }
     public void UpgradeDamage()

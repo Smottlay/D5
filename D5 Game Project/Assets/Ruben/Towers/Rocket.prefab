@@ -126,8 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22c844efc43255145b75d32ce07efa9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  splashRadius: 3
-  damageAmount: 80
+  splashRadius: 4
+  damageAmount: 125
   sploosh: {fileID: 1568485568907394791}
   particle: {fileID: 5717865491792577716, guid: e3aa7ab14f46bd14087f51d376b7f948,
     type: 3}

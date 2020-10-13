@@ -13,9 +13,7 @@ public class Shop : MonoBehaviour
     public GameObject refund;
 
     public float gold;
-    public float tankGold;
-    public float normalGold;
-    public float speedGold;
+    public float enemyAddGold;
     public float addToGold;
     public float addToGoldDrill;
 
@@ -37,6 +35,7 @@ public class Shop : MonoBehaviour
     public bool resetTowers;
 
     public GameObject shop;
+    public GameObject spawner;
 
     public GameObject rawDamageInfo;
     public GameObject splashTowerInfo;
@@ -50,15 +49,16 @@ public class Shop : MonoBehaviour
     public TMP_Text barracksGold;
     public TMP_Text drillGold;
 
+    public bool gameStarted;
+
     BuildManager buildManager;
 
-    public GameObject deadEnemy;
-
-    private void Start()
+    public void Start()
     {
         shop = GameObject.FindGameObjectWithTag("shop");
         buildManager = BuildManager.instance;
         gameObject.GetComponent<TextMeshPro>();
+        spawner = null;
     }
     public void Update()
     {
@@ -68,6 +68,11 @@ public class Shop : MonoBehaviour
         slowGold.text = mineLayerCost.ToString();
         barracksGold.text = barracksCost.ToString();
         drillGold.text = drillCost.ToString();
+
+        if (gameStarted)
+        {
+            spawner = GameObject.FindGameObjectWithTag("spawner");
+        }
 
         if (resetTowers == true)
         {
@@ -197,24 +202,14 @@ public class Shop : MonoBehaviour
 
     public void addGold()
     {
-        if(deadEnemy == null)
+        int waveCount = spawner.GetComponent<Spawn>().waveCounter;
+        if (waveCount <= 6)
         {
-            return;
+            gold += enemyAddGold;
         }
-        else if(deadEnemy.GetComponent<Enemy>().finishDamage == 5)
+        else if(waveCount <= 10)
         {
-            gold += tankGold;
-            deadEnemy = null;
-        }
-        else if (deadEnemy.GetComponent<Enemy>().finishDamage == 3)
-        {
-            gold += normalGold;
-            deadEnemy = null;
-        }
-        else if (deadEnemy.GetComponent<Enemy>().finishDamage == 2)
-        {
-            gold += speedGold;
-            deadEnemy = null;
+            gold += enemyAddGold / 2;
         }
     }
     public void addGoldDrill()

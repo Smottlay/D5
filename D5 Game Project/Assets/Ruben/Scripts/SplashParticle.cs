@@ -11,7 +11,10 @@ public class SplashParticle : MonoBehaviour
     void Start()
     {
         splash.Play();
-        impact.Play();
+        if(gameObject.tag != "mine")
+        {
+            impact.Play();
+        }
     }
 
     private void Update()
