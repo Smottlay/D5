@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
     public bool mineExplosion;
     public bool mineDetecion;
 
-    public float cripleTimer;
+    public float cripleTimer = 15;
     public float cripleCountdown;
     public float cripleSpeed;
 

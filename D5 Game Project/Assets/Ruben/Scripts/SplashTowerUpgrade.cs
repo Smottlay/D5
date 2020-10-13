@@ -12,6 +12,7 @@ public class SplashTowerUpgrade : MonoBehaviour
 
     public GameObject upgradeMenu;
     public GameObject shop;
+    public GameObject rangeCircle;
 
     public float rangeCost;
     public void Start()
@@ -48,10 +49,10 @@ public class SplashTowerUpgrade : MonoBehaviour
 
     public void OnMouseEnter()
     {
-
+        rangeCircle.SetActive(true);
     }
     public void OnMouseExit()
     {
-
+        rangeCircle.SetActive(false);
     }
 }

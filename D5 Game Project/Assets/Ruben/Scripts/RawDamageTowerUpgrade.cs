@@ -18,6 +18,7 @@ public class RawDamageTowerUpgrade : MonoBehaviour
     public GameObject turret;
     public GameObject upgradeMenu;
     public GameObject shop;
+    public GameObject rangeCircle;
 
     public TMP_Text rangeGold;
     public TMP_Text damageGold;
@@ -58,10 +59,10 @@ public class RawDamageTowerUpgrade : MonoBehaviour
 
     public void OnMouseEnter()
     {
-
+        rangeCircle.SetActive(true);
     }
     public void OnMouseExit()
     {
-        
+        rangeCircle.SetActive(false);
     }
 }

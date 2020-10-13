@@ -1915,7 +1915,7 @@ PrefabInstance:
     - target: {fileID: 5927047354892317794, guid: bbcb22f1b82ec63488eab745a76623d8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 34.519203
+      value: 36.39
       objectReference: {fileID: 0}
     - target: {fileID: 5927047354892317794, guid: bbcb22f1b82ec63488eab745a76623d8,
         type: 3}
@@ -1925,7 +1925,7 @@ PrefabInstance:
     - target: {fileID: 5927047354892317794, guid: bbcb22f1b82ec63488eab745a76623d8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -22.092241
+      value: -21.880001
       objectReference: {fileID: 0}
     - target: {fileID: 5927047354892317794, guid: bbcb22f1b82ec63488eab745a76623d8,
         type: 3}
@@ -3186,7 +3186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -3730,7 +3730,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -3847,12 +3847,13 @@ MonoBehaviour:
   speedGold: 1
   addToGold: 5
   addToGoldDrill: 5
-  rawDamageTowerCost: 25
+  rawDamageTowerCost: 30
   splashTowerCost: 60
   barracksCost: 40
-  mineLayerCost: 30
+  mineLayerCost: 20
   drillCost: 50
-  RangeCost: 10
+  rangeCost: 0
+  damageCost: 0
   rawDamageTower: 0
   resetTowers: 0
   shop: {fileID: 0}
@@ -4311,7 +4312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -12027,7 +12028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -13805,11 +13806,21 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9212124093612329769, guid: daf35082394f0b94c9ed70e09af6eea9,
+        type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9212124093649536673, guid: daf35082394f0b94c9ed70e09af6eea9,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1953856080}
+    - target: {fileID: 9212124093649536673, guid: daf35082394f0b94c9ed70e09af6eea9,
+        type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9212124093787208443, guid: daf35082394f0b94c9ed70e09af6eea9,
         type: 3}
       propertyPath: m_AnchorMin.x
@@ -13825,6 +13836,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9212124093921626179, guid: daf35082394f0b94c9ed70e09af6eea9,
+        type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9212124094203326359, guid: daf35082394f0b94c9ed70e09af6eea9,
         type: 3}
       propertyPath: m_AnchorMin.x
@@ -13838,6 +13854,16 @@ PrefabInstance:
     - target: {fileID: 9212124094203326359, guid: daf35082394f0b94c9ed70e09af6eea9,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212124094504894174, guid: daf35082394f0b94c9ed70e09af6eea9,
+        type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212124094574659037, guid: daf35082394f0b94c9ed70e09af6eea9,
+        type: 3}
+      propertyPath: m_Navigation.m_Mode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9212124095001385880, guid: daf35082394f0b94c9ed70e09af6eea9,
@@ -19463,7 +19489,7 @@ PrefabInstance:
     - target: {fileID: 4009703535639001779, guid: ee59db76a0cc6cc4ca309dcfba7a273f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 34.209206
+      value: 36.08
       objectReference: {fileID: 0}
     - target: {fileID: 4009703535639001779, guid: ee59db76a0cc6cc4ca309dcfba7a273f,
         type: 3}
@@ -19473,7 +19499,7 @@ PrefabInstance:
     - target: {fileID: 4009703535639001779, guid: ee59db76a0cc6cc4ca309dcfba7a273f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16.72224
+      value: -16.51
       objectReference: {fileID: 0}
     - target: {fileID: 4009703535639001779, guid: ee59db76a0cc6cc4ca309dcfba7a273f,
         type: 3}
@@ -20438,7 +20464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -20623,7 +20649,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1851241986}
   m_LocalRotation: {x: -0, y: -0.01434717, z: -0, w: 0.9998971}
-  m_LocalPosition: {x: 34.43921, y: 18.730429, z: -27.662241}
+  m_LocalPosition: {x: 36.310005, y: 18.730429, z: -27.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 399272615}
@@ -21211,7 +21237,7 @@ MonoBehaviour:
   instantiated: 0
   destroyedCounter: 0
   waveCounter: 1
-  extraHealth: 5
+  extraHealth: 15
   giveExtraHealth: 1
   waveCountdown: 10
   regulationRounds: 20
@@ -21963,6 +21989,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera Build
       objectReference: {fileID: 0}
+    - target: {fileID: 6277268301323266346, guid: d0b5581f3160db04391f845dcea53af9,
+        type: 3}
+      propertyPath: m_RequiresDepthTextureOption
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6277268301323266349, guid: d0b5581f3160db04391f845dcea53af9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22031,7 +22062,7 @@ PrefabInstance:
     - target: {fileID: 6277268301323266350, guid: d0b5581f3160db04391f845dcea53af9,
         type: 3}
       propertyPath: horLimit.x
-      value: 85
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 6277268301323266350, guid: d0b5581f3160db04391f845dcea53af9,
         type: 3}

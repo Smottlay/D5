@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -10679,7 +10679,7 @@ MonoBehaviour:
   instantiated: 0
   destroyedCounter: 0
   waveCounter: 1
-  extraHealth: 5
+  extraHealth: 12
   giveExtraHealth: 1
   waveCountdown: 10
   regulationRounds: 20
@@ -15113,7 +15113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -19784,6 +19784,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 108090337, guid: daf35082394f0b94c9ed70e09af6eea9, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 302646623, guid: daf35082394f0b94c9ed70e09af6eea9, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100417587, guid: daf35082394f0b94c9ed70e09af6eea9, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4466669643394259529, guid: daf35082394f0b94c9ed70e09af6eea9,
         type: 3}
       propertyPath: m_fontAsset
@@ -20263,6 +20275,11 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4290690750
       objectReference: {fileID: 0}
+    - target: {fileID: 9212124093612329769, guid: daf35082394f0b94c9ed70e09af6eea9,
+        type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9212124093649536673, guid: daf35082394f0b94c9ed70e09af6eea9,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
@@ -20307,6 +20324,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_MaxValue
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212124093649536673, guid: daf35082394f0b94c9ed70e09af6eea9,
+        type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9212124093699856176, guid: daf35082394f0b94c9ed70e09af6eea9,
         type: 3}
@@ -20426,7 +20448,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1657512819}
+      objectReference: {fileID: 0}
     - target: {fileID: 9212124093921626179, guid: daf35082394f0b94c9ed70e09af6eea9,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -20445,6 +20467,11 @@ PrefabInstance:
     - target: {fileID: 9212124093921626179, guid: daf35082394f0b94c9ed70e09af6eea9,
         type: 3}
       propertyPath: m_MaxValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212124093921626179, guid: daf35082394f0b94c9ed70e09af6eea9,
+        type: 3}
+      propertyPath: m_Navigation.m_Mode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9212124094027402789, guid: daf35082394f0b94c9ed70e09af6eea9,
@@ -20598,7 +20625,7 @@ PrefabInstance:
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1657512819}
+      objectReference: {fileID: 0}
     - target: {fileID: 9212124094504894174, guid: daf35082394f0b94c9ed70e09af6eea9,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -20608,6 +20635,11 @@ PrefabInstance:
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212124094504894174, guid: daf35082394f0b94c9ed70e09af6eea9,
+        type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9212124094574659037, guid: daf35082394f0b94c9ed70e09af6eea9,
         type: 3}
@@ -20633,7 +20665,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1657512819}
+      objectReference: {fileID: 0}
     - target: {fileID: 9212124094574659037, guid: daf35082394f0b94c9ed70e09af6eea9,
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -20648,6 +20680,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Options.m_Options.Array.data[0].m_Text
       value: konker
+      objectReference: {fileID: 0}
+    - target: {fileID: 9212124094574659037, guid: daf35082394f0b94c9ed70e09af6eea9,
+        type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9212124094884221323, guid: daf35082394f0b94c9ed70e09af6eea9,
         type: 3}
@@ -25937,7 +25974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -30726,12 +30763,13 @@ MonoBehaviour:
   speedGold: 1
   addToGold: 5
   addToGoldDrill: 5
-  rawDamageTowerCost: 25
+  rawDamageTowerCost: 30
   splashTowerCost: 60
   barracksCost: 40
-  mineLayerCost: 30
+  mineLayerCost: 20
   drillCost: 50
-  RangeCost: 10
+  rangeCost: 0
+  damageCost: 0
   rawDamageTower: 0
   resetTowers: 0
   shop: {fileID: 0}
@@ -32197,28 +32235,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1f3476242a7fa24b9551d2388a1eb58, type: 3}
---- !u!1 &1657512817 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9212124093282144746, guid: daf35082394f0b94c9ed70e09af6eea9,
-    type: 3}
-  m_PrefabInstance: {fileID: 1060702919}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1657512819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1657512817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e0cd8f826f197c4484ddd08e931109d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioMixer: {fileID: 24100000, guid: bde382c359ff3f746bcb300a6a43e0c8, type: 2}
-  resolutionsDropdown: {fileID: 1936537520}
-  slider: {fileID: 0}
-  player: {fileID: 0}
 --- !u!1001 &1657532910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33151,7 +33167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -37809,18 +37825,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1f3476242a7fa24b9551d2388a1eb58, type: 3}
---- !u!114 &1936537520 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9212124094574659037, guid: daf35082394f0b94c9ed70e09af6eea9,
-    type: 3}
-  m_PrefabInstance: {fileID: 1060702919}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b743370ac3e4ec2a1668f5455a8ef8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1942336891 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7291024644293959267, guid: f1f3476242a7fa24b9551d2388a1eb58,
@@ -40755,7 +40759,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -40948,7 +40952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -41447,6 +41451,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Camera Build
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277268301323266346, guid: d0b5581f3160db04391f845dcea53af9,
+        type: 3}
+      propertyPath: m_RequiresDepthTextureOption
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6277268301323266349, guid: d0b5581f3160db04391f845dcea53af9,
         type: 3}
