@@ -7,6 +7,9 @@ using TMPro;
 
 public class TransitionText : MonoBehaviour
 {
+    public AudioSource level1;
+    public AudioSource level2;
+
     public GameObject MissionPanel;
     public Text MissionNameText;
     public TextMeshProUGUI MissionLoreText;
@@ -29,11 +32,13 @@ public class TransitionText : MonoBehaviour
 
         if (sceneName == ("Level 1"))
         {
+            level1.Play();
             MissionNameText.text = missionName[0];
             StartCoroutine(TypeFirstLore());
         }
         else if(sceneName ==  ("Level 2"))
         {
+            level2.Play();
             MissionNameText.text = missionName[1];
             StartCoroutine(TypeSecondLore());
         }
@@ -64,6 +69,8 @@ public class TransitionText : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
+            level1.Stop();
+            level2.Stop();
             StopAllCoroutines();
             gameObject.GetComponent<Transition>().EndTransition();
             activeTimer = 1f;

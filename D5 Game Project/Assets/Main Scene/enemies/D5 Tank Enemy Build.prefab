@@ -450,7 +450,7 @@ MonoBehaviour:
   dissolveTimer: 0.15
   addOnDeath: 0.3
   dissolving: 0
-  maxHealth: 400
+  maxHealth: 600
   health: 0
   finishDamage: 5
   coinReward: 0

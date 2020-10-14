@@ -10,13 +10,17 @@ public class MusicPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int currentScene = SceneManager.GetActiveScene().buildIndex;
         music = gameObject.GetComponentsInChildren<AudioSource>();
-        if(currentScene == 1)
+    }
+
+    public void StartMusic()
+    {
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        if (currentScene == 1)
         {
             music[0].Play();
         }
-        else if(currentScene == 2)
+        else if (currentScene == 2)
         {
             music[1].Play();
         }

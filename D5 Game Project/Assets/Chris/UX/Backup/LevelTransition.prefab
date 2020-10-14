@@ -1275,6 +1275,7 @@ MonoBehaviour:
   spawner: {fileID: 0}
   timePanel: {fileID: 0}
   ui: {fileID: 0}
+  devMode: 0
 --- !u!95 &9095136356330635203
 Animator:
   serializedVersion: 3
@@ -1306,6 +1307,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44dce9a32c883594fa92ec43fec21deb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level1: {fileID: 0}
+  level2: {fileID: 0}
   MissionPanel: {fileID: 5683506315435358830}
   MissionNameText: {fileID: 1858302457898192768}
   MissionLoreText: {fileID: 7823853311073162694}

@@ -33,6 +33,7 @@ public class Transition : MonoBehaviour
     }
     public void ActivateUI()
     {
+        cam.GetComponent<MusicPlayer>().StartMusic();
         spawner.SetActive(true);
         timePanel.SetActive(true);
         ui.GetComponent<Canvas>().enabled = true;
