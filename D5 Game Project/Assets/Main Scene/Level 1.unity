@@ -11684,7 +11684,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -24371,6 +24371,7 @@ MonoBehaviour:
   shop: {fileID: 1575086473}
   health: {fileID: 1407801905}
   mainMenu: {fileID: 0}
+  transition: {fileID: 0}
   devmodeEnable: 0
 --- !u!1001 &1305920461
 PrefabInstance:
@@ -40129,7 +40130,7 @@ PrefabInstance:
     - target: {fileID: 6277268301323266349, guid: d0b5581f3160db04391f845dcea53af9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.82
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6277268301323266349, guid: d0b5581f3160db04391f845dcea53af9,
         type: 3}
@@ -40180,6 +40181,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277268301323266350, guid: d0b5581f3160db04391f845dcea53af9,
+        type: 3}
+      propertyPath: horLimit.x
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277268301323266350, guid: d0b5581f3160db04391f845dcea53af9,
+        type: 3}
+      propertyPath: minX
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277268301323266350, guid: d0b5581f3160db04391f845dcea53af9,
+        type: 3}
+      propertyPath: maxX
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0b5581f3160db04391f845dcea53af9, type: 3}

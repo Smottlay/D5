@@ -58,7 +58,7 @@ public class Enemy : MonoBehaviour
             attacker.gameObject.GetComponent<Soldier>().target = null;
             attacker.gameObject.GetComponent<Soldier>().searching = true;
             gameMaster.GetComponent<Shop>().addGold();
-            gameMaster.GetComponent<Spawn>().destroyedCounter++;
+            GameObject.FindGameObjectWithTag("spawner").GetComponent<Spawn>().destroyedCounter++;
             gameObject.tag = "Untagged";
             dissolving = true;
             death.Play();

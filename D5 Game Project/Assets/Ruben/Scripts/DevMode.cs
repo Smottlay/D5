@@ -8,20 +8,27 @@ public class DevMode : MonoBehaviour
     public GameObject shop;
     public GameObject health;
     public GameObject mainMenu;
+    public GameObject transition;
 
     public bool devmodeEnable;
     public void Start()
     {
         devmodeEnable = true;
         //devmodeEnable = false;
+        transition = null;
     }
     public void Update()
     {
+        if(transition == null)
+        {
+            transition = GameObject.FindGameObjectWithTag("levelloader");
+            transition.GetComponent<Transition>().devMode = true;
+        }
         if(spawner == null)
         {
             spawner = GameObject.FindGameObjectWithTag("spawner");
         }
-        if (devmodeEnable == true&& spawner != null)
+        if (devmodeEnable == true && spawner != null)
         {
             spawner.GetComponent<Spawn>().devMode = true;
         }

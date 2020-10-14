@@ -14,6 +14,9 @@ public class Barracks : MonoBehaviour
     public GameObject road;
     public Transform[] spawnPoints;
 
+    public bool found;
+    public bool roadFound;
+
     void Start()
     {
         cam = GameObject.FindGameObjectWithTag("MainCamera");
@@ -23,22 +26,34 @@ public class Barracks : MonoBehaviour
 
     void Update()
     {
-        if(gameObject.GetComponent<Lookat>().nearestRoad != null)
+        if(gameObject.GetComponent<Lookat>().nearestRoad != null && !found)
         {
             road = gameObject.GetComponent<Lookat>().nearestRoad;
+            found = true;
         }
 
-        if(road != null)
+        if(road != null && !roadFound)
         {
             spawnPoints = road.GetComponentsInChildren<Transform>();
+            roadFound = true;
+        }
+        
+        if(road != null && soldierCount >= 1)
+        {
+            SpawnSoldier();
+        }
+    }
+
+    void SpawnSoldier()
+    {
+        if(soldierCount >= 4)
+        {
+            return;
+        }
+
             newSoldier = Instantiate(soldier, spawnPoints[soldierCount].transform);
             newSoldier.transform.position = spawnPoints[soldierCount].transform.position;
             soldierCount++;
-        }
-        if(soldierCount == 3)
-        {
-            soldierCount = 0;
-            road = null;
-        }
+        
     }
 }

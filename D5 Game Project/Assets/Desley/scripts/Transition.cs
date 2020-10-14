@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Transition : MonoBehaviour
 {
@@ -10,6 +8,7 @@ public class Transition : MonoBehaviour
     public GameObject timePanel;
     public GameObject ui;
 
+    public bool devMode;
     public void Start()
     {
         transition.SetBool("End", false);
@@ -21,7 +20,13 @@ public class Transition : MonoBehaviour
         spawner.SetActive(false);
         timePanel.SetActive(false);
     }
-
+    public void Update()
+    {
+        if (devMode)
+        {
+            ActivateUI();
+        }
+    }
     public void EndTransition()
     {
         transition.SetBool("End", true);
@@ -36,5 +41,6 @@ public class Transition : MonoBehaviour
         cam.GetComponent<Skip>().gameStarted = true;
         GameObject.FindGameObjectWithTag("menu's").GetComponent<PauseMenu>().gameStarted = true;
         GameObject.FindGameObjectWithTag("gameMaster").GetComponent<Shop>().gameStarted = true;
+        gameObject.SetActive(false);
     }
 }
