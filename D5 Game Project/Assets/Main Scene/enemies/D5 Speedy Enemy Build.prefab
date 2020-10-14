@@ -39,7 +39,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: edc458e834a81a949a10ea87e10692a9, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.03
+  m_Volume: 0.01
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -192,11 +192,12 @@ MonoBehaviour:
   healthBar: {fileID: 777417996779796548}
   death: {fileID: 0}
   gameMaster: {fileID: 0}
+  attackingSound: {fileID: 0}
   sMeshRenderer: {fileID: 0}
   dissolveTimer: 0.15
   addOnDeath: 0.3
   dissolving: 0
-  maxHealth: 100
+  maxHealth: 150
   health: 0
   finishDamage: 2
   coinReward: 0

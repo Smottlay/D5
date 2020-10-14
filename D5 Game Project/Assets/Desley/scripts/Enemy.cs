@@ -12,6 +12,8 @@ public class Enemy : MonoBehaviour
 
     public GameObject gameMaster;
 
+    public AudioSource attackingSound;
+
     public SkinnedMeshRenderer sMeshRenderer;
     public float dissolveTimer;
     public float addOnDeath;
@@ -43,6 +45,7 @@ public class Enemy : MonoBehaviour
         sMeshRenderer = gameObject.GetComponentInChildren<SkinnedMeshRenderer>();
         death = gameObject.GetComponent<AudioSource>();
         gameMaster = GameObject.FindGameObjectWithTag("gameMaster");
+        attackingSound = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -110,10 +113,11 @@ public class Enemy : MonoBehaviour
             }
         }
 
-        else if (damageCountdown <= 0f)
+        if (damageCountdown <= 0f)
         {
             GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PlayerHealth>().health -= finishDamage;
-            damageCountdown = 1.25f;
+            attackingSound.Play();
+            damageCountdown = 1.2f;
         }
     }
 
