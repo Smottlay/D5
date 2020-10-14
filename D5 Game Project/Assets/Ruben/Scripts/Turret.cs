@@ -18,7 +18,7 @@ public class Turret : TowerUpgrade
     public float viewRange;
     public float viewRangeUpgrade;
     public float maxUpgrade;
-    private bool viewRangeUpgradePossible;
+    public bool viewRangeUpgradePossible;
 
     public bool splashTower;
 

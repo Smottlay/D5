@@ -20,6 +20,9 @@ public class RawDamageTowerUpgrade : MonoBehaviour
     public GameObject shop;
     public GameObject rangeCircle;
 
+    public GameObject rangeButton;
+    public GameObject damageButton;
+
     public TMP_Text rangeGold;
     public TMP_Text damageGold;
 
@@ -28,6 +31,7 @@ public class RawDamageTowerUpgrade : MonoBehaviour
         rawDamageUpgrade = false;
         //rend = GetComponent<Renderer>();
         //startColor = rend.material.color;
+        shop = GameObject.FindGameObjectWithTag("gameMaster");
         rangeCost = shop.GetComponent<Shop>().rangeCost;
         damageCost = shop.GetComponent<Shop>().damageCost;
     }
@@ -35,15 +39,26 @@ public class RawDamageTowerUpgrade : MonoBehaviour
     public void Update()
     {
         rangeGold.text = rangeCost.ToString();
-        damageGold.text = rangeCost.ToString();
+        damageGold.text = damageCost.ToString();
 
         shop = GameObject.FindGameObjectWithTag("gameMaster");
+
+        if(turret.GetComponent<Turret>().viewRangeUpgradePossible == false)
+        {
+            rangeButton.SetActive(false);
+        }
+        else
+        {
+            rangeButton.SetActive(true);
+        }
+
+
     }
 
 
     public void OnMouseDown()
     {
-        //upgradeMenu.SetActive(true);
+        upgradeMenu.SetActive(true);
     }
 
     public void UpgradeRange()
@@ -54,7 +69,8 @@ public class RawDamageTowerUpgrade : MonoBehaviour
     }
     public void UpgradeDamage()
     {
-
+        turret.GetComponent<Turret>().UpgradeDamage();
+        upgradeMenu.SetActive(false);
     }
 
     public void OnMouseEnter()

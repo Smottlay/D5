@@ -1457,9 +1457,7 @@ MonoBehaviour:
   mineralsDisplay: {fileID: 20564846}
   refund: {fileID: 880620180}
   gold: 100
-  tankGold: 0
-  normalGold: 0
-  speedGold: 0
+  enemyAddGold: 0
   addToGold: 2
   addToGoldDrill: 0
   rawDamageTowerCost: 10
@@ -1472,6 +1470,7 @@ MonoBehaviour:
   rawDamageTower: 0
   resetTowers: 0
   shop: {fileID: 0}
+  spawner: {fileID: 0}
   rawDamageInfo: {fileID: 161530399}
   splashTowerInfo: {fileID: 1210831940}
   slowTowerInfo: {fileID: 1466242118}
@@ -1482,7 +1481,7 @@ MonoBehaviour:
   slowGold: {fileID: 0}
   barracksGold: {fileID: 0}
   drillGold: {fileID: 0}
-  deadEnemy: {fileID: 0}
+  gameStarted: 0
 --- !u!1001 &199556770
 PrefabInstance:
   m_ObjectHideFlags: 0

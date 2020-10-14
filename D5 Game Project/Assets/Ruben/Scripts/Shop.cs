@@ -318,4 +318,11 @@ public class Shop : MonoBehaviour
             gold -= rangeCost;
         }
     }
+    public void DamageUpgrade()
+    {
+        if(gold >= rangeCost)
+        {
+            gold -= rangeCost;
+        }
+    }
 }
