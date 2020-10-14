@@ -1470,6 +1470,8 @@ MonoBehaviour:
   canUpgradeRange: 0
   canUpgradeDamage: 0
   rawDamageTower: 0
+  splashTower: 0
+  mineLayer: 0
   resetTowers: 0
   shop: {fileID: 0}
   spawner: {fileID: 0}
@@ -5309,6 +5311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   refund: {fileID: 0}
+  gameMaster: {fileID: 0}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   posOffSet: {x: 0, y: 0, z: 0}
   thunk: {fileID: 0}
@@ -5379,6 +5382,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mine Variant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7202088371911963812, guid: 4fddba2d2b5a70d4092aaaf5a04c72cc,
+        type: 3}
+      propertyPath: MinDistance
+      value: 1.0798922
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fddba2d2b5a70d4092aaaf5a04c72cc, type: 3}
