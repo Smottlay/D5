@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3819,7 +3819,6 @@ GameObject:
   - component: {fileID: 518562261}
   - component: {fileID: 518562260}
   - component: {fileID: 518562259}
-  - component: {fileID: 518562263}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: gameMaster
@@ -3921,46 +3920,6 @@ Transform:
   m_Father: {fileID: 1439361724}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &518562263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 518562258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21b50db41a482784588f9b98f0a7d090, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mineralsDisplay: {fileID: 0}
-  refund: {fileID: 0}
-  gold: 50
-  enemyAddGold: 2
-  addToGold: 5
-  addToGoldDrill: 1
-  rawDamageTowerCost: 30
-  splashTowerCost: 40
-  barracksCost: 40
-  mineLayerCost: 15
-  drillCost: 50
-  rangeCost: 10
-  damageCost: 10
-  rawDamageTower: 0
-  resetTowers: 0
-  shop: {fileID: 0}
-  spawner: {fileID: 0}
-  rawDamageInfo: {fileID: 0}
-  splashTowerInfo: {fileID: 0}
-  slowTowerInfo: {fileID: 0}
-  barracksInfo: {fileID: 0}
-  drillInfo: {fileID: 0}
-  damageGold: {fileID: 0}
-  splashGold: {fileID: 0}
-  slowGold: {fileID: 0}
-  barracksGold: {fileID: 0}
-  drillGold: {fileID: 0}
-  gameStarted: 0
 --- !u!1001 &523579523
 PrefabInstance:
   m_ObjectHideFlags: 0
