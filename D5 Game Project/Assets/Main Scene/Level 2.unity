@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3481,6 +3481,8 @@ MonoBehaviour:
   drillCost: 50
   rangeCost: 10
   damageCost: 10
+  canUpgradeRange: 0
+  canUpgradeDamage: 0
   rawDamageTower: 0
   resetTowers: 0
   shop: {fileID: 0}
@@ -13465,6 +13467,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 881718286, guid: 569f41f8729e2b240b51c6105b6fbaca, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1657110efc747b6499b5630dccc6d9fa, type: 3}
     - target: {fileID: 1457985009101426555, guid: 569f41f8729e2b240b51c6105b6fbaca,
         type: 3}
       propertyPath: level1
