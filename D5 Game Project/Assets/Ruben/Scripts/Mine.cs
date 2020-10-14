@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Mine : MonoBehaviour
 {
+    public AudioSource explosion;
+
     public float splashRadius;
     public int damageAmount;
 
@@ -26,10 +28,14 @@ public class Mine : MonoBehaviour
 
     public Rigidbody rb;
 
+    public bool hasExploded;
+    public float destroyTimer;
+
     public void Start()
     {
         kinematicCountdown = 1.5f;
         kinematicOffCountdown = 1f;
+        destroyTimer = Mathf.Infinity;
     }
 
 
@@ -48,6 +54,13 @@ public class Mine : MonoBehaviour
             gameObject.GetComponent<Rigidbody>().isKinematic = false;
             kinematicOffCountdown = 0;
         }
+
+        destroyTimer -= Time.deltaTime;
+
+        if(destroyTimer <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void OnTriggerEnter(Collider other)
@@ -60,7 +73,6 @@ public class Mine : MonoBehaviour
 
     public void Explode()
     {
-
         Collider[] colliders = Physics.OverlapSphere(transform.position, splashRadius);
 
         foreach (Collider nearbyEnemy in colliders)
@@ -68,12 +80,14 @@ public class Mine : MonoBehaviour
             if (nearbyEnemy.gameObject.tag == "enemy")
             {
 
-                if (nearbyEnemy.GetComponent<Enemy>().mineDetecion == true)
+                if (nearbyEnemy.GetComponent<Enemy>().mineDetecion == true && !hasExploded)
                 {
+                    explosion.Play();
+                    hasExploded = true;
                     mineLayer.GetComponent<MineLayer>().activeSpawnPoints[spawnPointID] = true;
                     nearbyEnemy.GetComponent<Enemy>().MineDamage(damageAmount);
                     Instantiate(particle, gameObject.transform.position, gameObject.transform.rotation);
-                    Destroy(gameObject);
+                    destroyTimer = .3f;
                 }
             }
         }

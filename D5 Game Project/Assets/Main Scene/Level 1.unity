@@ -28110,6 +28110,7 @@ MonoBehaviour:
   drillCost: 50
   rangeCost: 10
   damageCost: 10
+  canUpgradeRange: 0
   rawDamageTower: 0
   resetTowers: 0
   shop: {fileID: 0}
