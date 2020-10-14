@@ -28213,6 +28213,8 @@ MonoBehaviour:
   canUpgradeRange: 0
   canUpgradeDamage: 0
   rawDamageTower: 0
+  splashTower: 0
+  mineLayer: 0
   resetTowers: 0
   shop: {fileID: 0}
   spawner: {fileID: 0}
