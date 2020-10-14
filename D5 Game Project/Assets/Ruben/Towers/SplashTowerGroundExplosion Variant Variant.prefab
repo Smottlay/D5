@@ -7,10 +7,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1821824883704212744, guid: 36efad71018c7334787279fb3bcd6177,
+        type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821824883704212744, guid: 36efad71018c7334787279fb3bcd6177,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: ceb10cd166e0be047ab5760ca0ee83a2,
+        type: 2}
     - target: {fileID: 6307981046323943728, guid: 36efad71018c7334787279fb3bcd6177,
         type: 3}
       propertyPath: m_Name
-      value: SplashTowerGroundExplosion Variant Variant
+      value: SplashTowerGroundExplosion Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6307981046323943729, guid: 36efad71018c7334787279fb3bcd6177,
         type: 3}

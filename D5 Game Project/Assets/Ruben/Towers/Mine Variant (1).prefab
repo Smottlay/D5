@@ -9767,6 +9767,8 @@ MonoBehaviour:
   roadTag: road
   mineSpawnPointTag: mineSpawnPoint
   rb: {fileID: 0}
+  hasExploded: 0
+  destroyTimer: 0
 --- !u!114 &8204906887993352492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9791,10 +9793,11 @@ AudioSource:
   m_GameObject: {fileID: 6833606103196482294}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: ceb10cd166e0be047ab5760ca0ee83a2,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 4d5f7e99c0647a549b1f01f877566bfa, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.01
+  m_Volume: 0.33
   m_Pitch: 1
   Loop: 0
   Mute: 0

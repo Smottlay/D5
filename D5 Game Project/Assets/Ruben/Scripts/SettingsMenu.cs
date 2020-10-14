@@ -11,7 +11,7 @@ public class SettingsMenu : MonoBehaviour
     public AudioMixer audioMixer;
     Resolution[] resolutions;
     public TMPro.TMP_Dropdown resolutionsDropdown;
-    public Slider slider;
+    static public Slider slider;
     public GameObject player;
     public Text resText;
 
