@@ -8,6 +8,8 @@ public class Turret : TowerUpgrade
     public GameObject bullet;
     public GameObject turretRing;
 
+    public GameObject shop;
+
     public GameObject rangeCircle;
 
     public ParticleSystem muzzleFlash;
@@ -19,6 +21,11 @@ public class Turret : TowerUpgrade
     public float viewRangeUpgrade;
     public float maxUpgrade;
     public bool viewRangeUpgradePossible;
+
+    public int damage;
+    public int damageUpgrade;
+    public float maxDamageUpgrade;
+    public bool damageUpgradePossible;
 
     public bool splashTower;
 
@@ -33,6 +40,7 @@ public class Turret : TowerUpgrade
     {
         viewRangeUpgradePossible = true;
         InvokeRepeating("targetToShoot", 0f, 0.5f);
+        shop = GameObject.FindGameObjectWithTag("gameMaster");
     }
 
     public void targetToShoot()
@@ -70,6 +78,14 @@ public class Turret : TowerUpgrade
         if(viewRange >= maxUpgrade)
         {
             viewRangeUpgradePossible = false;
+        }
+        if(shop.GetComponent<Shop>().canUpgradeRange == false)
+        {
+            viewRangeUpgradePossible = false;
+        }
+        else
+        {
+            viewRangeUpgradePossible = true;
         }
 
         muzzleFlash.IsAlive();
@@ -114,7 +130,9 @@ public class Turret : TowerUpgrade
         gunFire.Play();
 
         GameObject tempBullet;
+
         tempBullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation) as GameObject;
+        tempBullet.GetComponent<Bullet>().damageAmount = damage;
 
         if (tempBullet.tag == "rocket")
         {
@@ -147,6 +165,9 @@ public class Turret : TowerUpgrade
     }
     public void UpgradeDamage()
     {
-        
+        if(damageUpgradePossible == true)
+        {
+            damage += damageUpgrade;
+        }
     }
 }

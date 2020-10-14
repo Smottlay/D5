@@ -12,6 +12,7 @@ public class RawDamageTowerUpgrade : MonoBehaviour
 
     public bool rawDamageUpgrade;
 
+    public float rawDamageRefund;
     public float rangeCost;
     public float damageCost;
 
@@ -19,6 +20,7 @@ public class RawDamageTowerUpgrade : MonoBehaviour
     public GameObject upgradeMenu;
     public GameObject shop;
     public GameObject rangeCircle;
+    public GameObject foundation;
 
     public GameObject rangeButton;
     public GameObject damageButton;
@@ -29,8 +31,6 @@ public class RawDamageTowerUpgrade : MonoBehaviour
     public void Start()
     {
         rawDamageUpgrade = false;
-        //rend = GetComponent<Renderer>();
-        //startColor = rend.material.color;
         shop = GameObject.FindGameObjectWithTag("gameMaster");
         rangeCost = shop.GetComponent<Shop>().rangeCost;
         damageCost = shop.GetComponent<Shop>().damageCost;
@@ -73,6 +73,13 @@ public class RawDamageTowerUpgrade : MonoBehaviour
         upgradeMenu.SetActive(false);
     }
 
+
+    public void RefundTower()
+    {
+        shop.GetComponent<Shop>().gold += rawDamageRefund;
+        Instantiate(foundation, gameObject.transform.position, gameObject.transform.rotation);
+        Destroy(gameObject);
+    }
     public void OnMouseEnter()
     {
         rangeCircle.SetActive(true);

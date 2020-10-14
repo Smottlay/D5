@@ -26,6 +26,8 @@ public class Shop : MonoBehaviour
     public float rangeCost;
     public float damageCost;
 
+    public bool canUpgradeRange;
+
     public bool rawDamageTower;
     private bool splashTower;
     private bool barracks;
@@ -81,6 +83,15 @@ public class Shop : MonoBehaviour
             mineLayer = false;
             barracks = false;
             drill = false;
+        }
+
+        if(rangeCost > gold)
+        {
+            canUpgradeRange = false;
+        }
+        else
+        {
+            canUpgradeRange = true;
         }
     }
 
