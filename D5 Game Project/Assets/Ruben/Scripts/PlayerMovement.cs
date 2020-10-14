@@ -22,8 +22,11 @@ public class PlayerMovement : MonoBehaviour
     public static float sens;
     public static bool firstSens;
 
+    public bool speedUp;
+    public bool speedDown;
     private void Start()
     {
+        speedDown = true;
         speed = 10;
         if(SceneManager.GetActiveScene().buildIndex == 0 && !firstSens)
         {
@@ -41,13 +44,17 @@ public class PlayerMovement : MonoBehaviour
             sens = slider.value;
         }
 
-        if(Time.timeScale == 1)
+        if(Time.timeScale == 1 && speed != 10 && !speedUp)
         {
-            speed = 10;
+            speed *= 2;
+            speedUp = true;
+            speedDown = false;
         }
-        else if(Time.timeScale == 2)
+        else if(Time.timeScale == 2 && !speedDown)
         {
-            speed = 5;
+            speed /= 2;
+            speedDown = true;
+            speedUp = false;
         }
 
         if (transitionEnd && SceneManager.GetActiveScene().buildIndex != 0)

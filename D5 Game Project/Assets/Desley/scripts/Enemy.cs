@@ -125,9 +125,12 @@ public class Enemy : MonoBehaviour
 
     public void AttackGate()
     {
-        gameObject.GetComponent<PathFinding>().speed = 0;
-        gameObject.GetComponent<Animator>().SetBool("Attack", true);
-        damageCountdown -= Time.deltaTime;
+        if (!dissolving)
+        {
+            gameObject.GetComponent<PathFinding>().speed = 0;
+            gameObject.GetComponent<Animator>().SetBool("Attack", true);
+            damageCountdown -= Time.deltaTime;
+        }
     }
 
     public void RawDamage(int damageAmount)
