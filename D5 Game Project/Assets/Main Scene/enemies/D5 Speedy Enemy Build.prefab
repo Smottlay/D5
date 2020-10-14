@@ -40,7 +40,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: f6e38d49f1bf83c4bb43a81280496f9d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.01
+  m_Volume: 0.05
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -288,9 +288,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attacker: {fileID: 0}
   healthBar: {fileID: 777417996779796548}
-  death: {fileID: 0}
+  death: {fileID: -6483474450992128263}
   gameMaster: {fileID: 0}
-  attackingSound: {fileID: 0}
+  attackingSound: {fileID: -6469735918119953035}
   sMeshRenderer: {fileID: 0}
   dissolveTimer: 0.15
   addOnDeath: 0.3

@@ -41,6 +41,15 @@ public class PlayerMovement : MonoBehaviour
             sens = slider.value;
         }
 
+        if(Time.timeScale == 1)
+        {
+            speed = 10;
+        }
+        else if(Time.timeScale == 2)
+        {
+            speed = 5;
+        }
+
         if (transitionEnd && SceneManager.GetActiveScene().buildIndex != 0)
         {
             Vector3 moveDir = transform.position;

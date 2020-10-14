@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Spawn : MonoBehaviour
 {
@@ -40,6 +41,8 @@ public class Spawn : MonoBehaviour
 
     public float buildSignTimer;
 
+    public GameObject nextLevelCanvas;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -60,6 +63,11 @@ public class Spawn : MonoBehaviour
         if (devMode)
         {
             timePanel.SetActive(false);
+        }
+
+        if (endlessMode && SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            nextLevelCanvas.SetActive(true);
         }
 
         if (endlessMode && newEndlessWave && !devMode)

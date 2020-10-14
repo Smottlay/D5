@@ -109,7 +109,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 90a96e83e06f03d4781084468f4ebf2f, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.01
+  m_Volume: 0.05
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -404,6 +404,16 @@ PrefabInstance:
       propertyPath: attackDuration
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8488314172147793731, guid: 78767f6e957baeb4f9452a2d9febd9d6,
+        type: 3}
+      propertyPath: attackingSound
+      value: 
+      objectReference: {fileID: -2169874545972738247}
+    - target: {fileID: 8488314172147793731, guid: 78767f6e957baeb4f9452a2d9febd9d6,
+        type: 3}
+      propertyPath: death
+      value: 
+      objectReference: {fileID: 3158116984558392428}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78767f6e957baeb4f9452a2d9febd9d6, type: 3}
 --- !u!1 &1779808116918377571 stripped

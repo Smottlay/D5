@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -15467,6 +15467,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 615845673}
+    - target: {fileID: 1918357105300396653, guid: f9497e5ffbb4a5a438b84d07752d6f8b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 615845673}
+    - target: {fileID: 1918357105300396653, guid: f9497e5ffbb4a5a438b84d07752d6f8b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MenuButton
+      objectReference: {fileID: 0}
     - target: {fileID: 1918357105393944292, guid: f9497e5ffbb4a5a438b84d07752d6f8b,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -15617,10 +15627,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1918357106522579061, guid: f9497e5ffbb4a5a438b84d07752d6f8b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 615845673}
+    - target: {fileID: 1918357106522579061, guid: f9497e5ffbb4a5a438b84d07752d6f8b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartButton
+      objectReference: {fileID: 0}
     - target: {fileID: 1918357106529435958, guid: f9497e5ffbb4a5a438b84d07752d6f8b,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918357106823028571, guid: f9497e5ffbb4a5a438b84d07752d6f8b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 615845673}
+    - target: {fileID: 1918357106823028571, guid: f9497e5ffbb4a5a438b84d07752d6f8b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitButton
       objectReference: {fileID: 0}
     - target: {fileID: 1918357106867621396, guid: f9497e5ffbb4a5a438b84d07752d6f8b,
         type: 3}
@@ -19834,6 +19864,7 @@ MonoBehaviour:
   speedMaxHp: 100
   tankMaxHp: 600
   buildSignTimer: 10
+  nextLevelCanvas: {fileID: 0}
 --- !u!4 &1905957713
 Transform:
   m_ObjectHideFlags: 0

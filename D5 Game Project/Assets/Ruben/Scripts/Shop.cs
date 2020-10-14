@@ -224,13 +224,9 @@ public class Shop : MonoBehaviour
     public void addGold()
     {
         int waveCount = spawner.GetComponent<Spawn>().waveCounter;
-        if (waveCount <= 6)
+        if(waveCount <= 10)
         {
             gold += enemyAddGold;
-        }
-        else if(waveCount <= 10)
-        {
-            gold += enemyAddGold / 2;
         }
     }
     public void addGoldDrill()

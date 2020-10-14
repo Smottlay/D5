@@ -37,6 +37,8 @@ TagManager:
   - BuildSign
   - menu's
   - mine
+  - devModePanel
+  - nextLevelCanvas
   layers:
   - Default
   - TransparentFX

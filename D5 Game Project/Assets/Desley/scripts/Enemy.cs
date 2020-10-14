@@ -36,6 +36,8 @@ public class Enemy : MonoBehaviour
 
     public float damageCountdown;
 
+    public Animation walk;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,9 +45,7 @@ public class Enemy : MonoBehaviour
         transform.position = GameObject.FindGameObjectWithTag("spawner").transform.position;
         colider = gameObject.GetComponent<BoxCollider>();
         sMeshRenderer = gameObject.GetComponentInChildren<SkinnedMeshRenderer>();
-        death = gameObject.GetComponent<AudioSource>();
         gameMaster = GameObject.FindGameObjectWithTag("gameMaster");
-        attackingSound = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -101,12 +101,14 @@ public class Enemy : MonoBehaviour
             if (cripleCountdown > 0)
             {
                 gameObject.GetComponent<PathFinding>().speed = cripleSpeed;
+                gameObject.GetComponent<Animator>().SetFloat("speed", .5f);
                 mineDetecion = false;
             }
             
             if (cripleCountdown <= 0)
             {
                 gameObject.GetComponent<PathFinding>().NormalSpeed();
+                gameObject.GetComponent<Animator>().SetFloat("speed", 1f);
                 cripleCountdown = cripleTimer;
                 mineExplosion = false;
                 mineDetecion = true;
