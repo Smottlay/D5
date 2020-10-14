@@ -183,7 +183,7 @@ public class SplashTurret : MonoBehaviour
 
         GameObject tempBullet;
         tempBullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation) as GameObject;
-        tempBullet.GetComponent<Bullet>().damageAmount = damage;
+        tempBullet.GetComponent<BulletSplash>().damageAmount = damage;
 
         if (tempBullet.tag == "rocket")
         {

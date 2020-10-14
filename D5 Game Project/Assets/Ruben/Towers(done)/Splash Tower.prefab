@@ -1665,9 +1665,9 @@ MonoBehaviour:
   viewRangeUpgrade: 0
   maxUpgrade: 0
   viewRangeUpgradePossible: 0
-  damage: 20
-  damageUpgrade: 5
-  maxDamageUpgrade: 40
+  damage: 125
+  damageUpgrade: 20
+  maxDamageUpgrade: 200
   damageUpgradePossible: 0
   splashTower: 0
   bulletSpeed: 4000
