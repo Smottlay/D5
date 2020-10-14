@@ -25,10 +25,11 @@ public class Warning : MonoBehaviour
     public float resourceWarningTimer;
     public float gateWarningTimer;
 
+    public bool gameStarted;
+
     // Start is called before the first frame update
     void Start()
     {
-        spawner = GameObject.FindGameObjectWithTag("spawner");
         player = GameObject.FindGameObjectWithTag("MainCamera");
         currentPlayerHp = player.GetComponent<PlayerHealth>().health;
         warningPanel.SetActive(false);
@@ -37,14 +38,22 @@ public class Warning : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(spawner.GetComponent<Spawn>().waveCounter == 7 && !resourceWarning)
+        if (spawner == null && gameStarted)
         {
-            resourceVoiceOver.Play();
-            warningPanel.SetActive(true);
-            warningText.text = warnings[1];
-            resourceWarningTimer = 10;
-            resourceWarning = true;
-            blockGateWarning = true;
+            spawner = GameObject.FindGameObjectWithTag("spawner");
+        }
+
+        if (gameStarted)
+        {
+            if (spawner.GetComponent<Spawn>().waveCounter == 7 && !resourceWarning)
+            {
+                resourceVoiceOver.Play();
+                warningPanel.SetActive(true);
+                warningText.text = warnings[1];
+                resourceWarningTimer = 10;
+                resourceWarning = true;
+                blockGateWarning = true;
+            }
         }
 
         resourceWarningTimer -= Time.deltaTime;

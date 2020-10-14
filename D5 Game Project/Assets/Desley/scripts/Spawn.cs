@@ -38,6 +38,8 @@ public class Spawn : MonoBehaviour
     public int speedMaxHp;
     public int tankMaxHp;
 
+    public float buildSignTimer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,7 +53,7 @@ public class Spawn : MonoBehaviour
         {
             cam.GetComponent<PlayerHealth>().continuePanelActive = true;
             continuePanel.SetActive(true);
-            Time.timeScale = 0;
+            Time.timeScale = .25f;
             return;
         }
 
@@ -95,7 +97,8 @@ public class Spawn : MonoBehaviour
             speed.GetComponent<Enemy>().maxHealth = speedMaxHp;
         }
 
-        if(waveCounter == 1 && waveCountdown <= 0)
+        buildSignTimer -= Time.deltaTime;
+        if(buildSignTimer <= 0)
         {
             GameObject[] buildSigns = GameObject.FindGameObjectsWithTag("BuildSign");
             foreach(GameObject sign in buildSigns)

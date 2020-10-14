@@ -279,8 +279,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.7017835, y: 4.368905, z: 2.27292}
-  m_Center: {x: -0.0021836758, y: 1.9430676, z: 0.048528552}
+  m_Size: {x: 1.7017835, y: 4.368905, z: 1.7003912}
+  m_Center: {x: -0.0021836758, y: 1.9430676, z: 0.1797503}
 --- !u!82 &-2198787482934348586
 AudioSource:
   m_ObjectHideFlags: 0
@@ -290,7 +290,7 @@ AudioSource:
   m_GameObject: {fileID: 4207473739688313522}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: bde382c359ff3f746bcb300a6a43e0c8,
+  OutputAudioMixerGroup: {fileID: 24300002, guid: ceb10cd166e0be047ab5760ca0ee83a2,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 20f284fd18b107b4fbbc30e7b779ac43, type: 3}
   m_PlayOnAwake: 0
@@ -425,7 +425,7 @@ AudioSource:
   m_GameObject: {fileID: 4207473739688313522}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: bde382c359ff3f746bcb300a6a43e0c8,
+  OutputAudioMixerGroup: {fileID: 24300002, guid: ceb10cd166e0be047ab5760ca0ee83a2,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: ddeb84b5add98c54aa12f63891c32578, type: 3}
   m_PlayOnAwake: 0
@@ -437,7 +437,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.9870796
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0

@@ -43,5 +43,6 @@ public class Transition : MonoBehaviour
         GameObject.FindGameObjectWithTag("menu's").GetComponent<PauseMenu>().gameStarted = true;
         GameObject.FindGameObjectWithTag("gameMaster").GetComponent<Shop>().gameStarted = true;
         gameObject.SetActive(false);
+        GameObject.FindGameObjectWithTag("canvas").GetComponent<Warning>().gameStarted = true;
     }
 }

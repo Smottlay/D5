@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DevMode : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class DevMode : MonoBehaviour
     }
     public void Update()
     {
-        if(transition == null)
+        if(transition == null && SceneManager.GetActiveScene().buildIndex != 0)
         {
             transition = GameObject.FindGameObjectWithTag("levelloader");
             transition.GetComponent<Transition>().devMode = true;

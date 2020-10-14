@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -16,14 +18,30 @@ public class PlayerMovement : MonoBehaviour
 
     public bool transitionEnd;
 
+    public Slider slider;
+    public static float sens;
+    public static bool firstSens;
+
     private void Start()
     {
         speed = 10;
+        if(SceneManager.GetActiveScene().buildIndex == 0 && !firstSens)
+        {
+            sens = slider.value;
+            firstSens = true;
+        }
+        PlayerMovement.speed = sens;
+        slider.value = sens;
     }
 
     void Update()
     {
-        if (transitionEnd)
+        if (slider.value != 19.5f)
+        {
+            sens = slider.value;
+        }
+
+        if (transitionEnd && SceneManager.GetActiveScene().buildIndex != 0)
         {
             Vector3 moveDir = transform.position;
 
