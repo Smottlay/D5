@@ -45,8 +45,9 @@ AudioSource:
   m_GameObject: {fileID: 881718284}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d5036bb14f85dc84bb8a16f5d66cd76a, type: 3}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: ceb10cd166e0be047ab5760ca0ee83a2,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 1657110efc747b6499b5630dccc6d9fa, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -1392,8 +1393,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -137, y: 3.2}
-  m_SizeDelta: {x: 224.35739, y: 240.84674}
+  m_AnchoredPosition: {x: -139.02, y: 3.33}
+  m_SizeDelta: {x: 219.56207, y: 241.43036}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1537984947081505542
 CanvasRenderer:
@@ -1411,11 +1412,11 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7957223481871487421}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 74e7793a732415f479ffe0da99e6eb9e, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 9f364d310c6160144bd6a021608e60ef, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 8400000, guid: f55a58be3220cf347b85976ff6af6716, type: 2}
+  m_TargetTexture: {fileID: 8400000, guid: 203ae391eb01c4848bad9af1e4f295ea, type: 2}
   m_TimeReference: 0
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: _MainTex
@@ -1456,7 +1457,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 8400000, guid: f55a58be3220cf347b85976ff6af6716, type: 2}
+  m_Texture: {fileID: 8400000, guid: 203ae391eb01c4848bad9af1e4f295ea, type: 2}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1570,13 +1571,13 @@ MonoBehaviour:
     in the mineral caves at the bottom of the main city. HQ says it seems to be those
     disgusting tentacles that bursted out of the crashed cargo ship. This morning
     a mining crew has been dispatched but no one came back when we gave the order.
-    We presume that those poor bastards have been turned into a food source of the
-    aliens. If we don\u2019t destroy those aliens, the city will be without power
-    in less than 2 days but that isn\u2019t the only problem, if we lose this battle
-    the aliens will have free passage to one of our last strongholds. So I'll  to
-    ask you this commander, Are you with us? Are you ready to save humanity from
-    the aliens grasp and cleanse this world from their footprint? That\u2019s what
-    I thought, Good luck commander, we\u2019ll talk soon.\r\n\r\n-LT. Rainn\r"
+    We presume that those poor bastards have been turned into the food source of
+    the aliens. If we don\u2019t destroy those aliens, the city will be without power
+    in less than 2 days but that isn\u2019t the only problem, if we lose the battle
+    the aliens will have free passage to one of our last strongholds. So I'll ask
+    you this commander, Are you with us? Are you ready to save humanity from the
+    aliens grasp and cleanse this world from their footprint? That\u2019s what I
+    thought, Good luck commander, we\u2019ll talk soon.\r\n\r\n-LT. Rainn\r"
   typingSpeed: 0.05
   sceneName: 
   activeTimer: 0

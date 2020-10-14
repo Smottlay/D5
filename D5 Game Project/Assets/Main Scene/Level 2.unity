@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -13540,83 +13540,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 164892054, guid: 569f41f8729e2b240b51c6105b6fbaca, type: 3}
-      propertyPath: m_VideoClip
-      value: 
-      objectReference: {fileID: 32900000, guid: 9f364d310c6160144bd6a021608e60ef,
-        type: 3}
-    - target: {fileID: 164892054, guid: 569f41f8729e2b240b51c6105b6fbaca, type: 3}
-      propertyPath: m_AudioOutputMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 164892054, guid: 569f41f8729e2b240b51c6105b6fbaca, type: 3}
-      propertyPath: m_AspectRatio
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 164892054, guid: 569f41f8729e2b240b51c6105b6fbaca, type: 3}
-      propertyPath: m_TargetTexture
-      value: 
-      objectReference: {fileID: 8400000, guid: 203ae391eb01c4848bad9af1e4f295ea, type: 2}
-    - target: {fileID: 164892056, guid: 569f41f8729e2b240b51c6105b6fbaca, type: 3}
-      propertyPath: m_Texture
-      value: 
-      objectReference: {fileID: 8400000, guid: 203ae391eb01c4848bad9af1e4f295ea, type: 2}
-    - target: {fileID: 881718286, guid: 569f41f8729e2b240b51c6105b6fbaca, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 1657110efc747b6499b5630dccc6d9fa, type: 3}
-    - target: {fileID: 881718286, guid: 569f41f8729e2b240b51c6105b6fbaca, type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 24300002, guid: ceb10cd166e0be047ab5760ca0ee83a2,
-        type: 2}
-    - target: {fileID: 1457985009101426555, guid: 569f41f8729e2b240b51c6105b6fbaca,
-        type: 3}
-      propertyPath: level1
-      value: 
-      objectReference: {fileID: 1008283849}
-    - target: {fileID: 1457985009101426555, guid: 569f41f8729e2b240b51c6105b6fbaca,
-        type: 3}
-      propertyPath: level2
-      value: 
-      objectReference: {fileID: 919965621}
-    - target: {fileID: 1457985009101426555, guid: 569f41f8729e2b240b51c6105b6fbaca,
-        type: 3}
-      propertyPath: missionLore.Array.data[1]
-      value: "Congratulations on your victory commander. But there is no time for
-        celebration, HQ has been monitoring the area and they have located some strange
-        infrared activity in the mineral caves at the bottom of the main city. HQ
-        says it seems to be those disgusting tentacles that bursted out of the crashed
-        cargo ship. This morning a mining crew has been dispatched but no one came
-        back when we gave the order. We presume that those poor bastards have been
-        turned into the food source of the aliens. If we don\u2019t destroy those
-        aliens, the city will be without power in less than 2 days but that isn\u2019t
-        the only problem, if we lose the battle the aliens will have free passage
-        to one of our last strongholds. So I'll ask you this commander, Are you with
-        us? Are you ready to save humanity from the aliens grasp and cleanse this
-        world from their footprint? That\u2019s what I thought, Good luck commander,
-        we\u2019ll talk soon.\r\n\r\n-LT. Rainn\r"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257875584648143367, guid: 569f41f8729e2b240b51c6105b6fbaca,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 219.56207
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257875584648143367, guid: 569f41f8729e2b240b51c6105b6fbaca,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 241.43036
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257875584648143367, guid: 569f41f8729e2b240b51c6105b6fbaca,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -139.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257875584648143367, guid: 569f41f8729e2b240b51c6105b6fbaca,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 3.33
-      objectReference: {fileID: 0}
     - target: {fileID: 8903286529069335211, guid: 569f41f8729e2b240b51c6105b6fbaca,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -13682,11 +13605,6 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 6c1baf4cd69cc4240a299890769e0c35, type: 2}
-    - target: {fileID: 8903286530263190717, guid: 569f41f8729e2b240b51c6105b6fbaca,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 569f41f8729e2b240b51c6105b6fbaca, type: 3}
 --- !u!1001 &1238652016
@@ -20497,9 +20415,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 630855524, guid: d0b5581f3160db04391f845dcea53af9, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1040767280, guid: d0b5581f3160db04391f845dcea53af9, type: 3}
       propertyPath: m_Volume
-      value: 0.05
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 1040767280, guid: d0b5581f3160db04391f845dcea53af9, type: 3}
       propertyPath: OutputAudioMixerGroup
@@ -20543,10 +20465,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 24300002, guid: ceb10cd166e0be047ab5760ca0ee83a2,
         type: 2}
+    - target: {fileID: 1932901415, guid: d0b5581f3160db04391f845dcea53af9, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5873646065175035538, guid: d0b5581f3160db04391f845dcea53af9,
         type: 3}
       propertyPath: m_Volume
-      value: 0.05
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 5873646065175035538, guid: d0b5581f3160db04391f845dcea53af9,
         type: 3}
