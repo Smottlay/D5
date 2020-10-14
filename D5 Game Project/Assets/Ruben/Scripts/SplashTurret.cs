@@ -87,10 +87,6 @@ public class SplashTurret : MonoBehaviour
 
     void Update()
     {
-        if (viewRange >= maxUpgrade)
-        {
-            viewRangeUpgradePossible = false;
-        }
         if (shop.GetComponent<Shop>().canUpgradeRange == false)
         {
             viewRangeUpgradePossible = false;
@@ -99,11 +95,11 @@ public class SplashTurret : MonoBehaviour
         {
             viewRangeUpgradePossible = true;
         }
-
-        if (damage >= maxDamageUpgrade)
+        if (viewRange >= maxUpgrade)
         {
-            damageUpgradePossible = false;
+            viewRangeUpgradePossible = false;
         }
+
         if (shop.GetComponent<Shop>().canUpgradeDamage == false)
         {
             damageUpgradePossible = false;
@@ -111,6 +107,10 @@ public class SplashTurret : MonoBehaviour
         else
         {
             damageUpgradePossible = true;
+        }
+        if (damage >= maxDamageUpgrade)
+        {
+            damageUpgradePossible = false;
         }
 
         particleReload -= Time.deltaTime;

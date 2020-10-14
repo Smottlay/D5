@@ -30,9 +30,9 @@ public class Shop : MonoBehaviour
     public bool canUpgradeDamage;
 
     public bool rawDamageTower;
-    private bool splashTower;
+    public bool splashTower;
     private bool barracks;
-    private bool mineLayer;
+    public bool mineLayer;
     private bool drill;
 
     public bool resetTowers;
@@ -321,6 +321,15 @@ public class Shop : MonoBehaviour
         slowTowerInfo.SetActive(false);
         barracksInfo.SetActive(false);
         drillInfo.SetActive(false);
+    }
+
+    public void NoRefund()
+    {
+        rawDamageTower = false;
+        splashTower = false;
+        mineLayer = false;
+        barracks = false;
+        drill = false;
     }
 
     public void UnlimitedResources()

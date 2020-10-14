@@ -75,10 +75,7 @@ public class Turret : TowerUpgrade
 
     void Update()
     {
-        if(viewRange >= maxUpgrade)
-        {
-            viewRangeUpgradePossible = false;
-        }
+
         if(shop.GetComponent<Shop>().canUpgradeRange == false)
         {
             viewRangeUpgradePossible = false;
@@ -87,18 +84,22 @@ public class Turret : TowerUpgrade
         {
             viewRangeUpgradePossible = true;
         }
-
-        if(damage >= maxDamageUpgrade)
+        if (viewRange >= maxUpgrade)
         {
-            damageUpgradePossible = false;
+            viewRangeUpgradePossible = false;
         }
-        if(shop.GetComponent<Shop>().canUpgradeDamage == false)
+
+        if (shop.GetComponent<Shop>().canUpgradeDamage == false)
         {
             damageUpgradePossible = false;
         }
         else
         {
             damageUpgradePossible = true;
+        }
+        if (damage >= maxDamageUpgrade)
+        {
+            damageUpgradePossible = false;
         }
 
         muzzleFlash.IsAlive();

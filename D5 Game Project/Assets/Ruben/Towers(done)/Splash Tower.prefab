@@ -1663,8 +1663,8 @@ MonoBehaviour:
   towerBase: {fileID: 8990969909395090824}
   emission: {fileID: 0}
   viewRange: 11
-  viewRangeUpgrade: 0
-  maxUpgrade: 0
+  viewRangeUpgrade: 5
+  maxUpgrade: 20
   viewRangeUpgradePossible: 0
   damage: 125
   damageUpgrade: 20

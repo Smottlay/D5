@@ -8,6 +8,7 @@ public class Foundation : MonoBehaviour
     private GameObject turret;
     private GameObject shop;
     public GameObject refund;
+    public GameObject gameMaster;
 
     public Color hoverColor;
     private Color startColor;
@@ -27,6 +28,7 @@ public class Foundation : MonoBehaviour
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
         shop = GameObject.FindGameObjectWithTag("shop");
+        gameMaster = GameObject.FindGameObjectWithTag("gameMaster");
     }
     public void Update()
     {
@@ -49,6 +51,7 @@ public class Foundation : MonoBehaviour
         GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
         turret = (GameObject)Instantiate(turretToBuild, transform.position + posOffSet, transform.rotation);
 
+        gameMaster.GetComponent<Shop>().NoRefund();
         gameObject.SetActive(false);
         buildmanager.NoTurretToBuild();
         shop.SetActive(true);
