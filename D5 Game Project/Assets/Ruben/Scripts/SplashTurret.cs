@@ -13,6 +13,8 @@ public class SplashTurret : MonoBehaviour
     public AudioClip laserLoad;
     public AudioSource audioS;
 
+    public GameObject rangeCircle;
+    public GameObject shop;
     public GameObject pulse;
     public Transform enemy;
 
@@ -22,7 +24,12 @@ public class SplashTurret : MonoBehaviour
     public float viewRange;
     public float viewRangeUpgrade;
     public float maxUpgrade;
-    private bool viewRangeUpgradePossible;
+    public bool viewRangeUpgradePossible;
+
+    public int damage;
+    public int damageUpgrade;
+    public float maxDamageUpgrade;
+    public bool damageUpgradePossible;
 
     public bool splashTower;
 
@@ -39,6 +46,7 @@ public class SplashTurret : MonoBehaviour
     public float particleReloadTime = 2f;
     public void Start()
     {
+        shop = GameObject.FindGameObjectWithTag("gameMaster");
         emission = towerBase.GetComponent<MeshRenderer>();
         audioS = gameObject.GetComponent<AudioSource>();
         particleReload = particleReloadTime;
@@ -79,12 +87,33 @@ public class SplashTurret : MonoBehaviour
 
     void Update()
     {
-        particleReload -= Time.deltaTime;
-
         if (viewRange >= maxUpgrade)
         {
             viewRangeUpgradePossible = false;
         }
+        if (shop.GetComponent<Shop>().canUpgradeRange == false)
+        {
+            viewRangeUpgradePossible = false;
+        }
+        else
+        {
+            viewRangeUpgradePossible = true;
+        }
+
+        if (damage >= maxDamageUpgrade)
+        {
+            damageUpgradePossible = false;
+        }
+        if (shop.GetComponent<Shop>().canUpgradeDamage == false)
+        {
+            damageUpgradePossible = false;
+        }
+        else
+        {
+            damageUpgradePossible = true;
+        }
+
+        particleReload -= Time.deltaTime;
 
         muzzleFlash.IsAlive();
         bulletReload -= Time.deltaTime;
@@ -154,6 +183,7 @@ public class SplashTurret : MonoBehaviour
 
         GameObject tempBullet;
         tempBullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation) as GameObject;
+        tempBullet.GetComponent<Bullet>().damageAmount = damage;
 
         if (tempBullet.tag == "rocket")
         {
@@ -181,10 +211,14 @@ public class SplashTurret : MonoBehaviour
         if (viewRangeUpgradePossible == true)
         {
             viewRange += viewRangeUpgrade;
+            rangeCircle.transform.localScale = new Vector3(viewRange, viewRange, viewRange) * 2;
         }
     }
     public void UpgradeDamage()
     {
-
+        if (damageUpgradePossible == true)
+        {
+            damage += damageUpgrade;
+        }
     }
 }

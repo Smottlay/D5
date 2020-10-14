@@ -88,6 +88,19 @@ public class Turret : TowerUpgrade
             viewRangeUpgradePossible = true;
         }
 
+        if(damage >= maxDamageUpgrade)
+        {
+            damageUpgradePossible = false;
+        }
+        if(shop.GetComponent<Shop>().canUpgradeDamage == false)
+        {
+            damageUpgradePossible = false;
+        }
+        else
+        {
+            damageUpgradePossible = true;
+        }
+
         muzzleFlash.IsAlive();
         bulletReload -= Time.deltaTime;
 

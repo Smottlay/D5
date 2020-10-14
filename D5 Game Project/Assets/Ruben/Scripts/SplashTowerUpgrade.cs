@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class SplashTowerUpgrade : MonoBehaviour
 {
@@ -10,43 +11,83 @@ public class SplashTowerUpgrade : MonoBehaviour
 
     public bool rawDamageUpgrade;
 
+    public float rawDamageRefund;
+    public float rangeCost;
+    public float damageCost;
+
+    public GameObject turret;
     public GameObject upgradeMenu;
     public GameObject shop;
     public GameObject rangeCircle;
+    public GameObject foundation;
 
-    public float rangeCost;
+    public GameObject rangeButton;
+    public GameObject damageButton;
+
+    public TMP_Text rangeGold;
+    public TMP_Text damageGold;
+
     public void Start()
     {
         rawDamageUpgrade = false;
-        //rend = GetComponent<Renderer>();
-        //startColor = rend.material.color;
+        shop = GameObject.FindGameObjectWithTag("gameMaster");
+        rangeCost = shop.GetComponent<Shop>().rangeCost;
+        damageCost = shop.GetComponent<Shop>().damageCost;
     }
 
     public void Update()
     {
-        shop = GameObject.FindGameObjectWithTag("shop");
+        rangeGold.text = rangeCost.ToString();
+        damageGold.text = damageCost.ToString();
+
+        shop = GameObject.FindGameObjectWithTag("gameMaster");
+
+        if (turret.GetComponent<SplashTurret>().viewRangeUpgradePossible == false)
+        {
+            rangeButton.SetActive(false);
+        }
+        else
+        {
+            rangeButton.SetActive(true);
+        }
+
+        if (turret.GetComponent<SplashTurret>().damageUpgradePossible == false)
+        {
+            damageButton.SetActive(false);
+        }
+        else
+        {
+            damageButton.SetActive(true);
+        }
+
     }
 
 
     public void OnMouseDown()
     {
-        //upgradeMenu.SetActive(true);
+        upgradeMenu.SetActive(true);
     }
 
     public void UpgradeRange()
     {
-        if(shop.GetComponent<Shop>().gold >= rangeCost)
-        {
-            gameObject.GetComponent<Turret>().UpgradeRange();
-            shop.GetComponent<Shop>().gold -= rangeCost;
-            upgradeMenu.SetActive(false);
-        }
+        turret.GetComponent<SplashTurret>().UpgradeRange();
+        shop.GetComponent<Shop>().RangeUpgrade();
+        upgradeMenu.SetActive(false);
     }
     public void UpgradeDamage()
     {
-
+        turret.GetComponent<SplashTurret>().UpgradeDamage();
+        shop.GetComponent<Shop>().DamageUpgrade();
+        upgradeMenu.SetActive(false);
     }
 
+
+    public void RefundTower()
+    {
+        shop.GetComponent<Shop>().gold += rawDamageRefund;
+        Instantiate(foundation, gameObject.transform.position, gameObject.transform.rotation);
+        Destroy(gameObject);
+    }
     public void OnMouseEnter()
     {
         rangeCircle.SetActive(true);

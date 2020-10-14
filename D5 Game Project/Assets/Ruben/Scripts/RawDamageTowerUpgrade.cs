@@ -52,6 +52,15 @@ public class RawDamageTowerUpgrade : MonoBehaviour
             rangeButton.SetActive(true);
         }
 
+        if(turret.GetComponent<Turret>().damageUpgradePossible == false)
+        {
+            damageButton.SetActive(false);
+        }
+        else
+        {
+            damageButton.SetActive(true);
+        }
+
 
     }
 
@@ -70,6 +79,7 @@ public class RawDamageTowerUpgrade : MonoBehaviour
     public void UpgradeDamage()
     {
         turret.GetComponent<Turret>().UpgradeDamage();
+        shop.GetComponent<Shop>().DamageUpgrade();
         upgradeMenu.SetActive(false);
     }
 

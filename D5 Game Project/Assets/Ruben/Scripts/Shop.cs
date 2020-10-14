@@ -27,6 +27,7 @@ public class Shop : MonoBehaviour
     public float damageCost;
 
     public bool canUpgradeRange;
+    public bool canUpgradeDamage;
 
     public bool rawDamageTower;
     private bool splashTower;
@@ -92,6 +93,15 @@ public class Shop : MonoBehaviour
         else
         {
             canUpgradeRange = true;
+        }
+
+        if(damageCost > gold)
+        {
+            canUpgradeDamage = false;
+        }
+        else
+        {
+            canUpgradeDamage = true;
         }
     }
 
@@ -331,9 +341,9 @@ public class Shop : MonoBehaviour
     }
     public void DamageUpgrade()
     {
-        if(gold >= rangeCost)
+        if(gold >= damageCost)
         {
-            gold -= rangeCost;
+            gold -= damageCost;
         }
     }
 }
