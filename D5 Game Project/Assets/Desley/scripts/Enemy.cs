@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public GameObject attacker;
+    public GameObject tower;
 
     public GameObject healthBar;
 
@@ -36,6 +37,9 @@ public class Enemy : MonoBehaviour
 
     public float damageCountdown;
 
+    public bool stopAdded;
+    public bool slowAdded;
+
     public Animation walk;
 
     // Start is called before the first frame update
@@ -62,6 +66,7 @@ public class Enemy : MonoBehaviour
             attacker.gameObject.GetComponent<Soldier>().searching = true;
             gameMaster.GetComponent<Shop>().addGold();
             GameObject.FindGameObjectWithTag("spawner").GetComponent<Spawn>().destroyedCounter++;
+            AddStats();
             gameObject.tag = "Untagged";
             dissolving = true;
             death.Play();
@@ -74,9 +79,16 @@ public class Enemy : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("gettingAttacked", true);
             gameMaster.GetComponent<Shop>().addGold();
             GameObject.FindGameObjectWithTag("spawner").GetComponent<Spawn>().destroyedCounter++;
+            AddStats();
             gameObject.tag = "Untagged";
             dissolving = true;
             death.Play();
+        }
+
+        if(attacker != null && !stopAdded)
+        {
+            attacker.GetComponent<Soldier>().tower.GetComponent<Barracks>().creepsStopped += 1;
+            stopAdded = true;
         }
         
         if (dissolving)
@@ -115,11 +127,37 @@ public class Enemy : MonoBehaviour
             }
         }
 
+        if(mineExplosion == true && tower.tag == "slowTower" && !slowAdded)
+        {
+            tower.GetComponent<MineLayer>().creepsSlowed += 1;
+            slowAdded = true;
+        }
+
         if (damageCountdown <= 0f)
         {
             GameObject.FindGameObjectWithTag("MainCamera").GetComponent<PlayerHealth>().health -= finishDamage;
             attackingSound.Play();
             damageCountdown = 1.2f;
+        }
+    }
+
+    public void AddStats()
+    {
+        if(tower.tag == "rawDamage")
+        {
+            tower.GetComponent<Turret>().kills += 1;
+        }
+        else if(tower.tag == "splashTower")
+        {
+            tower.GetComponent<SplashTurret>().kills += 1;
+        }
+        else if(tower.tag == "barrack")
+        {
+            tower.GetComponent<Barracks>().kills += 1;
+        }
+        else if(tower.tag == "slowTower")
+        {
+            tower.GetComponent<MineLayer>().kills += 1;
         }
     }
 

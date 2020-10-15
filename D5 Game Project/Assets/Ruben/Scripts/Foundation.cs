@@ -19,6 +19,8 @@ public class Foundation : MonoBehaviour
 
     public bool foundationStatus;
 
+    public GameObject statsPanel;
+
     BuildManager buildmanager;
 
     void Start()
@@ -29,6 +31,11 @@ public class Foundation : MonoBehaviour
         startColor = rend.material.color;
         shop = GameObject.FindGameObjectWithTag("shop");
         gameMaster = GameObject.FindGameObjectWithTag("gameMaster");
+        if(statsPanel == null)
+        {
+            statsPanel = GameObject.FindGameObjectWithTag("statsPanel");
+            statsPanel.SetActive(false);
+        }
     }
     public void Update()
     {
@@ -50,6 +57,7 @@ public class Foundation : MonoBehaviour
 
         GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
         turret = (GameObject)Instantiate(turretToBuild, transform.position + posOffSet, transform.rotation);
+        statsPanel.SetActive(true);
 
         gameMaster.GetComponent<Shop>().NoRefund();
         gameObject.SetActive(false);

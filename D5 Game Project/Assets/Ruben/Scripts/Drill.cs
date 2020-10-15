@@ -10,6 +10,9 @@ public class Drill : MonoBehaviour
 
     public GameObject shop;
     public ParticleSystem drill;
+
+    public int goldProduced;
+
     public void Start()
     {
         shop = GameObject.FindGameObjectWithTag("gameMaster");
@@ -23,6 +26,7 @@ public class Drill : MonoBehaviour
             drill.Play();
 
             shop.GetComponent<Shop>().addGoldDrill();
+            goldProduced += 1;
             goldCountdown = goldTimer;
         }
     }

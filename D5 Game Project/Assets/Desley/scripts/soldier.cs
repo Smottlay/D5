@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Soldier : MonoBehaviour
 {
+    public GameObject tower;
     public Transform target;
     public ParticleSystem muzzleFlash;
 
@@ -56,6 +57,7 @@ public class Soldier : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
 
         target.GetComponent<PathFinding>().speed = 0;
+        target.GetComponent<Enemy>().tower = tower;
 
         if(attackCountdown <= 0f)
         {

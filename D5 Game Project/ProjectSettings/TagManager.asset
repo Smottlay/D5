@@ -39,6 +39,11 @@ TagManager:
   - mine
   - devModePanel
   - nextLevelCanvas
+  - splashTower
+  - rawDamage
+  - drillTower
+  - statsPanel
+  - statsText
   layers:
   - Default
   - TransparentFX

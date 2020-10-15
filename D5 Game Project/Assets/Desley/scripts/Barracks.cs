@@ -17,6 +17,9 @@ public class Barracks : MonoBehaviour
     public bool found;
     public bool roadFound;
 
+    public int kills;
+    public int creepsStopped;
+
     void Start()
     {
         cam = GameObject.FindGameObjectWithTag("MainCamera");
@@ -53,6 +56,7 @@ public class Barracks : MonoBehaviour
 
             newSoldier = Instantiate(soldier, spawnPoints[soldierCount].transform);
             newSoldier.transform.position = spawnPoints[soldierCount].transform.position;
+            newSoldier.GetComponent<Soldier>().tower = gameObject;
             soldierCount++;
         
     }

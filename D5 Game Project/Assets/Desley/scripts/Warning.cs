@@ -27,6 +27,8 @@ public class Warning : MonoBehaviour
 
     public bool gameStarted;
 
+    public GameObject statsPanel;
+
     // Start is called before the first frame update
     void Start()
     {

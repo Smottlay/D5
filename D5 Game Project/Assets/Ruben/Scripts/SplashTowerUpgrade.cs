@@ -60,6 +60,11 @@ public class SplashTowerUpgrade : MonoBehaviour
             damageButton.SetActive(true);
         }
 
+        if (Time.timeScale == 0)
+        {
+            upgradeMenu.SetActive(false);
+        }
+
     }
 
 
@@ -72,12 +77,14 @@ public class SplashTowerUpgrade : MonoBehaviour
     {
         turret.GetComponent<SplashTurret>().UpgradeRange();
         shop.GetComponent<Shop>().RangeUpgrade();
+        gameObject.GetComponentInChildren<SplashTurret>().rangeUpgrades += 1;
         upgradeMenu.SetActive(false);
     }
     public void UpgradeDamage()
     {
         turret.GetComponent<SplashTurret>().UpgradeDamage();
         shop.GetComponent<Shop>().DamageUpgrade();
+        gameObject.GetComponentInChildren<SplashTurret>().damageUpgrades += 1;
         upgradeMenu.SetActive(false);
     }
 
@@ -86,6 +93,7 @@ public class SplashTowerUpgrade : MonoBehaviour
     {
         shop.GetComponent<Shop>().gold += rawDamageRefund;
         Instantiate(foundation, gameObject.transform.position, gameObject.transform.rotation);
+        GameObject.FindGameObjectWithTag("canvas").GetComponent<Warning>().statsPanel.SetActive(true);
         Destroy(gameObject);
     }
     public void OnMouseEnter()

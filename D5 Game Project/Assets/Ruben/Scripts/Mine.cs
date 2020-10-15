@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Mine : MonoBehaviour
 {
+    public GameObject tower;
+
     public AudioSource explosion;
 
     public float splashRadius;
@@ -86,6 +88,7 @@ public class Mine : MonoBehaviour
                     hasExploded = true;
                     mineLayer.GetComponent<MineLayer>().activeSpawnPoints[spawnPointID] = true;
                     nearbyEnemy.GetComponent<Enemy>().MineDamage(damageAmount);
+                    nearbyEnemy.GetComponent<Enemy>().tower = tower;
                     Instantiate(particle, gameObject.transform.position, gameObject.transform.rotation);
                     destroyTimer = .5f;
                 }

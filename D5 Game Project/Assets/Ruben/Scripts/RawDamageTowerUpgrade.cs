@@ -61,6 +61,10 @@ public class RawDamageTowerUpgrade : MonoBehaviour
             damageButton.SetActive(true);
         }
 
+        if(Time.timeScale == 0)
+        {
+            upgradeMenu.SetActive(false);
+        }
 
     }
 
@@ -74,12 +78,14 @@ public class RawDamageTowerUpgrade : MonoBehaviour
     {
         turret.GetComponent<Turret>().UpgradeRange();
         shop.GetComponent<Shop>().RangeUpgrade();
+        gameObject.GetComponentInChildren<Turret>().rangeUpgrades += 1;
         upgradeMenu.SetActive(false);
     }
     public void UpgradeDamage()
     {
         turret.GetComponent<Turret>().UpgradeDamage();
         shop.GetComponent<Shop>().DamageUpgrade();
+        gameObject.GetComponentInChildren<Turret>().damageUpgrades += 1;
         upgradeMenu.SetActive(false);
     }
 
@@ -88,6 +94,7 @@ public class RawDamageTowerUpgrade : MonoBehaviour
     {
         shop.GetComponent<Shop>().gold += rawDamageRefund;
         Instantiate(foundation, gameObject.transform.position, gameObject.transform.rotation);
+        GameObject.FindGameObjectWithTag("canvas").GetComponent<Warning>().statsPanel.SetActive(true);
         Destroy(gameObject);
     }
     public void OnMouseEnter()

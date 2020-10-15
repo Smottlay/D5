@@ -350,6 +350,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7444414279273912812, guid: 78767f6e957baeb4f9452a2d9febd9d6,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8488314172147793731, guid: 78767f6e957baeb4f9452a2d9febd9d6,
         type: 3}
       propertyPath: finishDamage

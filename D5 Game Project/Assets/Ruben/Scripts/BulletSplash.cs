@@ -12,6 +12,7 @@ public class BulletSplash : MonoBehaviour
     public GameObject particle;
     public GameObject enemy;
     public GameObject turret;
+    public GameObject tower;
 
 
     public void Start()
@@ -42,6 +43,7 @@ public class BulletSplash : MonoBehaviour
             if (nearbyEnemy.gameObject.tag == "enemy")
             {
                 nearbyEnemy.GetComponent<Enemy>().RawDamage(damageAmount);
+                nearbyEnemy.GetComponent<Enemy>().tower = tower;
             }
         }
 

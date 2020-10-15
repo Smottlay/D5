@@ -26,7 +26,10 @@ public class MineLayer : MonoBehaviour
     public ParticleSystem thunkDust;
     public AudioSource mineThunk;
     public AudioSource slowThunk;
-    
+
+    public int kills;
+    public int creepsSlowed;
+
     void Start()
     {
         //roadTransform = road.GetComponent<Transform>();
@@ -108,6 +111,7 @@ public class MineLayer : MonoBehaviour
         tempMine.GetComponent<Mine>().targetPos = targetPos;
         tempMine.GetComponent<Mine>().mineLayer = gameObject;
         tempMine.GetComponent<Mine>().spawnPointID = 0;
+        tempMine.GetComponent<Mine>().tower = gameObject;
 
         Rigidbody tempRid;
         tempRid = tempMine.GetComponent<Rigidbody>();
@@ -125,6 +129,7 @@ public class MineLayer : MonoBehaviour
         tempMine.GetComponent<Mine>().targetPos = targetPos;
         tempMine.GetComponent<Mine>().mineLayer = gameObject;
         tempMine.GetComponent<Mine>().spawnPointID = 1;
+        tempMine.GetComponent<Mine>().tower = gameObject;
 
         Rigidbody tempRid;
         tempRid = tempMine.GetComponent<Rigidbody>();
@@ -142,6 +147,7 @@ public class MineLayer : MonoBehaviour
         tempMine.GetComponent<Mine>().targetPos = targetPos;
         tempMine.GetComponent<Mine>().mineLayer = gameObject;
         tempMine.GetComponent<Mine>().spawnPointID = 2;
+        tempMine.GetComponent<Mine>().tower = gameObject;
 
         Rigidbody tempRid;
         tempRid = tempMine.GetComponent<Rigidbody>();

@@ -36,6 +36,11 @@ public class Turret : TowerUpgrade
     public float bulletSpeed;
     public float bulletReload;
     public float bulletrate;
+
+    public int kills;
+    public int rangeUpgrades;
+    public int damageUpgrades;
+
     public void Start()
     {
         viewRangeUpgradePossible = true;
@@ -147,6 +152,7 @@ public class Turret : TowerUpgrade
 
         tempBullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation) as GameObject;
         tempBullet.GetComponent<Bullet>().damageAmount = damage;
+        tempBullet.GetComponent<Bullet>().tower = gameObject;
 
         if (tempBullet.tag == "rocket")
         {

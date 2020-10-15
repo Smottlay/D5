@@ -74,8 +74,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -339,8 +339,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -562,7 +562,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!114 &471564998
 MonoBehaviour:
@@ -689,8 +689,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1084,8 +1084,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1218,8 +1218,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1354,9 +1354,10 @@ GameObject:
   - component: {fileID: 4981596390405753809}
   - component: {fileID: 7127036130029368896}
   - component: {fileID: 5189481792228173429}
+  - component: {fileID: 6259006563059829949}
   m_Layer: 0
   m_Name: Splash Tower
-  m_TagString: Untagged
+  m_TagString: splashTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1553,8 +1554,30 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.612915, y: 4.3345904, z: 1.3079548}
-  m_Center: {x: -0.012101173, y: 2.1748297, z: 0.012094498}
+  m_Size: {x: 2.2551625, y: 4.078197, z: 1.2885399}
+  m_Center: {x: -0.02789414, y: 2.046633, z: -0.6244583}
+--- !u!114 &6259006563059829949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474309455099426496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 595bc7b15a9860e4b9bb3f76c1fceae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tower: {fileID: 0}
+  statsPanel: {fileID: 0}
+  statsTexts: []
+  clear: 
+  kills: 0
+  rangeUpgrade: 0
+  damageUpgrade: 0
+  creepsSlowed: 0
+  creepsStopped: 0
+  goldProduced: 0
 --- !u!1 &8990969909169031188
 GameObject:
   m_ObjectHideFlags: 0
@@ -1570,7 +1593,7 @@ GameObject:
   - component: {fileID: 8990969910058413043}
   m_Layer: 0
   m_Name: Turret
-  m_TagString: Untagged
+  m_TagString: splashTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1676,6 +1699,9 @@ MonoBehaviour:
   addPulse: 0
   particleReload: 0
   particleReloadTime: 2
+  kills: 0
+  rangeUpgrades: 0
+  damageUpgrades: 0
 --- !u!82 &8990969910058413043
 AudioSource:
   m_ObjectHideFlags: 0

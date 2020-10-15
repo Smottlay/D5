@@ -44,6 +44,11 @@ public class SplashTurret : MonoBehaviour
 
     public float particleReload;
     public float particleReloadTime = 2f;
+
+    public int kills;
+    public int rangeUpgrades;
+    public int damageUpgrades;
+
     public void Start()
     {
         shop = GameObject.FindGameObjectWithTag("gameMaster");
@@ -184,6 +189,7 @@ public class SplashTurret : MonoBehaviour
         GameObject tempBullet;
         tempBullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation) as GameObject;
         tempBullet.GetComponent<BulletSplash>().damageAmount = damage;
+        tempBullet.GetComponent<BulletSplash>().tower = gameObject;
 
         if (tempBullet.tag == "rocket")
         {

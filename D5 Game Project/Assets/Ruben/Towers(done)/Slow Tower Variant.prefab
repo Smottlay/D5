@@ -252,6 +252,7 @@ GameObject:
   - component: {fileID: 1906420184}
   - component: {fileID: 386024925760629496}
   - component: {fileID: 3617148826634206723}
+  - component: {fileID: 1814441272}
   m_Layer: 0
   m_Name: Slow Tower Variant
   m_TagString: slowTower
@@ -430,8 +431,28 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.7296076, y: 5.584958, z: 1.5300685}
-  m_Center: {x: 0.028061867, y: 3.1717496, z: 0.014135063}
+  m_Size: {x: 1.7296076, y: 5.9190087, z: 1.6904135}
+  m_Center: {x: 0.028061867, y: 3.0047243, z: -0.012589097}
+--- !u!114 &1814441272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455054008700568944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 595bc7b15a9860e4b9bb3f76c1fceae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tower: {fileID: 0}
+  statsPanel: {fileID: 0}
+  kills: 0
+  rangeUpgrade: 0
+  damageUpgrade: 0
+  creepsSlowed: 0
+  creepsStopped: 0
+  goldProduced: 0
 --- !u!1 &455054008976828700
 GameObject:
   m_ObjectHideFlags: 0

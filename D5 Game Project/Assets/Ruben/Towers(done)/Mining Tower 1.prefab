@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 363820955306901807}
   - component: {fileID: 4279793553594249755}
   - component: {fileID: 7387754496564621268}
+  - component: {fileID: 7945897459463338927}
   m_Layer: 0
   m_Name: Mining Tower 1
-  m_TagString: Untagged
+  m_TagString: drillTower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64,8 +65,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.694109, y: 6.0034103, z: 2.5741034}
-  m_Center: {x: -1.7931261, y: 2.964449, z: 1.7738156}
+  m_Size: {x: 4.018961, y: 6.0034103, z: 7.1288023}
+  m_Center: {x: -1.7780294, y: 2.964449, z: 1.2432294}
 --- !u!82 &7387754496564621268
 AudioSource:
   m_ObjectHideFlags: 0
@@ -163,6 +164,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7945897459463338927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3356374379207804587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 595bc7b15a9860e4b9bb3f76c1fceae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tower: {fileID: 0}
+  statsPanel: {fileID: 0}
+  kills: 0
+  rangeUpgrade: 0
+  damageUpgrade: 0
+  creepsSlowed: 0
+  creepsStopped: 0
+  goldProduced: 0
 --- !u!1 &4739619737238834501
 GameObject:
   m_ObjectHideFlags: 0

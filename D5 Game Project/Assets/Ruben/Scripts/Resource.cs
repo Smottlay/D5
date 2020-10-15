@@ -19,6 +19,8 @@ public class Resource : MonoBehaviour
     private bool mineralStatus;
     private bool mineralUsed;
 
+    public GameObject statsPanel;
+
     BuildManager buildmanager;
 
     void Start()
@@ -53,6 +55,7 @@ public class Resource : MonoBehaviour
         }
         GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
         turret = (GameObject)Instantiate(turretToBuild, transform.position + posOffSet, transform.rotation);
+        statsPanel.SetActive(true);
 
         gameMaster.GetComponent<Shop>().NoRefund();
         mineralUsed = true;
