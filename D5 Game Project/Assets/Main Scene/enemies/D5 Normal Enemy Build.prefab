@@ -13,7 +13,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: ddeb84b5add98c54aa12f63891c32578, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.03
+  m_Volume: 0.05
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -22,9 +22,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 40
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -57,7 +57,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -110,7 +110,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 90a96e83e06f03d4781084468f4ebf2f, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.05
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -119,9 +119,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 40
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -154,7 +154,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -211,6 +211,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e2112f1f140d3f24c8f3dc36e93ad083, type: 2}
+    - target: {fileID: -3288532126315810487, guid: 78767f6e957baeb4f9452a2d9febd9d6,
+        type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 700168007, guid: 78767f6e957baeb4f9452a2d9febd9d6, type: 3}
       propertyPath: m_Size.y
       value: 1.291065
@@ -353,7 +358,7 @@ PrefabInstance:
     - target: {fileID: 8488314172147793731, guid: 78767f6e957baeb4f9452a2d9febd9d6,
         type: 3}
       propertyPath: maxHealth
-      value: 200
+      value: 212
       objectReference: {fileID: 0}
     - target: {fileID: 8488314172147793731, guid: 78767f6e957baeb4f9452a2d9febd9d6,
         type: 3}

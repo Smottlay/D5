@@ -3488,7 +3488,7 @@ MonoBehaviour:
   addToGoldDrill: 1
   rawDamageTowerCost: 30
   splashTowerCost: 40
-  barracksCost: 40
+  barracksCost: 50
   mineLayerCost: 15
   drillCost: 50
   rangeCost: 10
@@ -3496,6 +3496,8 @@ MonoBehaviour:
   canUpgradeRange: 0
   canUpgradeDamage: 0
   rawDamageTower: 0
+  splashTower: 0
+  mineLayer: 0
   resetTowers: 0
   shop: {fileID: 0}
   spawner: {fileID: 0}
@@ -13605,6 +13607,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 6c1baf4cd69cc4240a299890769e0c35, type: 2}
+    - target: {fileID: 8903286530263190717, guid: 569f41f8729e2b240b51c6105b6fbaca,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 569f41f8729e2b240b51c6105b6fbaca, type: 3}
 --- !u!1001 &1238652016
@@ -14144,6 +14151,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 680112977}
     m_Modifications:
+    - target: {fileID: 1258747180, guid: de67228faf7b9fb4394bbb64d4052828, type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2373364564984958247, guid: de67228faf7b9fb4394bbb64d4052828,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20417,7 +20428,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 630855524, guid: d0b5581f3160db04391f845dcea53af9, type: 3}
       propertyPath: m_Volume
-      value: 0.5
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 1040767280, guid: d0b5581f3160db04391f845dcea53af9, type: 3}
       propertyPath: m_Volume
@@ -20458,7 +20469,7 @@ PrefabInstance:
       objectReference: {fileID: 1212767561}
     - target: {fileID: 1697659882, guid: d0b5581f3160db04391f845dcea53af9, type: 3}
       propertyPath: m_Volume
-      value: 0.05
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 1697659882, guid: d0b5581f3160db04391f845dcea53af9, type: 3}
       propertyPath: OutputAudioMixerGroup
@@ -20467,7 +20478,7 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 1932901415, guid: d0b5581f3160db04391f845dcea53af9, type: 3}
       propertyPath: m_Volume
-      value: 0.5
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 5873646065175035538, guid: d0b5581f3160db04391f845dcea53af9,
         type: 3}

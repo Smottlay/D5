@@ -11197,6 +11197,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6374695119231548085, guid: cef6c169a92c83e4a8974fe81e33a7aa,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374695119231548085, guid: cef6c169a92c83e4a8974fe81e33a7aa,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6374695119231548085, guid: cef6c169a92c83e4a8974fe81e33a7aa,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6449151928199919064, guid: cef6c169a92c83e4a8974fe81e33a7aa,
         type: 3}
       propertyPath: m_Name
@@ -28004,6 +28019,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 164892054, guid: 569f41f8729e2b240b51c6105b6fbaca, type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 74e7793a732415f479ffe0da99e6eb9e,
+        type: 3}
+    - target: {fileID: 164892054, guid: 569f41f8729e2b240b51c6105b6fbaca, type: 3}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: f55a58be3220cf347b85976ff6af6716, type: 2}
+    - target: {fileID: 164892054, guid: 569f41f8729e2b240b51c6105b6fbaca, type: 3}
+      propertyPath: m_SkipOnDrop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 164892056, guid: 569f41f8729e2b240b51c6105b6fbaca, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 8400000, guid: f55a58be3220cf347b85976ff6af6716, type: 2}
+    - target: {fileID: 881718286, guid: 569f41f8729e2b240b51c6105b6fbaca, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d5036bb14f85dc84bb8a16f5d66cd76a, type: 3}
     - target: {fileID: 8903286529069335211, guid: 569f41f8729e2b240b51c6105b6fbaca,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28069,6 +28105,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 6c1baf4cd69cc4240a299890769e0c35, type: 2}
+    - target: {fileID: 8903286530263190717, guid: 569f41f8729e2b240b51c6105b6fbaca,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 569f41f8729e2b240b51c6105b6fbaca, type: 3}
 --- !u!1 &1570986321
@@ -28195,7 +28236,7 @@ MonoBehaviour:
   addToGoldDrill: 1
   rawDamageTowerCost: 30
   splashTowerCost: 40
-  barracksCost: 40
+  barracksCost: 50
   mineLayerCost: 15
   drillCost: 50
   rangeCost: 10
@@ -38243,6 +38284,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 630855524, guid: d0b5581f3160db04391f845dcea53af9, type: 3}
+      propertyPath: m_Volume
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 1430783980, guid: d0b5581f3160db04391f845dcea53af9, type: 3}
       propertyPath: shopPanel
       value: 
@@ -38263,6 +38308,10 @@ PrefabInstance:
       propertyPath: brokenGate
       value: 
       objectReference: {fileID: 1258747179}
+    - target: {fileID: 1932901415, guid: d0b5581f3160db04391f845dcea53af9, type: 3}
+      propertyPath: m_Volume
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 6277268301323266345, guid: d0b5581f3160db04391f845dcea53af9,
         type: 3}
       propertyPath: m_Name

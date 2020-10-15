@@ -98,7 +98,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void Resume()
     {
-        Time.timeScale = 1;
+        Time.timeScale = lastTimescale;
         HidePaused();
         HideSettings();
     }

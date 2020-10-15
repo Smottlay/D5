@@ -110,14 +110,14 @@ MonoBehaviour:
   cam: {fileID: 0}
   soldier: {fileID: 1574657593899381097, guid: 4cd4092298f41e443b2cee757da7a8dc, type: 3}
   newSoldier: {fileID: 0}
-  maxSoldiers: 3
   soldierCount: 1
   road: {fileID: 0}
   spawnPoints:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  firstSpawn: 0
+  found: 0
+  roadFound: 0
 --- !u!114 &6471931135141852177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,10 +142,11 @@ AudioSource:
   m_GameObject: {fileID: 2224047353701688502}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: ceb10cd166e0be047ab5760ca0ee83a2,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 1301ccf9fb776194abfb255a80079458, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.03
+  m_Volume: 0.05
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -189,7 +190,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.5
       inSlope: 0
       outSlope: 0
       tangentMode: 0

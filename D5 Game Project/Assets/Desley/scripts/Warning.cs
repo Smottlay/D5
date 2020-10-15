@@ -50,7 +50,14 @@ public class Warning : MonoBehaviour
                 resourceVoiceOver.Play();
                 warningPanel.SetActive(true);
                 warningText.text = warnings[1];
-                resourceWarningTimer = 10;
+                if(Time.timeScale == 1)
+                {
+                    resourceWarningTimer = 10;
+                }
+                else if(Time.timeScale == 2)
+                {
+                    resourceWarningTimer = 20;
+                }
                 resourceWarning = true;
                 blockGateWarning = true;
             }
