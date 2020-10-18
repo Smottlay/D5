@@ -295,6 +295,12 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 8904202443599133620, guid: bfec9582d87e406449635ac4621d263b,
+        type: 3}
+      propertyPath: foundation2
+      value: 
+      objectReference: {fileID: 5927047354892317795, guid: bbcb22f1b82ec63488eab745a76623d8,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfec9582d87e406449635ac4621d263b, type: 3}
 --- !u!1 &2968795203144560846 stripped

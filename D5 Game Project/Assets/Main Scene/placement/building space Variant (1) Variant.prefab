@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4988858017270723613, guid: cef6c169a92c83e4a8974fe81e33a7aa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5923409089455583074, guid: cef6c169a92c83e4a8974fe81e33a7aa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -72,6 +77,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: building space Variant (1) Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7538784703874542285, guid: cef6c169a92c83e4a8974fe81e33a7aa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1784195406988788531, guid: cef6c169a92c83e4a8974fe81e33a7aa, type: 3}

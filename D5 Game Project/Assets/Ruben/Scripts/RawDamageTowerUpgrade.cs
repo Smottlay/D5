@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class RawDamageTowerUpgrade : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class RawDamageTowerUpgrade : MonoBehaviour
     public GameObject shop;
     public GameObject rangeCircle;
     public GameObject foundation;
+    public GameObject foundation2;
 
     public GameObject rangeButton;
     public GameObject damageButton;
@@ -93,7 +95,14 @@ public class RawDamageTowerUpgrade : MonoBehaviour
     public void RefundTower()
     {
         shop.GetComponent<Shop>().gold += rawDamageRefund;
-        Instantiate(foundation, gameObject.transform.position, gameObject.transform.rotation);
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            Instantiate(foundation, gameObject.transform.position, gameObject.transform.rotation);
+        }
+        else
+        {
+            Instantiate(foundation2, gameObject.transform.position, gameObject.transform.rotation);
+        }
         GameObject.FindGameObjectWithTag("canvas").GetComponent<Warning>().statsPanel.SetActive(true);
         Destroy(gameObject);
     }

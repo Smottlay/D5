@@ -275,7 +275,7 @@ public class Shop : MonoBehaviour
         GameObject[] foundations = GameObject.FindGameObjectsWithTag("foundation");
         foreach (GameObject foundation in foundations)
         {
-            foundation.GetComponent<Foundation>().EnableFoundation();
+           foundation.GetComponent<Foundation>().EnableFoundation();
         }
     }
     private void Enable()

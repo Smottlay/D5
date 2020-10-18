@@ -1593,6 +1593,7 @@ MonoBehaviour:
   resourceWarningTimer: 0
   gateWarningTimer: 0
   gameStarted: 0
+  statsPanel: {fileID: 0}
 --- !u!1 &1918357106267701266
 GameObject:
   m_ObjectHideFlags: 0
