@@ -153,7 +153,7 @@ PrefabInstance:
     - target: {fileID: 2118396979442734491, guid: bfec9582d87e406449635ac4621d263b,
         type: 3}
       propertyPath: m_Name
-      value: Raw Damage Tower Working Variant
+      value: Raw Damage Tower Working
       objectReference: {fileID: 0}
     - target: {fileID: 2118396979442734491, guid: bfec9582d87e406449635ac4621d263b,
         type: 3}
@@ -316,6 +316,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5927047354892317795, guid: bbcb22f1b82ec63488eab745a76623d8,
         type: 3}
+    - target: {fileID: 8904202443599133620, guid: bfec9582d87e406449635ac4621d263b,
+        type: 3}
+      propertyPath: foundation
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfec9582d87e406449635ac4621d263b, type: 3}
 --- !u!1 &2968795203144560846 stripped

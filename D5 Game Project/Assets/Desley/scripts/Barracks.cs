@@ -11,8 +11,12 @@ public class Barracks : MonoBehaviour
 
     public int soldierCount;
 
+    public GameObject shop;
     public GameObject road;
     public Transform[] spawnPoints;
+
+    public bool buySoldierPossible;
+    public float maxSoldiers;
 
     public bool found;
     public bool roadFound;
@@ -22,6 +26,7 @@ public class Barracks : MonoBehaviour
 
     void Start()
     {
+        shop = GameObject.FindGameObjectWithTag("gameMaster");
         cam = GameObject.FindGameObjectWithTag("MainCamera");
         spawnPoints = null;
         road = null;
@@ -45,7 +50,26 @@ public class Barracks : MonoBehaviour
         {
             SpawnSoldier();
         }
+
+        if (shop.GetComponent<Shop>().canUpgradeDamage == false)
+        {
+            buySoldierPossible = false;
+        }
+        else
+        {
+            buySoldierPossible = true;
+        }
+        if (soldierCount >= maxSoldiers)
+        {
+            buySoldierPossible = false;
+        }
     }
+
+    public void BuySoldier()
+    {
+        SpawnSoldier();
+    }
+
 
     void SpawnSoldier()
     {

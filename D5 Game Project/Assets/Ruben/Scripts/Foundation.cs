@@ -64,7 +64,7 @@ public class Foundation : MonoBehaviour
         buildmanager.NoTurretToBuild();
         shop.SetActive(true);
         refund.SetActive(false);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
     void OnMouseEnter()
     {

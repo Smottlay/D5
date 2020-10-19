@@ -36,7 +36,7 @@ public class BarracksUpgrade : MonoBehaviour
 
         shop = GameObject.FindGameObjectWithTag("gameMaster");
 
-        if (gameObject.GetComponent<MineLayer>().damageUpgradePossible == false)
+        if (gameObject.GetComponent<Barracks>().buySoldierPossible == false)
         {
             upgradeButton.SetActive(false);
         }
@@ -52,9 +52,9 @@ public class BarracksUpgrade : MonoBehaviour
 
     }
 
-    public void MineDamageUpgrade()
+    public void BuySoldierUpgrade()
     {
-        gameObject.GetComponent<MineLayer>().UpgradeDamage();
+        gameObject.GetComponent<Barracks>().BuySoldier();
         shop.GetComponent<Shop>().DamageUpgrade();
         gameObject.GetComponentInChildren<MineLayer>().damageUpgrades += 1;
         upgradeMenu.SetActive(false);

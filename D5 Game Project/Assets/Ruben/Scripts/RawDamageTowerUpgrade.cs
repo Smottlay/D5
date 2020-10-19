@@ -22,7 +22,6 @@ public class RawDamageTowerUpgrade : MonoBehaviour
     public GameObject shop;
     public GameObject rangeCircle;
     public GameObject foundation;
-    public GameObject foundation2;
 
     public GameObject rangeButton;
     public GameObject damageButton;
@@ -45,7 +44,7 @@ public class RawDamageTowerUpgrade : MonoBehaviour
 
         shop = GameObject.FindGameObjectWithTag("gameMaster");
 
-        if(turret.GetComponent<Turret>().viewRangeUpgradePossible == false)
+        if (turret.GetComponent<Turret>().viewRangeUpgradePossible == false)
         {
             rangeButton.SetActive(false);
         }
@@ -70,6 +69,10 @@ public class RawDamageTowerUpgrade : MonoBehaviour
 
     }
 
+    public void OnCollisionEnter(Collision collision)
+    {
+        foundation = collision.gameObject;
+    }
 
     public void OnMouseDown()
     {
@@ -95,14 +98,7 @@ public class RawDamageTowerUpgrade : MonoBehaviour
     public void RefundTower()
     {
         shop.GetComponent<Shop>().gold += rawDamageRefund;
-        if (SceneManager.GetActiveScene().buildIndex == 1)
-        {
-            Instantiate(foundation, gameObject.transform.position, gameObject.transform.rotation);
-        }
-        else
-        {
-            Instantiate(foundation2, gameObject.transform.position, gameObject.transform.rotation);
-        }
+        foundation.SetActive(true);
         GameObject.FindGameObjectWithTag("canvas").GetComponent<Warning>().statsPanel.SetActive(true);
         Destroy(gameObject);
     }

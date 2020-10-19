@@ -36,10 +36,19 @@ public class Drill : MonoBehaviour
 
     void Update()
     {
+        if (shop.GetComponent<Shop>().canUpgradeDamage == false)
+        {
+            incomeUpgradePossible = false;
+        }
+        else
+        {
+            incomeUpgradePossible = true;
+        }
         if (incomeUpgrades >= maxIncomeUpgrades)
         {
             incomeUpgradePossible = false;
         }
+
 
         goldCountdown -= Time.deltaTime;
         if(goldCountdown <= 0)

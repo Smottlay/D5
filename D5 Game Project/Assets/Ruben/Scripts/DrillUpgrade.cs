@@ -68,14 +68,6 @@ public class DrillUpgrade : MonoBehaviour
     public void RefundTower()
     {
         shop.GetComponent<Shop>().gold += drillRefund;
-        if (SceneManager.GetActiveScene().buildIndex == 1)
-        {
-            Instantiate(foundation, gameObject.transform.position, gameObject.transform.rotation);
-        }
-        else
-        {
-            Instantiate(foundation2, gameObject.transform.position, gameObject.transform.rotation);
-        }
         GameObject.FindGameObjectWithTag("canvas").GetComponent<Warning>().statsPanel.SetActive(true);
         Destroy(gameObject);
     }
