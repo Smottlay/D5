@@ -5,8 +5,15 @@ using UnityEngine;
 public class Drill : MonoBehaviour
 {
     public float goldTimer;
+    public float goldTimerReduceUpgrade;
+
+    public float incomeUpgrades;
+    public float maxIncomeUpgrades;
+
     private float goldCountdown;
     public float goldAmount;
+
+    public bool incomeUpgradePossible;
 
     public GameObject shop;
     public ParticleSystem drill;
@@ -15,11 +22,25 @@ public class Drill : MonoBehaviour
 
     public void Start()
     {
+        incomeUpgradePossible = true;
         shop = GameObject.FindGameObjectWithTag("gameMaster");
+    }
+
+    public void UpgradeIncome()
+    {
+        if (incomeUpgradePossible == true)
+        {
+            goldTimer -= goldTimerReduceUpgrade;
+        }
     }
 
     void Update()
     {
+        if (incomeUpgrades >= maxIncomeUpgrades)
+        {
+            incomeUpgradePossible = false;
+        }
+
         goldCountdown -= Time.deltaTime;
         if(goldCountdown <= 0)
         {

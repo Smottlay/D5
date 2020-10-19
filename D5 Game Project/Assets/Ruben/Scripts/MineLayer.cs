@@ -6,6 +6,12 @@ public class MineLayer : MonoBehaviour
 {
     public float cooldown;
     private float cooldownTimer;
+    public int damage;
+    public int damageUpgrade;
+    public int maxDamage;
+
+    public bool damageUpgradePossible;
+    public float damageUpgrades;
 
     public float mineForce;
     public GameObject mineSpawner;
@@ -23,6 +29,8 @@ public class MineLayer : MonoBehaviour
     public GameObject road;
     public GameObject mine;
 
+    public GameObject shop;
+
     public ParticleSystem thunkDust;
     public AudioSource mineThunk;
     public AudioSource slowThunk;
@@ -32,8 +40,9 @@ public class MineLayer : MonoBehaviour
 
     void Start()
     {
-        //roadTransform = road.GetComponent<Transform>();
+        damageUpgradePossible = true;
         maxMines = Mathf.Infinity;
+        shop = GameObject.FindGameObjectWithTag("gameMaster");
     }
 
     void Update()
@@ -99,6 +108,19 @@ public class MineLayer : MonoBehaviour
             }
         }
         cooldownTimer -= Time.deltaTime;
+
+        if (shop.GetComponent<Shop>().canUpgradeDamage == false)
+        {
+            damageUpgradePossible = false;
+        }
+        else
+        {
+            damageUpgradePossible = true;
+        }
+        if (damageUpgrade >= maxDamage)
+        {
+            damageUpgradePossible = false;
+        }
     }
 
     public void Mine0()
@@ -107,7 +129,9 @@ public class MineLayer : MonoBehaviour
         slowThunk.Play();
         GameObject tempMine;
         tempMine = Instantiate(mine, mineSpawner.transform.position, mineSpawner.transform.rotation) as GameObject;
+
         targetPos = mineSpawnPoints[4].transform.position;
+        tempMine.GetComponent<Mine>().damageAmount = damage;
         tempMine.GetComponent<Mine>().targetPos = targetPos;
         tempMine.GetComponent<Mine>().mineLayer = gameObject;
         tempMine.GetComponent<Mine>().spawnPointID = 0;
@@ -125,7 +149,9 @@ public class MineLayer : MonoBehaviour
         slowThunk.Play();
         GameObject tempMine;
         tempMine = Instantiate(mine, mineSpawner.transform.position, mineSpawner.transform.rotation) as GameObject;
+
         targetPos = mineSpawnPoints[5].transform.position;
+        tempMine.GetComponent<Mine>().damageAmount = damage;
         tempMine.GetComponent<Mine>().targetPos = targetPos;
         tempMine.GetComponent<Mine>().mineLayer = gameObject;
         tempMine.GetComponent<Mine>().spawnPointID = 1;
@@ -143,7 +169,9 @@ public class MineLayer : MonoBehaviour
         slowThunk.Play();
         GameObject tempMine;
         tempMine = Instantiate(mine, mineSpawner.transform.position, mineSpawner.transform.rotation) as GameObject;
+
         targetPos = mineSpawnPoints[6].transform.position;
+        tempMine.GetComponent<Mine>().damageAmount = damage;
         tempMine.GetComponent<Mine>().targetPos = targetPos;
         tempMine.GetComponent<Mine>().mineLayer = gameObject;
         tempMine.GetComponent<Mine>().spawnPointID = 2;
@@ -153,6 +181,14 @@ public class MineLayer : MonoBehaviour
         tempRid = tempMine.GetComponent<Rigidbody>();
 
         tempRid.AddForce(transform.up * mineForce);
+    }
+
+    public void UpgradeDamage()
+    {
+        if (damageUpgradePossible == true)
+        {
+            damage += damageUpgrade;
+        }
     }
 
     public void extractMine()

@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class SlowTowerUpgrade : MonoBehaviour
+public class BarracksUpgrade : MonoBehaviour
 {
     public Renderer rend;
     public Color hoverColor;
@@ -12,37 +12,37 @@ public class SlowTowerUpgrade : MonoBehaviour
 
     public bool slowTowerUpgrade;
 
-    public float slowTowerRefund;
-    public float damageCost;
+    public float barracksRefund;
+    public float upgradeCost;
 
     public GameObject upgradeMenu;
     public GameObject shop;
     public GameObject foundation;
     public GameObject foundation2;
 
-    public GameObject damageButton;
+    public GameObject upgradeButton;
     public TMP_Text damageGold;
 
     public void Start()
     {
         slowTowerUpgrade = false;
         shop = GameObject.FindGameObjectWithTag("gameMaster");
-        damageCost = shop.GetComponent<Shop>().damageCost;
+        upgradeCost = shop.GetComponent<Shop>().damageCost;
     }
 
     public void Update()
     {
-        damageGold.text = damageCost.ToString();
+        damageGold.text = upgradeCost.ToString();
 
         shop = GameObject.FindGameObjectWithTag("gameMaster");
 
         if (gameObject.GetComponent<MineLayer>().damageUpgradePossible == false)
         {
-            damageButton.SetActive(false);
+            upgradeButton.SetActive(false);
         }
         else
         {
-            damageButton.SetActive(true);
+            upgradeButton.SetActive(true);
         }
 
         if (Time.timeScale == 0)
@@ -67,7 +67,7 @@ public class SlowTowerUpgrade : MonoBehaviour
 
     public void RefundTower()
     {
-        shop.GetComponent<Shop>().gold += slowTowerRefund;
+        shop.GetComponent<Shop>().gold += barracksRefund;
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             Instantiate(foundation, gameObject.transform.position, gameObject.transform.rotation);

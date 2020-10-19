@@ -1,18 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 using UnityEngine.SceneManagement;
+using TMPro;
 
-public class SlowTowerUpgrade : MonoBehaviour
+public class DrillUpgrade : MonoBehaviour
 {
     public Renderer rend;
     public Color hoverColor;
     private Color startColor;
 
-    public bool slowTowerUpgrade;
+    public bool drillUpgrade;
 
-    public float slowTowerRefund;
+    public float drillRefund;
     public float damageCost;
 
     public GameObject upgradeMenu;
@@ -20,29 +20,29 @@ public class SlowTowerUpgrade : MonoBehaviour
     public GameObject foundation;
     public GameObject foundation2;
 
-    public GameObject damageButton;
-    public TMP_Text damageGold;
+    public GameObject incomeButton;
+    public TMP_Text incomeGold;
 
     public void Start()
     {
-        slowTowerUpgrade = false;
+        drillUpgrade = false;
         shop = GameObject.FindGameObjectWithTag("gameMaster");
         damageCost = shop.GetComponent<Shop>().damageCost;
     }
 
     public void Update()
     {
-        damageGold.text = damageCost.ToString();
+        incomeGold.text = damageCost.ToString();
 
         shop = GameObject.FindGameObjectWithTag("gameMaster");
 
-        if (gameObject.GetComponent<MineLayer>().damageUpgradePossible == false)
+        if (gameObject.GetComponent<Drill>().incomeUpgradePossible == false)
         {
-            damageButton.SetActive(false);
+            incomeButton.SetActive(false);
         }
         else
         {
-            damageButton.SetActive(true);
+            incomeButton.SetActive(true);
         }
 
         if (Time.timeScale == 0)
@@ -52,11 +52,11 @@ public class SlowTowerUpgrade : MonoBehaviour
 
     }
 
-    public void MineDamageUpgrade()
+    public void IncomeUpgrade()
     {
-        gameObject.GetComponent<MineLayer>().UpgradeDamage();
+        gameObject.GetComponent<Drill>().UpgradeIncome();
         shop.GetComponent<Shop>().DamageUpgrade();
-        gameObject.GetComponentInChildren<MineLayer>().damageUpgrades += 1;
+        gameObject.GetComponentInChildren<Drill>().incomeUpgrades += 1;
         upgradeMenu.SetActive(false);
     }
 
@@ -67,7 +67,7 @@ public class SlowTowerUpgrade : MonoBehaviour
 
     public void RefundTower()
     {
-        shop.GetComponent<Shop>().gold += slowTowerRefund;
+        shop.GetComponent<Shop>().gold += drillRefund;
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             Instantiate(foundation, gameObject.transform.position, gameObject.transform.rotation);
