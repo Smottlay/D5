@@ -52,6 +52,13 @@ public class Shop : MonoBehaviour
     public TMP_Text barracksGold;
     public TMP_Text drillGold;
 
+    public GameObject damageButton;
+    public GameObject splashButton;
+    public GameObject slowButton;
+    public GameObject barrackButton;
+    public GameObject drillButton;
+    public float buttonReset;
+
     public bool gameStarted;
 
     BuildManager buildManager;
@@ -71,6 +78,16 @@ public class Shop : MonoBehaviour
         slowGold.text = mineLayerCost.ToString();
         barracksGold.text = barracksCost.ToString();
         drillGold.text = drillCost.ToString();
+
+        buttonReset -= Time.deltaTime;
+        if(buttonReset <= 0)
+        {
+            damageButton.GetComponent<Image>().color = Color.white;
+            splashButton.GetComponent<Image>().color = Color.white;
+            slowButton.GetComponent<Image>().color = Color.white;
+            barrackButton.GetComponent<Image>().color = Color.white;
+            drillButton.GetComponent<Image>().color = Color.white;
+        }
 
         if (gameStarted)
         {
@@ -113,7 +130,14 @@ public class Shop : MonoBehaviour
     public void PurchaserRawDamageTower()
     {
         if (gold < rawDamageTowerCost)
+        {
+            damageButton.GetComponent<Image>().color = Color.red;
+            if(buttonReset < 0)
+            {
+                buttonReset = .3f;
+            }
             return;
+        }
         if (gold >= rawDamageTowerCost)
         {
             rawDamageTower = true;
@@ -135,7 +159,14 @@ public class Shop : MonoBehaviour
     public void PurchaseSplashTower()
     {
         if (gold < splashTowerCost)
+        {
+            splashButton.GetComponent<Image>().color = Color.red;
+            if (buttonReset <= 0)
+            {
+                buttonReset = .3f;
+            }
             return;
+        }
         if (gold >= splashTowerCost)
         {
             splashTower = true;
@@ -157,7 +188,14 @@ public class Shop : MonoBehaviour
     public void PurchaseSlowTower()
     {
         if (gold < mineLayerCost)
+        {
+            slowButton.GetComponent<Image>().color = Color.red;
+            if (buttonReset < 0)
+            {
+                buttonReset = .3f;
+            }
             return;
+        }
         if (gold >= mineLayerCost)
         {
             mineLayer = true;
@@ -179,7 +217,14 @@ public class Shop : MonoBehaviour
     public void PurchaseBunker()
     {
         if (gold < barracksCost)
+        {
+            barrackButton.GetComponent<Image>().color = Color.red;
+            if (buttonReset < 0)
+            {
+                buttonReset = .3f;
+            }
             return;
+        }
         if (gold >= barracksCost)
         {
             barracks = true;
@@ -201,7 +246,14 @@ public class Shop : MonoBehaviour
     public void PurchaseMiningTower()
     {
         if (gold < drillCost)
+        {
+            drillButton.GetComponent<Image>().color = Color.red;
+            if (buttonReset < 0)
+            {
+                buttonReset = .3f;
+            }
             return;
+        }
         if (gold >= drillCost)
         {
             drill = true;

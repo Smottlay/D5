@@ -83,7 +83,7 @@ public class Stats : MonoBehaviour
         }
         else if (tower.tag == "drillTower")
         {
-            statsTexts[0].GetComponent<TextMeshProUGUI>().text = "Gold Produced: " + goldProduced.ToString();
+            statsTexts[0].GetComponent<TextMeshProUGUI>().text = "Minerals: " + goldProduced.ToString();
         }
     }
 

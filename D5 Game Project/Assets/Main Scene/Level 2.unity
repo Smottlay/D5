@@ -3622,6 +3622,12 @@ MonoBehaviour:
   slowGold: {fileID: 1051529028}
   barracksGold: {fileID: 1376275739}
   drillGold: {fileID: 1290406061}
+  damageButton: {fileID: 578000102}
+  splashButton: {fileID: 1788558558}
+  slowButton: {fileID: 399689273}
+  barrackButton: {fileID: 881170779}
+  drillButton: {fileID: 515224893}
+  buttonReset: 0
   gameStarted: 0
 --- !u!114 &518562260
 MonoBehaviour:
@@ -14024,6 +14030,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1457985009101426555, guid: 569f41f8729e2b240b51c6105b6fbaca,
+        type: 3}
+      propertyPath: waitForSkip
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8903286529069335211, guid: 569f41f8729e2b240b51c6105b6fbaca,
         type: 3}
       propertyPath: m_LocalPosition.x

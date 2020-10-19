@@ -22,6 +22,9 @@ public class TransitionText : MonoBehaviour
     public float activeTimer;
     public bool activeBool;
 
+    public float waitForSkip;
+    public int clickCount;
+
     void Start()
     {
         currentScene = SceneManager.GetActiveScene();
@@ -62,9 +65,23 @@ public class TransitionText : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        waitForSkip -= Time.deltaTime;
+
+        if (Input.GetButtonDown("Fire1") && waitForSkip <= 0 && clickCount ==0)
         {
             StopAllCoroutines();
+            if(SceneManager.GetActiveScene().buildIndex == 1)
+            {
+                MissionLoreText.text = missionLore[0];
+            }
+            else if (SceneManager.GetActiveScene().buildIndex == 2)
+            {
+                MissionLoreText.text = missionLore[1];
+            }
+            clickCount += 1;
+        }
+        else if (Input.GetButtonDown("Fire1") && clickCount == 1)
+        {
             gameObject.GetComponent<Transition>().EndTransition();
             activeTimer = 1f;
             activeBool = true;
