@@ -11,6 +11,8 @@ public class RawDamageTowerUpgrade : MonoBehaviour
     public Color hoverColor;
     private Color startColor;
 
+    private float foundationRange = 2;
+
     public bool rawDamageUpgrade;
 
     public float rawDamageRefund;
@@ -31,6 +33,7 @@ public class RawDamageTowerUpgrade : MonoBehaviour
 
     public void Start()
     {
+        FindFoundation();
         rawDamageUpgrade = false;
         shop = GameObject.FindGameObjectWithTag("gameMaster");
         rangeCost = shop.GetComponent<Shop>().rangeCost;
@@ -69,9 +72,29 @@ public class RawDamageTowerUpgrade : MonoBehaviour
 
     }
 
-    public void OnCollisionEnter(Collision collision)
+    public void FindFoundation()
     {
-        foundation = collision.gameObject;
+        GameObject[] foundations = GameObject.FindGameObjectsWithTag("foundation");
+        float shortestDistance = Mathf.Infinity;
+        GameObject nearestFoundation = null;
+
+        foreach (GameObject foundation in foundations)
+        {
+            float distanceToEnemy = Vector3.Distance(transform.position, foundation.transform.position);
+            if (distanceToEnemy < shortestDistance)
+            {
+                shortestDistance = distanceToEnemy;
+                nearestFoundation = foundation;
+            }
+        }
+        if (nearestFoundation != null && shortestDistance <= foundationRange)
+        {
+            foundation = nearestFoundation;
+        }
+        else
+        {
+            foundation = null;
+        }
     }
 
     public void OnMouseDown()
@@ -98,7 +121,10 @@ public class RawDamageTowerUpgrade : MonoBehaviour
     public void RefundTower()
     {
         shop.GetComponent<Shop>().gold += rawDamageRefund;
-        foundation.SetActive(true);
+
+        foundation.GetComponent<Renderer>().enabled = true;
+        foundation.GetComponent<Collider>().enabled = true;
+
         GameObject.FindGameObjectWithTag("canvas").GetComponent<Warning>().statsPanel.SetActive(true);
         Destroy(gameObject);
     }

@@ -16,6 +16,8 @@ public class SplashTowerUpgrade : MonoBehaviour
     public float rangeCost;
     public float damageCost;
 
+    private float foundationRange;
+
     public GameObject turret;
     public GameObject upgradeMenu;
     public GameObject shop;
@@ -31,6 +33,7 @@ public class SplashTowerUpgrade : MonoBehaviour
 
     public void Start()
     {
+        FindFoundation();
         rawDamageUpgrade = false;
         shop = GameObject.FindGameObjectWithTag("gameMaster");
         rangeCost = shop.GetComponent<Shop>().rangeCost;
@@ -69,6 +72,30 @@ public class SplashTowerUpgrade : MonoBehaviour
 
     }
 
+    public void FindFoundation()
+    {
+        GameObject[] foundations = GameObject.FindGameObjectsWithTag("foundation");
+        float shortestDistance = Mathf.Infinity;
+        GameObject nearestFoundation = null;
+
+        foreach (GameObject foundation in foundations)
+        {
+            float distanceToEnemy = Vector3.Distance(transform.position, foundation.transform.position);
+            if (distanceToEnemy < shortestDistance)
+            {
+                shortestDistance = distanceToEnemy;
+                nearestFoundation = foundation;
+            }
+        }
+        if (nearestFoundation != null && shortestDistance <= foundationRange)
+        {
+            foundation = nearestFoundation;
+        }
+        else
+        {
+            foundation = null;
+        }
+    }
 
     public void OnMouseDown()
     {
@@ -94,14 +121,8 @@ public class SplashTowerUpgrade : MonoBehaviour
     public void RefundTower()
     {
         shop.GetComponent<Shop>().gold += rawDamageRefund;
-        if (SceneManager.GetActiveScene().buildIndex == 1)
-        {
-            Instantiate(foundation, gameObject.transform.position, gameObject.transform.rotation);
-        }
-        else
-        {
-            Instantiate(foundation2, gameObject.transform.position, gameObject.transform.rotation);
-        }
+        foundation.GetComponent<Renderer>().enabled = true;
+        foundation.GetComponent<Collider>().enabled = true;
         GameObject.FindGameObjectWithTag("canvas").GetComponent<Warning>().statsPanel.SetActive(true);
         Destroy(gameObject);
     }

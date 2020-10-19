@@ -18,13 +18,15 @@ public class SlowTowerUpgrade : MonoBehaviour
     public GameObject upgradeMenu;
     public GameObject shop;
     public GameObject foundation;
-    public GameObject foundation2;
+
+    public float foundationRange;
 
     public GameObject damageButton;
     public TMP_Text damageGold;
 
     public void Start()
     {
+        FindFoundation();
         slowTowerUpgrade = false;
         shop = GameObject.FindGameObjectWithTag("gameMaster");
         damageCost = shop.GetComponent<Shop>().damageCost;
@@ -52,6 +54,31 @@ public class SlowTowerUpgrade : MonoBehaviour
 
     }
 
+    public void FindFoundation()
+    {
+        GameObject[] foundations = GameObject.FindGameObjectsWithTag("foundation");
+        float shortestDistance = Mathf.Infinity;
+        GameObject nearestFoundation = null;
+
+        foreach (GameObject foundation in foundations)
+        {
+            float distanceToEnemy = Vector3.Distance(transform.position, foundation.transform.position);
+            if (distanceToEnemy < shortestDistance)
+            {
+                shortestDistance = distanceToEnemy;
+                nearestFoundation = foundation;
+            }
+        }
+        if (nearestFoundation != null && shortestDistance <= foundationRange)
+        {
+            foundation = nearestFoundation;
+        }
+        else
+        {
+            foundation = null;
+        }
+    }
+
     public void MineDamageUpgrade()
     {
         gameObject.GetComponent<MineLayer>().UpgradeDamage();
@@ -68,14 +95,8 @@ public class SlowTowerUpgrade : MonoBehaviour
     public void RefundTower()
     {
         shop.GetComponent<Shop>().gold += slowTowerRefund;
-        if (SceneManager.GetActiveScene().buildIndex == 1)
-        {
-            Instantiate(foundation, gameObject.transform.position, gameObject.transform.rotation);
-        }
-        else
-        {
-            Instantiate(foundation2, gameObject.transform.position, gameObject.transform.rotation);
-        }
+        foundation.GetComponent<Renderer>().enabled = true;
+        foundation.GetComponent<Collider>().enabled = true;
         GameObject.FindGameObjectWithTag("canvas").GetComponent<Warning>().statsPanel.SetActive(true);
         Destroy(gameObject);
     }

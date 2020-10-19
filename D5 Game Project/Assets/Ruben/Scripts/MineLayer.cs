@@ -123,6 +123,7 @@ public class MineLayer : MonoBehaviour
         }
     }
 
+
     public void Mine0()
     {
         thunkDust.Play();

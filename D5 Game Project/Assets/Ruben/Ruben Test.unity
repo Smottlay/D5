@@ -5602,6 +5602,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Raw Damage Tower Working
       objectReference: {fileID: 0}
+    - target: {fileID: 5748666408590728929, guid: 2789afc5e6227eb4fbf88e258c9e86cf,
+        type: 3}
+      propertyPath: foundationRange
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2789afc5e6227eb4fbf88e258c9e86cf, type: 3}
 --- !u!1001 &5832468775617091241

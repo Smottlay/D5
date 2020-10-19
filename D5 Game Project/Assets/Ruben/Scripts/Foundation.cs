@@ -41,6 +41,7 @@ public class Foundation : MonoBehaviour
     {
         refund = GameObject.FindGameObjectWithTag("refund");
     }
+
     void OnMouseDown()
     {
         if (EventSystem.current.IsPointerOverGameObject())
@@ -60,11 +61,12 @@ public class Foundation : MonoBehaviour
         statsPanel.SetActive(true);
 
         gameMaster.GetComponent<Shop>().NoRefund();
-        gameObject.SetActive(false);
         buildmanager.NoTurretToBuild();
         shop.SetActive(true);
         refund.SetActive(false);
-        gameObject.SetActive(false);
+
+        gameObject.GetComponent<Renderer>().enabled = false;
+        gameObject.GetComponent<Collider>().enabled = false;
     }
     void OnMouseEnter()
     {
