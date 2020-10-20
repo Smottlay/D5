@@ -53,7 +53,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Post Processing
   - 
   - 
   - 
@@ -80,4 +80,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Render After PP
+    uniqueID: 2989742787
     locked: 0

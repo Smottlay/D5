@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.01
@@ -3001,6 +3001,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: minerals 1 Variant (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125927312586075261, guid: 7842341e5a2a05448a96dd3ef29c0046,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125927312586075261, guid: 7842341e5a2a05448a96dd3ef29c0046,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 8217421688065181070, guid: 7842341e5a2a05448a96dd3ef29c0046,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1925
+      objectReference: {fileID: 0}
+    - target: {fileID: 8217421688065181070, guid: 7842341e5a2a05448a96dd3ef29c0046,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8217421688065181070, guid: 7842341e5a2a05448a96dd3ef29c0046,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8217421688065181070, guid: 7842341e5a2a05448a96dd3ef29c0046,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8217421688065181070, guid: 7842341e5a2a05448a96dd3ef29c0046,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 8217421688065181070, guid: 7842341e5a2a05448a96dd3ef29c0046,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -195
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7842341e5a2a05448a96dd3ef29c0046, type: 3}
@@ -9296,6 +9336,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: minerals 1 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125927312586075261, guid: 7842341e5a2a05448a96dd3ef29c0046,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125927312586075261, guid: 7842341e5a2a05448a96dd3ef29c0046,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125927312586075261, guid: 7842341e5a2a05448a96dd3ef29c0046,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 220
+      objectReference: {fileID: 0}
+    - target: {fileID: 8217421688065181070, guid: 7842341e5a2a05448a96dd3ef29c0046,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8217421688065181070, guid: 7842341e5a2a05448a96dd3ef29c0046,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8217421688065181070, guid: 7842341e5a2a05448a96dd3ef29c0046,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8217421688065181070, guid: 7842341e5a2a05448a96dd3ef29c0046,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1925
+      objectReference: {fileID: 0}
+    - target: {fileID: 8217421688065181070, guid: 7842341e5a2a05448a96dd3ef29c0046,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 400
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1843786999839977580, guid: 7842341e5a2a05448a96dd3ef29c0046, type: 3}
@@ -28287,6 +28367,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelTransition
       objectReference: {fileID: 0}
+    - target: {fileID: 8903286529069335212, guid: 569f41f8729e2b240b51c6105b6fbaca,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8903286530034941358, guid: 569f41f8729e2b240b51c6105b6fbaca,
         type: 3}
       propertyPath: m_Controller
@@ -30624,6 +30709,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: minerals 1 Variant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125927312586075261, guid: 7842341e5a2a05448a96dd3ef29c0046,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125927312586075261, guid: 7842341e5a2a05448a96dd3ef29c0046,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125927312586075261, guid: 7842341e5a2a05448a96dd3ef29c0046,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 8217421688065181070, guid: 7842341e5a2a05448a96dd3ef29c0046,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1925
+      objectReference: {fileID: 0}
+    - target: {fileID: 8217421688065181070, guid: 7842341e5a2a05448a96dd3ef29c0046,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 8217421688065181070, guid: 7842341e5a2a05448a96dd3ef29c0046,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8217421688065181070, guid: 7842341e5a2a05448a96dd3ef29c0046,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8217421688065181070, guid: 7842341e5a2a05448a96dd3ef29c0046,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1843786999839977580, guid: 7842341e5a2a05448a96dd3ef29c0046, type: 3}
@@ -38666,6 +38791,11 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.75
       objectReference: {fileID: 0}
+    - target: {fileID: 1953856083, guid: d0b5581f3160db04391f845dcea53af9, type: 3}
+      propertyPath: sharedProfile
+      value: 
+      objectReference: {fileID: 11400000, guid: 6392ca43685434d4aa46489ecfa1876c,
+        type: 2}
     - target: {fileID: 6277268301323266345, guid: d0b5581f3160db04391f845dcea53af9,
         type: 3}
       propertyPath: m_Name
@@ -38731,5 +38861,20 @@ PrefabInstance:
       propertyPath: slider
       value: 
       objectReference: {fileID: 691809507}
+    - target: {fileID: 6277268301323266350, guid: d0b5581f3160db04391f845dcea53af9,
+        type: 3}
+      propertyPath: minZ
+      value: -25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277268301323266350, guid: d0b5581f3160db04391f845dcea53af9,
+        type: 3}
+      propertyPath: minY
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277268301323266350, guid: d0b5581f3160db04391f845dcea53af9,
+        type: 3}
+      propertyPath: maxY
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0b5581f3160db04391f845dcea53af9, type: 3}
