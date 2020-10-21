@@ -248,6 +248,7 @@ MonoBehaviour:
   cam: {fileID: 0}
   soldier: {fileID: 1574657593899381097, guid: 4cd4092298f41e443b2cee757da7a8dc, type: 3}
   newSoldier: {fileID: 0}
+  soldiers: []
   soldierCount: 1
   shop: {fileID: 0}
   road: {fileID: 0}
@@ -256,7 +257,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   buySoldierPossible: 0
-  maxSoldiers: 3
+  maxSoldiers: 4
   found: 0
   roadFound: 0
   kills: 0

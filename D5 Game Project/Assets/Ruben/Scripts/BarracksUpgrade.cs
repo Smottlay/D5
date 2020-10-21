@@ -84,7 +84,6 @@ public class BarracksUpgrade : MonoBehaviour
     {
         gameObject.GetComponent<Barracks>().BuySoldier();
         shop.GetComponent<Shop>().DamageUpgrade();
-        gameObject.GetComponentInChildren<MineLayer>().damageUpgrades += 1;
         upgradeMenu.SetActive(false);
     }
 

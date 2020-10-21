@@ -47,10 +47,9 @@ public class Barracks : MonoBehaviour
             roadFound = true;
         }
         
-        if(road != null && soldierCount >= 1)
+        if(road != null && soldierCount == 1)
         {
             SpawnSoldier();
-            soldierCount++;
         }
 
         if (shop.GetComponent<Shop>().canUpgradeDamage == false)
@@ -85,6 +84,5 @@ public class Barracks : MonoBehaviour
             soldiers.Add(newSoldier);
             newSoldier.GetComponent<Soldier>().tower = gameObject;
             soldierCount++;
-        
     }
 }
