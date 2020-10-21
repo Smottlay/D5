@@ -485,12 +485,20 @@ MonoBehaviour:
   cam: {fileID: 0}
   soldier: {fileID: 2285371412216912651, guid: 9f23dee6a0db1544e81b96bd6f30ab9a, type: 3}
   newSoldier: {fileID: 0}
+  soldiers:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   soldierCount: 0
+  newSoldiersCount: 0
+  shop: {fileID: 0}
   road: {fileID: 0}
   spawnPoints:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  buySoldierPossible: 0
+  maxSoldiers: 0
   found: 0
   roadFound: 0
   kills: 0
