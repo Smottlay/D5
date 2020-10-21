@@ -29427,7 +29427,7 @@ MonoBehaviour:
   splashTowerCost: 40
   barracksCost: 50
   mineLayerCost: 15
-  drillCost: 50
+  drillCost: 40
   rangeCost: 10
   damageCost: 10
   canUpgradeRange: 0

@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 05162b32fb154074aafd12e5da54b8f4,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4151,7 +4151,7 @@ MonoBehaviour:
   splashTowerCost: 40
   barracksCost: 50
   mineLayerCost: 15
-  drillCost: 50
+  drillCost: 40
   rangeCost: 10
   damageCost: 10
   canUpgradeRange: 0

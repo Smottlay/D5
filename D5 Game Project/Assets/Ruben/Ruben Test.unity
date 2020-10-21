@@ -1490,6 +1490,11 @@ MonoBehaviour:
   slowButton: {fileID: 0}
   barrackButton: {fileID: 0}
   drillButton: {fileID: 0}
+  noDamage: {fileID: 0}
+  noSplash: {fileID: 0}
+  noSlow: {fileID: 0}
+  noBarracks: {fileID: 0}
+  noDrill: {fileID: 0}
   buttonReset: 0
   gameStarted: 0
 --- !u!1001 &199556770
@@ -5323,6 +5328,7 @@ MonoBehaviour:
   thunk: {fileID: 0}
   foundationStatus: 0
   statsPanel: {fileID: 0}
+  buildSign: {fileID: 0}
 --- !u!1001 &2465124495243527510
 PrefabInstance:
   m_ObjectHideFlags: 0

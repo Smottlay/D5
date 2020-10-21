@@ -993,7 +993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31244fdda59a13346b33fb3886d47e99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goldTimer: 5
+  goldTimer: 8
   goldTimerReduceUpgrade: 1
   incomeUpgrades: 0
   maxIncomeUpgrades: 2
