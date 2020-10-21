@@ -50,6 +50,7 @@ public class Barracks : MonoBehaviour
         if(road != null && soldierCount >= 1)
         {
             SpawnSoldier();
+            soldierCount++;
         }
 
         if (shop.GetComponent<Shop>().canUpgradeDamage == false)
