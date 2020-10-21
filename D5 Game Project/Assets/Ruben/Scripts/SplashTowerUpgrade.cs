@@ -16,7 +16,7 @@ public class SplashTowerUpgrade : MonoBehaviour
     public float rangeCost;
     public float damageCost;
 
-    private float foundationRange;
+    private float foundationRange = 2;
 
     public GameObject turret;
     public GameObject upgradeMenu;

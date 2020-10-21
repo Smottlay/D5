@@ -19,7 +19,7 @@ public class SlowTowerUpgrade : MonoBehaviour
     public GameObject shop;
     public GameObject foundation;
 
-    public float foundationRange;
+    private float foundationRange = 2f;
 
     public GameObject damageButton;
     public TMP_Text damageGold;
