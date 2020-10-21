@@ -57,6 +57,13 @@ public class Shop : MonoBehaviour
     public GameObject slowButton;
     public GameObject barrackButton;
     public GameObject drillButton;
+
+    public GameObject noDamage;
+    public GameObject noSplash;
+    public GameObject noSlow;
+    public GameObject noBarracks;
+    public GameObject noDrill;
+
     public float buttonReset;
 
     public bool gameStarted;
@@ -348,22 +355,67 @@ public class Shop : MonoBehaviour
     public void RawDamageInfo()
     {
         rawDamageInfo.SetActive(true);
+
+        if(rawDamageTowerCost > gold)
+        {
+            noDamage.SetActive(true);
+        }
+        else
+        {
+            noDamage.SetActive(false);
+        }
     }
     public void SplashTowerInfo()
     {
         splashTowerInfo.SetActive(true);
+
+        if (splashTowerCost > gold)
+        {
+            noSplash.SetActive(true);
+        }
+        else
+        {
+            noSplash.SetActive(false);
+        }
     }
     public void SlowTowerInfo()
     {
         slowTowerInfo.SetActive(true);
+
+        if (mineLayerCost > gold)
+        {
+            noSlow.SetActive(true);
+        }
+        else
+        {
+            noSlow.SetActive(false);
+        }
     }
     public void BarracksInfo()
     {
         barracksInfo.SetActive(true);
+
+        if (barracksCost > gold)
+        {
+            noBarracks.SetActive(true);
+        }
+        else
+        {
+            noBarracks.SetActive(false);
+        }
     }
     public void DrillInfo()
     {
         drillInfo.SetActive(true);
+
+        if (drillCost > gold)
+        {
+            noDrill.SetActive(true);
+        }
+        else
+        {
+            noDrill.SetActive(false);
+        }
     }
 
     public void InfoDisable()
@@ -373,6 +425,12 @@ public class Shop : MonoBehaviour
         slowTowerInfo.SetActive(false);
         barracksInfo.SetActive(false);
         drillInfo.SetActive(false);
+
+        noDamage.SetActive(false);
+        noSplash.SetActive(false);
+        noSlow.SetActive(false);
+        noBarracks.SetActive(false);
+        noDrill.SetActive(false);
     }
 
     public void NoRefund()
