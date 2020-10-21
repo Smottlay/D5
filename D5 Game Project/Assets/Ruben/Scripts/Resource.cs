@@ -20,6 +20,7 @@ public class Resource : MonoBehaviour
     private bool mineralUsed;
 
     public GameObject statsPanel;
+    public GameObject buildSign;
 
     BuildManager buildmanager;
 
@@ -31,8 +32,7 @@ public class Resource : MonoBehaviour
         rend = GetComponent<Renderer>();
         startColor = rend.material.color;
         shop = GameObject.FindGameObjectWithTag("shop");
-        gameMaster = GameObject.FindGameObjectWithTag("gameMaster");
-        
+        gameMaster = GameObject.FindGameObjectWithTag("gameMaster");     
     }
     private void Update()
     {
@@ -57,6 +57,7 @@ public class Resource : MonoBehaviour
         turret = (GameObject)Instantiate(turretToBuild, transform.position + posOffSet, transform.rotation);
         statsPanel.SetActive(true);
 
+        Destroy(buildSign);
         gameMaster.GetComponent<Shop>().NoRefund();
         mineralUsed = true;
         buildmanager.NoTurretToBuild();

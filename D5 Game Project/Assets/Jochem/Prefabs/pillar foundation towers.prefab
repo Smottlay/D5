@@ -275,7 +275,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   refund: {fileID: 0}
+  gameMaster: {fileID: 0}
   hoverColor: {r: 0, g: 0, b: 0, a: 0}
   posOffSet: {x: 0, y: 0, z: 0}
   thunk: {fileID: 0}
   foundationStatus: 0
+  statsPanel: {fileID: 0}
+  buildSign: {fileID: 1973666288491769012}

@@ -127,7 +127,7 @@ public class Enemy : MonoBehaviour
             }
         }
 
-        if(mineExplosion == true && tower.tag == "slowTower" && !slowAdded)
+        if(mineExplosion == true && tower.tag == "slowTower" && !slowAdded && tower != null)
         {
             tower.GetComponent<MineLayer>().creepsSlowed += 1;
             slowAdded = true;

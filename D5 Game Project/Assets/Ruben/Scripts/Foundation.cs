@@ -20,6 +20,7 @@ public class Foundation : MonoBehaviour
     public bool foundationStatus;
 
     public GameObject statsPanel;
+    public GameObject buildSign;
 
     BuildManager buildmanager;
 
@@ -31,11 +32,6 @@ public class Foundation : MonoBehaviour
         startColor = rend.material.color;
         shop = GameObject.FindGameObjectWithTag("shop");
         gameMaster = GameObject.FindGameObjectWithTag("gameMaster");
-        if(statsPanel == null)
-        {
-            statsPanel = GameObject.FindGameObjectWithTag("statsPanel");
-            statsPanel.SetActive(false);
-        }
     }
     public void Update()
     {
@@ -65,6 +61,7 @@ public class Foundation : MonoBehaviour
         shop.SetActive(true);
         refund.SetActive(false);
 
+        Destroy(buildSign);
         gameObject.GetComponent<Renderer>().enabled = false;
         gameObject.GetComponent<Collider>().enabled = false;
     }

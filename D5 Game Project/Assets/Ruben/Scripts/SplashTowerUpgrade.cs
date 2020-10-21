@@ -123,7 +123,6 @@ public class SplashTowerUpgrade : MonoBehaviour
         shop.GetComponent<Shop>().gold += rawDamageRefund;
         foundation.GetComponent<Renderer>().enabled = true;
         foundation.GetComponent<Collider>().enabled = true;
-        GameObject.FindGameObjectWithTag("canvas").GetComponent<Warning>().statsPanel.SetActive(true);
         Destroy(gameObject);
     }
     public void OnMouseEnter()

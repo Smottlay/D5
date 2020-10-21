@@ -38624,11 +38624,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1918357106267701265, guid: f9497e5ffbb4a5a438b84d07752d6f8b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 25.000122
+      objectReference: {fileID: 0}
     - target: {fileID: 1918357106430321621, guid: f9497e5ffbb4a5a438b84d07752d6f8b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1039966862}
+    - target: {fileID: 1918357106466305250, guid: f9497e5ffbb4a5a438b84d07752d6f8b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 25.000122
+      objectReference: {fileID: 0}
     - target: {fileID: 1918357106466305251, guid: f9497e5ffbb4a5a438b84d07752d6f8b,
         type: 3}
       propertyPath: m_IsActive

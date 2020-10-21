@@ -96,8 +96,7 @@ public class SlowTowerUpgrade : MonoBehaviour
     {
         shop.GetComponent<Shop>().gold += slowTowerRefund;
         foundation.GetComponent<Renderer>().enabled = true;
-        foundation.GetComponent<Collider>().enabled = true;
-        GameObject.FindGameObjectWithTag("canvas").GetComponent<Warning>().statsPanel.SetActive(true);
+        foundation.GetComponent<Collider>().enabled = true; 
         Destroy(gameObject);
     }
 }

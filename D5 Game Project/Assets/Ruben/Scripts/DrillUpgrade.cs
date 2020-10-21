@@ -68,7 +68,6 @@ public class DrillUpgrade : MonoBehaviour
     public void RefundTower()
     {
         shop.GetComponent<Shop>().gold += drillRefund;
-        GameObject.FindGameObjectWithTag("canvas").GetComponent<Warning>().statsPanel.SetActive(true);
         Destroy(gameObject);
     }
 }
