@@ -9,6 +9,7 @@ public class Barracks : MonoBehaviour
     public GameObject soldier;
     public GameObject newSoldier;
 
+    public List<GameObject> soldiers;
     public int soldierCount;
 
     public GameObject shop;
@@ -80,6 +81,7 @@ public class Barracks : MonoBehaviour
 
             newSoldier = Instantiate(soldier, spawnPoints[soldierCount].transform);
             newSoldier.transform.position = spawnPoints[soldierCount].transform.position;
+            soldiers.Add(newSoldier);
             newSoldier.GetComponent<Soldier>().tower = gameObject;
             soldierCount++;
         

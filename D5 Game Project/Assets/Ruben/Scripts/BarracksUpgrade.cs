@@ -98,6 +98,10 @@ public class BarracksUpgrade : MonoBehaviour
         shop.GetComponent<Shop>().gold += barracksRefund;
         foundation.GetComponent<Renderer>().enabled = true;
         foundation.GetComponent<Collider>().enabled = true;
+        foreach(GameObject soldier in gameObject.GetComponent<Barracks>().soldiers)
+        {
+            Destroy(soldier);
+        }
         Destroy(gameObject);
     }
 }
