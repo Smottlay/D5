@@ -37,22 +37,19 @@ public class BulletSplash : MonoBehaviour
     void splash()
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position, splashRadius);
+        Debug.Log(colliders.Length);
 
         foreach (Collider nearbyEnemy in colliders)
         {
-            if(nearbyEnemy.gameObject.tag == "soldier")
+            if (nearbyEnemy.gameObject.tag == "enemy" && nearbyEnemy.GetComponent<Enemy>().attacker != null)
             {
-                print("lessdamage");
                 nearbyEnemy.GetComponent<Enemy>().RawDamage(damageAmount/2);
                 nearbyEnemy.GetComponent<Enemy>().tower = tower;
             }
-
             else if (nearbyEnemy.gameObject.tag == "enemy")
             {
-                print("moredamage");
                 nearbyEnemy.GetComponent<Enemy>().RawDamage(damageAmount);
                 nearbyEnemy.GetComponent<Enemy>().tower = tower;
-           
             }
         }
 

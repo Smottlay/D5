@@ -8,17 +8,24 @@ public class Bullet : MonoBehaviour
     public GameObject turret;
     public GameObject tower;
 
-    void OnCollisionEnter(Collision collision)
+    public float bulletRange = 1;
+
+    private void Update()
     {
-        if (collision.gameObject.tag == "enemy")
-        {
-            collision.gameObject.GetComponent<Enemy>().RawDamage(damageAmount);
-            collision.gameObject.GetComponent<Enemy>().tower = tower;
-            Destroy(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        DoDamage();
     }
+
+    public void DoDamage()
+    {
+        Collider[] colliders = Physics.OverlapSphere(transform.position, bulletRange);
+        foreach (Collider enemy in colliders)
+        {
+            if (enemy.gameObject.tag == "enemy")
+            {
+                enemy.gameObject.GetComponent<Enemy>().RawDamage(damageAmount);
+                enemy.gameObject.GetComponent<Enemy>().tower = tower;
+                Destroy(gameObject);
+            }
+        }
+    }   
 }
