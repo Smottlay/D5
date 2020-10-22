@@ -127,7 +127,10 @@ public class SplashTowerUpgrade : MonoBehaviour
     }
     public void OnMouseEnter()
     {
-        rangeCircle.SetActive(true);
+        if(Time.timeScale != 0)
+        {
+            rangeCircle.SetActive(true);
+        }
     }
     public void OnMouseExit()
     {

@@ -58,32 +58,35 @@ public class Stats : MonoBehaviour
 
     public void OnMouseEnter()
     {
-        statsPanel.SetActive(true);
-        if (tower.tag == "rawDamage")
+        if(Time.timeScale != 0)
         {
-            statsTexts[0].GetComponent<TextMeshProUGUI>().text = "Kills: " + kills.ToString();
-            statsTexts[1].GetComponent<TextMeshProUGUI>().text = "Range Upgrades: " + rangeUpgrade.ToString();
-            statsTexts[2].GetComponent<TextMeshProUGUI>().text = "Damage Upgrades: " + damageUpgrade.ToString();
-        }
-        else if (tower.tag == "splashTower")
-        {
-            statsTexts[0].GetComponent<TextMeshProUGUI>().text = "Kills: " + kills.ToString();
-            statsTexts[1].GetComponent<TextMeshProUGUI>().text = "Range Upgrades: " + rangeUpgrade.ToString();
-            statsTexts[2].GetComponent<TextMeshProUGUI>().text = "Damage Upgrades: " + damageUpgrade.ToString();
-        }
-        else if (tower.tag == "slowTower")
-        {
-            statsTexts[0].GetComponent<TextMeshProUGUI>().text = "Kills: " + kills.ToString();
-            statsTexts[1].GetComponent<TextMeshProUGUI>().text = "Creeps Slowed: " + creepsSlowed.ToString();
-        }
-        else if (tower.tag == "barrack")
-        {
-            statsTexts[0].GetComponent<TextMeshProUGUI>().text = "Kills: " + kills.ToString();
-            statsTexts[1].GetComponent<TextMeshProUGUI>().text = "Creeps Stopped: " + creepsStopped.ToString();
-        }
-        else if (tower.tag == "drillTower")
-        {
-            statsTexts[0].GetComponent<TextMeshProUGUI>().text = "Minerals: " + goldProduced.ToString();
+            statsPanel.SetActive(true);
+            if (tower.tag == "rawDamage")
+            {
+                statsTexts[0].GetComponent<TextMeshProUGUI>().text = "Kills: " + kills.ToString();
+                statsTexts[1].GetComponent<TextMeshProUGUI>().text = "Range Upgrades: " + rangeUpgrade.ToString();
+                statsTexts[2].GetComponent<TextMeshProUGUI>().text = "Damage Upgrades: " + damageUpgrade.ToString();
+            }
+            else if (tower.tag == "splashTower")
+            {
+                statsTexts[0].GetComponent<TextMeshProUGUI>().text = "Kills: " + kills.ToString();
+                statsTexts[1].GetComponent<TextMeshProUGUI>().text = "Range Upgrades: " + rangeUpgrade.ToString();
+                statsTexts[2].GetComponent<TextMeshProUGUI>().text = "Damage Upgrades: " + damageUpgrade.ToString();
+            }
+            else if (tower.tag == "slowTower")
+            {
+                statsTexts[0].GetComponent<TextMeshProUGUI>().text = "Kills: " + kills.ToString();
+                statsTexts[1].GetComponent<TextMeshProUGUI>().text = "Creeps Slowed: " + creepsSlowed.ToString();
+            }
+            else if (tower.tag == "barrack")
+            {
+                statsTexts[0].GetComponent<TextMeshProUGUI>().text = "Kills: " + kills.ToString();
+                statsTexts[1].GetComponent<TextMeshProUGUI>().text = "Creeps Stopped: " + creepsStopped.ToString();
+            }
+            else if (tower.tag == "drillTower")
+            {
+                statsTexts[0].GetComponent<TextMeshProUGUI>().text = "Minerals: " + goldProduced.ToString();
+            }
         }
     }
 
