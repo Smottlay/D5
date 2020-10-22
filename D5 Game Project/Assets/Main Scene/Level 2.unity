@@ -13845,6 +13845,16 @@ PrefabInstance:
       propertyPath: m_Navigation.m_Mode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9212124094504894174, guid: daf35082394f0b94c9ed70e09af6eea9,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 47812397}
+    - target: {fileID: 9212124094504894174, guid: daf35082394f0b94c9ed70e09af6eea9,
+        type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetFullscreen
+      objectReference: {fileID: 0}
     - target: {fileID: 9212124094574659037, guid: daf35082394f0b94c9ed70e09af6eea9,
         type: 3}
       propertyPath: m_Navigation.m_Mode

@@ -14,6 +14,7 @@ public class SettingsMenu : MonoBehaviour
     static public Slider slider;
     public GameObject player;
     public Text resText;
+    public static bool fullscreenBool;
 
     public List<string> options = new List<string>();
     private void Start()
@@ -65,5 +66,6 @@ public class SettingsMenu : MonoBehaviour
     public void SetFullscreen(bool isFullScreen)
     {
         Screen.fullScreen = isFullScreen;
+        fullscreenBool = isFullScreen;
     }
 }
