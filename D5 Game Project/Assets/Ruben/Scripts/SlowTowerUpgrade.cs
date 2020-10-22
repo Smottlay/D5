@@ -19,7 +19,7 @@ public class SlowTowerUpgrade : MonoBehaviour
     public GameObject shop;
     public GameObject foundation;
 
-    private float foundationRange = 2f;
+    private float foundationRange = 3f;
 
     public GameObject damageButton;
     public TMP_Text damageGold;
@@ -94,6 +94,11 @@ public class SlowTowerUpgrade : MonoBehaviour
 
     public void RefundTower()
     {
+        foreach(GameObject mine in gameObject.GetComponent<MineLayer>().mineList)
+        {
+            Destroy(mine);
+        }
+
         shop.GetComponent<Shop>().gold += slowTowerRefund;
         foundation.GetComponent<Renderer>().enabled = true;
         foundation.GetComponent<Collider>().enabled = true; 

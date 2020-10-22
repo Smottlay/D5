@@ -19,6 +19,8 @@ public class MineLayer : MonoBehaviour
     public float mines;
     public float maxMines;
 
+    public List<GameObject> mineList;
+
     public bool firstSpawn;
     public Vector3 targetPos;
     public float mineAmount;
@@ -117,7 +119,7 @@ public class MineLayer : MonoBehaviour
         {
             damageUpgradePossible = true;
         }
-        if (damageUpgrade >= maxDamage)
+        if (damage >= maxDamage)
         {
             damageUpgradePossible = false;
         }
@@ -137,6 +139,8 @@ public class MineLayer : MonoBehaviour
         tempMine.GetComponent<Mine>().mineLayer = gameObject;
         tempMine.GetComponent<Mine>().spawnPointID = 0;
         tempMine.GetComponent<Mine>().tower = gameObject;
+
+        mineList.Add(tempMine);
 
         Rigidbody tempRid;
         tempRid = tempMine.GetComponent<Rigidbody>();
@@ -158,6 +162,8 @@ public class MineLayer : MonoBehaviour
         tempMine.GetComponent<Mine>().spawnPointID = 1;
         tempMine.GetComponent<Mine>().tower = gameObject;
 
+        mineList.Add(tempMine);
+
         Rigidbody tempRid;
         tempRid = tempMine.GetComponent<Rigidbody>();
 
@@ -177,6 +183,8 @@ public class MineLayer : MonoBehaviour
         tempMine.GetComponent<Mine>().mineLayer = gameObject;
         tempMine.GetComponent<Mine>().spawnPointID = 2;
         tempMine.GetComponent<Mine>().tower = gameObject;
+
+        mineList.Add(tempMine);
 
         Rigidbody tempRid;
         tempRid = tempMine.GetComponent<Rigidbody>();

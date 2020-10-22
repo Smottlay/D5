@@ -40,10 +40,19 @@ public class BulletSplash : MonoBehaviour
 
         foreach (Collider nearbyEnemy in colliders)
         {
-            if (nearbyEnemy.gameObject.tag == "enemy")
+            if(nearbyEnemy.gameObject.tag == "soldier")
             {
+                print("lessdamage");
+                nearbyEnemy.GetComponent<Enemy>().RawDamage(damageAmount/2);
+                nearbyEnemy.GetComponent<Enemy>().tower = tower;
+            }
+
+            else if (nearbyEnemy.gameObject.tag == "enemy")
+            {
+                print("moredamage");
                 nearbyEnemy.GetComponent<Enemy>().RawDamage(damageAmount);
                 nearbyEnemy.GetComponent<Enemy>().tower = tower;
+           
             }
         }
 

@@ -1298,7 +1298,7 @@ GameObject:
   - component: {fileID: 7407512032079321967}
   - component: {fileID: 3238553333075969438}
   - component: {fileID: 886430384218576697}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: OnMouseExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}

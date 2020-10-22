@@ -60,4 +60,5 @@ public class Drill : MonoBehaviour
             goldCountdown = goldTimer;
         }
     }
+
 }

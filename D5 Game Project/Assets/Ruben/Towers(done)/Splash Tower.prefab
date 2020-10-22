@@ -1289,7 +1289,7 @@ GameObject:
   - component: {fileID: 1827268000}
   - component: {fileID: 1827268002}
   - component: {fileID: 1827268001}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: OnMouseExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}

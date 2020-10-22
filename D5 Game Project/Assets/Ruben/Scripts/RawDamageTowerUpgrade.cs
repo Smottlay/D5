@@ -11,7 +11,7 @@ public class RawDamageTowerUpgrade : MonoBehaviour
     public Color hoverColor;
     private Color startColor;
 
-    private float foundationRange = 2;
+    private float foundationRange = 3;
 
     public bool rawDamageUpgrade;
 

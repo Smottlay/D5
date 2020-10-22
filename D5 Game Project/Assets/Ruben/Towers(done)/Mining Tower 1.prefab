@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 1326128169}
   - component: {fileID: 1326128171}
   - component: {fileID: 1326128170}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: OnMouseExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1151,11 +1151,10 @@ MonoBehaviour:
   drillUpgrade: 0
   drillRefund: 25
   damageCost: 10
+  foundationRange: 3
   upgradeMenu: {fileID: 1897258861}
   shop: {fileID: 0}
-  foundation: {fileID: 6449151928199919064, guid: cef6c169a92c83e4a8974fe81e33a7aa,
-    type: 3}
-  foundation2: {fileID: 0}
+  foundation: {fileID: 0}
   incomeButton: {fileID: 2133825458}
   incomeGold: {fileID: 1836516649}
 --- !u!1 &4739619737238834501

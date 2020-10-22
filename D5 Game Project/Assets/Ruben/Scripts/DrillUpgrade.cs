@@ -15,16 +15,18 @@ public class DrillUpgrade : MonoBehaviour
     public float drillRefund;
     public float damageCost;
 
+    public float foundationRange = 3;
+
     public GameObject upgradeMenu;
     public GameObject shop;
     public GameObject foundation;
-    public GameObject foundation2;
 
     public GameObject incomeButton;
     public TMP_Text incomeGold;
 
     public void Start()
     {
+        FindFoundation();
         drillUpgrade = false;
         shop = GameObject.FindGameObjectWithTag("gameMaster");
         damageCost = shop.GetComponent<Shop>().damageCost;
@@ -32,6 +34,7 @@ public class DrillUpgrade : MonoBehaviour
 
     public void Update()
     {
+
         incomeGold.text = damageCost.ToString();
 
         shop = GameObject.FindGameObjectWithTag("gameMaster");
@@ -52,6 +55,31 @@ public class DrillUpgrade : MonoBehaviour
 
     }
 
+    public void FindFoundation()
+    {
+        GameObject[] foundations = GameObject.FindGameObjectsWithTag("minerals");
+        float shortestDistance = Mathf.Infinity;
+        GameObject nearestFoundation = null;
+
+        foreach (GameObject foundation in foundations)
+        {
+            float distanceToEnemy = Vector3.Distance(transform.position, foundation.transform.position);
+            if (distanceToEnemy < shortestDistance)
+            {
+                shortestDistance = distanceToEnemy;
+                nearestFoundation = foundation;
+            }
+        }
+        if (nearestFoundation != null)
+        {
+            foundation = nearestFoundation;
+        }
+        else
+        {
+            foundation = null;
+        }
+    }
+
     public void IncomeUpgrade()
     {
         gameObject.GetComponent<Drill>().UpgradeIncome();
@@ -68,6 +96,7 @@ public class DrillUpgrade : MonoBehaviour
     public void RefundTower()
     {
         shop.GetComponent<Shop>().gold += drillRefund;
+        foundation.GetComponent<Resource>().mineralUsed = false;
         Destroy(gameObject);
     }
 }

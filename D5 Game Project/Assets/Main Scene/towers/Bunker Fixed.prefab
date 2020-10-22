@@ -30,7 +30,7 @@ GameObject:
   - component: {fileID: 1912131793445311735}
   - component: {fileID: 8299369007490029447}
   - component: {fileID: 4539750952455416331}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -444,7 +444,7 @@ GameObject:
   - component: {fileID: 9161672244009290455}
   - component: {fileID: 6120901365190741772}
   - component: {fileID: 4682264052372875491}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Buttons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -558,7 +558,7 @@ GameObject:
   - component: {fileID: 2024009349530700461}
   - component: {fileID: 5671009120995851397}
   - component: {fileID: 7423194552994058226}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -693,7 +693,7 @@ GameObject:
   - component: {fileID: 4437677869699117604}
   - component: {fileID: 4861775130938965930}
   - component: {fileID: 1915107202377929918}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Soldier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -825,7 +825,7 @@ GameObject:
   - component: {fileID: 7696150932907231242}
   - component: {fileID: 2961702106665577999}
   - component: {fileID: 6180410362931876496}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: UpgradeMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -936,7 +936,7 @@ GameObject:
   - component: {fileID: 2436312709001374528}
   - component: {fileID: 1270224265410528213}
   - component: {fileID: 1287515252216120540}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1153,7 +1153,7 @@ GameObject:
   - component: {fileID: 7292968738866228246}
   - component: {fileID: 7122163092385572646}
   - component: {fileID: 5320736563925917254}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Refund
   m_TagString: Untagged
   m_Icon: {fileID: 0}

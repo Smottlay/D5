@@ -15,7 +15,7 @@ public class BarracksUpgrade : MonoBehaviour
     public float barracksRefund;
     public float upgradeCost;
 
-    private float foundationRange = 2;
+    private float foundationRange = 3;
 
     public GameObject upgradeMenu;
     public GameObject shop;

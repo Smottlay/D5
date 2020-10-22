@@ -17,7 +17,7 @@ public class Resource : MonoBehaviour
     private Renderer rend;
 
     private bool mineralStatus;
-    private bool mineralUsed;
+    public bool mineralUsed;
 
     public GameObject statsPanel;
     public GameObject buildSign;

@@ -4458,6 +4458,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 455054008700568946, guid: f52ed55f61be8e842828072a67f8c7d7,
         type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 455054008700568946, guid: f52ed55f61be8e842828072a67f8c7d7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 455054008700568946, guid: f52ed55f61be8e842828072a67f8c7d7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 455054008700568946, guid: f52ed55f61be8e842828072a67f8c7d7,
+        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -5607,11 +5622,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Raw Damage Tower Working
-      objectReference: {fileID: 0}
-    - target: {fileID: 5748666408590728929, guid: 2789afc5e6227eb4fbf88e258c9e86cf,
-        type: 3}
-      propertyPath: foundationRange
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2789afc5e6227eb4fbf88e258c9e86cf, type: 3}

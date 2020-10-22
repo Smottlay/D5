@@ -75,7 +75,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1467222180, guid: bfec9582d87e406449635ac4621d263b, type: 3}
       propertyPath: m_Layer
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 52494220426450343, guid: bfec9582d87e406449635ac4621d263b,
         type: 3}
@@ -175,7 +175,7 @@ PrefabInstance:
     - target: {fileID: 2118396979442734491, guid: bfec9582d87e406449635ac4621d263b,
         type: 3}
       propertyPath: m_Name
-      value: Raw Damage Tower Working Variant
+      value: Raw Damage Tower Working
       objectReference: {fileID: 0}
     - target: {fileID: 2118396979442734491, guid: bfec9582d87e406449635ac4621d263b,
         type: 3}
@@ -185,7 +185,7 @@ PrefabInstance:
     - target: {fileID: 2237837892065139451, guid: bfec9582d87e406449635ac4621d263b,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2337300378873109397, guid: bfec9582d87e406449635ac4621d263b,
         type: 3}

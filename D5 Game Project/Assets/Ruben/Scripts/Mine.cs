@@ -6,6 +6,8 @@ public class Mine : MonoBehaviour
 {
     public GameObject tower;
 
+    public GameObject firstEnemy;
+
     public AudioSource explosion;
 
     public float splashRadius;
@@ -67,6 +69,8 @@ public class Mine : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        firstEnemy = other.gameObject;
+
         if(other.gameObject.tag == "enemy")
         {
             Explode();
@@ -77,22 +81,29 @@ public class Mine : MonoBehaviour
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position, splashRadius);
 
-        foreach (Collider nearbyEnemy in colliders)
+        if(firstEnemy.GetComponent<Enemy>().mineDetecion == true)
         {
-            if (nearbyEnemy.gameObject.tag == "enemy")
+            foreach (Collider nearbyEnemy in colliders)
             {
-
-                if (nearbyEnemy.GetComponent<Enemy>().mineDetecion == true && !hasExploded)
+                if (nearbyEnemy.gameObject.tag == "enemy")
                 {
-                    explosion.Play();
-                    hasExploded = true;
-                    mineLayer.GetComponent<MineLayer>().activeSpawnPoints[spawnPointID] = true;
-                    nearbyEnemy.GetComponent<Enemy>().MineDamage(damageAmount);
-                    nearbyEnemy.GetComponent<Enemy>().tower = tower;
-                    Instantiate(particle, gameObject.transform.position, gameObject.transform.rotation);
-                    destroyTimer = .5f;
+
+                    if (nearbyEnemy.GetComponent<Enemy>().mineDetecion == true && !hasExploded)
+                    {
+                        explosion.Play();
+                        hasExploded = true;
+                        mineLayer.GetComponent<MineLayer>().activeSpawnPoints[spawnPointID] = true;
+                        nearbyEnemy.GetComponent<Enemy>().MineDamage(damageAmount);
+                        nearbyEnemy.GetComponent<Enemy>().tower = tower;
+                        Instantiate(particle, gameObject.transform.position, gameObject.transform.rotation);
+                        destroyTimer = .5f;
+
+                        tower.GetComponent<MineLayer>().mineList.Remove(gameObject);
+                    }
                 }
             }
         }
     }
+
+
 }
