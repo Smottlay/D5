@@ -33,6 +33,10 @@ PrefabInstance:
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 706509965, guid: bfec9582d87e406449635ac4621d263b, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 706509966, guid: bfec9582d87e406449635ac4621d263b, type: 3}
       propertyPath: m_fontColor.r
       value: 1
@@ -49,6 +53,10 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 1035881978, guid: bfec9582d87e406449635ac4621d263b, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1035881980, guid: bfec9582d87e406449635ac4621d263b, type: 3}
       propertyPath: m_fontColor.r
       value: 1
@@ -64,6 +72,10 @@ PrefabInstance:
     - target: {fileID: 1035881980, guid: bfec9582d87e406449635ac4621d263b, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1467222180, guid: bfec9582d87e406449635ac4621d263b, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 52494220426450343, guid: bfec9582d87e406449635ac4621d263b,
         type: 3}
@@ -89,6 +101,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 194765270713154557, guid: bfec9582d87e406449635ac4621d263b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1457005412656003789, guid: bfec9582d87e406449635ac4621d263b,
         type: 3}
@@ -150,10 +167,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1632776344858411932, guid: bfec9582d87e406449635ac4621d263b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2118396979442734491, guid: bfec9582d87e406449635ac4621d263b,
         type: 3}
       propertyPath: m_Name
-      value: Raw Damage Tower Working
+      value: Raw Damage Tower Working Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2118396979442734491, guid: bfec9582d87e406449635ac4621d263b,
         type: 3}
@@ -210,6 +232,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 2877426429452298929, guid: bfec9582d87e406449635ac4621d263b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3365466484952956995, guid: bfec9582d87e406449635ac4621d263b,
         type: 3}
       propertyPath: m_Size.y
@@ -249,6 +276,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5658038502451327369, guid: bfec9582d87e406449635ac4621d263b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735544555082384205, guid: bfec9582d87e406449635ac4621d263b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6091520787809732071, guid: bfec9582d87e406449635ac4621d263b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6807504755698859218, guid: bfec9582d87e406449635ac4621d263b,
         type: 3}
@@ -300,6 +342,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 8034006483772319483, guid: bfec9582d87e406449635ac4621d263b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8061365406548257273, guid: bfec9582d87e406449635ac4621d263b,
         type: 3}
       propertyPath: m_fontColor.r
@@ -319,6 +366,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8304208826349682939, guid: bfec9582d87e406449635ac4621d263b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8904202443599133620, guid: bfec9582d87e406449635ac4621d263b,
         type: 3}

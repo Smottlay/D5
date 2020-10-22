@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 05162b32fb154074aafd12e5da54b8f4,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2804,7 +2804,7 @@ GameObject:
   - component: {fileID: 294139266}
   - component: {fileID: 294139268}
   - component: {fileID: 294139267}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: fill red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14404,7 +14404,7 @@ GameObject:
   - component: {fileID: 1190310250}
   - component: {fileID: 1190310252}
   - component: {fileID: 1190310251}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: healthbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18120,7 +18120,7 @@ GameObject:
   - component: {fileID: 1580782375}
   - component: {fileID: 1580782377}
   - component: {fileID: 1580782376}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18346,7 +18346,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1602637215}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: GateHealth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21883,7 +21883,7 @@ GameObject:
   - component: {fileID: 1977881886}
   - component: {fileID: 1977881888}
   - component: {fileID: 1977881887}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22662,7 +22662,7 @@ GameObject:
   - component: {fileID: 2120333227}
   - component: {fileID: 2120333229}
   - component: {fileID: 2120333228}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: fill green
   m_TagString: Untagged
   m_Icon: {fileID: 0}

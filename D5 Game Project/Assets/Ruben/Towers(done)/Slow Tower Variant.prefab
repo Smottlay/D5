@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 5089933479152798107}
   - component: {fileID: 6868709192886637915}
   - component: {fileID: 3285015213672118870}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -620,7 +620,6 @@ MonoBehaviour:
   shop: {fileID: 0}
   foundation: {fileID: 6449151928199919064, guid: cef6c169a92c83e4a8974fe81e33a7aa,
     type: 3}
-  foundation2: {fileID: 0}
   damageButton: {fileID: 5487286888425039591}
   damageGold: {fileID: 3285015213672118870}
 --- !u!1 &455054008976828700
@@ -825,7 +824,7 @@ GameObject:
   - component: {fileID: 9045831446184983178}
   - component: {fileID: 1238942854081188064}
   - component: {fileID: 2218011145682968986}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: UpgradeMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -937,7 +936,7 @@ GameObject:
   - component: {fileID: 2236519260694632831}
   - component: {fileID: 5978563471228864944}
   - component: {fileID: 8309520654188853302}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Buttons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1039,7 +1038,7 @@ GameObject:
   - component: {fileID: 7867003541030287830}
   - component: {fileID: 1303046950151310418}
   - component: {fileID: 1834430230290905442}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Damage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1170,7 +1169,7 @@ GameObject:
   - component: {fileID: 2591151822521321210}
   - component: {fileID: 3762934706639378308}
   - component: {fileID: 5311647039332947853}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Refund
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1299,7 +1298,7 @@ GameObject:
   - component: {fileID: 7407512032079321967}
   - component: {fileID: 3238553333075969438}
   - component: {fileID: 886430384218576697}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: OnMouseExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1362,7 +1361,7 @@ GameObject:
   - component: {fileID: 1961606066460452038}
   - component: {fileID: 7912821086758650961}
   - component: {fileID: 7791445556394002789}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1496,7 +1495,7 @@ GameObject:
   - component: {fileID: 3625939192912061053}
   - component: {fileID: 8485862367362373976}
   - component: {fileID: 5652713829922408894}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -2823,7 +2823,7 @@ GameObject:
   - component: {fileID: 159252177}
   - component: {fileID: 159252179}
   - component: {fileID: 159252178}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: fill red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6894,6 +6894,12 @@ PrefabInstance:
       propertyPath: m_FontData.m_MaxSize
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 1189328717791835769, guid: 7842341e5a2a05448a96dd3ef29c0046,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 5d950b7ac5ebfa448b334ad91d966cf9,
+        type: 3}
     - target: {fileID: 3715927175824383449, guid: 7842341e5a2a05448a96dd3ef29c0046,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10576,7 +10582,7 @@ GameObject:
   - component: {fileID: 556470355}
   - component: {fileID: 556470357}
   - component: {fileID: 556470356}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: fill green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19843,7 +19849,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 958685410}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: GateHealth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21742,7 +21748,7 @@ GameObject:
   - component: {fileID: 1103718994}
   - component: {fileID: 1103718996}
   - component: {fileID: 1103718995}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24155,7 +24161,7 @@ GameObject:
   - component: {fileID: 1255085482}
   - component: {fileID: 1255085484}
   - component: {fileID: 1255085483}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32116,6 +32122,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera Build
       objectReference: {fileID: 0}
+    - target: {fileID: 6277268301323266345, guid: d0b5581f3160db04391f845dcea53af9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277268301323266346, guid: d0b5581f3160db04391f845dcea53af9,
+        type: 3}
+      propertyPath: m_VolumeLayerMask.m_Bits
+      value: 2147483648
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277268301323266348, guid: d0b5581f3160db04391f845dcea53af9,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 2147483671
+      objectReference: {fileID: 0}
     - target: {fileID: 6277268301323266349, guid: d0b5581f3160db04391f845dcea53af9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -35375,7 +35396,7 @@ GameObject:
   - component: {fileID: 1919861833}
   - component: {fileID: 1919861835}
   - component: {fileID: 1919861834}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: healthbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}

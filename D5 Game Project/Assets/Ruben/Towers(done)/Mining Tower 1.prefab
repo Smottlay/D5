@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 361638916}
   - component: {fileID: 361638915}
   - component: {fileID: 361638914}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Buttons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 410870331}
   - component: {fileID: 410870330}
   - component: {fileID: 410870329}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Refund
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 1326128169}
   - component: {fileID: 1326128171}
   - component: {fileID: 1326128170}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: OnMouseExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,7 +306,7 @@ GameObject:
   - component: {fileID: 1836516651}
   - component: {fileID: 1836516650}
   - component: {fileID: 1836516649}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP) (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -440,7 +440,7 @@ GameObject:
   - component: {fileID: 1865808696}
   - component: {fileID: 1865808698}
   - component: {fileID: 1865808697}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -576,7 +576,7 @@ GameObject:
   - component: {fileID: 1897258865}
   - component: {fileID: 1897258864}
   - component: {fileID: 1897258863}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: UpgradeMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -687,7 +687,7 @@ GameObject:
   - component: {fileID: 2077291556}
   - component: {fileID: 2077291558}
   - component: {fileID: 2077291557}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -822,7 +822,7 @@ GameObject:
   - component: {fileID: 2133825462}
   - component: {fileID: 2133825461}
   - component: {fileID: 2133825460}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Income
   m_TagString: Untagged
   m_Icon: {fileID: 0}
