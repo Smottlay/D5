@@ -17092,6 +17092,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1918357106267701265, guid: f9497e5ffbb4a5a438b84d07752d6f8b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 1918357106430321621, guid: f9497e5ffbb4a5a438b84d07752d6f8b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -17101,6 +17106,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1918357106466305250, guid: f9497e5ffbb4a5a438b84d07752d6f8b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 1918357106466305251, guid: f9497e5ffbb4a5a438b84d07752d6f8b,
         type: 3}
@@ -21707,6 +21717,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera Build
       objectReference: {fileID: 0}
+    - target: {fileID: 6277268301323266345, guid: d0b5581f3160db04391f845dcea53af9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277268301323266346, guid: d0b5581f3160db04391f845dcea53af9,
+        type: 3}
+      propertyPath: m_Cameras.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277268301323266346, guid: d0b5581f3160db04391f845dcea53af9,
+        type: 3}
+      propertyPath: m_Cameras.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277268301323266346, guid: d0b5581f3160db04391f845dcea53af9,
+        type: 3}
+      propertyPath: m_VolumeLayerMask.m_Bits
+      value: 2147483648
+      objectReference: {fileID: 0}
+    - target: {fileID: 6277268301323266348, guid: d0b5581f3160db04391f845dcea53af9,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 2147483671
+      objectReference: {fileID: 0}
     - target: {fileID: 6277268301323266349, guid: d0b5581f3160db04391f845dcea53af9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22925,7 +22960,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 567
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0

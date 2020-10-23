@@ -41,6 +41,7 @@ public class SplashTurret : MonoBehaviour
     private float bulletReload;
     public float bulletrate;
     public float addPulse;
+    
 
     public float particleReload;
     public float particleReloadTime = 2f;
@@ -51,6 +52,7 @@ public class SplashTurret : MonoBehaviour
 
     public void Start()
     {
+        
         shop = GameObject.FindGameObjectWithTag("gameMaster");
         emission = towerBase.GetComponent<MeshRenderer>();
         audioS = gameObject.GetComponent<AudioSource>();
@@ -118,6 +120,11 @@ public class SplashTurret : MonoBehaviour
             damageUpgradePossible = false;
         }
 
+        if (enemy == null)
+        {
+            emission.material.SetFloat("_PulseTime", 0);
+            return;
+        }
         particleReload -= Time.deltaTime;
 
         muzzleFlash.IsAlive();
@@ -125,11 +132,7 @@ public class SplashTurret : MonoBehaviour
         addPulse = 2 - bulletReload;
         emission.material.SetFloat("_PulseTime", addPulse);
 
-        if (enemy == null)
-        {
-            emission.material.SetFloat("_PulseTime", 0);
-            return;
-        }
+        
            
 
         if (enemy.tag == "Untagged")
@@ -141,7 +144,7 @@ public class SplashTurret : MonoBehaviour
 
         float distance = Vector3.Distance(enemy.position, transform.position);
         if (distance <= viewRange)
-        {
+        { 
             Vector3 dir = enemy.position - transform.position;
             transform.LookAt(new Vector3(enemy.position.x, enemy.position.y, enemy.position.z));
             if(particleReload < particleReloadTime)
@@ -185,7 +188,6 @@ public class SplashTurret : MonoBehaviour
     public void Shoot()
     {
         GetComponent<AudioSource> ().PlayOneShot (gunFire, 1);
-
         GameObject tempBullet;
         tempBullet = Instantiate(bullet, bulletSpawner.transform.position, bulletSpawner.transform.rotation) as GameObject;
         tempBullet.GetComponent<BulletSplash>().damageAmount = damage;
