@@ -10,22 +10,20 @@ public class Bullet : MonoBehaviour
 
     public float bulletRange = 1;
 
-    private void Update()
+    public void OnCollisionEnter(Collision collision)
     {
-        DoDamage();
+        if (collision.gameObject.tag == "enemy")
+        {
+            collision.gameObject.GetComponent<Enemy>().RawDamage(damageAmount);
+            collision.gameObject.GetComponent<Enemy>().tower = tower;
+            Destroy(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
-    public void DoDamage()
-    {
-        Collider[] colliders = Physics.OverlapSphere(transform.position, bulletRange);
-        foreach (Collider enemy in colliders)
-        {
-            if (enemy.gameObject.tag == "enemy")
-            {
-                enemy.gameObject.GetComponent<Enemy>().RawDamage(damageAmount);
-                enemy.gameObject.GetComponent<Enemy>().tower = tower;
-                Destroy(gameObject);
-            }
-        }
-    }   
 }
+        
+ 
